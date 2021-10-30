@@ -1,23 +1,23 @@
 @font-face {
     font-family: Pokemon;
-    src: url(css/Pokemon-Solid.ttf);
+    src: url(Pokemon-Solid.ttf);
 }
 .gridzera {   
     font-family: 'Yanone Kaffeesatz', sans-serif;
     display: grid;
     width: 100vw;
     grid-template-rows: 
-    11vh 11vh auto auto auto auto 200px;
+    11vh 11vh auto auto auto auto 50vh;
     grid-template-columns:
        10vw   20vw    40vw    20vw    10vw;
     grid-template-areas: 
-    'blankhl header header header blankhr'
-    'blanknl  nav    nav     nav  blanknr'
-    'blankl content content aside blankr'
-    'blankl content content aside blankr'
-    'blankl content content aside blankr'
-    'blankl content content aside blankr'
-    'blankfl footer footer footer blankfr';
+    'blankhl        header  header  header blankhr'
+    'blanknl        nav     nav     nav    blanknr'
+    'costeleta-left content content aside costeleta-right'
+    'costeleta-left content content aside costeleta-right'
+    'costeleta-left content content aside costeleta-right'
+    'costeleta-left content content aside costeleta-right'
+    'blankfl        footer  footer  footer blankfr';
 }
 
 .blankhl {
@@ -45,7 +45,7 @@
     grid-column-start: 1;
     grid-column-end: 1;
     background-color: black;
-    height: 60px;
+    height: auto;
 }
 .blanknr {
     grid-area: "hblankr";
@@ -54,30 +54,32 @@
     grid-column-start: 5;
     grid-column-end: 5;
     background-color: black;
-    height: 60px;
+    height: auto;
 }
 
-.blankl {
-    grid-area: "blankl";  
+.costeleta-left {
+    grid-area: "costeleta-left";  
     grid-row-start: 3;
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 1;    
-    background-image: url("../images/pokeball-left-01.png");
+    background-image:
+    url("../images/pokeball-left-01.png");
     background-repeat: no-repeat;
-    background-size: 10vw 100%;
+    background-size: auto 100%;
     background-position: center;
 }
 
-.blankr {
-    grid-area: "blankr";  
+.costeleta-right {
+    grid-area: "costeleta-right";  
     grid-row-start: 3;
     grid-row-end: 6;
     grid-column-start: 5;
     grid-column-end: 5;
-    background-image: url("../images/pokeball-right-01.png");
+    background-image:
+    url("../images/pokeball-right-01.png");
     background-repeat: no-repeat;
-    background-size: 10vw 100%;
+    background-size: auto 100%;
     background-position: center;
     
 }
@@ -88,7 +90,8 @@
     grid-row-end: 7;
     grid-column-start: 1;
     grid-column-end: 1;    
-    background-color: rgb(19, 18, 18);
+    background-color:
+    rgb(19, 18, 18);
 }
 
 .blankfr {
@@ -97,68 +100,68 @@
     grid-row-end: 7;
     grid-column-start: 5;
     grid-column-end: 5;
-    background-color: rgb(19, 18, 18);
+    background-color:
+    rgb(19, 18, 18);
 }
 
-/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
-/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
-/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
+/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
+/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
+/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
 header {
     grid-area: "header";  
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
     grid-column-end: 4;
-    background-color: rgb(250, 102, 33);
+    background-color:
+    rgb(250, 102, 33);
     height: 11vh;
     width: 80vw;
 }
 
 .font-poke {
     color: rgb(255, 217, 0);
-    text-shadow: 1px 5px 5px  rgb(0, 4, 255);
-    margin-right: 5%;
+    text-shadow:
+    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
     line-height: 0.01vh;
     font-family: Pokemon;
-    font-size: 6vh;
+    font-size: 5vh;
+}
+.font-poke a {
+    text-decoration: none;
 }
 
 .topbar {
     grid-area: "header";    
-    max-height: 60px; 
+    max-height: 10vh; 
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
-    line-height: 60px;
+    font-size: 2.1vh;
+    line-height: 7vh;
     color: rgb(0, 0, 0);
     margin-right: 2%;
     margin-left: 2%;
 }
 
-.search-bar {
-    color: black;
-    border: 2px solid rgb(219, 8, 8);
-    background-color: white;
-    border-radius: 7px;
-    width: 30%;
-    height: 30px;
-    line-height: 30px;
-    padding-left: 1%;
+.search-bar form {
+    width: 30vw;
+    height: 10vh;
 }
 
 .buycart{
-    width: 20px;
-    height: 20px;
+    width: 2vh;
+    height: 2vh;
     
 }
 
 .headlink{
     text-decoration: none;
     color: black;
+    font-size: 2.1vh;
 }
-/*==================NAVBAR=============*/
-/*==================NAVBAR=============*/
-/*==================NAVBAR=============*/
+/*==================NAVBAR========*/
+/*==================NAVBAR========*/
+/*==================NAVBAR========*/
 nav {
     grid-area: "nav";
     grid-row-start: 2;
@@ -167,13 +170,12 @@ nav {
     grid-column-end: 4;
     display: flex;
     justify-content: space-between;
-    height: 60px;
-    width: 130%;
-    padding-right: 2%;
-    padding-left: 2%;
-    line-height: 60px;
+    height: auto;
+    width: 80vw;
     background-color: rgb(0, 0, 0);
 }
+
+nav div
 
 .navbar{
     display: flex;
@@ -186,14 +188,15 @@ nav div ul li .navlink{
     color: white;
 
     border-right: solid 1px white;
-    padding-right: 0.5rem;
+    padding-right: 0.8rem;
     margin-right: 1rem;
     text-decoration: none;
 }
 
 nav div ul li {
     display: list-item;
-    text-align: -webkit-match-parent;
+    text-align:
+    -webkit-match-parent;
 
 }
 
@@ -212,10 +215,10 @@ nav div ul li {
     border-radius: 5px;
 }
 
-/*----------------------MAIN------------*/
-/*------------STYLE-----MAIN------------*/
-/*------STYLE-----------MAIN------------*/
-/*----------------------MAIN------------*/
+/*----------------------MAIN-------*/
+/*------------STYLE-----MAIN-------*/
+/*------STYLE-----------MAIN-------*/
+/*----------------------MAIN-------*/
 
 main {
     background-color: white;
@@ -231,10 +234,10 @@ main {
 
 .grid-main {   
     font-family:
-'Yanone Kaffeesatz', sans-serif;
+    'Yanone Kaffeesatz', sans-serif;
     display: grid;
     grid-template-rows: 
-    24vh 24vh 24vh 24vh;
+    22.5vh 22.5vh 22.5vh 22.5vh;
     grid-template-columns:
     14vw 14vw 14vw 14vw;
     grid-template-areas: 
@@ -243,7 +246,7 @@ main {
     'pok9 pok10 pok11 pok12'
     'prox prox prox prox';
     grid-column-gap: 1vw;
-    grid-row-gap: 3.5vh;
+    grid-row-gap: 9.5vh;
     
 }
 
@@ -262,10 +265,11 @@ main {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-image: url("../images/pikachu-01.png");
-    background-position: center;
+    background-image:
+    url("../images/pikachu-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);    
 }
@@ -276,10 +280,11 @@ main {
     grid-row-end: 1;
     grid-column-start: 2;
     grid-column-end: 2;
-    background-image: url("../images/squirtle-01.png");
-    background-position: center;
+    background-image:
+    url("../images/squirtle-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);    
 }
@@ -289,10 +294,11 @@ main {
     grid-row-end: 1;
     grid-column-start: 3;
     grid-column-end: 3;
-    background-image: url("../images/psyduck-01.png");
-    background-position: center;
+    background-image:
+    url("../images/psyduck-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 }
@@ -303,10 +309,11 @@ main {
     grid-row-end: 1;
     grid-column-start: 4;
     grid-column-end: 4;
-    background-image: url("../images/jigg-01.png");
-    background-position: center;
+    background-image:
+    url("../images/jigg-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 }
@@ -317,10 +324,11 @@ main {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-image: url("../images/ditto-01.png");
-    background-position: center;
+    background-image:
+    url("../images/ditto-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 }
@@ -331,10 +339,11 @@ main {
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 2;
-    background-image: url("../images/zapdos-01.png");
-    background-position: center;
+    background-image:
+    url("../images/zapdos-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 }
@@ -345,10 +354,11 @@ main {
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 3;
-    background-image: url("../images/moltres-01-01.png");
-    background-position: center;
+    background-image:
+    url("../images/moltres-01-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 }
@@ -359,10 +369,11 @@ main {
     grid-row-end: 2;
     grid-column-start: 4;
     grid-column-end: 4;
-    background-image: url("../images/meow-01.png");
-    background-position: center;
+    background-image:
+    url("../images/meow-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 
@@ -374,10 +385,11 @@ main {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-image: url("../images/articuno-01.png");
-    background-position: center;
+    background-image:
+    url("../images/articuno-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 
@@ -389,10 +401,11 @@ main {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2;
-    background-image: url("../images/absol-01.png");
-    background-position: center;
+    background-image:
+    url("../images/absol-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 
@@ -404,10 +417,11 @@ main {
     grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 3;
-    background-image: url("../images/beedrill-01.png");
-    background-position: center;
+    background-image:
+    url("../images/beedrill-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 
@@ -419,10 +433,11 @@ main {
     grid-row-end: 3;
     grid-column-start: 4;
     grid-column-end: 4;
-    background-image: url("../images/heracross-01.png");
-    background-position: center;
+    background-image:
+    url("../images/heracross-01.png");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border-radius: 15%;
     border: 2px solid rgb(184, 249, 252);
 }
@@ -436,9 +451,9 @@ main {
     margin-left: 14vw;
 }
 
-/*------------------------------aspect MAIN-------*/
-/*------------------------------aspect MAIN-------*/
-/*------------------------------aspect MAIN-------*/
+/*--------------aspect MAIN-------*/
+/*--------------aspect MAIN-------*/
+/*--------------aspect MAIN-------*/
 
 main ul{
     
@@ -453,7 +468,7 @@ main ul{
     flex-wrap: wrap;
     /*justify-content: flex-end;*/
     align-content: center;
-    font-size: 2.vh;
+    font-size: 2.5vh;
     font-weight: 600;
     text-align: center;
     padding-right: 2.5rem;
@@ -493,16 +508,17 @@ main ul{
     background-size: cover;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 1rem;
-    padding-left: 0.7vw;
-    padding-right: 0.7vw;
-    padding-bottom: 0.2vw;
+    /*padding-left: 0.1vw;
+    padding-right: 0.1vw;
+    padding-bottom: 0.1vw;
     padding-top: 0.8vw;
     /*margin-right: 0.2vw;
     margin-left: 0.2vw;*/
-    font-size: 2.2vh;
-    font-weight: 800;
+    font-size: 2.5vh;
+    font-weight: 600;
     line-height: 2.4vh;
-    width: 7.5vw;
+    width: 11vw;
+    text-align: right;
 }
 
 .btn a {
@@ -521,7 +537,7 @@ main ul{
 
 .prox-item a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .prox-item {
@@ -529,14 +545,14 @@ main ul{
     padding: 0.5rem;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
-    
-    background-color: blueviolet;
-    border: 2px solid black;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(198, 199, 255);
 }
 
-/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>>>>>>*/
-/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>>>>>>*/
-/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>>>>>>*/
+/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>*/
+/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>*/
+/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>*/
 aside {
     grid-area: "sidenav";
     grid-row-start: 3;
@@ -550,9 +566,9 @@ aside img {
     width: 100%;
 }
 
-/*___________________FOOTER____________*/
-/*___________________FOOTER____________*/
-/*___________________FOOTER____________*/
+/*___________________FOOTER_______*/
+/*___________________FOOTER_______*/
+/*___________________FOOTER_______*/
 footer {
     grid-area: "footer";
     grid-row-start: 7;
@@ -560,11 +576,12 @@ footer {
     grid-column-start: 2;
     grid-column-end: 4;
     /*  display: flex;
-        justify-content: space-between; */
+    justify-content: space-between; */
     width: 78vw;
     padding-right: 2%;
     padding-left: 2%;
-    background-color: rgb(19, 18, 18);
+    background-color:
+    rgb(19, 18, 18);
     color: white;
 }
 
@@ -589,12 +606,15 @@ footer {
 }
 
 .bottom {
-    line-height: 0px;
     color: white;
     font-size: 20px;
     text-align: center;
     margin-bottom: 0;
+}
 
+.defaut-clean {
+    text-decoration: none;
+    color: white;
 }
 
 .top-pokes  ol{
@@ -606,4 +626,36 @@ ol {
 
 .poke-img {
     width: 2.8vw;
+}
+
+/*===========MEDIA========MOBILE==*/
+/*-----------------FLEX-----------*/
+/*===========MEDIA========MOBILE==*/
+/*-----------------FLEX-----------*/
+@media(max-width: 888px){
+    .gridzera {
+        grid-template-rows: 
+        7vh 7vh auto auto auto auto 200px;
+        grid-template-columns:
+        10vw   20vw    40vw    20vw    10vw;
+    }
+
+    .header-flex {
+        /*display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;*/
+    }
+    
+    .font-poke {
+        font-size: 3vh;  
+    }
+
+    section .topbar h1 .font-poke form div{
+        flex: 2;
+
+    }
+
+    nav {
+
+    }
 }
