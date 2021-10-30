@@ -1,0 +1,609 @@
+@font-face {
+    font-family: Pokemon;
+    src: url(css/Pokemon-Solid.ttf);
+}
+.gridzera {   
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 
+    11vh 11vh auto auto auto auto 200px;
+    grid-template-columns:
+       10vw   20vw    40vw    20vw    10vw;
+    grid-template-areas: 
+    'blankhl header header header blankhr'
+    'blanknl  nav    nav     nav  blanknr'
+    'blankl content content aside blankr'
+    'blankl content content aside blankr'
+    'blankl content content aside blankr'
+    'blankl content content aside blankr'
+    'blankfl footer footer footer blankfr';
+}
+
+.blankhl {
+    grid-area: "hblankl";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: rgb(250, 102, 33);
+
+}
+.blankhr {
+    grid-area: "hblankr";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-color: rgb(250, 102, 33);
+
+}
+.blanknl {
+    grid-area: "hblankl";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: black;
+    height: 60px;
+}
+.blanknr {
+    grid-area: "hblankr";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-color: black;
+    height: 60px;
+}
+
+.blankl {
+    grid-area: "blankl";  
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 1;    
+    background-image: url("../images/pokeball-left-01.png");
+    background-repeat: no-repeat;
+    background-size: 10vw 100%;
+    background-position: center;
+}
+
+.blankr {
+    grid-area: "blankr";  
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-image: url("../images/pokeball-right-01.png");
+    background-repeat: no-repeat;
+    background-size: 10vw 100%;
+    background-position: center;
+    
+}
+
+.blankfl {
+    grid-area: "blankl";  
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 1;    
+    background-color: rgb(19, 18, 18);
+}
+
+.blankfr {
+    grid-area: "blankr";  
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-color: rgb(19, 18, 18);
+}
+
+/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
+/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
+/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
+header {
+    grid-area: "header";  
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: rgb(250, 102, 33);
+    height: 11vh;
+    width: 80vw;
+}
+
+.font-poke {
+    color: rgb(255, 217, 0);
+    text-shadow: 1px 5px 5px  rgb(0, 4, 255);
+    margin-right: 5%;
+    line-height: 0.01vh;
+    font-family: Pokemon;
+    font-size: 6vh;
+}
+
+.topbar {
+    grid-area: "header";    
+    max-height: 60px; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 60px;
+    color: rgb(0, 0, 0);
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.search-bar {
+    color: black;
+    border: 2px solid rgb(219, 8, 8);
+    background-color: white;
+    border-radius: 7px;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 1%;
+}
+
+.buycart{
+    width: 20px;
+    height: 20px;
+    
+}
+
+.headlink{
+    text-decoration: none;
+    color: black;
+}
+/*==================NAVBAR=============*/
+/*==================NAVBAR=============*/
+/*==================NAVBAR=============*/
+nav {
+    grid-area: "nav";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 130%;
+    padding-right: 2%;
+    padding-left: 2%;
+    line-height: 60px;
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+
+nav div ul li .navlink{
+    color: white;
+
+    border-right: solid 1px white;
+    padding-right: 0.5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+nav div ul li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+
+}
+
+.social1 {
+    grid-area: "nav";  
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-top: 1%;
+}
+
+.socialtop {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+/*----------------------MAIN------------*/
+/*------------STYLE-----MAIN------------*/
+/*------STYLE-----------MAIN------------*/
+/*----------------------MAIN------------*/
+
+main {
+    background-color: white;
+    grid-area: "content";
+    text-align: center;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: auto;
+    height: auto;
+}
+
+.grid-main {   
+    font-family:
+'Yanone Kaffeesatz', sans-serif;
+    display: grid;
+    grid-template-rows: 
+    24vh 24vh 24vh 24vh;
+    grid-template-columns:
+    14vw 14vw 14vw 14vw;
+    grid-template-areas: 
+    'pok1 pok2  pok3  pok4'
+    'pok5 pok6  pok7  pok8'
+    'pok9 pok10 pok11 pok12'
+    'prox prox prox prox';
+    grid-column-gap: 1vw;
+    grid-row-gap: 3.5vh;
+    
+}
+
+.poke-table {
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    height: 100%;
+    width: 60vw;
+   /* background-color: rgb(106, 192, 231);*/
+}
+
+.pok1 {
+    grid-area: "pok1";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-image: url("../images/pikachu-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);    
+}
+
+.pok2 {
+    grid-area: "pok2";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-image: url("../images/squirtle-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);    
+}
+.pok3 {
+    grid-area: "pok3";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    background-image: url("../images/psyduck-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+}
+
+.pok4 {
+    grid-area: "pok4";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    background-image: url("../images/jigg-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+}
+
+.pok5 {
+    grid-area: "pok5";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-image: url("../images/ditto-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+}
+
+.pok6 {
+    grid-area: "pok6";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-image: url("../images/zapdos-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+}
+
+.pok7 {
+    grid-area: "pok7";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    background-image: url("../images/moltres-01-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+}
+
+.pok8 {
+    grid-area: "pok8";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    background-image: url("../images/meow-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+
+}
+
+.pok9 {
+    grid-area: "pok9";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-image: url("../images/articuno-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+
+}
+
+.pok10 {
+    grid-area: "pok10";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-image: url("../images/absol-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+
+}
+
+.pok11 {
+    grid-area: "pok11";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    background-image: url("../images/beedrill-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+
+}
+
+.pok12 {
+    grid-area: "pok12";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    background-image: url("../images/heracross-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15%;
+    border: 2px solid rgb(184, 249, 252);
+}
+
+.prox {
+    grid-area: "prox";
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-left: 14vw;
+}
+
+/*------------------------------aspect MAIN-------*/
+/*------------------------------aspect MAIN-------*/
+/*------------------------------aspect MAIN-------*/
+
+main ul{
+    
+    list-style: none;
+    text-align: center;
+
+}
+
+.card-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*justify-content: flex-end;*/
+    align-content: center;
+    font-size: 2.vh;
+    font-weight: 600;
+    text-align: center;
+    padding-right: 2.5rem;
+}
+
+.card {
+    flex: 1;
+    margin: 1rem;
+
+}
+.poke-void{
+    background-color: none;
+    margin-bottom: 4.5rem;
+}
+.poke-name {
+    color: black;
+    font-weight: 800;
+    font-size: 2.2vh;
+}
+
+.old-price {
+    align-self: center;
+    text-decoration: line-through;
+    color: red;
+}
+
+.actual-price {
+    color: black;
+    font-weight: bold;
+}
+
+.btn{
+    background-image: 
+    url("../images/pokeball-btn-q-01.png");
+    background-position-y: 45%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    padding-bottom: 0.2vw;
+    padding-top: 0.8vw;
+    /*margin-right: 0.2vw;
+    margin-left: 0.2vw;*/
+    font-size: 2.2vh;
+    font-weight: 800;
+    line-height: 2.4vh;
+    width: 7.5vw;
+}
+
+.btn a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    line-height: 1vh;
+
+}
+
+.prox-box{
+    text-align: center;
+    display: flex;
+    margin-left: 5vw;
+    justify-content: space-around;
+}
+
+.prox-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.prox-item {
+    flex: 1;
+    padding: 0.5rem;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+
+/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>>>>>>*/
+/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>>>>>>*/
+/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>>>>>>*/
+aside {
+    grid-area: "sidenav";
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+aside img {
+    width: 100%;
+}
+
+/*___________________FOOTER____________*/
+/*___________________FOOTER____________*/
+/*___________________FOOTER____________*/
+footer {
+    grid-area: "footer";
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    /*  display: flex;
+        justify-content: space-between; */
+    width: 78vw;
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color: rgb(19, 18, 18);
+    color: white;
+}
+
+.containerfoot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav{
+    text-decoration: none;
+    color: white;
+}
+
+.social2 {
+    margin-top: 2%;
+}
+
+.socialfoot {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.bottom {
+    line-height: 0px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+.top-pokes  ol{
+    list-style-type: decimal;
+}
+ol {
+    list-style-type: decimal;
+}
+
+.poke-img {
+    width: 2.8vw;
+}
