@@ -7,7 +7,7 @@
     display: grid;
     width: 100vw;
     grid-template-rows: 
-    11vh 11vh auto auto auto auto 50vh;
+    11vh 11vh auto auto 3vh 0 500px;
     grid-template-columns:
        10vw   20vw    40vw    20vw    10vw;
     grid-template-areas: 
@@ -26,7 +26,7 @@
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-color: rgb(255, 125, 65);
+    background-color: rgba(214, 68, 0, 0.863);
 
 }
 .blankhr {
@@ -35,7 +35,7 @@
     grid-row-end: 1;
     grid-column-start: 5;
     grid-column-end: 5;
-    background-color: rgb(255, 125, 65);
+    background-color: rgba(214, 68, 0, 0.863);
 }
 .blanknl {
     grid-area: "hblankl";
@@ -112,14 +112,13 @@ header {
     grid-row-end: 1;
     grid-column-start: 2;
     grid-column-end: 4;
-    background-color: rgb(255, 125, 65);
+    background-color: rgba(214, 68, 0, 0.863);
     height: 11vh;
     width: 80vw;
 }
 
 .font-poke {
     color: #FFDE00;
-    color: ;
     text-shadow:
     0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
     line-height: 0.01vh;
@@ -136,6 +135,32 @@ header {
     0.5rem 0.8vh 0.4vw rgb(0, 4, 255);
 }
 
+h1 .font-poke {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+    text-shadow:
+    0.1rem 0.1vh 0.1vw rgb(77, 249, 255);
+    margin-left: 100%;
+    width: 300%;
+    }
+    75% {
+        text-shadow:
+        0.8rem 1.9vh 1.9vw rgb(0, 4, 255);
+        margin-left: 25%;
+        width: 150%;
+        font-size: 220%;
+    }
+    to {
+        text-shadow:
+        0.1rem 0.1vh 0.1vw rgb(0, 4, 255);
+        margin-left: 0%;
+        width: 100%;
+    }
+}
 
 .topbar {
     grid-area: "header";    
@@ -212,10 +237,11 @@ nav div ul li .navlink{
 }
 
 nav div ul li {
-    display: list-item;
+    /*display: list-item;
     text-align:
-    -webkit-match-parent;
+    -webkit-match-parent;*/
 }
+
 .social1 {
     grid-area: "nav";  
     grid-row-start: 1;
@@ -235,23 +261,22 @@ nav div ul li {
 /*------STYLE-----------MAIN-------*/
 /*----------------------MAIN-------*/
 main {
-    background-color: white;
     grid-area: "content";
-    text-align: center;
+    /*text-align: center;*/
     grid-row-start: 3;
     grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 4;
-    width: auto;
-    height: auto;
+    /*width: auto;
+    height: auto;*/
 }
 
-.grid-main {   
+main .grid-main {   
     font-family:
     'Yanone Kaffeesatz', sans-serif;
     display: grid;
     grid-template-rows: 
-    22.5vh 22.5vh 22.5vh 22.5vh;
+    30vh 30vh 30vh 10vh;
     grid-template-columns:
     14vw 14vw 14vw 14vw;
     grid-template-areas: 
@@ -261,14 +286,18 @@ main {
     'prox prox prox prox';
     grid-column-gap: 1vw;
     grid-row-gap: 9.5vh;
+    margin: 1%;
 }
 
 .poke-table {
     text-align: center;
     margin-top: 1vh;
-    margin-bottom: 5vh;
-    height: 100%;
-    width: 60vw;
+    margin-bottom: 1vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+
+    /*height: 100%;
+    width: 60vw;*/
    /* background-color: rgb(106, 192, 231);*/
 }
 /*---------------------POKEMONS-----*/
@@ -285,8 +314,9 @@ main {
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);    
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);    
+    margin: 0;
 }
 .pok2 {
     grid-area: "pok2";
@@ -296,11 +326,12 @@ main {
     grid-column-end: 2;
     background-image:
     url("../images/squirtle-01.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);    
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);    
+    margin: 0;
 }
 .pok3 {
     grid-area: "pok3";
@@ -310,11 +341,12 @@ main {
     grid-column-end: 3;
     background-image:
     url("../images/psyduck-01.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
 }
 .pok4 {
     grid-area: "pok4";
@@ -324,11 +356,12 @@ main {
     grid-column-end: 4;
     background-image:
     url("../images/jigg-01.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
 }
 .pok5 {
     grid-area: "pok5";
@@ -338,12 +371,14 @@ main {
     grid-column-end: 1;
     background-image:
     url("../images/ditto-01.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
 }
+
 .pok6 {
     grid-area: "pok6";
     grid-row-start: 2;
@@ -352,12 +387,14 @@ main {
     grid-column-end: 2;
     background-image:
     url("../images/zapdos-01.png");
-    background-position: top;
+    background-position: 40%;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
 }
+
 .pok7 {
     grid-area: "pok7";
     grid-row-start: 2;
@@ -369,9 +406,11 @@ main {
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
 }
+
 .pok8 {
     grid-area: "pok8";
     grid-row-start: 2;
@@ -383,9 +422,12 @@ main {
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
+
 }
+
 .pok9 {
     grid-area: "pok9";
     grid-row-start: 3;
@@ -397,9 +439,11 @@ main {
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
 }
+
 .pok10 {
     grid-area: "pok10";
     grid-row-start: 3;
@@ -408,12 +452,14 @@ main {
     grid-column-end: 2;
     background-image:
     url("../images/absol-01.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
 }
+
 .pok11 {
     grid-area: "pok11";
     grid-row-start: 3;
@@ -422,12 +468,15 @@ main {
     grid-column-end: 3;
     background-image:
     url("../images/beedrill-01.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(184, 249, 252);
+    margin: 0;
+
 }
+
 .pok12 {
     grid-area: "pok12";
     grid-row-start: 3;
@@ -436,11 +485,12 @@ main {
     grid-column-end: 4;
     background-image:
     url("../images/heracross-01.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 15%;
-    border: 2px solid rgb(184, 249, 252);
+    border-radius: 2.5%;
+    border: 1px solid rgb(164, 226, 230);
+    margin: 0;
 }
 
 .prox {
@@ -449,46 +499,114 @@ main {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 4;
-    margin-left: 14vw;
+    margin-left: 11vw;
+    margin-bottom: 0;
+    
 }
 /*--------------aspect MAIN-------*/
 /*--------------aspect MAIN-------*/
 /*--------------aspect MAIN-------*/
-main ul{
+main div .poke-table button {
     list-style: none;
     text-align: center;
 }
 
-.card-flex .btn {
-    display: flex;
-    flex-direction: column;
-    /*flex-wrap: wrap;*/
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 2.5vh;
-    font-weight: 600;
+div .card-flex {
+    transform: all ease 0.5s;
     text-align: center;
-    /*padding-right: 2.5rem;*/
+    /*padding: 10px;*/
+    border: solid #DDD;
+}
+
+.poke-table .card-flex:hover {
+    box-shadow: 2px 3px 20px #1900ff;
 }
 
 .card {
-    flex: 1;
-    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-end;
+    justify-content: space-between;
+    /*justify-content: flex-end;*/
 }
 
-.poke-void{
-    background-color: none;
-    margin-bottom: 4.5rem;
+.card-flex .card {
+   /* display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+/*    width: 100%;*/
 }
 
-.poke-name {
+.poke-void .poke-name .old-price .actual-price .btn {
+    /*flex: 1 0 70%;*/
+    /*align-self: flex-end;*/
+}
+
+@keyframes pokeBtnAnimation {
+    0% {
+        background-position: 0% 5%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.poke-table .card-flex:hover .btn {
+    animation: pokeBtnAnimation 5s ease infinite;
+}
+
+.poke-data {
+    /*flex: 1;*/
+    margin: 1%;
+}
+
+.card-head {
+    align-self: baseline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    font-size: 0.8rem;
+}
+
+.poke-void {
+    align-self: baseline;
+}
+.card .poke-void img {    
+    transform: all ease 0.5s;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0.8rem;
+}
+
+.poke-void img:hover {
+    background-image: url("../images/pokeball-2.png");
+    background-position-y: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor:grabbing;
+    cursor: zoom-in;
+    /* mask-image:
+    linear-gradient(rgba(0,0,0,1,0), transparent);
+    mask-image:
+    image(url(../images/favicon-pokes.ico), skyblue);*/
+    /*margin-bottom: 4.5rem;*/
+}
+
+.card-head h2 .poke-name {
     color: black;
     font-weight: 800;
-    font-size: 2.2vh;
+    font-size: 0.5rem;
+    margin: 0;
 }
 
 .old-price {
-    align-self: center;
+    /*align-self: baseline;*/
     text-decoration: line-through;
     color: red;
 }
@@ -496,34 +614,64 @@ main ul{
 .actual-price {
     color: black;
     font-weight: bold;
+    font-size: 2.5vh;
 }
 
-.btn{
-    background-image: 
+.poke-data .btn {
+    /*flex-wrap: wrap;*/
+    font-size: 2.5vh;
+    font-weight: 600;
+    text-align: center;
+    /*padding-right: 2.5rem;*/
+}
+
+.poke-table .card-flex .btn{
+    background: linear-gradient(-45deg, #ce0606, #ec6834, #d5c923, #23d5ab);
+    background-size: 400% 400%;
+    cursor: pointer;
+}
+
+
+button {
+    display: flex;
+    justify-content: space-between;
+}
+
+button img .buy {
+    flex: 0 1 100%;
+}
+
+.btn {
+    /*background-image: 
     url("../images/pokeball-btn-q-01.png");
-    background-position-y: 45%;
+    background-position-y: 40%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     border: 1px solid rgb(0, 0, 0);
     border-radius: 1rem;
-    /*padding-left: 0.1vw;
-    padding-right: 0.1vw;
-    padding-bottom: 0.1vw;
-    padding-top: 0.8vw;
+    padding-left: 3%;
+    padding-right: 12%;
+    padding-bottom: 3%;
+    padding-top: 6%;
     /*margin-right: 0.2vw;
     margin-left: 0.2vw;*/
     font-size: 2.5vh;
     font-weight: 600;
     line-height: 2.4vh;
-    width: 11vw;
+    width: 100%;
     text-align: right;
+    margin: 0;
 }
 
 .btn a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     line-height: 1vh;
+}
 
+.btn img {
+    height: 1.6rem;
+    margin-right: 0.3rem;
 }
 
 .prox-box{
@@ -564,7 +712,6 @@ aside {
     grid-column-start: 4;
     grid-column-end: 4;
     width: 100%;
-    background-color: rgb(255, 255, 255);
 }
 aside img {
     width: 100%;
@@ -717,10 +864,11 @@ ol {
 /*-----------------FLEX-----------*/
 /*===========MEDIA========MOBILE==*/
 /*-----------------FLEX-----------*/
+
 @media(max-width: 888px){
     .gridzera {
         grid-template-rows: 
-        7vh 7vh auto auto auto auto 200px;
+        7vh 7vh auto auto auto auto 300px;
         grid-template-columns:
         10vw   20vw    40vw    20vw    10vw;
     }
@@ -742,5 +890,102 @@ ol {
 
     nav {
 
+    }
+}
+
+
+@media(max-width: 413px){
+    .gridzera {
+        grid-template-rows: 
+        5vh 4vh 40vh 40vh 2vh 2vh 500px;
+        grid-template-columns:
+        0   50vw    20vw    30vw    0;
+        margin: 0;
+    }
+    main .grid-main {   
+        font-family:
+        'Yanone Kaffeesatz', sans-serif;
+        display: grid;
+        grid-template-rows: 
+        15vh 15vh 15vh 5vh;
+        grid-template-columns:
+        17vw 17vw 17vw 17vw;
+        grid-template-areas: 
+        'pok1 pok2  pok3  pok4'
+        'pok5 pok6  pok7  pok8'
+        'pok9 pok10 pok11 pok12'
+        'prox prox prox prox';
+        grid-column-gap: 0.2vw;
+        grid-row-gap: 6vh;
+        margin: 1%;
+    }
+    header {
+        width: 99vw;
+    }
+    nav {
+        width: 99vw;
+    }
+    footer {
+        width: 99vw;
+    }
+    .main {
+        width: ;
+    }
+    header section h1 .font-poke {
+        margin-top: 0;
+        padding-top: 0;
+        height: 4vh;
+    }
+    
+    .font-poke {
+        font-size: 2vh;  
+    }
+
+    .headlink {
+        font-size: 0.7rem;
+    }
+
+    .navlink {
+        font-size: 0.7rem;
+    }
+
+    a .socialfoot {
+        max-width: 15px;
+        max-height: 15px;
+    }
+
+    .card-flex .poke-data {
+        height: fit-content;
+    }
+
+    .poke-void img {
+        width: 15px;
+    }
+    
+    .poke-name {
+        font-size: 0.9rem;
+    }
+
+    .old-price {
+        font-size: 0.7rem;
+    }
+
+    .actual-price {
+        font-size: 0.7rem;
+    }
+
+    button img {
+        max-width: 15px;
+        max-height: 15px;
+    }
+
+    .btn .buy {
+        font-size: 0.6rem;
+    }
+    .
+
+    .footer-nav ul li a { 
+        list-style-image: none;
+        font-size: 0.3rem;
     }
 }
