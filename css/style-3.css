@@ -1,0 +1,166 @@
+
+@media(max-width: 420px){
+    .gridzera {
+        grid-template-rows: 
+        11vh 4vh 40vh 40vh 2vh 1fr 500px;
+        grid-template-columns:
+        0   50vw    20vw    30vw    0;
+        margin: 0;
+    }
+    header {
+        height: 11vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-container {
+        display: block;
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    header .topbar .profile {
+        top: 5px;
+        right: 5px;
+        margin-top: 0;
+        margin-right: 0;
+        position: absolute;
+    }
+
+    header .header-container .profile {
+        font-size: 0.1rem;
+    }
+
+    header .header-container h1 {
+        margin-top: -5px;
+        padding-top: 0;
+    }
+    
+    .header-container h1 .font-poke {
+        font-size: 2vh;
+        line-height: 0;
+    }
+
+    header .topbar .header-container>div {
+        display: block;
+    }
+
+
+    header .topbar .search {
+        margin-left: 0;
+    }
+
+    header .topbar .search-input .input {
+        width: 60%;
+    }
+
+    header .topbar .search-input .input focus {
+        width: 70%;
+    }
+/* -------------- |NAV NAV---------NAV| --*/
+/* -------------- |NAV ---NAV------NAV|- --*/
+/* ---------------|NAV -------NAV--NAV| --*/
+/* ---------------|NAV -------NAV--NAV|- --*/
+    nav {
+        width: 99vw;
+        height: 4vh;
+    }
+    nav .navbar {
+        display: flex;
+        overflow: scroll;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .navlink {
+        font-size: 0.7rem;
+    }
+
+    a .socialfoot {
+        max-width: 15px;
+        max-height: 15px;
+    }
+/*---------MAN--MAIN-------MAIN-MAIN------*/
+/*---------MAN-------MAIN-------MAIN------*/
+/*---------MAN-------MAIN-------MAIN------*/
+/*---------MAN-------MAIN-------MAIN------*/
+    .main {
+        width: 99%;
+        height: 100%;
+    }
+
+    main .grid-main {   
+        font-family:
+        'Yanone Kaffeesatz', sans-serif;
+        display: grid;
+        grid-template-rows: 
+        15vh 15vh 15vh 1fr;
+        grid-template-columns:
+        17vw 17vw 17vw 17vw;
+        grid-template-areas: 
+        'pok1 pok2  pok3  pok4'
+        'pok5 pok6  pok7  pok8'
+        'pok9 pok10 pok11 pok12'
+        'prox prox prox prox';
+        grid-column-gap: 0.2vw;
+        grid-row-gap: 3vh;
+        margin: 1%;
+    }
+
+    .card-flex .poke-data {
+        height: fit-content;
+    }
+
+    .poke-void img {
+        width: 15px;
+    }
+    
+    .poke-name {
+        font-size: 0.5rem;
+    }
+
+    .old-price {
+        font-size: 0.7rem;
+    }
+
+    .actual-price {
+        font-size: 0.7rem;
+    }
+
+    button img {
+        max-width: 15px;
+        max-height: 15px;
+    }
+
+    .btn .buy {
+        font-size: 0.6rem;
+    }
+/*------------ASIDE-ASIDE-ASIDE---------*/
+/*------------ASIDE-------ASIDE---------*/
+/*------------ASIDE-ASIDE-ASIDE---------*/
+/*------------ASIDE-------ASIDE---------*/
+    aside .top-pokes {
+        width: 20px;
+    }
+    .news h4 {
+        font-size: 0.6rem;
+    }
+
+    footer {
+        width: 99vw;
+    }
+
+    .footer-nav ul li a { 
+        list-style-image: none;
+        font-size: 0.3rem;
+    }
+}
+/*TODO
+/* Não deu tempo de resolver tudo aqui*/
+/* Precisa Enquadrar melhor o TOp Pokemons*/
+/* Assim como o carrinho de compra*/
+/* Apagar as casses que criri atoa*/
+/* Criar MAIS outros tipos de mediaQueries*/
+/* Criar outro Main sem suar a img de pokemon no 
+backgound-image e sim como o professor fez*/
