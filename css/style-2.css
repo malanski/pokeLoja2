@@ -17,8 +17,9 @@
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);    
     margin: 0;
+    height: 100%;
 }
-.pok2 {
+.pok2  {
     grid-area: "pok2";
     grid-row-start: 1;
     grid-row-end: 1;
@@ -26,12 +27,14 @@
     grid-column-end: 2;
     background-image:
     url("../images/squirtle-01.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);    
     margin: 0;
+    height: 100%;
+
 }
 .pok3 {
     grid-area: "pok3";
@@ -41,13 +44,15 @@
     grid-column-end: 3;
     background-image:
     url("../images/psyduck-01.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
 }
+
 .pok4 {
     grid-area: "pok4";
     grid-row-start: 1;
@@ -56,13 +61,15 @@
     grid-column-end: 4;
     background-image:
     url("../images/jigg-01.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
 }
+
 .pok5 {
     grid-area: "pok5";
     grid-row-start: 2;
@@ -71,12 +78,13 @@
     grid-column-end: 1;
     background-image:
     url("../images/ditto-01.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
 }
 
 .pok6 {
@@ -87,12 +95,14 @@
     grid-column-end: 2;
     background-image:
     url("../images/zapdos-01.png");
-    background-position: 40%;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
+
 }
 
 .pok7 {
@@ -109,6 +119,8 @@
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
+
 }
 
 .pok8 {
@@ -125,6 +137,8 @@
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
+
 
 }
 
@@ -142,6 +156,8 @@
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
+
 }
 
 .pok10 {
@@ -152,12 +168,14 @@
     grid-column-end: 2;
     background-image:
     url("../images/absol-01.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
+
 }
 
 .pok11 {
@@ -168,12 +186,14 @@
     grid-column-end: 3;
     background-image:
     url("../images/beedrill-01.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(184, 249, 252);
     margin: 0;
+    height: 100%;
+
 
 }
 
@@ -185,10 +205,12 @@
     grid-column-end: 4;
     background-image:
     url("../images/heracross-01.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 2.5%;
     border: 1px solid rgb(164, 226, 230);
     margin: 0;
+    height: 100%;
+
 }

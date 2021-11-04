@@ -106,10 +106,12 @@
     background-color:
     rgb(26, 26, 26);
 }
-
-/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
-/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
-/*¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨HEADER¨¨¨¨¨¨¨¨*/
+/* ----- |HEAD-----------HEAD| ------ --*/
+/* ----- |HEAD-----------HEAD| ----- --*/
+/* ----- |HEAD-HEAD-HEAD-HEAD| ----- --*/
+/* ----- |HEAD-----------HEAD| ----- --*/
+/* ----- |HEAD-----------HEAD| ---- --*/
+/* ----- |HEAD-----------HEAD| ---- --*/
 header {
     grid-area: "header";  
     grid-row-start: 1;
@@ -204,16 +206,13 @@ header .topbar .search-input button {
     position: absolute;
     right: 3px;
     top: 3px;
-}
-
-header .topbar .search-input button {
     background:
     url("../images/pokeball-1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border: 0;
     cursor: grabbing;   
 }
@@ -222,7 +221,7 @@ header .topbar .search-input input {
     transition: width 0.3s ease-in-out;
     border-radius: 5px;
     border: 0;
-    width: 123px;
+    width: 130px;
     padding: 15px 33px 15px 17px;
 }
 
@@ -265,27 +264,36 @@ header .topbar .headlink{
 .buycart {
     width: 2.5vh;
     height: 2.5vh;
+    margin-right: 15px;
 }
-/*==================NAVBAR========*/
-/*==================NAVBAR========*/
-/*==================NAVBAR========*/
+/*---- |NAV NAV--------NAV| -------*/
+/*---- |NAV -NAV-------NAV| ------*/
+/*---- |NAV ---NAV-----NAV| -------*/
+/*-----|NAV ------NAV--NAV| ------*/
+/*-----|NAV ------NAV--NAV| -----*/
 nav {
     grid-area: "nav";
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 4;
-    display: flex;
-    justify-content: space-between;
     height: auto;
     width: 80vw;
     background-color: rgb(0, 0, 0);
 }
-
-.navbar{
+nav .nav-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
+    margin: auto;
 }
 
 div .navbar li .navlink:hover {
@@ -320,10 +328,11 @@ nav div ul li {
     height: 25px;
     border-radius: 5px;
 }
-/*----------------------MAIN-------*/
-/*------------STYLE-----MAIN-------*/
-/*------STYLE-----------MAIN-------*/
-/*----------------------MAIN-------*/
+/* - |MAIN-MA------MAIN-MAIN|  --*/
+/* - |MAIN--MA-----MAIN-MAIN|  --*/
+/* - |MAIN----IN--IN----MAIN|  --*/
+/* - |MAIN------MA------MAIN|  --*/
+/* - |MAIN-----MA-------MAIN|  --*/
 main {
     grid-area: "content";
     /*text-align: center;*/
@@ -340,7 +349,7 @@ main .grid-main {
     'Yanone Kaffeesatz', sans-serif;
     display: grid;
     grid-template-rows: 
-    30vh 30vh 30vh 10vh;
+    50vh 50vh 50vh 10vh;
     grid-template-columns:
     14vw 14vw 14vw 14vw;
     grid-template-areas: 
@@ -360,23 +369,7 @@ main .grid-main {
     margin-left: 1vh;
     margin-right: 1vh;
 }
-/*-----LOOK IN -----------POKEMONS--*/
-/*--------the-------------POKEMONS--*/
-/*------STYLE-2.CSS-------POKEMONS--*/
 
-.prox {
-    grid-area: "prox";
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    margin-left: 11vw;
-    margin-bottom: 0;
-}
-
-/*--------------aspect MAIN-------*/
-/*--------------aspect MAIN-------*/
-/*--------------aspect MAIN-------*/
 main div .poke-table button {
     list-style: none;
     text-align: center;
@@ -392,22 +385,22 @@ div .card-flex {
 .poke-table .card-flex:hover {
     box-shadow: 2px 3px 20px #1900ff;
 }
-
 .card {
     display: flex;
+    flex: 2;
     flex-direction: column;
     align-content: space-between;
-    align-items: flex-end;
+    align-items: stretch;
     justify-content: space-between;
     /*justify-content: flex-end;*/
 }
 
 .card-flex .card {
-   /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 0;
-/*    width: 100%;*/
+    width: 100%;
 }
 
 .poke-void .poke-name .old-price .actual-price .btn {
@@ -439,14 +432,14 @@ div .card-flex {
 .card-head {
     align-self: baseline;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: start;
     font-size: 0.8rem;
 }
 
 .poke-void {
-    align-self: baseline;
+    align-self: flex-end;
 }
 .card .poke-void img {    
     transform: all ease 0.5s;
@@ -463,11 +456,6 @@ div .card-flex {
     background-size: cover;
     cursor:grabbing;
     cursor: zoom-in;
-    /* mask-image:
-    linear-gradient(rgba(0,0,0,1,0), transparent);
-    mask-image:
-    image(url(../images/favicon-pokes.ico), skyblue);*/
-    /*margin-bottom: 4.5rem;*/
 }
 
 .card-head h2 .poke-name {
@@ -476,7 +464,12 @@ div .card-flex {
     font-size: 0.5rem;
     margin: 0;
 }
-
+.card-flex .card .prices {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    align-content: flex-end;
+}
 .old-price {
     /*align-self: baseline;*/
     text-decoration: line-through;
@@ -502,7 +495,6 @@ div .card-flex {
     background-size: 400% 400%;
     cursor: pointer;
 }
-
 
 .btn {
     display: flex;
@@ -549,6 +541,19 @@ div .card-flex {
 
     margin-left: 0.3rem;
 }
+/*_________PROX BUTTONS BUTTONS-------*/
+/*_________PROX         BUTTONS-------*/
+/*_________PROX BUTTONS--------------*/
+/*_________PROX BUTTONS--------------*/
+.prox {
+    grid-area: "prox";
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-left: 11vw;
+    margin-bottom: 0;
+}
 
 .prox-box{
     text-align: center;
@@ -577,10 +582,13 @@ div .card-flex {
     box-shadow: 1px 3px 10px #FFDE00;
     background-color: #FFDE00;
 }
+/*---------------- |ASIDE-ASIDE-ASIDE| --*/
+/*---------------- |ASIDE-ASIDE-ASIDE| --*/
+/*---------------- |ASIDE       ASIDE| --*/
+/*---------------- |ASIDE-ASIDE-ASIDE| --*/
+/*---------------- |ASIDE       ASIDE| --*/
+/*---------------- |ASIDE       ASIDE| --*/
 
-/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>*/
-/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>*/
-/*>>>>>>>>>>>>>>ASIDE>>>>>>>>>>>>>*/
 aside {
     grid-area: "sidenav";
     grid-row-start: 3;
@@ -624,9 +632,11 @@ aside img {
     
 }
 
-/*___________________FOOTER_______*/
-/*___________________FOOTER_______*/
-/*___________________FOOTER_______*/
+/*-- |FOOTER-FOOTER-FOOTER| -----*/
+/*-- |FOOTER-FOOTER-FOOTER| -----*/
+/*-- |FOOTER|             -------*/
+/*-- |FOOTER-FOOTER-FOOTER|------*/
+/*-- |FOOTER|              ------*/
 footer {
     grid-area: "footer";
     grid-row-start: 7;
@@ -650,6 +660,7 @@ footer .containerfoot {
 
 footer .footer-nav li {
     margin-bottom: 10px;
+    list-style-type: none;
 }
 
 footer .footer-nav a {
