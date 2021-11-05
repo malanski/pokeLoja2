@@ -13,7 +13,7 @@ body {
     display: grid;
     width: 100vw;
     grid-template-rows: 
-    10vh 7vh auto auto auto 0 500px;
+    10vh 7vh auto auto auto 0 auto;
     grid-template-columns:
        10vw   20vw    40vw    20vw    10vw;
     grid-template-areas: 
@@ -283,14 +283,14 @@ nav {
     width: 80vw;
     background-color: rgb(0, 0, 0);
 }
-nav .nav-container {
+nav div .nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: nowrap;
-    width: 100%;
-    margin: auto;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -310,18 +310,8 @@ nav div ul li .navlink{
     text-decoration: none;
 }
 
-nav div ul li {
-    /*display: list-item;
-    text-align:
-    -webkit-match-parent;*/
-}
-
 .social1 {
-    grid-area: "nav";  
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 4;
+
     margin-top: 1%;
 }
 
@@ -337,7 +327,6 @@ nav div ul li {
 /* - |MAIN-----MA-------MAIN|  --*/
 main {
     grid-area: "content";
-    /*text-align: center;*/
     grid-row-start: 3;
     grid-row-end: 6;
     grid-column-start: 2;
