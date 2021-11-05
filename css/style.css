@@ -1,7 +1,9 @@
 /*CSS Principal, contém a etrutura dos GRID's*/
 /*os pokemons dos cards estão no style-2.css */
 /*os MediaQueries estão no style-3.css       */
-
+body {
+    overflow-x: hidden;
+}
 @font-face {
     font-family: Pokemon;
     src: url(Pokemon-Solid.ttf);
@@ -11,7 +13,7 @@
     display: grid;
     width: 100vw;
     grid-template-rows: 
-    10vh 7vh auto auto 3vh 0 500px;
+    10vh 7vh auto auto auto 0 500px;
     grid-template-columns:
        10vw   20vw    40vw    20vw    10vw;
     grid-template-areas: 
@@ -359,10 +361,10 @@ main .grid-main {
     'prox prox prox prox';
     grid-column-gap: 1vw;
     grid-row-gap: 9.5vh;
-    margin: 1%;
+    margin: 0.5vh 0.5vw;
 }
 
-.poke-table {
+main .poke-table {
     text-align: center;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -375,17 +377,17 @@ main div .poke-table button {
     text-align: center;
 }
 
-div .card-flex {
+main .poke-table div .card-flex {
     transform: all ease 0.5s;
     text-align: center;
     /*padding: 10px;*/
     border: solid #DDD;
 }
 
-.poke-table .card-flex:hover {
+main .poke-table .card-flex:hover {
     box-shadow: 2px 3px 20px #1900ff;
 }
-.card {
+main .poke-table .card {
     display: flex;
     flex: 2;
     flex-direction: column;
@@ -395,9 +397,9 @@ div .card-flex {
     /*justify-content: flex-end;*/
 }
 
-.card-flex .card {
+main .card-flex .card-head {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
     margin-bottom: 0;
     width: 100%;
@@ -462,16 +464,26 @@ div .card-flex {
     color: black;
     font-weight: 800;
     font-size: 0.5rem;
+    margin-left: 5px;
+}
+
+.card-flex .card-feet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin: 0;
 }
+
 .card-flex .card .prices {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-    align-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
+
 .old-price {
-    /*align-self: baseline;*/
+    flex: auto;
+    align-self: flex-start;
     text-decoration: line-through;
     color: red;
 }
@@ -597,8 +609,40 @@ aside {
     grid-column-end: 4;
     width: 100%;
 }
-aside img {
+
+aside .sizing  {
     width: 100%;
+}
+
+aside .gambeta {
+    position: relative;
+    display: block;
+    background-image:
+    url('../images/tenor-wave.gif');
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    width: 100%;
+}
+
+aside .gambeta::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-image:
+    url('../images/tenor-wave-2.gif');
+    background-position: center center;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+aside .gambeta>div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: ;
 }
 
 .news {
@@ -728,10 +772,12 @@ nav .social1 .socialfoot {
     padding: 10px 0;
     margin: 0;
 }
+
 .top-pokes ol {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 
 .top-pokes li {
@@ -742,6 +788,7 @@ nav .social1 .socialfoot {
     border-bottom: solid 1px rgb(255, 226, 194);
     transition: all ease 0.3s;
     cursor: pointer;
+    height: auto;
 }
 
 .top-pokes li:hover {
@@ -766,7 +813,12 @@ nav .social1 .socialfoot {
 }
 
 .top-pokes .poke-img {
-    width: 50px;
+    width: 100%;
+    margin: 0 8px;
+}
+
+footer .top-pokes .poke-img {
+    width: 20%;
     margin: 0 8px;
 }
 
