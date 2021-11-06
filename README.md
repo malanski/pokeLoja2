@@ -36,3 +36,5 @@ main .__grid-main__ {
       
   #### those parts refered as pok'number' above are the spaces for the cards and they hold all the information for the porducts in the store.
   
+  ##### Page#1 é um local de testes prara ezercicios CSS.
+  
