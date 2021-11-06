@@ -71,6 +71,7 @@
     }
 
     header .topbar .search {
+        margin-top: -25px;
         margin-left: 0;
     }
 
@@ -280,16 +281,16 @@
     }
 
     .top-pokes h3 {
-        font-size: 0.7rem;
+        font-size: 1.5rem;
     }
 
     .top-pokes ol {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         margin-left: -10px;
     }
 
     .top-pokes span {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
         margin-left: -10px;
     }
 
