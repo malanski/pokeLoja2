@@ -38,7 +38,7 @@
         margin: 0;
     }
 
-    header .topbar .header-container>div {
+    header .topbar .header-container {
         display: block;
     }
 
@@ -60,23 +60,22 @@
         margin-left: -5px;
     }
 
-    header .header-container h1 {
+    .header-container .logo .font-poke{
         margin-top: -5px;
         padding-top: 0;
-    }
-    
-    .header-container h1 .font-poke {
-        font-size: 2vh;
-        line-height: 0;
+        font-size: 2.9vh;
+        line-height: 55px;
+        margin-bottom: 0;
     }
 
     header .topbar .search {
-        margin-top: -25px;
+        margin-top: 2px;
         margin-left: 0;
     }
 
     header .topbar .search-input input {
-        width: 100%;
+        width: 80%;
+        height: 10%;
     }
 
     header .topbar .search-input input:focus {
@@ -84,7 +83,7 @@
     }
 
     header .topbar .search-input button {
-    /*  margin-left: -25px;*/
+        margin-left: -25px;
     }
 /* -------------- |NAV NAV----------NAV| --*/
 /* -------------- |NAV --NAV--------NAV| --*/
@@ -112,10 +111,11 @@
         max-width: 15px;
         max-height: 15px;
     }
-/*---------|MAN--MAIN-------MAIN-MAIN------*/
-/*---------|MAN-------|MAIN-------|MAIN------*/
-/*---------|MAN-------|MAIN-------|MAIN------*/
-/*---------|MAN-------|MAIN-------|MAIN------*/
+/*---------|MAN-|MAIN|-----|MAIN|-|MAIN------*/
+/*---------|MAN-|MAIN|-----|MAIN|-|MAIN------*/
+/*---------|MAN-------|MAIN|------|MAIN------*/
+/*---------|MAN-------|MAIN|------|MAIN------*/
+/*---------|MAN-------|MAIN|------|MAIN------*/
     .main {
         grid-row-start: 2;
         grid-row-end: 6;

@@ -13,7 +13,7 @@ body {
     display: grid;
     width: 100vw;
     grid-template-rows: 
-    15vh 7vh auto auto auto 0 auto;
+    17vh 7vh auto auto auto 0 auto;
     grid-template-columns:
        10vw   20vw    40vw    20vw    10vw;
     grid-template-areas: 
@@ -129,13 +129,6 @@ header {
     padding: 1% 0;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    width: 75vw;
-    margin: auto;
-}
-
 .topbar {
     grid-area: "header";    
     max-height: 10vh; 
@@ -143,13 +136,22 @@ header {
     margin-left: 2%;
 }
 
-header .topbar .header-container>div {
-    display: flex;
+.header-container {
+   /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    width: 75vw;
+    margin: auto;*/
 }
 
-header .topbar .font-poke {
+header .topbar .header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75vw;
+    margin: auto;
+}
+
+header .header-container .font-poke {
     color: #FFDE00;
     text-shadow:
     0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
@@ -158,17 +160,28 @@ header .topbar .font-poke {
     font-size: 7vh;
     transition: all ease 0.9s;
 }
-
-.font-poke a {
+.logo a {
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
 }
 
-.font-poke a:hover {
+.logo {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.font-poke {    
+    text-transform: uppercase;
+}
+
+a .font-poke:hover {
     text-shadow:
     0.5rem 0.8vh 0.4vw rgb(0, 4, 255);
 }
 
-h1 .font-poke {
+.font-poke {
     animation-duration: 3s;
     animation-name: slidein;
 }
@@ -176,6 +189,19 @@ h1 .font-poke {
 .pika-run {
     animation-duration: 3s;
     animation-name: runing;
+}
+.pika-spin {
+    
+    animation: pikaspin 3s infinite linear;
+}
+
+@keyframes pikaspin {
+    0% {
+        transform: rotate(0deg)    
+    }
+    100% {
+        transform: rotate(360deg)  
+    }
 }
 
 @keyframes slidein {
@@ -201,25 +227,23 @@ h1 .font-poke {
 }
 @keyframes runing {
     from {
-    background-image: url("../images/favicon-pokes.ico");
+    background-image: url("../images/pikachu-thunder.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 150%;
     margin-left: 100%;
-    border-radius: 50%;
-    width: 10%;
+    width: 50%;
     filter:blur(2px)
     }
     
     75% {
-        background-image: url("../images/favicon-pokes.ico");
+        background-image: url("../images/pikachu-thunder.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 10%;
+        background-size: 200%;
         margin-left: 45%;
-        border-radius: 0;
-        width: 50%;
+        width: 70%;
         filter: contrast(200%)
         hue-rotate(180deg);
     }
@@ -227,8 +251,6 @@ h1 .font-poke {
         background-color: none;
         margin-left: 0;
         width: 100%;
-        drop-shadow
-        
     }
 }
 
@@ -625,21 +647,21 @@ aside {
     grid-column-start: 4;
     grid-column-end: 4;
     width: 100%;
-}
-
-aside .sizing  {
-    width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .loop {
     cursor: pointer;
+    position: relative;
 }
 
-.pikachuu {
-    cursor: pointer;
-
-} 
+aside .sizing  {
+    width: 100%;
+    height: 100%;
+}
 
 aside .gambeta {
     position: relative;
@@ -712,7 +734,7 @@ aside .poke-ads-font {
 .news input {
     padding: 8px;
     border: 0;
-    width: 100%;
+    width: 90%;
 }
 
 .news button {
@@ -724,6 +746,7 @@ aside .poke-ads-font {
     background: #000;
     border-radius: 1% 1%;    
 }
+
 /*-- |FOOTER-FOOTER-FOOTER| -----*/
 /*-- |FOOTER-FOOTER-FOOTER| -----*/
 /*-- |FOOTER|             -------*/
@@ -757,6 +780,44 @@ footer .containerfoot {
 footer .footer-nav li {
     margin-bottom: 10px;
     list-style-type: none;
+}
+
+
+#cf {
+    position: relative;
+    height: auto;
+}
+
+#cf img{
+    position: absolute;
+    right: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes cfFadeInOut {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }    
+}
+
+#cf img.image-top {
+    animation-name: cfFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 
 footer .footer-nav a {
@@ -824,7 +885,7 @@ nav .social1 .socialfoot {
     text-transform: uppercase;
     font-weight: bold;
     border-bottom: solid 1px #DDD;
-    padding: 10px 0;
+    padding: 5% 0;
     margin: 0;
 }
 
@@ -836,32 +897,44 @@ footer .top-pokes h3  {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    height: 100%;
+    height: 75%;
+    counter-increment: li;
+    font-family: Pokemon;
+    color: #FFDE00;
+    text-shadow:
+    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
 }
 
 .top-pokes li {
-    counter-increment: li;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 2%;
     border-bottom: solid 1px rgb(255, 226, 194);
     transition: all ease 0.3s;
     cursor: pointer;
     height: auto;
 }
 
+.top-pokes span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-shadow: initial;
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .top-pokes li:hover {
-    background: #EEE;
-    color: #FFDE00;
+    background: rgb(241, 255, 240);
+    color: #ff7322;
+    text-shadow:
+    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
 }
 
 .top-pokes li:last-child {
     border-bottom: 0;
-}
+    text-shadow:
+    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
 
-.top-pokes span {
-    font-size: 20px;
-    font-weight: 300;
+
 }
 
 .top-pokes li::before {

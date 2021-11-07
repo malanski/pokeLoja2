@@ -21,15 +21,3 @@ vaporWave.onclick = function() {
     vaporWave.setAttribute ('src','images/tenor-pikachu.gif');
     }
 }
-
-
-let pikachuKick = document.querySelector('.pikachu-x');
-
-pikachuKick.onclick = function() {
-    let pikaSrc = pikachuKick.getAttribute('src');
-        if(pikaSrc === 'images/pikachu-kick.png') {
-    pikachuKick.setAttribute ('src','images/raichu-kick.png');
-        } else {
-    pikachuKick.setAttribute ('src','images/pikachu-kick.png');
-    }
-}
