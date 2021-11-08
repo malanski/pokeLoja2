@@ -1,372 +1,15 @@
-body {
-    overflow-x: hidden;
-}
-@font-face {
-    font-family: Pokemon;
-    src: url(Pokemon-Solid.ttf);
-}
 
-.grid-page1 {   
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    display: grid;
-    width: 100vw;
-    grid-template-rows: 
-    15vh 7vh auto auto auto 0 auto;
-    grid-template-columns:
-       10vw   20vw    40vw    20vw    10vw;
-    grid-template-areas: 
-    'blankhl        header  header  header blankhr'
-    'blanknl        nav     nav     nav    blanknr'
-    'nothing-left content content aside nothing-right'
-    'nothing-left content content aside nothing-right'
-    'nothing-left content content aside nothing-right'
-    'nothing-left content content aside nothing-right'
-    'blankfl        footer  footer  footer blankfr';
-}
+.img-crossfade {
+    width: 178px;
+    height: 150px;
 
-.blankhl {
-    grid-area: "hblankl";
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    background-color: rgba(214, 68, 0, 0.863);
-
-}
-.blankhr {
-    grid-area: "hblankr";
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 5;
-    grid-column-end: 5;
-    background-color: rgba(214, 68, 0, 0.863);
-}
-.blanknl {
-    grid-area: "hblankl";
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    background-color: black;
-    height: auto;
-}
-.blanknr {
-    grid-area: "hblankr";
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 5;
-    grid-column-end: 5;
-    background-color: black;
-    height: auto;
-}
-
-.nothing-left {
-    grid-area: "nothing-left";  
-    grid-row-start: 3;
-    grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 1;    
-    background-image:
-    url("../images/pokeball-left-01.png");
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center;
-}
-
-.nothing-right {
-    grid-area: "nothing-right";  
-    grid-row-start: 3;
-    grid-row-end: 6;
-    grid-column-start: 5;
-    grid-column-end: 5;
-    background-image:
-    url("../images/pokeball-right-01.png");
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center;
-    
-}
-
-.blankfl {
-    grid-area: "blankl";  
-    grid-row-start: 7;
-    grid-row-end: 7;
-    grid-column-start: 1;
-    grid-column-end: 1;    
-    background-color:
-    rgb(26, 26, 26);
-}
-
-.blankfr {
-    grid-area: "blankr";  
-    grid-row-start: 7;
-    grid-row-end: 7;
-    grid-column-start: 5;
-    grid-column-end: 5;
-    background-color:
-    rgb(26, 26, 26);
-}
-
-
-header {
-    grid-area: "header";  
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    background-color: rgba(214, 68, 0, 0.863);
-    height: auto;
-    width: 80vw;
-    padding: 1% 0;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    width: 75vw;
-    margin: auto;
-}
-
-.topbar {
-    grid-area: "header";    
-    max-height: 10vh; 
-    margin-right: 2%;
-    margin-left: 2%;
-}
-
-header .topbar .header-container>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .topbar .font-poke {
-    color: #FFDE00;
-    text-shadow:
-    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
-    line-height: 0.01vh;
-    font-family: Pokemon;
-    font-size: 7vh;
-    transition: all ease 0.9s;
-}
-
-.font-poke a {
-    text-decoration: none;
-}
-
-.font-poke a:hover {
-    text-shadow:
-    0.5rem 0.8vh 0.4vw rgb(0, 4, 255);
-}
-
-h1 .font-poke {
-    animation-duration: 3s;
-    animation-name: slidein;
-}
-
-.pika-run {
-    animation-duration: 3s;
-    animation-name: runing;
-}
-
-@keyframes slidein {
-    from {
-    text-shadow:
-    0.1rem 0.1vh 0.1vw rgb(77, 249, 255);
-    margin-left: 100%;
-    width: 300%;
-    }
-    75% {
-        text-shadow:
-        0.8rem 1.9vh 1.9vw rgb(0, 4, 255);
-        margin-left: 25%;
-        width: 100%;
-        font-size: 200%;
-    }
-    to {
-        text-shadow:
-        0.1rem 0.1vh 0.1vw rgb(0, 4, 255);
-        margin-left: 0%;
-        width: 100%;
-    }
-}
-@keyframes runing {
-    from {
-    background-image: url("../images/favicon-pokes.ico");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    margin-left: 100%;
-    border-radius: 50%;
-    width: 10%;
-    filter:blur(2px)
-    }
-    
-    75% {
-        background-image: url("../images/favicon-pokes.ico");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 10%;
-        margin-left: 45%;
-        border-radius: 0;
-        width: 50%;
-        filter: contrast(200%)
-        hue-rotate(180deg);
-    }
-    to {
-        background-color: none;
-        margin-left: 0;
-        width: 100%;
-        drop-shadow
-        
-    }
-}
-
-header .topbar .search {
-    margin-left: 15px;
-}
-
-header .topbar .search-input {
-    position: relative;
-} 
-
-header .topbar .search-input button {
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    background:
-    url("../images/pokeball-1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-    cursor: grabbing;   
-}
-
-header .topbar .search-input input {
-    transition: width 0.3s ease-in-out;
-    border-radius: 5px;
-    border: 0;
-    width: 130px;
-    padding: 15px 33px 15px 17px;
-}
-
-header .topbar .search-input input:focus {
-    width: 230px;
-    outline: 3px solid #2428ff;
-} 
-
-header .topbar .profile {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-}
-
-header .topbar .profile li {
-    margin-left: 8%;
-}
-
-header .topbar .headlink{
-    text-decoration: none;
-    color: black;
-    font-size: 2.1vh;
-    transition: all ease 0.4s;
-}
-
-.headlink:hover {
-    box-shadow: 5px 5px 5px #ffffff;
-    font-size: 2.3vh;
-    border-radius: 50%;
-    padding-left: auto;
-    padding-right: auto;
-    background-color: #FFDE00;
-    color: blue;
-    font-family: Pokemon;
-}
-
-.buycart {
-    width: 2.5vh;
-    height: 2.5vh;
-    margin-right: 15px;
-}
-
-nav {
-    grid-area: "nav";
-grid-row-start: 2;
-grid-row-end: 2;
-grid-column-start: 2;
-grid-column-end: 4;
-height: auto;
-width: 80vw;
-background-color: rgb(0, 0, 0);
-}
-nav div .nav-container {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-flex-wrap: nowrap;
-}
-
-.navbar {
-display: flex;
-justify-content: space-between;
-list-style-type: none;
-margin: auto;
-}
-
-div .navbar li .navlink:hover {
-color: #FFDE00;
-}
-
-nav div ul li .navlink{
-color: white;
-border-right: solid 1px white;
-padding-right: 0.8rem;
-margin-right: 1rem;
-text-decoration: none;
-}
-
-.social1 {
-margin-top: 1%;
-}
-
-.socialtop {
-width: 25px;
-height: 25px;
-border-radius: 5px;
-}
-
-nav .social1 .socialfoot {
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-    margin-top: 2%;
-    transition: all ease 0.4s;
-}
-
-.socialfoot:hover {
-    border: 1px solid #FFDE00;
-    border-radius: 8%;
-    box-shadow: 0 3px 10px #FFDE00;
-    background-color: yellow;
-}
-
-main {
-    grid-area: "content";
-    grid-row-start: 3;
-    grid-row-end: 6;
-    grid-column-start: 2;
-    grid-column-end: 4;
 }
 
 #cf {
+    position: relative;
+    height: auto;
+}
+#cf2 {
     position: relative;
     height: auto;
 }
@@ -379,7 +22,14 @@ main {
     -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
-
+#cf2 img{
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
 
 @keyframes cf2FadeInOut {
     0% {
@@ -403,3 +53,15 @@ main {
     animation-duration: 1s;
     animation-direction: alternate;
 }
+#cf2 img.image-top {
+    animation-name: cf2FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+
+
+
+

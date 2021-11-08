@@ -1,0 +1,54 @@
+/*----SMALL MEDIA QUERIES -----------*/
+/*----SMALL MEDIA QUERIES -----------*/
+/*----SMALL MEDIA QUERIES -------------*/
+/*----SMALL MEDIA QUERIES -------------*/
+@media screen and (max-width: 360px){
+    .gridzera {
+        grid-template-rows: 
+        17vh 11vh 100% 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+        grid-template-columns:
+        0   50vw    50vw    0    0;
+    }
+    header {
+        height: 17vh;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .header-container .logo .font-poke{
+        margin-bottom: 0;
+    }
+
+    header .topbar .search {
+        margin-top: 2px;
+        margin-left: 0;
+    }
+    header .topbar .search-input input {
+        width: 80%;
+        height: 10%;
+    }
+
+    header .topbar .search-input input:focus {
+        width: 80%;
+    }
+
+    header .topbar .search-input button {
+        margin-left: -25px;
+    }
+    nav {
+        width: 100vw;
+        height: 11vh;
+        margin: 0;
+        line-height: 45px;
+    }
+
+    nav .navbar {
+       margin: 0;
+    }
+    .prox {
+        width: 70%;
+        margin-bottom: 0;
+        margin-left: 110px;
+    }
+}
+

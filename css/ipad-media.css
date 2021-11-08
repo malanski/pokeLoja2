@@ -23,8 +23,7 @@
         'costeleta-left content content aside costeleta-right'
         'blankfl        footer  footer  footer blankfr';
         margin: 0;
-    }
-    
+    }    
     header {
         height: 11vh;
         width: 100vw;
@@ -64,7 +63,7 @@
         margin-top: -5px;
         padding-top: 0;
         font-size: 2.9vh;
-        line-height: 55px;
+        line-height: 65px;
         margin-bottom: 0;
     }
 
@@ -74,7 +73,7 @@
     }
 
     header .topbar .search-input input {
-        width: 80%;
+        width: 100%;
         height: 10%;
     }
 
@@ -232,10 +231,15 @@
         grid-row-end: 7;
         grid-column-start: 1;
         grid-column-end: 2;
-        margin-left: 11vw;
         margin-bottom: 0;
+        width: 70%;
+        margin-left: 250px;
     }
-
+    
+    .pro-box {
+        margin: auto;
+    }
+    
     .card-flex .poke-data {
         height: fit-content;
     }
@@ -245,8 +249,8 @@
     }
     
     .poke-name {
-        font-size: 0.9rem;
-        margin-left: -11px;
+        font-size: 1.2rem;
+        margin-left: -10px;
     }
 
     .old-price {
@@ -254,7 +258,7 @@
     }
 
     .actual-price {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 
     .card-flex button img {
@@ -263,11 +267,13 @@
     }
 
     .btn .buy {
-        font-size: 0.6rem;
+        font-size: 1.2rem;
     }
 /*------------ASIDE-ASIDE-ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
 /*------------ASIDE-ASIDE-ASIDE---------*/
+/*------------ASIDE-------ASIDE---------*/
+/*------------ASIDE-------ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
     aside {
         grid-row-start: 7;

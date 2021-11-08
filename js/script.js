@@ -21,3 +21,6 @@ vaporWave.onclick = function() {
     vaporWave.setAttribute ('src','images/tenor-pikachu.gif');
     }
 }
+
+
+
