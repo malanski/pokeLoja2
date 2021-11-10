@@ -1,0 +1,154 @@
+
+/*-- |FOOTER-FOOTER-FOOTER| -----*/
+/*-- |FOOTER-FOOTER-FOOTER| -----*/
+/*-- |FOOTER|             -------*/
+/*-- |FOOTER|             -------*/
+/*-- |FOOTER-FOOTER-FOOTER|------*/
+/*-- |FOOTER-FOOTER-FOOTER|------*/
+/*-- |FOOTER|              ------*/
+/*-- |FOOTER|              ------*/
+/*-- |FOOTER|              ------*/
+footer {
+    grid-area: "footer";
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    /*  display: flex;
+    justify-content: space-between; */
+    width: 78vw;
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color:
+    rgb(26, 26, 26);
+    color: white;
+}
+
+footer .containerfoot {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-nav li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+
+#cf {
+    position: relative;
+    height: auto;
+}
+
+#cf img{
+    position: absolute;
+    right: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes cfFadeInOut {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }    
+}
+
+#cf img.image-top {
+    animation-name: cfFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+footer .footer-nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-nav a:hover {
+    color: #FFDE00;
+}
+
+footer .copyright {
+    background: rgb(26, 26, 26);
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+    padding: 20px 0;
+}
+/*-----SOCIAL---------FOOTER-------------*/
+/*-----SOCIAL---------FOOTER-------------*/
+/*-----SOCIAL---------FOOTER-------------*/
+/*-----SOCIAL---------FOOTER-------------*/
+/*-----SOCIAL---------FOOTER-------------*/
+footer .social2 .socialfoot {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 10%;
+    transition: all ease 0.4s;
+}
+
+nav .social1 .socialfoot {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 2%;
+    transition: all ease 0.4s;
+}
+
+.socialfoot:hover {
+    border: 1px solid #FFDE00;
+    border-radius: 8%;
+    box-shadow: 0 3px 10px #FFDE00;
+    background-color: yellow;
+}
+
+.bottom {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.defaut-clean {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
+/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+@media screen and (max-width: 810px){
+    footer {
+        grid-row-start: 11;
+        grid-row-end: 11;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 100vw;
+    }
+
+    footer {
+        padding-left: 0;
+    }
+
+    footer .containerfoot ul li a { 
+        font-size: 0.8rem;
+    }
+}
