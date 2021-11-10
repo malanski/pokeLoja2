@@ -8,15 +8,15 @@ body {
     font-family: Pokemon;
     src: url(Pokemon-Solid.ttf);
 }
-.gridzera {   
+.gridzera {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     display: grid;
     width: 100vw;
-    grid-template-rows: 
+    grid-template-rows:
     17vh 7vh auto auto auto 0 auto;
     grid-template-columns:
        10vw   20vw    40vw    20vw    10vw;
-    grid-template-areas: 
+    grid-template-areas:
     'blankhl        header  header  header blankhr'
     'blanknl        nav     nav     nav    blanknr'
     'costeleta-left content content aside costeleta-right'
@@ -63,11 +63,11 @@ body {
 }
 
 .costeleta-left {
-    grid-area: "costeleta-left";  
+    grid-area: "costeleta-left";
     grid-row-start: 3;
     grid-row-end: 6;
     grid-column-start: 1;
-    grid-column-end: 1;    
+    grid-column-end: 1;
     background-image:
     url("../images/pokeball-left-01.png");
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ body {
 }
 
 .costeleta-right {
-    grid-area: "costeleta-right";  
+    grid-area: "costeleta-right";
     grid-row-start: 3;
     grid-row-end: 6;
     grid-column-start: 5;
@@ -86,21 +86,20 @@ body {
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
-    
 }
 
 .blankfl {
-    grid-area: "blankl";  
+    grid-area: "blankl";
     grid-row-start: 7;
     grid-row-end: 7;
     grid-column-start: 1;
-    grid-column-end: 1;    
+    grid-column-end: 1;
     background-color:
     rgb(26, 26, 26);
 }
 
 .blankfr {
-    grid-area: "blankr";  
+    grid-area: "blankr";
     grid-row-start: 7;
     grid-row-end: 7;
     grid-column-start: 5;
@@ -118,7 +117,7 @@ body {
 /* ----- |HEAD-----------HEAD| ---- --*/
 
 header {
-    grid-area: "header";  
+    grid-area: "header";
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
@@ -130,17 +129,10 @@ header {
 }
 
 .topbar {
-    grid-area: "header";    
-    max-height: 10vh; 
+    grid-area: "header";
+    max-height: 10vh;
     margin-right: 2%;
     margin-left: 2%;
-}
-
-.header-container {
-   /* display: flex;
-    justify-content: space-between;
-    width: 75vw;
-    margin: auto;*/
 }
 
 header .topbar .header-container {
@@ -172,7 +164,7 @@ header .header-container .font-poke {
     flex: 1;
 }
 
-.font-poke {    
+.font-poke {
     text-transform: uppercase;
 }
 
@@ -191,16 +183,15 @@ a .font-poke:hover {
     animation-name: runing;
 }
 .pika-spin {
-    
     animation: pikaspin 3s infinite linear;
 }
 
 @keyframes pikaspin {
     0% {
-        transform: rotate(0deg)    
+        transform: rotate(0deg)
     }
     100% {
-        transform: rotate(360deg)  
+        transform: rotate(360deg)
     }
 }
 
@@ -236,7 +227,6 @@ a .font-poke:hover {
     width: 50%;
     filter:blur(2px)
     }
-    
     75% {
         background-image: url("../images/pikachu-thunder.png");
         background-position: center;
@@ -260,7 +250,7 @@ header .topbar .search {
 
 header .topbar .search-input {
     position: relative;
-} 
+}
 
 header .topbar .search-input button {
     position: absolute;
@@ -274,7 +264,7 @@ header .topbar .search-input button {
     width: 20px;
     height: 20px;
     border: 0;
-    cursor: grabbing;   
+    cursor: grabbing;
 }
 
 header .topbar .search-input input {
@@ -288,7 +278,7 @@ header .topbar .search-input input {
 header .topbar .search-input input:focus {
     width: 230px;
     outline: 3px solid #2428ff;
-} 
+}
 
 header .topbar .profile {
 
@@ -396,15 +386,15 @@ main {
     grid-column-end: 4;
 }
 
-main .grid-main {   
+main .grid-main {
     font-family:
     'Yanone Kaffeesatz', sans-serif;
     display: grid;
-    grid-template-rows: 
+    grid-template-rows:
     65vh 65vh 65vh 10vh;
     grid-template-columns:
     14vw 14vw 14vw 14vw;
-    grid-template-areas: 
+    grid-template-areas:
     'pok1 pok2  pok3  pok4'
     'pok5 pok6  pok7  pok8'
     'pok9 pok10 pok11 pok12'
@@ -467,7 +457,7 @@ main .card-flex .card-head {
     50% {
         background-position: 100% 50%;
         font-size: 1.9rem;
-        font-family: Pokemon;      
+        font-family: Pokemon;
     }
     100% {
         background-position: 0% 50%;
@@ -480,7 +470,6 @@ main .card-flex .card-head {
 
 .poke-table .card-flex:hover .btn {
     animation: pokeBtnAnimation 5s ease infinite;
-    
 }
 
 .card-head {
@@ -497,7 +486,7 @@ main .card-flex .card-head {
     align-self: flex-end;
 }
 
-.card .poke-void img {    
+.card .poke-void img {
     transform: all ease 0.5s;
     margin-top: 0;
     margin-bottom: 0;
@@ -677,7 +666,7 @@ main .card-flex .card-head {
     }
     50% {
         background-position: 100% 50%;
-        font-size: 0.8rem;   
+        font-size: 0.8rem; 
     }
     100% {
         background-position: 0% 50%;
