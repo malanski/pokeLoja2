@@ -1,0 +1,114 @@
+
+.top-pokes {
+    margin-top: 1%;
+}
+
+.top-pokes h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: solid 1px #DDD;
+    padding: 5% 0;
+    margin: 0;
+}
+
+footer .top-pokes h3  {
+    font-family: Pokemon;
+}
+
+.top-pokes ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 75%;
+    font-family: Pokemon;
+    color: #FFDE00;
+    text-shadow:
+    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
+}
+
+.top-pokes li {
+    counter-increment: li;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    border-bottom: solid 1px rgb(255, 226, 194);
+    transition: all ease 0.3s;
+    cursor: pointer;
+    height: auto;
+}
+
+.top-pokes span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-shadow: initial;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.top-pokes li:hover {
+    background: rgb(241, 255, 240);
+    color: #ff7322;
+    text-shadow:
+    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
+}
+
+.top-pokes li:last-child {
+    border-bottom: 0;
+    text-shadow:
+    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
+}
+
+.top-pokes li::before {
+    content: counter(li) "º";
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 0;
+}
+
+.top-pokes .poke-img {
+    width: 100%;
+    margin: 0 8px;
+}
+
+footer .top-pokes {
+    max-width: 60vw;
+}
+
+footer .top-pokes .poke-img {
+    margin: 0 8px;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+.poke-img {
+    width: 3vw;
+}
+
+
+
+/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
+/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+
+@media screen and (max-width: 810px){
+    .top-pokes h3 {
+        font-size: 1.5rem;
+    }
+
+    .top-pokes ol {
+        font-size: 0.9rem;
+        margin-left: -10px;
+    }
+
+    .top-pokes span {
+        font-size: 1.5rem;
+        margin-left: -10px;
+    }
+
+    .top-pokes .poke-img {
+        margin-left: -5px;
+    }
+}
