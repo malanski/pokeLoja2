@@ -1,0 +1,23 @@
+{
+  "name": "pokeloja2",
+  "version": "1.0.0",
+  "description": "awari pokeloja 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malanski/pokeLoja2.git"
+  },
+  "author": "ulisses malanski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malanski/pokeLoja2/issues"
+  },
+  "homepage": "https://github.com/malanski/pokeLoja2#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}
