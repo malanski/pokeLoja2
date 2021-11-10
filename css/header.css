@@ -6,7 +6,7 @@ header {
     grid-column-start: 2;
     grid-column-end: 4;
     background-color: rgba(214, 68, 0, 0.863);
-    height: auto;
+    height: 100%;
     width: 80vw;
     padding: 1% 0;
 }
@@ -216,12 +216,12 @@ header .topbar .headlink{
 /*-----|NAV ------NAV--NAV| -----*/
 /*-----|NAV -------NAV-NAV| -----*/
 nav {
-        grid-area: "nav";
+    grid-area: "nav";
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 4;
-    height: auto;
+    height: 100%;
     width: 80vw;
     background-color: rgb(0, 0, 0);
 }
@@ -256,57 +256,11 @@ nav div ul li .navlink{
 /*------------SOCIAL-----NAV----*/
 /*------------SOCIAL-----NAV----*/
 /*------------SOCIAL-----NAV----*/
-.social1 {
-    margin-top: 1%;
-}
-.socialtop {
+.socialfoot {
     width: 25px;
     height: 25px;
     border-radius: 5px;
-}
-
-/*----SMALL MEDIA QUERIES -----------*/
-/*----SMALL MEDIA QUERIES -----------*/
-/*----SMALL MEDIA QUERIES -------------*/
-/*----SMALL MEDIA QUERIES -------------*/
-@media screen and (max-width: 360px){
-    header {
-        height: 17vh;
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .header-container .logo .font-poke{
-        margin-bottom: 0;
-    }
-
-    header .topbar .search {
-        margin-top: 2px;
-        margin-left: 0;
-    }
-    header .topbar .search-input input {
-        width: 80%;
-        height: 10%;
-    }
-
-    header .topbar .search-input input:focus {
-        width: 80%;
-    }
-
-    header .topbar .search-input button {
-        margin-left: -25px;
-    }
-    nav {
-        width: 100vw;
-        height: 11vh;
-        margin: 0;
-        line-height: 45px;
-    }
-
-    nav .navbar {
-        margin: 0;
-    }
-
+    margin-top: 1%;
 }
 
 /*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
@@ -314,9 +268,10 @@ nav div ul li .navlink{
 /*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+
 @media screen and (max-width: 810px){
     header {
-        height: 11vh;
+        height: 100%;
         width: 100vw;
         margin: 0;
         padding: 0;
@@ -341,7 +296,7 @@ nav div ul li .navlink{
     }
 
     .header-container .profile .headlink {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .header-container .profile img {
@@ -381,8 +336,8 @@ nav div ul li .navlink{
 /* ---------------|NAV -------NAV---NAV| --*/
 /* ---------------|NAV --------NAV--NAV|- --*/
     nav {
+        height: 100%;
         width: 100vw;
-        height: 4vh;
         margin: auto;
     }
     nav .navbar {
@@ -394,11 +349,78 @@ nav div ul li .navlink{
         margin: auto;
     }
     .navlink {
+        font-size: 0.9rem;
+    }
+
+    nav a .socialfoot {
+      
+        max-width: 15px;
+        max-height: 15px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 8%;
+    }
+
+}
+
+/*----SMALL MEDIA QUERIES -----------*/
+/*----SMALL MEDIA QUERIES -----------*/
+/*----SMALL MEDIA QUERIES -------------*/
+/*----SMALL MEDIA QUERIES -------------*/
+@media screen and (max-width: 370px){
+    header {
+        height: 100%;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    header .header-container .font-poke {
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    header .topbar .search {
+        margin-top: 2px;
+        margin-left: 0;
+    }
+    header .topbar .search-input input {
+        width: 80%;
+        height: 10%;
+    }
+
+    header .topbar .search-input input:focus {
+        width: 80%;
+    }
+
+    header .topbar .search-input button {
+        margin-left: -25px;
+    }
+    nav {
+        width: 100vw;
+        margin: 0;
+        line-height: 100%;
+    }
+
+    nav .navbar {
+        margin: 0;
+    }
+
+    .header-container .profile .headlink {
         font-size: 0.7rem;
     }
 
-    a .socialfoot {
-        max-width: 15px;
-        max-height: 15px;
+
+    .navlink {
+        font-size: 0.7rem;
     }
+
+    nav a .socialfoot {
+        max-width: 13px;
+        max-height: 13px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 8%;
+    }
+
 }

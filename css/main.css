@@ -465,4 +465,18 @@ main .card-flex .card-head {
     .btn .buy {
         font-size: 1.2rem;
     }
+
+    .prox {
+        width: 70%;
+        margin-bottom: 0;
+        margin-right: 110px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .prox {
+        width: 70%;
+        margin-bottom: 0;
+        margin-left: 110px;
+    }
 }
