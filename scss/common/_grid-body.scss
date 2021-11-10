@@ -83,7 +83,6 @@ body {
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
-
 }
 
 .blankfl {
@@ -106,7 +105,7 @@ body {
     rgb(26, 26, 26);
 }
 
-@media screen and (max-width: 810px){
+@media screen and (max-width: 720px){
     .gridzera {
         grid-template-rows:
         12vh 4vh 100% 100% 100% 100% 100% 100% 100% 100% 100%;
