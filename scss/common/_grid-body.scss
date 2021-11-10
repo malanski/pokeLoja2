@@ -131,7 +131,7 @@ body {
 @media screen and (max-width: 360px){
     .gridzera {
         grid-template-rows:
-        17vh 5vh 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+        17vh 5vh auto auto auto auto auto auto auto auto 100%;
         grid-template-columns:
         0   50vw    50vw    0    0;
     }
