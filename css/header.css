@@ -1,0 +1,404 @@
+
+header {
+    grid-area: "header";  
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: rgba(214, 68, 0, 0.863);
+    height: auto;
+    width: 80vw;
+    padding: 1% 0;
+}
+
+.topbar {
+    grid-area: "header";    
+    max-height: 10vh; 
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.header-container {
+   /* display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    margin: auto;*/
+}
+
+header .topbar .header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75vw;
+    margin: auto;
+}
+
+header .header-container .font-poke {
+    color: #FFDE00;
+    text-shadow:
+    4px 4px 1px rgb(0, 4, 255);
+    line-height: 0;
+    font-family: Pokemon;
+    font-size: 8vh;
+    transition: all ease 0.9s;
+}
+.logo a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.font-poke {    
+    text-transform: uppercase;
+}
+
+a .font-poke:hover {
+    text-shadow:
+    0.5rem 0.8vh 0.4vw rgb(0, 4, 255);
+}
+
+.font-poke {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+.pika-run {
+    animation-duration: 3s;
+    animation-name: runing;
+}
+.pika-spin {
+    
+    animation: pikaspin 3s infinite linear;
+}
+
+@keyframes pikaspin {
+    0% {
+        transform: rotate(0deg)    
+    }
+    100% {
+        transform: rotate(360deg)  
+    }
+}
+
+@keyframes slidein {
+    from {
+    text-shadow:
+    0.1rem 0.1vh 0.1vw rgb(77, 249, 255);
+    margin-left: 100%;
+    width: 300%;
+    }
+    75% {
+        text-shadow:
+        0.8rem 1.9vh 1.9vw rgb(0, 4, 255);
+        margin-left: 25%;
+        width: 100%;
+        font-size: 200%;
+    }
+    to {
+        text-shadow:
+        0.1rem 0.1vh 0.1vw rgb(0, 4, 255);
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+@keyframes runing {
+    from {
+    background-image: url("../images/pikachu-thunder.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    margin-left: 100%;
+    width: 50%;
+    filter:blur(2px)
+    }
+    
+    75% {
+        background-image: url("../images/pikachu-thunder.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        margin-left: 45%;
+        width: 70%;
+        filter: contrast(200%)
+        hue-rotate(180deg);
+    }
+    to {
+        background-color: none;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+header .topbar .search {
+    margin-left: 15px;
+}
+
+header .topbar .search-input {
+    position: relative;
+} 
+
+header .topbar .search-input button {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background:
+    url("../images/pokeball-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    cursor: grabbing;   
+}
+
+header .topbar .search-input input {
+    transition: width 0.3s ease-in-out;
+    border-radius: 5px;
+    border: 0;
+    width: 130px;
+    padding: 15px 33px 15px 17px;
+}
+
+header .topbar .search-input input:focus {
+    width: 230px;
+    outline: 3px solid #2428ff;
+} 
+
+header .topbar .profile {
+
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+header .topbar .profile li {
+    margin-left: 8%;
+}
+
+header .topbar .headlink{
+    text-decoration: none;
+    color: black;
+    font-size: 2.1vh;
+    transition: all ease 0.4s;
+}
+
+.headlink:hover {
+    box-shadow: 5px 5px 5px #ffffff;
+    font-size: 2.3vh;
+    border-radius: 50%;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: #FFDE00;
+    color: blue;
+    font-family: Pokemon;
+}
+
+.buycart {
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-right: 15px;
+}
+/*---- |NAV NAV--------NAV| -------*/
+/*---- |NAV -NAV-------NAV| ------*/
+/*---- |NAV ---NAV-----NAV| -------*/
+/*-----|NAV ------NAV--NAV| ------*/
+/*-----|NAV ------NAV--NAV| -----*/
+/*-----|NAV -------NAV-NAV| -----*/
+nav {
+        grid-area: "nav";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    height: auto;
+    width: 80vw;
+    background-color: rgb(0, 0, 0);
+}
+nav div .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: auto;
+}
+
+div .navbar li .navlink:hover {
+    color: #FFDE00;
+}
+
+nav div ul li .navlink{
+    color: white;
+    border-right: solid 1px white;
+    padding-right: 0.8rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+/*------------SOCIAL-----NAV----*/
+/*------------SOCIAL-----NAV----*/
+/*------------SOCIAL-----NAV----*/
+/*------------SOCIAL-----NAV----*/
+/*------------SOCIAL-----NAV----*/
+.social1 {
+    margin-top: 1%;
+}
+.socialtop {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+/*----SMALL MEDIA QUERIES -----------*/
+/*----SMALL MEDIA QUERIES -----------*/
+/*----SMALL MEDIA QUERIES -------------*/
+/*----SMALL MEDIA QUERIES -------------*/
+@media screen and (max-width: 360px){
+    header {
+        height: 17vh;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .header-container .logo .font-poke{
+        margin-bottom: 0;
+    }
+
+    header .topbar .search {
+        margin-top: 2px;
+        margin-left: 0;
+    }
+    header .topbar .search-input input {
+        width: 80%;
+        height: 10%;
+    }
+
+    header .topbar .search-input input:focus {
+        width: 80%;
+    }
+
+    header .topbar .search-input button {
+        margin-left: -25px;
+    }
+    nav {
+        width: 100vw;
+        height: 11vh;
+        margin: 0;
+        line-height: 45px;
+    }
+
+    nav .navbar {
+        margin: 0;
+    }
+
+}
+
+/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
+/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+@media screen and (max-width: 810px){
+    header {
+        height: 11vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-container {
+        display: block;
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    header .topbar .header-container {
+        display: block;
+    }
+
+    header .topbar .profile {
+        top: 5px;
+        right: 5px;
+        margin-top: 0;
+        margin-right: 30px;
+        position: absolute;
+    }
+
+    .header-container .profile .headlink {
+        font-size: 0.7rem;
+    }
+
+    .header-container .profile img {
+        width: 15px;
+        height: 15px;
+        margin-left: -5px;
+    }
+
+    .header-container .logo .font-poke{
+        margin-top: -5px;
+        padding-top: 0;
+        font-size: 2.9vh;
+        line-height: 65px;
+        margin-bottom: 0;
+    }
+
+    header .topbar .search {
+        margin-top: 2px;
+        margin-left: 0;
+    }
+
+    header .topbar .search-input input {
+        width: 100%;
+        height: 10%;
+    }
+
+    header .topbar .search-input input:focus {
+        width: 100%;
+    }
+
+    header .topbar .search-input button {
+        margin-left: -25px;
+    }
+/* -------------- |NAV NAV----------NAV| --*/
+/* -------------- |NAV --NAV--------NAV| --*/
+/* -------------- |NAV ----NAV------NAV|- --*/
+/* ---------------|NAV -------NAV---NAV| --*/
+/* ---------------|NAV --------NAV--NAV|- --*/
+    nav {
+        width: 100vw;
+        height: 4vh;
+        margin: auto;
+    }
+    nav .navbar {
+        display: flex;
+        overflow: scroll;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+        margin: auto;
+    }
+    .navlink {
+        font-size: 0.7rem;
+    }
+
+    a .socialfoot {
+        max-width: 15px;
+        max-height: 15px;
+    }
+}

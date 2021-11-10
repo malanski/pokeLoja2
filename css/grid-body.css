@@ -1,0 +1,129 @@
+body {
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: Pokemon;
+    src: url(Pokemon-Solid.ttf);
+}
+.gridzera {   
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 
+    17vh 7vh auto auto auto 0 auto;
+    grid-template-columns:
+       10vw   20vw    40vw    20vw    10vw;
+    grid-template-areas: 
+    'blankhl        header  header  header blankhr'
+    'blanknl        nav     nav     nav    blanknr'
+    'costeleta-left content content aside costeleta-right'
+    'costeleta-left content content aside costeleta-right'
+    'costeleta-left content content aside costeleta-right'
+    'costeleta-left content content aside costeleta-right'
+    'blankfl        footer  footer  footer blankfr';
+}
+
+.blankhl {
+    grid-area: "hblankl";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: rgba(214, 68, 0, 0.863);
+
+}
+.blankhr {
+    grid-area: "hblankr";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-color: rgba(214, 68, 0, 0.863);
+}
+.blanknl {
+    grid-area: "hblankl";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: black;
+    height: auto;
+}
+.blanknr {
+    grid-area: "hblankr";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-color: black;
+    height: auto;
+}
+
+.costeleta-left {
+    grid-area: "costeleta-left";  
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 1;    
+    background-image:
+    url("../images/pokeball-left-01.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+}
+
+.costeleta-right {
+    grid-area: "costeleta-right";  
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-image:
+    url("../images/pokeball-right-01.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    
+}
+
+.blankfl {
+    grid-area: "blankl";  
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 1;    
+    background-color:
+    rgb(26, 26, 26);
+}
+
+.blankfr {
+    grid-area: "blankr";  
+    grid-row-start: 7;
+    grid-row-end: 7;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    background-color:
+    rgb(26, 26, 26);
+}
+
+@media screen and (max-width: 810px){
+    .gridzera {
+        grid-template-rows: 
+        11vh 4vh 100% 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+        grid-template-columns:
+        0   50vw    50vw    0    0;
+        grid-template-areas: 
+        'blankhl        header  header  header blankhr'
+        'blanknl        nav     nav     nav    blanknr'
+        'costeleta-left content content aside costeleta-right'
+        'costeleta-left content content aside costeleta-right'
+        'costeleta-left content content aside costeleta-right'
+        'costeleta-left content content aside costeleta-right'
+        'costeleta-left content content aside costeleta-right'
+        'costeleta-left content content aside costeleta-right'
+        'costeleta-left content content aside costeleta-right'
+        'costeleta-left content content aside costeleta-right'
+        'blankfl        footer  footer  footer blankfr';
+        margin: 0;
+    }    
+} 
