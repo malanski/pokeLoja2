@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* Content Styles */
+/*COLOR THEME */
+/* Costeletas-Ribs-Sider's */
+/* Product Images */
 body {
   overflow-x: hidden;
 }
@@ -96,9 +100,9 @@ body {
   background-color: #1a1a1a;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 720px) {
   .gridzera {
-    grid-template-rows: 12vh 4vh 100% 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+    grid-template-rows: 12vh 4vh 100% 100% 100% 100% 100% 100% 100% 100% 100%;
     grid-template-columns: 0 50vw 50vw 0 0;
     grid-template-areas: "blankhl        header  header  header blankhr" "blanknl        nav     nav     nav    blanknr" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "blankfl        footer  footer  footer blankfr";
     margin: 0;
@@ -106,7 +110,7 @@ body {
 }
 @media screen and (max-width: 360px) {
   .gridzera {
-    grid-template-rows: 17vh 5vh 100% 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+    grid-template-rows: 17vh 5vh auto auto auto auto auto auto auto auto 100%;
     grid-template-columns: 0 50vw 50vw 0 0;
   }
 }
@@ -146,7 +150,7 @@ header .topbar .header-container {
 
 header .header-container .font-poke {
   color: #FFDE00;
-  text-shadow: 4px 4px 1px #0004ff;
+  text-shadow: 4px 4px 1px #012bff;
   line-height: 0;
   font-family: Pokemon;
   font-size: 8vh;
@@ -170,7 +174,7 @@ header .header-container .font-poke {
 }
 
 a .font-poke:hover {
-  text-shadow: 0.5rem 0.8vh 0.4vw #0004ff;
+  text-shadow: 5px 12px 8px #012bff;
 }
 
 .font-poke {
@@ -197,18 +201,18 @@ a .font-poke:hover {
 }
 @keyframes slidein {
   from {
-    text-shadow: 0.1rem 0.1vh 0.1vw #4df9ff;
+    text-shadow: 0.1rem 0.1vh 0.1vw #5671f7;
     margin-left: 100%;
     width: 300%;
   }
   75% {
-    text-shadow: 0.8rem 1.9vh 1.9vw #0004ff;
+    text-shadow: 0.8rem 1.9vh 1.9vw #012bff;
     margin-left: 25%;
     width: 100%;
     font-size: 200%;
   }
   to {
-    text-shadow: 0.1rem 0.1vh 0.1vw #0004ff;
+    text-shadow: 0.1rem 0.1vh 0.1vw #012bff;
     margin-left: 0%;
     width: 100%;
   }
@@ -271,7 +275,7 @@ header .topbar .search-input input {
 
 header .topbar .search-input input:focus {
   width: 230px;
-  outline: 3px solid #2428ff;
+  outline: 3px solid #012bff;
 }
 
 header .topbar .profile {
@@ -294,15 +298,17 @@ header .topbar .headlink {
   transition: all ease 0.4s;
 }
 
-.headlink:hover {
+header .topbar .headlink:hover {
+  /* transition: background-color .1s linear;*/
   box-shadow: 5px 5px 5px #ffffff;
-  font-size: 2.3vh;
-  border-radius: 50%;
-  padding-left: auto;
-  padding-right: auto;
+  font-size: 2.4vh;
+  border-radius: 20%;
+  padding-left: 19%;
+  padding-right: 19%;
   background-color: #FFDE00;
-  color: blue;
+  color: #012bff;
   font-family: Pokemon;
+  text-shadow: 2px 2px 1px #012bff;
 }
 
 .buycart {
@@ -372,7 +378,7 @@ nav div ul li .navlink {
 /*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 720px) {
   header {
     height: 100%;
     width: 100vw;
@@ -572,7 +578,7 @@ main .poke-table div .card-flex {
 }
 
 main .poke-table .card-flex:hover {
-  box-shadow: 2px 3px 20px #1900ff;
+  box-shadow: 2px 3px 20px #012bff;
 }
 
 main .poke-table .card {
@@ -600,7 +606,7 @@ main .card-flex .card-head {
   0% {
     background-position: 0% 5%;
     color: #DDD;
-    text-shadow: 0.2px 0.5vh 0.1vw #34a4ff;
+    text-shadow: 0.2px 0.5vh 0.1vw #5671f7;
     font-family: Pokemon;
   }
   50% {
@@ -611,7 +617,7 @@ main .card-flex .card-head {
   100% {
     background-position: 0% 50%;
     color: #FFDE00;
-    text-shadow: 0.2rem 0.5vh 0.1vw #0004ff;
+    text-shadow: 0.2rem 0.5vh 0.1vw #012bff;
     font-family: Pokemon;
   }
 }
@@ -984,14 +990,6 @@ main .card-flex .card-head {
     margin-left: 110px;
   }
 }
-/*---------------- |ASIDE-ASIDE-ASIDE| --*/
-/*---------------- |ASIDE-ASIDE-ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE-ASIDE-ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
 aside {
   grid-area: "sidenav";
   grid-row-start: 3;
@@ -1061,7 +1059,7 @@ aside .poke-ads-font {
   font-family: Pokemon;
   font-size: 1.5rem;
   color: #FFDE00;
-  text-shadow: 0.2rem 0.5vh 0.1vw #0004ff;
+  text-shadow: 4px 4px 1px #012bff;
   text-align: center;
   margin: 0;
 }
@@ -1102,7 +1100,7 @@ aside .poke-ads-font {
 /*------------ASIDE-------ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 720px) {
   aside {
     grid-row-start: 7;
     grid-row-end: 10;
@@ -1198,7 +1196,7 @@ footer .copyright {
   background: #1a1a1a;
   text-align: center;
   margin-top: 30px;
-  color: #fff;
+  color: white;
   padding: 20px 0;
 }
 
@@ -1227,7 +1225,7 @@ nav .social1 .socialfoot {
   border: 1px solid #FFDE00;
   border-radius: 8%;
   box-shadow: 0 3px 10px #FFDE00;
-  background-color: yellow;
+  background-color: #ffea60;
 }
 
 .bottom {
@@ -1247,7 +1245,7 @@ nav .social1 .socialfoot {
 /*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 720px) {
   footer {
     grid-row-start: 11;
     grid-row-end: 11;
@@ -1264,10 +1262,6 @@ nav .social1 .socialfoot {
     font-size: 0.8rem;
   }
 }
-/*AQUI VC ENCONTRA OS POKEMONS DOS CARDS*/
-/*---------POKEMONS----------SOMENTE----*/
-/*---------------POKEMONS---------------*/
-/*---SÓ--------------POKEMONS-----------*/
 main .grid-main .pok1 {
   grid-area: "pok1";
   grid-row-start: 1;
@@ -1455,7 +1449,7 @@ main .grid-main .pok12 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #a4e2e6;
+  border: 1px solid #b8f9fc;
   margin: 0;
   height: 100%;
 }
@@ -1483,7 +1477,7 @@ footer .top-pokes h3 {
   height: 75%;
   font-family: Pokemon;
   color: #FFDE00;
-  text-shadow: 0.2rem 0.5vh 0.1vw #0004ff;
+  text-shadow: 4px 4px 1px #012bff;
 }
 
 .top-pokes li {
@@ -1491,7 +1485,7 @@ footer .top-pokes h3 {
   display: flex;
   align-items: center;
   padding: 2%;
-  border-bottom: solid 1px #ffe2c2;
+  border-bottom: solid 1px #DDD;
   transition: all ease 0.3s;
   cursor: pointer;
   height: auto;
@@ -1505,14 +1499,14 @@ footer .top-pokes h3 {
 }
 
 .top-pokes li:hover {
-  background: #f1fff0;
-  color: #ff7322;
-  text-shadow: 0.2rem 0.5vh 0.1vw #0004ff;
+  background: #c3f2ff;
+  color: red;
+  text-shadow: 4px 4px 1px #012bff;
 }
 
 .top-pokes li:last-child {
   border-bottom: 0;
-  text-shadow: 0.2rem 0.5vh 0.1vw #0004ff;
+  text-shadow: 4px 4px 1px #012bff;
 }
 
 .top-pokes li::before {
@@ -1548,7 +1542,7 @@ ol {
 /*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 720px) {
   .top-pokes h3 {
     font-size: 1.5rem;
   }

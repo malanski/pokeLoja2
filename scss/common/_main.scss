@@ -1,5 +1,7 @@
 
 
+@use '../config';
+
 /* - |MAIN-MAIN---------MAIN-MAIN| --*/
 /* - |MAIN--MAIN-------MAIN--MAIN| --*/
 /* - |MAIN---MAIN-----MAIN---MAIN| --*/
@@ -52,7 +54,7 @@ main .poke-table div .card-flex {
 }
 
 main .poke-table .card-flex:hover {
-    box-shadow: 2px 3px 20px #1900ff;
+    box-shadow: 2px 3px 20px config.$bluePok;
 }
 main .poke-table .card {
     display: flex;
@@ -79,26 +81,25 @@ main .card-flex .card-head {
         background-position: 0% 5%;
         color: #DDD;
         text-shadow:
-        0.2px 0.5vh 0.1vw rgb(52, 164, 255);
+        0.2px 0.5vh 0.1vw config.$blue2Pok;
         font-family: Pokemon;
     }
     50% {
         background-position: 100% 50%;
         font-size: 1.9rem;
-        font-family: Pokemon;      
+        font-family: Pokemon;
     }
     100% {
         background-position: 0% 50%;
-        color: #FFDE00;
+        color: config.$yellowPok;
         text-shadow:
-        0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
+        0.2rem 0.5vh 0.1vw config.$bluePok;
         font-family: Pokemon;
     }
 }
 
 .poke-table .card-flex:hover .btn {
     animation: pokeBtnAnimation 5s ease infinite;
-    
 }
 
 .card-head {
@@ -115,7 +116,7 @@ main .card-flex .card-head {
     align-self: flex-end;
 }
 
-.card .poke-void img {    
+.card .poke-void img {
     transform: all ease 0.5s;
     margin-top: 0;
     margin-bottom: 0;
@@ -175,7 +176,7 @@ main .card-flex .card-head {
 }
 
 .poke-table .card-flex .btn{
-    background: linear-gradient(-45deg, #ce0606, #ec6834, #d5c923, #23d5ab);
+    background: config.$btnCardBg;
     background-size: 400% 400%;
     cursor: pointer;
 }
@@ -270,8 +271,7 @@ main .card-flex .card-head {
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 2%;
-    background: linear-gradient(-45deg,
-    #fbff00, #fff1eb, #8a23ff, #0c10fa);
+    background: config.$nextBtnBg;
     background-size: 300% 300%;
     cursor: pointer;
 }
