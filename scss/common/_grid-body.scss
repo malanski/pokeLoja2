@@ -1,3 +1,4 @@
+@use '../config';
 body {
     overflow-x: hidden;
 }
@@ -29,7 +30,7 @@ body {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-color: rgba(214, 68, 0, 0.863);
+    background-color: config.$headerColor;
 
 }
 .blankhr {
@@ -38,7 +39,7 @@ body {
     grid-row-end: 1;
     grid-column-start: 5;
     grid-column-end: 5;
-    background-color: rgba(214, 68, 0, 0.863);
+    background-color: config.$headerColor;
 }
 .blanknl {
     grid-area: "hblankl";
@@ -66,7 +67,7 @@ body {
     grid-column-start: 1;
     grid-column-end: 1;
     background-image:
-    url("../images/pokeball-left-01.png");
+    config.$sideBlancleft;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
@@ -79,7 +80,7 @@ body {
     grid-column-start: 5;
     grid-column-end: 5;
     background-image:
-    url("../images/pokeball-right-01.png");
+    config.$sideBlancright;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
@@ -92,7 +93,7 @@ body {
     grid-column-start: 1;
     grid-column-end: 1;
     background-color:
-    rgb(26, 26, 26);
+    config.$footerColor;
 }
 
 .blankfr {
@@ -102,7 +103,7 @@ body {
     grid-column-start: 5;
     grid-column-end: 5;
     background-color:
-    rgb(26, 26, 26);
+    config.$footerColor;
 }
 
 @media screen and (max-width: 720px){

@@ -1,4 +1,5 @@
 
+@use '../config';
 /*-- |FOOTER-FOOTER-FOOTER| -----*/
 /*-- |FOOTER-FOOTER-FOOTER| -----*/
 /*-- |FOOTER|             -------*/
@@ -20,8 +21,8 @@ footer {
     padding-right: 2%;
     padding-left: 2%;
     background-color:
-    rgb(26, 26, 26);
-    color: white;
+    config.$footerColor;
+    color: config.$fontWhite;
 }
 
 footer .containerfoot {
@@ -74,19 +75,19 @@ footer .footer-nav li {
 
 footer .footer-nav a {
     font-size: 20px;
-    color: white;
+    color: config.$fontWhite;
     text-decoration: none;
 }
 
 footer .footer-nav a:hover {
-    color: #FFDE00;
+    color: config.$yellowPok;
 }
 
 footer .copyright {
     background: rgb(26, 26, 26);
     text-align: center;
     margin-top: 30px;
-    color: #fff;
+    color: config.$fontWhite;
     padding: 20px 0;
 }
 /*-----SOCIAL---------FOOTER-------------*/
@@ -111,14 +112,14 @@ nav .social1 .socialfoot {
 }
 
 .socialfoot:hover {
-    border: 1px solid #FFDE00;
+    border: 1px solid config.$yellowPok;
     border-radius: 8%;
-    box-shadow: 0 3px 10px #FFDE00;
-    background-color: yellow;
+    box-shadow: 0 3px 10px config.$yellowPok;
+    background-color: config.$yellow2Pok;
 }
 
 .bottom {
-    color: white;
+    color: config.$fontWhite;
     font-size: 20px;
     text-align: center;
     margin-bottom: 0;
@@ -126,7 +127,7 @@ nav .social1 .socialfoot {
 
 .defaut-clean {
     text-decoration: none;
-    color: white;
+    color: config.$fontWhite;
 }
 
 

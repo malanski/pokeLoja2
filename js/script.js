@@ -21,6 +21,6 @@ vaporWave.onclick = function() {
     vaporWave.setAttribute ('src','images/tenor-pikachu.gif');
     }
 }
-
-
+var audio = document.getElementsByTagName("audio")[0];
+audio.play();
 

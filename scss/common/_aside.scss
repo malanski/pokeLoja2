@@ -1,12 +1,4 @@
-
-/*---------------- |ASIDE-ASIDE-ASIDE| --*/
-/*---------------- |ASIDE-ASIDE-ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE-ASIDE-ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
-/*---------------- |ASIDE       ASIDE| --*/
+@use '../config';
 aside {
     grid-area: "sidenav";
     grid-row-start: 3;
@@ -77,9 +69,8 @@ aside .poke-ads-description-2 {
 aside .poke-ads-font {
     font-family: Pokemon;
     font-size: 1.5rem;
-    color: #FFDE00;
-    text-shadow:
-    0.2rem 0.5vh 0.1vw rgb(0, 4, 255);
+    color: config.$yellowPok;
+    text-shadow: config.$texShadow;
     text-align: center;
     margin: 0;
 }

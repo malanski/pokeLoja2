@@ -1,3 +1,4 @@
+@use 'config';
 @use 'common/grid-body';
 @use 'common/header';
 @use 'common/main';
@@ -5,5 +6,6 @@
 @use 'common/footer';
 @use 'common/pokemons';
 @use 'common/top-pokes';
+
 
 
