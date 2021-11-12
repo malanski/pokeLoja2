@@ -1,11 +1,14 @@
 @use '../config';
 
 .top-pokes {
+    transform: all ease 0.5s;
+
     height: 100%;
     margin-top: 1%;
 }
 
 .top-pokes h3 {
+    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     border-bottom: solid 1px #DDD;
@@ -17,7 +20,17 @@ footer .top-pokes h3  {
     font-family: config.$pokeFont;
 }
 
-.top-pokes ol {
+aside .top-pokes ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 75%;
+    font-family: config.$pokeFont;
+    color: config.$bluePok;
+    text-shadow: config.$texShadowRev;
+}
+
+footer .top-pokes ol {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -27,7 +40,20 @@ footer .top-pokes h3  {
     text-shadow: config.$texShadow;
 }
 
-.top-pokes li {
+aside .top-pokes li {
+    background: config.$topBtnBg;
+    background-size: 400% 400%;
+    counter-increment: li;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    border-bottom: solid 1px #DDD;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    height: auto;
+}
+footer .top-pokes li {
+    background-size: 400% 400%;
     counter-increment: li;
     display: flex;
     align-items: center;
@@ -40,18 +66,27 @@ footer .top-pokes h3  {
 
 .top-pokes span {
     font-family: config.$fontText;
-    text-shadow: initial;
+    text-shadow: none;
     font-size: 20px;
     font-weight: 300;
+    margin-left: -20px;
 }
 
-.top-pokes li:hover {
-    background: config.$hovTopBgColor;
+aside .top-pokes li:hover {
+    animation: topPokeAnima 5s ease infinite;
+
     color: config.$hovTopColor;
     text-shadow: config.$texShadow;
 }
 
-.top-pokes li:last-child {
+footer .top-pokes li:hover {
+    padding: 5%;
+    background: config.$pokeRed;
+    color: config.$hovTopColor;
+    text-shadow: config.$texShadow;
+}
+
+footer .top-pokes li:last-child {
     border-bottom: 0;
     text-shadow: config.$texShadow;
 }
@@ -61,6 +96,19 @@ footer .top-pokes h3  {
     font-size: 36px;
     font-weight: bold;
     line-height: 0;
+}
+
+
+@keyframes topPokeAnima {
+    0% {
+        background-position: 0% 5%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .top-pokes .poke-img {
@@ -81,6 +129,7 @@ footer .top-pokes .poke-img {
 .top.pokes ol {
     list-style-type: decimal;
 }
+
 
 /*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
 /*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/

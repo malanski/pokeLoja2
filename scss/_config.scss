@@ -5,6 +5,7 @@ $pokeFont: Pokemon;
 $fontText: "Yanone Kaffeesatz", sans-serif;
 
 $texShadow: 4px 4px 1px #012bff;
+$texShadowRev: 4px 4px 1px #FFDE00;
 
 /*COLOR THEME */
 
@@ -20,10 +21,11 @@ $navColor: black;
 $fontWhite: white;
 $cardBorder: 1px solid #9FF1FF;
 $footerColor: #262626;
-$hovTopColor: #BA0A00;
+$hovTopColor: #FFDE00;
 $hovTopBgColor: #C67DFF;
 $btnCardBg: linear-gradient(-45deg, #BA0A00, #ec6834, #dca202, #5671f7);
 $nextBtnBg: linear-gradient(-45deg,#ffea60, #fff1eb, #8a23ff, #012bff);
+$topBtnBg: linear-gradient(-45deg,white,#8a23ff, white , white);
 
 
 /* Costeletas-Ribs-Sider's */

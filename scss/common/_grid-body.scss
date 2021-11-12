@@ -106,7 +106,7 @@ body {
 @media screen and (max-width: 720px){
     .gridzera {
         grid-template-rows:
-        13vh 7vh 100% auto 100%;
+        13vh 7vh auto auto auto;
         grid-template-columns:
         0 50vw    50vw   0;
         grid-template-areas:
@@ -115,91 +115,87 @@ body {
         'content content'
         'aside   aside'
         'footer  footer';
-        margin: 1%;
+        row-gap: 0.01%;
+        margin-bottom: 10%;
+        margin-left: 0;
+
     }
-
-.blankhl {
-    grid-area: "hblankl";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: config.$headerColor;
-
-}
-.blankhr {
-    grid-area: "hblankr";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: config.$headerColor;
-}
-.blanknl {
-    grid-area: "hblankl";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: black;
-}
-.blanknr {
-    grid-area: "hblankr";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: black;
-}
-
-.costeleta-left {
-    display: none;
-    visibility: hidden;
-    grid-area: "costeleta-left";
-    background-image: none;
-    background-repeat: none;
-    background-size: none;
-    background-position: center;
-    width: 0;
-}
-
-.costeleta-right {
-    display: none;
-    visibility: hidden;
-    grid-area: "costeleta-right";
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center;
-}
-
-.blankfl {
-    grid-area: "blankl";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color:
-    config.$footerColor;
-}
-
-.blankfr {
-    grid-area: "blankr";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color:
-    config.$footerColor;
+    .blankhl {
+        grid-area: "hblankl";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: config.$headerColor;
+    }
+    .blankhr {
+        grid-area: "hblankr";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: config.$headerColor;
+    }
+    .blanknl {
+        grid-area: "hblankl";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: black;
+    }
+    .blanknr {
+        grid-area: "hblankr";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: black;
+    }
+    .costeleta-left {
+        display: none;
+        visibility: hidden;
+        grid-area: "costeleta-left";
+        background-image: none;
+        background-repeat: none;
+        background-size: none;
+        background-position: center;
+        width: 0;
+    }
+    .costeleta-right {
+        display: none;
+        visibility: hidden;
+        grid-area: "costeleta-right";
+        background-image: none;
+        background-repeat: none;
+        background-size: none;
+        background-position: center;
+    }
+    .blankfl {
+        grid-area: "blankl";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color:
+        config.$footerColor;
+    }
+    .blankfr {
+        grid-area: "blankr";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color:
+        config.$footerColor;
+    }
 }
 
-}
-
-/*@media screen and (max-width: 360px){
+@media screen and (max-width: 414px){
     .gridzera {
         grid-template-rows:
-        17vh 5vh auto auto auto auto auto auto auto auto 100%;
-        grid-template-columns:
-        0   50vw    50vw    0    0;
+        13vh 7vh auto auto auto;
+        row-gap: 0.5%;
     }
-}*/
+}
+

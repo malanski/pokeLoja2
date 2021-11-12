@@ -84,7 +84,7 @@ footer .footer-nav a:hover {
 }
 
 footer .copyright {
-    background: rgb(26, 26, 26);
+    background: config.$footerColor;
     text-align: center;
     margin-top: 30px;
     color: config.$fontWhite;

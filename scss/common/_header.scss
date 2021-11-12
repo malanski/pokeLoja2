@@ -281,7 +281,6 @@ nav div ul li .navlink{
         grid-row-end: 1;
         grid-column-start: 1;
         grid-column-end: 2;
-        height: 100%;
         width: 100vw;
         margin: 0;
         padding: 0;
@@ -364,11 +363,11 @@ nav div ul li .navlink{
         margin: auto;
     }
     .navlink {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     nav a .socialfoot {
-        
+
         max-width: 15px;
         max-height: 15px;
         margin-left: 5%;
@@ -382,9 +381,9 @@ nav div ul li .navlink{
 /*----SMALL MEDIA QUERIES -----------*/
 /*----SMALL MEDIA QUERIES -------------*/
 /*----SMALL MEDIA QUERIES -------------*/
-@media screen and (max-width: 370px){
+@media screen and (max-width: 414px){
     header {
-        height: 100%;
+        height: 110%;
         margin: 0;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -392,7 +391,7 @@ nav div ul li .navlink{
 
     header .header-container .font-poke {
         margin-bottom: 0;
-        font-size: 1rem;
+        font-size: 15px;
     }
 
     header .topbar .search {
@@ -400,12 +399,12 @@ nav div ul li .navlink{
         margin-left: 0;
     }
     header .topbar .search-input input {
-        width: 80%;
+        width: 260px;
         height: 10%;
     }
 
     header .topbar .search-input input:focus {
-        width: 80%;
+        width: 260px;
     }
 
     header .topbar .search-input button {
@@ -413,26 +412,21 @@ nav div ul li .navlink{
     }
     nav {
         width: 100vw;
-        margin: 0;
         line-height: 100%;
     }
 
     nav .navbar {
-        margin: 0;
+        margin-left: -30px;
     }
 
     .header-container .profile .headlink {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        margin-left: 0;
     }
-
-
-    .navlink {
-        font-size: 0.7rem;
-    }
-
+    
     nav a .socialfoot {
-        max-width: 13px;
-        max-height: 13px;
+        max-width: 19px;
+        max-height: 19px;
         margin-left: 3%;
         margin-right: 3%;
         margin-bottom: 8%;

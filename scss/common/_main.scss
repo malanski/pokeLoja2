@@ -227,7 +227,8 @@ main .card-flex .card-head {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 4;
-    margin-bottom: 0;
+    padding-bottom: 5%;
+    margin-bottom: 1%;
     margin-top: 15%;
     margin-left: 30%;
     align-self: center;
@@ -250,6 +251,7 @@ main .card-flex .card-head {
 /* certo foi forçar a margem esquerda */
 
 .prox-item a {
+
     align-self: center;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -259,6 +261,8 @@ main .card-flex .card-head {
 }
 
 .prox-item {
+    border: 1px solid black;
+
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 8%;
@@ -277,7 +281,7 @@ main .card-flex .card-head {
     font-weight: 800;
 }
 .prox-item:last-child {
-    margin-right: 0;
+    margin-right: 0.1%;
 }
 @keyframes pokeProxAnimation {
     0% {
@@ -286,11 +290,11 @@ main .card-flex .card-head {
     }
     25% {
         background-position: 100% 50%;
-        font-size: 1rem;   
+        font-size: 1rem;
     }
     50% {
         background-position: 100% 50%;
-        font-size: 0.8rem;   
+        font-size: 0.8rem;
     }
     100% {
         background-position: 0% 50%;
@@ -314,8 +318,8 @@ main .card-flex .card-head {
         grid-column-end: 2;
         width: fit-content;
         height: auto;
-        margin: 0;
-        bottom: 0;
+        margin-bottom: 10%;
+        row-gap: 5%;
     }
 
     main .grid-main {
@@ -336,7 +340,7 @@ main .card-flex .card-head {
         'prox prox';
         grid-column-gap: 0.5%;
         grid-row-gap: 0.5%;
-        margin: 1%;
+        margin-bottom: 10%;
         left: 0;
 
     }
@@ -427,7 +431,7 @@ main .card-flex .card-head {
         grid-row-end: 7;
         grid-column-start: 1;
         grid-column-end: 2;
-        margin-bottom: 0;
+        margin-bottom: 1%;
         width: 70%;
         margin-left: 65%;
     }
@@ -450,7 +454,7 @@ main .card-flex .card-head {
     }
 
     .old-price {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .actual-price {
