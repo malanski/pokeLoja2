@@ -224,8 +224,11 @@ nav {
     grid-column-start: 2;
     grid-column-end: 4;
     height: 100%;
-    width: 80vw;
-    background-color: rgb(0, 0, 0);
+    width: 75vw;
+    padding-left: 0;
+    padding-right: 9%;
+    margin: 0;
+    background-color: config.$navBgColor;
 }
 nav div .nav-container {
     display: flex;
@@ -273,7 +276,11 @@ nav div ul li .navlink{
 
 @media screen and (max-width: 720px){
     header {
-        height: 100%;
+        grid-area: 'header';
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 2;
         width: 100vw;
         margin: 0;
         padding: 0;
@@ -310,8 +317,8 @@ nav div ul li .navlink{
     .header-container .logo .font-poke{
         margin-top: -5px;
         padding-top: 0;
-        font-size: 2.9vh;
-        line-height: 65px;
+        font-size: 20px;
+        line-height: 35px;
         margin-bottom: 0;
     }
 
@@ -321,12 +328,12 @@ nav div ul li .navlink{
     }
 
     header .topbar .search-input input {
-        width: 100%;
-        height: 10%;
+        width: 270px;
+        height: 10px;
     }
 
     header .topbar .search-input input:focus {
-        width: 100%;
+        width: 270px;
     }
 
     header .topbar .search-input button {
@@ -338,24 +345,29 @@ nav div ul li .navlink{
 /* ---------------|NAV -------NAV---NAV| --*/
 /* ---------------|NAV --------NAV--NAV|- --*/
     nav {
+        grid-area: 'nav';
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
         height: 100%;
         width: 100vw;
         margin: auto;
     }
     nav .navbar {
         display: flex;
-        overflow: scroll;
+        /* overflow: scroll;*/
         justify-content: flex-start;
         align-items: flex-end;
         width: 100%;
         margin: auto;
     }
     .navlink {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     nav a .socialfoot {
-      
+
         max-width: 15px;
         max-height: 15px;
         margin-left: 5%;
@@ -369,9 +381,9 @@ nav div ul li .navlink{
 /*----SMALL MEDIA QUERIES -----------*/
 /*----SMALL MEDIA QUERIES -------------*/
 /*----SMALL MEDIA QUERIES -------------*/
-@media screen and (max-width: 370px){
+@media screen and (max-width: 414px){
     header {
-        height: 100%;
+        height: 110%;
         margin: 0;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -379,7 +391,7 @@ nav div ul li .navlink{
 
     header .header-container .font-poke {
         margin-bottom: 0;
-        font-size: 1rem;
+        font-size: 15px;
     }
 
     header .topbar .search {
@@ -387,12 +399,12 @@ nav div ul li .navlink{
         margin-left: 0;
     }
     header .topbar .search-input input {
-        width: 80%;
+        width: 260px;
         height: 10%;
     }
 
     header .topbar .search-input input:focus {
-        width: 80%;
+        width: 260px;
     }
 
     header .topbar .search-input button {
@@ -400,26 +412,21 @@ nav div ul li .navlink{
     }
     nav {
         width: 100vw;
-        margin: 0;
         line-height: 100%;
     }
 
     nav .navbar {
-        margin: 0;
+        margin-left: -30px;
     }
 
     .header-container .profile .headlink {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        margin-left: 0;
     }
-
-
-    .navlink {
-        font-size: 0.7rem;
-    }
-
+    
     nav a .socialfoot {
-        max-width: 13px;
-        max-height: 13px;
+        max-width: 19px;
+        max-height: 19px;
         margin-left: 3%;
         margin-right: 3%;
         margin-bottom: 8%;

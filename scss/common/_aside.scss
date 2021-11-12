@@ -2,7 +2,7 @@
 aside {
     grid-area: "sidenav";
     grid-row-start: 3;
-    grid-row-end: 6;
+    grid-row-end: 3;
     grid-column-start: 4;
     grid-column-end: 4;
     width: 100%;
@@ -48,6 +48,7 @@ aside .gambeta::before {
 }
 
 aside .poke-ads-title {
+    background-color: config.$pokeRed;
     text-transform: uppercase;
     font-size: 1.5rem;
     text-align: center;
@@ -114,13 +115,21 @@ aside .poke-ads-font {
 
 @media screen and (max-width: 720px){
     aside {
-        grid-row-start: 7;
-        grid-row-end: 10;
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
         width: 100vw;
-        flex: 1;
+        height: auto;
         padding-left: 0;
-        margin-top: 50px;
+        padding-right: 0;
+        margin-top: 10%;
+        padding-top: 20%;
+    }
+}
+@media screen and (max-width: 414px){
+    aside {
+        margin-top: 10%;
+        padding-top: 50%;
     }
 }

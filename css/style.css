@@ -15,9 +15,9 @@ body {
   font-family: "Yanone Kaffeesatz", sans-serif;
   display: grid;
   width: 100vw;
-  grid-template-rows: 17vh 7vh auto auto auto 0 auto;
+  grid-template-rows: 17vh 7vh auto auto auto;
   grid-template-columns: 10vw 20vw 40vw 20vw 10vw;
-  grid-template-areas: "blankhl        header  header  header blankhr" "blanknl        nav     nav     nav    blanknr" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "blankfl        footer  footer  footer blankfr";
+  grid-template-areas: "blankhl        header  header  header blankhr" "blanknl        nav     nav     nav    blanknr" "costeleta-left content content aside costeleta-right" "blankfl        footer  footer  footer blankfr";
 }
 
 .blankhl {
@@ -26,7 +26,7 @@ body {
   grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: 1;
-  background-color: rgba(214, 68, 0, 0.863);
+  background-color: #ED6000;
 }
 
 .blankhr {
@@ -35,7 +35,7 @@ body {
   grid-row-end: 1;
   grid-column-start: 5;
   grid-column-end: 5;
-  background-color: rgba(214, 68, 0, 0.863);
+  background-color: #ED6000;
 }
 
 .blanknl {
@@ -44,7 +44,7 @@ body {
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 1;
-  background-color: black;
+  background-color: #BA0A00;
   height: auto;
 }
 
@@ -54,14 +54,14 @@ body {
   grid-row-end: 2;
   grid-column-start: 5;
   grid-column-end: 5;
-  background-color: black;
+  background-color: #BA0A00;
   height: auto;
 }
 
 .costeleta-left {
   grid-area: "costeleta-left";
   grid-row-start: 3;
-  grid-row-end: 6;
+  grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 1;
   background-image: url("../images/pokeball-left-01.png");
@@ -73,7 +73,7 @@ body {
 .costeleta-right {
   grid-area: "costeleta-right";
   grid-row-start: 3;
-  grid-row-end: 6;
+  grid-row-end: 3;
   grid-column-start: 5;
   grid-column-end: 5;
   background-image: url("../images/pokeball-right-01.png");
@@ -84,34 +84,111 @@ body {
 
 .blankfl {
   grid-area: "blankl";
-  grid-row-start: 7;
-  grid-row-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 1;
-  background-color: #1a1a1a;
+  background-color: #262626;
 }
 
 .blankfr {
   grid-area: "blankr";
-  grid-row-start: 7;
-  grid-row-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 4;
   grid-column-start: 5;
   grid-column-end: 5;
-  background-color: #1a1a1a;
+  background-color: #262626;
 }
 
 @media screen and (max-width: 720px) {
   .gridzera {
-    grid-template-rows: 12vh 4vh 100% 100% 100% 100% 100% 100% 100% 100% 100%;
-    grid-template-columns: 0 50vw 50vw 0 0;
-    grid-template-areas: "blankhl        header  header  header blankhr" "blanknl        nav     nav     nav    blanknr" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "costeleta-left content content aside costeleta-right" "blankfl        footer  footer  footer blankfr";
-    margin: 0;
+    grid-template-rows: 13vh 7vh auto auto auto;
+    grid-template-columns: 0 50vw 50vw 0;
+    grid-template-areas: "header  header " "nav     nav    " "content content" "aside   aside" "footer  footer";
+    row-gap: 0.01%;
+    margin-bottom: 10%;
+    margin-left: 0;
+  }
+
+  .blankhl {
+    grid-area: "hblankl";
+    grid-row-start: none;
+    grid-row-end: none;
+    grid-column-start: none;
+    grid-column-end: none;
+    background-color: #ED6000;
+  }
+
+  .blankhr {
+    grid-area: "hblankr";
+    grid-row-start: none;
+    grid-row-end: none;
+    grid-column-start: none;
+    grid-column-end: none;
+    background-color: #ED6000;
+  }
+
+  .blanknl {
+    grid-area: "hblankl";
+    grid-row-start: none;
+    grid-row-end: none;
+    grid-column-start: none;
+    grid-column-end: none;
+    background-color: black;
+  }
+
+  .blanknr {
+    grid-area: "hblankr";
+    grid-row-start: none;
+    grid-row-end: none;
+    grid-column-start: none;
+    grid-column-end: none;
+    background-color: black;
+  }
+
+  .costeleta-left {
+    display: none;
+    visibility: hidden;
+    grid-area: "costeleta-left";
+    background-image: none;
+    background-repeat: none;
+    background-size: none;
+    background-position: center;
+    width: 0;
+  }
+
+  .costeleta-right {
+    display: none;
+    visibility: hidden;
+    grid-area: "costeleta-right";
+    background-image: none;
+    background-repeat: none;
+    background-size: none;
+    background-position: center;
+  }
+
+  .blankfl {
+    grid-area: "blankl";
+    grid-row-start: none;
+    grid-row-end: none;
+    grid-column-start: none;
+    grid-column-end: none;
+    background-color: #262626;
+  }
+
+  .blankfr {
+    grid-area: "blankr";
+    grid-row-start: none;
+    grid-row-end: none;
+    grid-column-start: none;
+    grid-column-end: none;
+    background-color: #262626;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 414px) {
   .gridzera {
-    grid-template-rows: 17vh 5vh auto auto auto auto auto auto auto auto 100%;
-    grid-template-columns: 0 50vw 50vw 0 0;
+    grid-template-rows: 13vh 7vh auto auto auto;
+    row-gap: 0.5%;
   }
 }
 header {
@@ -120,7 +197,7 @@ header {
   grid-row-end: 1;
   grid-column-start: 2;
   grid-column-end: 4;
-  background-color: rgba(214, 68, 0, 0.863);
+  background-color: #ED6000;
   height: 100%;
   width: 80vw;
   padding: 1% 0;
@@ -330,8 +407,11 @@ nav {
   grid-column-start: 2;
   grid-column-end: 4;
   height: 100%;
-  width: 80vw;
-  background-color: black;
+  width: 75vw;
+  padding-left: 0;
+  padding-right: 9%;
+  margin: 0;
+  background-color: #BA0A00;
 }
 
 nav div .nav-container {
@@ -380,7 +460,11 @@ nav div ul li .navlink {
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 @media screen and (max-width: 720px) {
   header {
-    height: 100%;
+    grid-area: "header";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -417,8 +501,8 @@ nav div ul li .navlink {
   .header-container .logo .font-poke {
     margin-top: -5px;
     padding-top: 0;
-    font-size: 2.9vh;
-    line-height: 65px;
+    font-size: 20px;
+    line-height: 35px;
     margin-bottom: 0;
   }
 
@@ -428,12 +512,12 @@ nav div ul li .navlink {
   }
 
   header .topbar .search-input input {
-    width: 100%;
-    height: 10%;
+    width: 270px;
+    height: 10px;
   }
 
   header .topbar .search-input input:focus {
-    width: 100%;
+    width: 270px;
   }
 
   header .topbar .search-input button {
@@ -446,6 +530,11 @@ nav div ul li .navlink {
   /* ---------------|NAV -------NAV---NAV| --*/
   /* ---------------|NAV --------NAV--NAV|- --*/
   nav {
+    grid-area: "nav";
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
     height: 100%;
     width: 100vw;
     margin: auto;
@@ -453,7 +542,7 @@ nav div ul li .navlink {
 
   nav .navbar {
     display: flex;
-    overflow: scroll;
+    /* overflow: scroll;*/
     justify-content: flex-start;
     align-items: flex-end;
     width: 100%;
@@ -461,7 +550,7 @@ nav div ul li .navlink {
   }
 
   .navlink {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   nav a .socialfoot {
@@ -476,9 +565,9 @@ nav div ul li .navlink {
 /*----SMALL MEDIA QUERIES -----------*/
 /*----SMALL MEDIA QUERIES -------------*/
 /*----SMALL MEDIA QUERIES -------------*/
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 414px) {
   header {
-    height: 100%;
+    height: 110%;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -486,7 +575,7 @@ nav div ul li .navlink {
 
   header .header-container .font-poke {
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 15px;
   }
 
   header .topbar .search {
@@ -495,12 +584,12 @@ nav div ul li .navlink {
   }
 
   header .topbar .search-input input {
-    width: 80%;
+    width: 260px;
     height: 10%;
   }
 
   header .topbar .search-input input:focus {
-    width: 80%;
+    width: 260px;
   }
 
   header .topbar .search-input button {
@@ -509,40 +598,30 @@ nav div ul li .navlink {
 
   nav {
     width: 100vw;
-    margin: 0;
     line-height: 100%;
   }
 
   nav .navbar {
-    margin: 0;
+    margin-left: -30px;
   }
 
   .header-container .profile .headlink {
-    font-size: 0.7rem;
-  }
-
-  .navlink {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    margin-left: 0;
   }
 
   nav a .socialfoot {
-    max-width: 13px;
-    max-height: 13px;
+    max-width: 19px;
+    max-height: 19px;
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 8%;
   }
 }
-/* - |MAIN-MAIN---------MAIN-MAIN| --*/
-/* - |MAIN--MAIN-------MAIN--MAIN| --*/
-/* - |MAIN---MAIN-----MAIN---MAIN| --*/
-/* - |MAIN----MAIN--MAIN-----MAIN| --*/
-/* - |MAIN------MAIN---------MAIN| --*/
-/* - |MAIN------MAIN---------MAIN| --*/
 main {
   grid-area: "content";
   grid-row-start: 3;
-  grid-row-end: 6;
+  grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 4;
 }
@@ -550,7 +629,7 @@ main {
 main .grid-main {
   font-family: "Yanone Kaffeesatz", sans-serif;
   display: grid;
-  grid-template-rows: 65vh 65vh 65vh 10vh;
+  grid-template-rows: 65vh 65vh 65vh 5vh;
   grid-template-columns: 14vw 14vw 14vw 14vw;
   grid-template-areas: "pok1 pok2  pok3  pok4" "pok5 pok6  pok7  pok8" "pok9 pok10 pok11 pok12" "prox prox prox prox";
   grid-column-gap: 1vw;
@@ -698,7 +777,7 @@ main .card-flex .card-head {
 }
 
 .poke-table .card-flex .btn {
-  background: linear-gradient(-45deg, #ce0606, #ec6834, #d5c923, #23d5ab);
+  background: linear-gradient(-45deg, #BA0A00, #ec6834, #dca202, #5671f7);
   background-size: 400% 400%;
   cursor: pointer;
 }
@@ -755,10 +834,11 @@ main .card-flex .card-head {
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 4;
-  margin-bottom: 0;
-  margin-top: 0;
+  padding-bottom: 5%;
+  margin-bottom: 1%;
+  margin-top: 15%;
+  margin-left: 30%;
   align-self: center;
-  margin-left: 15vw;
 }
 
 .prox-box {
@@ -786,6 +866,7 @@ main .card-flex .card-head {
 }
 
 .prox-item {
+  border: 1px solid black;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-left: 8%;
@@ -793,7 +874,7 @@ main .card-flex .card-head {
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 2%;
-  background: linear-gradient(-45deg, #fbff00, #fff1eb, #8a23ff, #0c10fa);
+  background: linear-gradient(-45deg, #ffea60, #fff1eb, #8a23ff, #012bff);
   background-size: 300% 300%;
   cursor: pointer;
 }
@@ -805,7 +886,7 @@ main .card-flex .card-head {
 }
 
 .prox-item:last-child {
-  margin-right: 0;
+  margin-right: 0.1%;
 }
 
 @keyframes pokeProxAnimation {
@@ -833,22 +914,27 @@ main .card-flex .card-head {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 @media screen and (max-width: 720px) {
   .main {
-    grid-row-start: 2;
-    grid-row-end: 6;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    width: 100%;
+    grid-area: "content";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: fit-content;
     height: auto;
+    margin-bottom: 10%;
+    row-gap: 5%;
   }
 
   main .grid-main {
     font-family: "Yanone Kaffeesatz", sans-serif;
     display: grid;
-    grid-template-rows: 33vh 33vh 33vh 33vh 33vh 33vh 5vh;
+    grid-template-rows: 33vh 33vh 33vh 33vh 33vh 33vh 2vh;
     grid-template-columns: 50% 50%;
     grid-template-areas: "pok1 pok2" "pok3  pok4" "pok5 pok6" "pok7  pok8" "pok9 pok10" "pok11 pok12" "prox prox";
-    grid-column-gap: 0.2vw;
-    /*grid-row-gap: 3vh;*/
+    grid-column-gap: 0.5%;
+    grid-row-gap: 0.5%;
+    margin-bottom: 10%;
+    left: 0;
   }
 
   main .grid-main .pok3 {
@@ -937,12 +1023,9 @@ main .card-flex .card-head {
     grid-row-end: 7;
     grid-column-start: 1;
     grid-column-end: 2;
-    /*margin-bottom: 0;*/
-    height: 5vh;
-    /* margin-left: 250px; */
-    /*margin: auto;*/
-    display: flex;
-    justify-content: center;
+    margin-bottom: 1%;
+    width: 70%;
+    margin-left: 65%;
   }
 
   .pro-box {
@@ -963,7 +1046,7 @@ main .card-flex .card-head {
   }
 
   .old-price {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .actual-price {
@@ -995,7 +1078,7 @@ main .card-flex .card-head {
 aside {
   grid-area: "sidenav";
   grid-row-start: 3;
-  grid-row-end: 6;
+  grid-row-end: 3;
   grid-column-start: 4;
   grid-column-end: 4;
   width: 100%;
@@ -1039,6 +1122,7 @@ aside .gambeta::before {
 }
 
 aside .poke-ads-title {
+  background-color: #BA0A00;
   text-transform: uppercase;
   font-size: 1.5rem;
   text-align: center;
@@ -1104,14 +1188,22 @@ aside .poke-ads-font {
 /*------------ASIDE-------ASIDE---------*/
 @media screen and (max-width: 720px) {
   aside {
-    grid-row-start: 7;
-    grid-row-end: 10;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
     width: 100vw;
-    flex: 1;
+    height: auto;
     padding-left: 0;
-    margin-top: 50px;
+    padding-right: 0;
+    margin-top: 10%;
+    padding-top: 20%;
+  }
+}
+@media screen and (max-width: 414px) {
+  aside {
+    margin-top: 10%;
+    padding-top: 50%;
   }
 }
 /*-- |FOOTER-FOOTER-FOOTER| -----*/
@@ -1125,8 +1217,8 @@ aside .poke-ads-font {
 /*-- |FOOTER|              ------*/
 footer {
   grid-area: "footer";
-  grid-row-start: 7;
-  grid-row-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 4;
   /*  display: flex;
@@ -1134,7 +1226,7 @@ footer {
   width: 78vw;
   padding-right: 2%;
   padding-left: 2%;
-  background-color: #1a1a1a;
+  background-color: #262626;
   color: white;
 }
 
@@ -1195,7 +1287,7 @@ footer .footer-nav a:hover {
 }
 
 footer .copyright {
-  background: #1a1a1a;
+  background: #262626;
   text-align: center;
   margin-top: 30px;
   color: white;
@@ -1249,10 +1341,11 @@ nav .social1 .socialfoot {
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 @media screen and (max-width: 720px) {
   footer {
-    grid-row-start: 11;
-    grid-row-end: 11;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-area: "footer";
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
     width: 100vw;
   }
 
@@ -1275,7 +1368,7 @@ main .grid-main .pok1 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1291,7 +1384,7 @@ main .grid-main .pok2 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1307,7 +1400,7 @@ main .grid-main .pok3 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1323,7 +1416,7 @@ main .grid-main .pok4 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1339,7 +1432,7 @@ main .grid-main .pok5 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1355,7 +1448,7 @@ main .grid-main .pok6 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1371,7 +1464,7 @@ main .grid-main .pok7 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1387,7 +1480,7 @@ main .grid-main .pok8 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1403,7 +1496,7 @@ main .grid-main .pok9 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1419,7 +1512,7 @@ main .grid-main .pok10 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1435,7 +1528,7 @@ main .grid-main .pok11 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
@@ -1451,16 +1544,19 @@ main .grid-main .pok12 {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 1%;
-  border: 1px solid #b8f9fc;
+  border: 1px solid #9FF1FF;
   margin: 0;
   height: 100%;
 }
 
 .top-pokes {
+  transform: all ease 0.5s;
+  height: 100%;
   margin-top: 1%;
 }
 
 .top-pokes h3 {
+  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   border-bottom: solid 1px #DDD;
@@ -1472,7 +1568,17 @@ footer .top-pokes h3 {
   font-family: Pokemon;
 }
 
-.top-pokes ol {
+aside .top-pokes ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 75%;
+  font-family: Pokemon;
+  color: #012bff;
+  text-shadow: 4px 4px 1px #FFDE00;
+}
+
+footer .top-pokes ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1482,7 +1588,21 @@ footer .top-pokes h3 {
   text-shadow: 4px 4px 1px #012bff;
 }
 
-.top-pokes li {
+aside .top-pokes li {
+  background: linear-gradient(-45deg, white, #8a23ff, white, white);
+  background-size: 400% 400%;
+  counter-increment: li;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  border-bottom: solid 1px #DDD;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  height: auto;
+}
+
+footer .top-pokes li {
+  background-size: 400% 400%;
   counter-increment: li;
   display: flex;
   align-items: center;
@@ -1495,18 +1615,26 @@ footer .top-pokes h3 {
 
 .top-pokes span {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  text-shadow: initial;
+  text-shadow: none;
   font-size: 20px;
   font-weight: 300;
+  margin-left: -20px;
 }
 
-.top-pokes li:hover {
-  background: #c3f2ff;
-  color: red;
+aside .top-pokes li:hover {
+  animation: topPokeAnima 5s ease infinite;
+  color: #FFDE00;
   text-shadow: 4px 4px 1px #012bff;
 }
 
-.top-pokes li:last-child {
+footer .top-pokes li:hover {
+  padding: 5%;
+  background: #BA0A00;
+  color: #FFDE00;
+  text-shadow: 4px 4px 1px #012bff;
+}
+
+footer .top-pokes li:last-child {
   border-bottom: 0;
   text-shadow: 4px 4px 1px #012bff;
 }
@@ -1518,8 +1646,19 @@ footer .top-pokes h3 {
   line-height: 0;
 }
 
+@keyframes topPokeAnima {
+  0% {
+    background-position: 0% 5%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .top-pokes .poke-img {
-  width: 100%;
+  max-width: 70px;
   margin: 0 8px;
 }
 
@@ -1529,14 +1668,11 @@ footer .top-pokes {
 
 footer .top-pokes .poke-img {
   margin: 0 8px;
+  max-width: 150px;
 }
 
-ol {
+.top.pokes ol {
   list-style-type: decimal;
-}
-
-.poke-img {
-  width: 3vw;
 }
 
 /*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
@@ -1551,15 +1687,15 @@ ol {
 
   .top-pokes ol {
     font-size: 0.9rem;
-    margin-left: -10px;
   }
 
   .top-pokes span {
     font-size: 1.5rem;
-    margin-left: -10px;
+    margin-left: 0;
   }
 
   .top-pokes .poke-img {
+    max-width: 20vw;
     margin-left: -5px;
   }
 }

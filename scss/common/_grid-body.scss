@@ -11,15 +11,12 @@ body {
     display: grid;
     width: 100vw;
     grid-template-rows:
-    17vh 7vh auto auto auto 0 auto;
+    17vh 7vh auto auto auto;
     grid-template-columns:
        10vw   20vw    40vw    20vw    10vw;
     grid-template-areas:
     'blankhl        header  header  header blankhr'
     'blanknl        nav     nav     nav    blanknr'
-    'costeleta-left content content aside costeleta-right'
-    'costeleta-left content content aside costeleta-right'
-    'costeleta-left content content aside costeleta-right'
     'costeleta-left content content aside costeleta-right'
     'blankfl        footer  footer  footer blankfr';
 }
@@ -47,7 +44,7 @@ body {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-color: black;
+    background-color: config.$navBgColor;
     height: auto;
 }
 .blanknr {
@@ -56,14 +53,14 @@ body {
     grid-row-end: 2;
     grid-column-start: 5;
     grid-column-end: 5;
-    background-color: black;
+    background-color: config.$navBgColor;
     height: auto;
 }
 
 .costeleta-left {
     grid-area: "costeleta-left";
     grid-row-start: 3;
-    grid-row-end: 6;
+    grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
     background-image:
@@ -76,7 +73,7 @@ body {
 .costeleta-right {
     grid-area: "costeleta-right";
     grid-row-start: 3;
-    grid-row-end: 6;
+    grid-row-end: 3;
     grid-column-start: 5;
     grid-column-end: 5;
     background-image:
@@ -88,8 +85,8 @@ body {
 
 .blankfl {
     grid-area: "blankl";
-    grid-row-start: 7;
-    grid-row-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 1;
     background-color:
@@ -98,8 +95,8 @@ body {
 
 .blankfr {
     grid-area: "blankr";
-    grid-row-start: 7;
-    grid-row-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 4;
     grid-column-start: 5;
     grid-column-end: 5;
     background-color:
@@ -109,30 +106,96 @@ body {
 @media screen and (max-width: 720px){
     .gridzera {
         grid-template-rows:
-        12vh 4vh 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+        13vh 7vh auto auto auto;
         grid-template-columns:
-        0   50vw    50vw    0    0;
+        0 50vw    50vw   0;
         grid-template-areas:
-        'blankhl        header  header  header blankhr'
-        'blanknl        nav     nav     nav    blanknr'
-        'costeleta-left content content aside costeleta-right'
-        'costeleta-left content content aside costeleta-right'
-        'costeleta-left content content aside costeleta-right'
-        'costeleta-left content content aside costeleta-right'
-        'costeleta-left content content aside costeleta-right'
-        'costeleta-left content content aside costeleta-right'
-        'costeleta-left content content aside costeleta-right'
-        'costeleta-left content content aside costeleta-right'
-        'blankfl        footer  footer  footer blankfr';
-        margin: 0;
+        'header  header '
+        'nav     nav    '
+        'content content'
+        'aside   aside'
+        'footer  footer';
+        row-gap: 0.01%;
+        margin-bottom: 10%;
+        margin-left: 0;
+
+    }
+    .blankhl {
+        grid-area: "hblankl";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: config.$headerColor;
+    }
+    .blankhr {
+        grid-area: "hblankr";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: config.$headerColor;
+    }
+    .blanknl {
+        grid-area: "hblankl";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: black;
+    }
+    .blanknr {
+        grid-area: "hblankr";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color: black;
+    }
+    .costeleta-left {
+        display: none;
+        visibility: hidden;
+        grid-area: "costeleta-left";
+        background-image: none;
+        background-repeat: none;
+        background-size: none;
+        background-position: center;
+        width: 0;
+    }
+    .costeleta-right {
+        display: none;
+        visibility: hidden;
+        grid-area: "costeleta-right";
+        background-image: none;
+        background-repeat: none;
+        background-size: none;
+        background-position: center;
+    }
+    .blankfl {
+        grid-area: "blankl";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color:
+        config.$footerColor;
+    }
+    .blankfr {
+        grid-area: "blankr";
+        grid-row-start: none;
+        grid-row-end: none;
+        grid-column-start: none;
+        grid-column-end: none;
+        background-color:
+        config.$footerColor;
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 414px){
     .gridzera {
         grid-template-rows:
-        17vh 5vh auto auto auto auto auto auto auto auto 100%;
-        grid-template-columns:
-        0   50vw    50vw    0    0;
+        13vh 7vh auto auto auto;
+        row-gap: 0.5%;
     }
 }
+
