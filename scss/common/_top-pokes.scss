@@ -1,6 +1,7 @@
 @use '../config';
 
 .top-pokes {
+    height: 100%;
     margin-top: 1%;
 }
 
@@ -63,7 +64,7 @@ footer .top-pokes h3  {
 }
 
 .top-pokes .poke-img {
-    width: 100%;
+    max-width: 70px;
     margin: 0 8px;
 }
 
@@ -73,15 +74,14 @@ footer .top-pokes {
 
 footer .top-pokes .poke-img {
     margin: 0 8px;
+    max-width: 150px;
+
 }
 
-ol {
+.top.pokes ol {
     list-style-type: decimal;
 }
 
-.poke-img {
-    width: 3vw;
-}
 /*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
 /*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
 /*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
@@ -94,14 +94,14 @@ ol {
 
     .top-pokes ol {
         font-size: 0.9rem;
-        margin-left: -10px;
     }
 
     .top-pokes span {
         font-size: 1.5rem;
-        margin-left: -10px;
+        margin-left: 0;
     }
     .top-pokes .poke-img {
+        max-width: 20vw;
         margin-left: -5px;
     }
 }

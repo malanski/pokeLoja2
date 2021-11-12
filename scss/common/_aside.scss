@@ -2,7 +2,7 @@
 aside {
     grid-area: "sidenav";
     grid-row-start: 3;
-    grid-row-end: 6;
+    grid-row-end: 3;
     grid-column-start: 4;
     grid-column-end: 4;
     width: 100%;
@@ -114,13 +114,13 @@ aside .poke-ads-font {
 
 @media screen and (max-width: 720px){
     aside {
-        grid-row-start: 7;
-        grid-row-end: 10;
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
         width: 100vw;
-        flex: 1;
         padding-left: 0;
-        margin-top: 50px;
+        padding-right: 0;
+        margin-top: 10%;
     }
 }
