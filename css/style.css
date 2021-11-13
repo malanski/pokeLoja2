@@ -470,7 +470,7 @@ nav .nav-container .social1 .socialfoot {
     width: 100vw;
     margin: auto;
   }
-  nav .navbar {
+  nav .nav-container .navbar {
     display: flex;
     /* overflow: scroll;*/
     justify-content: flex-start;
@@ -478,11 +478,10 @@ nav .nav-container .social1 .socialfoot {
     width: 100%;
     margin: auto;
   }
-  nav .navbar .navlink {
+  nav .nav-container .navbar .navlink {
     font-size: 0.8rem;
   }
-
-  nav a .socialfoot {
+  nav .nav-container .social1 .socialfoot {
     max-width: 15px;
     max-height: 15px;
     margin-left: 5%;
@@ -490,10 +489,6 @@ nav .nav-container .social1 .socialfoot {
     margin-bottom: 8%;
   }
 }
-/*----SMALL MEDIA QUERIES -----------*/
-/*----SMALL MEDIA QUERIES -----------*/
-/*----SMALL MEDIA QUERIES -------------*/
-/*----SMALL MEDIA QUERIES -------------*/
 @media screen and (max-width: 414px) {
   header {
     height: 110%;
@@ -501,45 +496,37 @@ nav .nav-container .social1 .socialfoot {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-
-  header .header-container .font-poke {
+  header .topbar .header-container .font-poke {
     margin-bottom: 0;
     font-size: 15px;
   }
-
   header .topbar .search {
     margin-top: 2px;
     margin-left: 0;
   }
-
+  header .topbar .search-input button {
+    margin-left: -25px;
+  }
   header .topbar .search-input input {
     width: 260px;
     height: 10%;
   }
-
   header .topbar .search-input input:focus {
     width: 260px;
   }
-
-  header .topbar .search-input button {
-    margin-left: -25px;
+  header .topbar .profile .headlink {
+    font-size: 0.8rem;
+    margin-left: 0;
   }
 
   nav {
     width: 100vw;
     line-height: 100%;
   }
-
-  nav .navbar {
+  nav .nav-container .navbar {
     margin-left: -30px;
   }
-
-  .header-container .profile .headlink {
-    font-size: 0.8rem;
-    margin-left: 0;
-  }
-
-  nav a .socialfoot {
+  nav .nav-container .social1 .socialfoot {
     max-width: 19px;
     max-height: 19px;
     margin-left: 3%;
