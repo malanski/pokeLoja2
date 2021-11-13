@@ -2,7 +2,6 @@
 
 .top-pokes {
     transform: all ease 0.5s;
-
     height: 100%;
     margin-top: 1%;
 }
@@ -11,14 +10,18 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 35px;
     border-bottom: solid 1px #DDD;
     padding: 5% 0;
     margin: 0;
 }
-
-footer .top-pokes h3  {
+footer .top-pokes h3 {
     font-family: config.$pokeFont;
+    font-size: 25px;
+    border-bottom: solid 1px #DDD;
+    padding: 3% 0;
 }
+
 
 aside .top-pokes ol {
     list-style-type: none;
@@ -36,6 +39,7 @@ footer .top-pokes ol {
     margin: 0;
     height: 75%;
     font-family: config.$pokeFont;
+
     color: config.$yellowPok;
     text-shadow: config.$texShadow;
 }
@@ -138,7 +142,7 @@ footer .top-pokes .poke-img {
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 @media screen and (max-width: 720px){
     .top-pokes h3 {
-        font-size: 1.5rem;
+        font-size: 19px;
     }
 
     .top-pokes ol {

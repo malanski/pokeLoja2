@@ -23,94 +23,88 @@ footer {
     background-color:
     config.$footerColor;
     color: config.$fontWhite;
-}
-
-footer .containerfoot {
-    display: flex;
-    justify-content: space-between;
-}
-
-footer .footer-nav li {
-    margin-bottom: 10px;
-    list-style-type: none;
-}
-
-
-#cf {
-    position: relative;
-    height: auto;
-}
-
-#cf img{
-    position: absolute;
-    right: 0;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-
-@keyframes cfFadeInOut {
-    0% {
-        opacity: 1;
+    .containerfoot {
+        display: flex;
+        justify-content: space-between;
+        .footer-nav {
+            li {
+                margin-bottom: 10px;
+                list-style-type: none;
+                a {
+                    font-size: 20px;
+                    color: config.$fontWhite;
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: config.$yellowPok;
+                }
+            }
+        }
+        .social2 {
+            .socialfoot {
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+                margin-top: 10%;
+                transition: all ease 0.4s;
+            }
+        }
     }
-    45% {
-        opacity: 1;
+    #cf {
+        flex:1;
+        align-self: center;
+        position: relative;
+        height: auto;
+        img{
+            position: absolute;
+            right: 0;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+        }
+        @keyframes cfFadeInOut {
+            0% {
+                opacity: 1;
+            }
+            45% {
+                opacity: 1;
+            }
+            55% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .image-top {
+            animation-name: cfFadeInOut;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-direction: alternate;
+        }
     }
-    55% {
-        opacity: 0;
+    .copyright {
+        background: config.$footerColor;
+        text-align: center;
+        margin-top: 30px;
+        color: config.$fontWhite;
+        padding: 20px 0;
+        .bottom {
+            color: config.$fontWhite;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 0;
+            .defaut-clean {
+                text-decoration: none;
+                color: config.$fontWhite;
+            }
+        }
     }
-    100% {
-        opacity: 0;
-    }    
 }
 
-#cf img.image-top {
-    animation-name: cfFadeInOut;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-direction: alternate;
-}
-
-footer .footer-nav a {
-    font-size: 20px;
-    color: config.$fontWhite;
-    text-decoration: none;
-}
-
-footer .footer-nav a:hover {
-    color: config.$yellowPok;
-}
-
-footer .copyright {
-    background: config.$footerColor;
-    text-align: center;
-    margin-top: 30px;
-    color: config.$fontWhite;
-    padding: 20px 0;
-}
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-footer .social2 .socialfoot {
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-    margin-top: 10%;
-    transition: all ease 0.4s;
-}
-
-nav .social1 .socialfoot {
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-    margin-top: 2%;
-    transition: all ease 0.4s;
-}
-
+/*---SOCIAL--USED ON--FOOTER--&--HEADER-------*/
 .socialfoot:hover {
     border: 1px solid config.$yellowPok;
     border-radius: 8%;
@@ -118,24 +112,14 @@ nav .social1 .socialfoot {
     background-color: config.$yellow2Pok;
 }
 
-.bottom {
-    color: config.$fontWhite;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.defaut-clean {
-    text-decoration: none;
-    color: config.$fontWhite;
-}
 
 
-/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
-/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
 @media screen and (max-width: 720px){
     footer {
         grid-area: 'footer';
@@ -143,14 +127,26 @@ nav .social1 .socialfoot {
         grid-row-end: 5;
         grid-column-start: 1;
         grid-column-end: 2;
-        width: 100vw;
-    }
-
-    footer {
         padding-left: 0;
-    }
-
-    footer .containerfoot ul li a {
-        font-size: 0.8rem;
+        width: 100vw;
+        .containerfoot {
+            .footer-nav {
+                li {
+                    a {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            .social2 {
+                .socialfoot {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 2px;
+                    margin-top: 10%;
+                    margin-bottom: 10%;
+                    margin-right: 10%;
+                }
+            }
+        }
     }
 }

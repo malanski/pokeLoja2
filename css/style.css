@@ -404,6 +404,8 @@ nav .nav-container .social1 .socialfoot {
   height: 25px;
   border-radius: 5px;
   margin-top: 1%;
+  margin-top: 2%;
+  transition: all ease 0.4s;
 }
 
 @media screen and (max-width: 720px) {
@@ -1145,23 +1147,36 @@ footer {
   background-color: #262626;
   color: white;
 }
-
 footer .containerfoot {
   display: flex;
   justify-content: space-between;
 }
-
-footer .footer-nav li {
+footer .containerfoot .footer-nav li {
   margin-bottom: 10px;
   list-style-type: none;
 }
-
-#cf {
+footer .containerfoot .footer-nav li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+footer .containerfoot .footer-nav li a:hover {
+  color: #FFDE00;
+}
+footer .containerfoot .social2 .socialfoot {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  margin-top: 10%;
+  transition: all ease 0.4s;
+}
+footer #cf {
+  flex: 1;
+  align-self: center;
   position: relative;
   height: auto;
 }
-
-#cf img {
+footer #cf img {
   position: absolute;
   right: 0;
   -webkit-transition: opacity 1s ease-in-out;
@@ -1169,7 +1184,6 @@ footer .footer-nav li {
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
-
 @keyframes cfFadeInOut {
   0% {
     opacity: 1;
@@ -1184,24 +1198,13 @@ footer .footer-nav li {
     opacity: 0;
   }
 }
-#cf img.image-top {
+footer #cf .image-top {
   animation-name: cfFadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 1s;
   animation-direction: alternate;
 }
-
-footer .footer-nav a {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-}
-
-footer .footer-nav a:hover {
-  color: #FFDE00;
-}
-
 footer .copyright {
   background: #262626;
   text-align: center;
@@ -1209,28 +1212,18 @@ footer .copyright {
   color: white;
   padding: 20px 0;
 }
-
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-/*-----SOCIAL---------FOOTER-------------*/
-footer .social2 .socialfoot {
-  width: 25px;
-  height: 25px;
-  border-radius: 5px;
-  margin-top: 10%;
-  transition: all ease 0.4s;
+footer .copyright .bottom {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0;
+}
+footer .copyright .bottom .defaut-clean {
+  text-decoration: none;
+  color: white;
 }
 
-nav .social1 .socialfoot {
-  width: 25px;
-  height: 25px;
-  border-radius: 5px;
-  margin-top: 2%;
-  transition: all ease 0.4s;
-}
-
+/*---SOCIAL--USED ON--FOOTER--&--HEADER-------*/
 .socialfoot:hover {
   border: 1px solid #FFDE00;
   border-radius: 8%;
@@ -1238,23 +1231,10 @@ nav .social1 .socialfoot {
   background-color: #ffea60;
 }
 
-.bottom {
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.defaut-clean {
-  text-decoration: none;
-  color: white;
-}
-
-/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
-/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @media screen and (max-width: 720px) {
   footer {
     grid-area: "footer";
@@ -1262,15 +1242,19 @@ nav .social1 .socialfoot {
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
+    padding-left: 0;
     width: 100vw;
   }
-
-  footer {
-    padding-left: 0;
+  footer .containerfoot .footer-nav li a {
+    font-size: 0.9rem;
   }
-
-  footer .containerfoot ul li a {
-    font-size: 0.8rem;
+  footer .containerfoot .social2 .socialfoot {
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 10%;
   }
 }
 main .grid-main .pok1 {
@@ -1475,6 +1459,7 @@ main .grid-main .pok12 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 35px;
   border-bottom: solid 1px #DDD;
   padding: 5% 0;
   margin: 0;
@@ -1482,6 +1467,9 @@ main .grid-main .pok12 {
 
 footer .top-pokes h3 {
   font-family: Pokemon;
+  font-size: 25px;
+  border-bottom: solid 1px #DDD;
+  padding: 3% 0;
 }
 
 aside .top-pokes ol {
@@ -1598,7 +1586,7 @@ footer .top-pokes .poke-img {
 /*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 @media screen and (max-width: 720px) {
   .top-pokes h3 {
-    font-size: 1.5rem;
+    font-size: 19px;
   }
 
   .top-pokes ol {
