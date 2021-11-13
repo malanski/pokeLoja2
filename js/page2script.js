@@ -16,7 +16,7 @@ let vaporWave = document.querySelector('.pikachuu');
 vaporWave.onclick = function() {
     let mySrc = vaporWave.getAttribute('src');
         if(mySrc === '../images/tenor-pikachu.gif') {
-    vaporWave.setAttribute ('src','../images/imgur-pikachu.gif');
+    vaporWave.setAttribute ('src','../images/pikachu-dance.gif');
         } else {
     vaporWave.setAttribute ('src','../images/tenor-pikachu.gif');
     }
