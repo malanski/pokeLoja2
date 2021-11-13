@@ -1493,6 +1493,7 @@ footer .top-pokes ol {
 }
 
 aside .top-pokes li {
+  transition: all ease 0.3s;
   background: linear-gradient(-45deg, white, #8a23ff, white, white);
   background-size: 400% 400%;
   counter-increment: li;
@@ -1500,19 +1501,18 @@ aside .top-pokes li {
   align-items: center;
   padding: 2%;
   border-bottom: solid 1px #DDD;
-  transition: all ease 0.3s;
   cursor: pointer;
   height: auto;
 }
 
 footer .top-pokes li {
-  background-size: 400% 400%;
+  transition: all ease 0.5s;
+  background: linear-gradient(180deg, #262626, #262626, #BA0A00, #262626);
+  background-size: 600% 600%;
   counter-increment: li;
   display: flex;
   align-items: center;
   padding: 2%;
-  border-bottom: solid 1px #DDD;
-  transition: all ease 0.3s;
   cursor: pointer;
   height: auto;
 }
@@ -1525,6 +1525,14 @@ footer .top-pokes li {
   margin-left: -20px;
 }
 
+footer .top-pokes span {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-shadow: none;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: -20px;
+}
+
 aside .top-pokes li:hover {
   animation: topPokeAnima 5s ease infinite;
   color: #FFDE00;
@@ -1532,8 +1540,9 @@ aside .top-pokes li:hover {
 }
 
 footer .top-pokes li:hover {
+  animation: topPokeFootAnima 3s ease infinite;
+  border-bottom: solid 1px #DDD;
   padding: 5%;
-  background: #BA0A00;
   color: #FFDE00;
   text-shadow: 4px 4px 1px #012bff;
 }
@@ -1556,6 +1565,17 @@ footer .top-pokes li:last-child {
   }
   50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes topPokeFootAnima {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
   }
   100% {
     background-position: 0% 50%;

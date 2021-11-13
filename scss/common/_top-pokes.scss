@@ -39,12 +39,12 @@ footer .top-pokes ol {
     margin: 0;
     height: 75%;
     font-family: config.$pokeFont;
-
     color: config.$yellowPok;
     text-shadow: config.$texShadow;
 }
 
 aside .top-pokes li {
+    transition: all ease 0.3s;
     background: config.$topBtnBg;
     background-size: 400% 400%;
     counter-increment: li;
@@ -52,18 +52,17 @@ aside .top-pokes li {
     align-items: center;
     padding: 2%;
     border-bottom: solid 1px #DDD;
-    transition: all ease 0.3s;
     cursor: pointer;
     height: auto;
 }
 footer .top-pokes li {
-    background-size: 400% 400%;
+    transition: all ease 0.5s;
+    background: config.$topBtnFoot;
+    background-size: 600% 600%;
     counter-increment: li;
     display: flex;
     align-items: center;
     padding: 2%;
-    border-bottom: solid 1px #DDD;
-    transition: all ease 0.3s;
     cursor: pointer;
     height: auto;
 }
@@ -75,6 +74,13 @@ footer .top-pokes li {
     font-weight: 300;
     margin-left: -20px;
 }
+footer .top-pokes span {
+    font-family: config.$fontText;
+    text-shadow: none;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: -20px;
+}
 
 aside .top-pokes li:hover {
     animation: topPokeAnima 5s ease infinite;
@@ -84,8 +90,9 @@ aside .top-pokes li:hover {
 }
 
 footer .top-pokes li:hover {
+    animation: topPokeFootAnima 3s ease infinite;
+    border-bottom: solid 1px #DDD;
     padding: 5%;
-    background: config.$pokeRed;
     color: config.$hovTopColor;
     text-shadow: config.$texShadow;
 }
@@ -109,6 +116,17 @@ footer .top-pokes li:last-child {
     }
     50% {
         background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes topPokeFootAnima {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
     }
     100% {
         background-position: 0% 50%;
