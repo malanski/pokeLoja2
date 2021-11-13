@@ -202,21 +202,12 @@ header {
   width: 80vw;
   padding: 1% 0;
 }
-
-.topbar {
+header .topbar {
   grid-area: "header";
   max-height: 10vh;
   margin-right: 2%;
   margin-left: 2%;
 }
-
-.header-container {
-  /* display: flex;
-   justify-content: space-between;
-   width: 75vw;
-   margin: auto;*/
-}
-
 header .topbar .header-container {
   display: flex;
   justify-content: space-evenly;
@@ -224,44 +215,95 @@ header .topbar .header-container {
   width: 75vw;
   margin: auto;
 }
-
-header .header-container .font-poke {
+header .topbar .header-container .logo {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+header .topbar .header-container .logo a {
+  text-decoration: none;
+}
+header .topbar .header-container .logo a .font-poke:hover {
+  text-shadow: 5px 12px 8px #012bff;
+}
+header .topbar .header-container .logo .font-poke {
   color: #FFDE00;
   text-shadow: 4px 4px 1px #012bff;
   line-height: 0;
   font-family: Pokemon;
   font-size: 8vh;
   transition: all ease 0.9s;
-}
-
-.logo a {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-}
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-}
-
-.font-poke {
   text-transform: uppercase;
-}
-
-a .font-poke:hover {
-  text-shadow: 5px 12px 8px #012bff;
-}
-
-.font-poke {
   animation-duration: 3s;
   animation-name: slidein;
 }
-
-.pika-run {
+header .topbar .header-container .logo .pika-run {
   animation-duration: 3s;
   animation-name: runing;
+}
+header .topbar .header-container .search {
+  margin-left: 15px;
+}
+header .topbar .header-container .search .search-input {
+  position: relative;
+}
+header .topbar .header-container .search .search-input button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  background: url("../images/pokeball-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  cursor: grabbing;
+}
+header .topbar .header-container .search .search-input input {
+  transition: width 0.3s ease-in-out;
+  border-radius: 5px;
+  border: 0;
+  width: 130px;
+  padding: 15px 33px 15px 17px;
+}
+header .topbar .header-container .search .search-input input:focus {
+  width: 230px;
+  outline: 3px solid #012bff;
+}
+header .topbar .profile {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+header .topbar .profile li {
+  margin-left: 8%;
+}
+header .topbar .profile li .headlink {
+  text-decoration: none;
+  color: black;
+  font-size: 2.1vh;
+  transition: all ease 0.4s;
+}
+header .topbar .profile li .headlink:hover {
+  /* transition: background-color .1s linear;*/
+  box-shadow: 5px 5px 5px #ffffff;
+  font-size: 2.4vh;
+  border-radius: 20%;
+  padding-left: 19%;
+  padding-right: 19%;
+  background-color: #FFDE00;
+  color: #012bff;
+  font-family: Pokemon;
+  text-shadow: 2px 2px 1px #012bff;
+}
+header .topbar .profile li .buycart {
+  width: 2.5vh;
+  height: 2.5vh;
+  margin-right: 15px;
 }
 
 .pika-spin {
@@ -320,86 +362,6 @@ a .font-poke:hover {
     width: 100%;
   }
 }
-header .topbar .search {
-  margin-left: 15px;
-}
-
-header .topbar .search-input {
-  position: relative;
-}
-
-header .topbar .search-input button {
-  position: absolute;
-  right: 3px;
-  top: 3px;
-  background: url("../images/pokeball-1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 20px;
-  height: 20px;
-  border: 0;
-  cursor: grabbing;
-}
-
-header .topbar .search-input input {
-  transition: width 0.3s ease-in-out;
-  border-radius: 5px;
-  border: 0;
-  width: 130px;
-  padding: 15px 33px 15px 17px;
-}
-
-header .topbar .search-input input:focus {
-  width: 230px;
-  outline: 3px solid #012bff;
-}
-
-header .topbar .profile {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-header .topbar .profile li {
-  margin-left: 8%;
-}
-
-header .topbar .headlink {
-  text-decoration: none;
-  color: black;
-  font-size: 2.1vh;
-  transition: all ease 0.4s;
-}
-
-header .topbar .headlink:hover {
-  /* transition: background-color .1s linear;*/
-  box-shadow: 5px 5px 5px #ffffff;
-  font-size: 2.4vh;
-  border-radius: 20%;
-  padding-left: 19%;
-  padding-right: 19%;
-  background-color: #FFDE00;
-  color: #012bff;
-  font-family: Pokemon;
-  text-shadow: 2px 2px 1px #012bff;
-}
-
-.buycart {
-  width: 2.5vh;
-  height: 2.5vh;
-  margin-right: 15px;
-}
-
-/*---- |NAV NAV--------NAV| -------*/
-/*---- |NAV -NAV-------NAV| ------*/
-/*---- |NAV ---NAV-----NAV| -------*/
-/*-----|NAV ------NAV--NAV| ------*/
-/*-----|NAV ------NAV--NAV| -----*/
-/*-----|NAV -------NAV-NAV| -----*/
 nav {
   grid-area: "nav";
   grid-row-start: 2;
@@ -413,51 +375,37 @@ nav {
   margin: 0;
   background-color: #BA0A00;
 }
-
-nav div .nav-container {
+nav .nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 }
-
-.navbar {
+nav .nav-container .navbar {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   margin: auto;
 }
-
-div .navbar li .navlink:hover {
-  color: #FFDE00;
-}
-
-nav div ul li .navlink {
+nav .nav-container .navbar li .navlink {
   color: white;
   border-right: solid 1px white;
   padding-right: 0.8rem;
   margin-right: 1rem;
   text-decoration: none;
+  text-transform: uppercase;
 }
-
-/*------------SOCIAL-----NAV----*/
-/*------------SOCIAL-----NAV----*/
-/*------------SOCIAL-----NAV----*/
-/*------------SOCIAL-----NAV----*/
-/*------------SOCIAL-----NAV----*/
-.socialfoot {
+nav .nav-container .navbar li .navlink:hover {
+  color: #FFDE00;
+}
+nav .nav-container .social1 .socialfoot {
   width: 25px;
   height: 25px;
   border-radius: 5px;
   margin-top: 1%;
 }
 
-/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
-/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 @media screen and (max-width: 720px) {
   header {
     grid-area: "header";
@@ -469,66 +417,49 @@ nav div ul li .navlink {
     margin: 0;
     padding: 0;
   }
-
-  .header-container {
+  header .topbar .header-container {
     display: block;
     padding: 0 15px;
     margin: 0;
-  }
-
-  header .topbar .header-container {
     display: block;
   }
-
-  header .topbar .profile {
-    top: 5px;
-    right: 5px;
-    margin-top: 0;
-    margin-right: 30px;
-    position: absolute;
-  }
-
-  .header-container .profile .headlink {
-    font-size: 0.9rem;
-  }
-
-  .header-container .profile img {
-    width: 15px;
-    height: 15px;
-    margin-left: -5px;
-  }
-
-  .header-container .logo .font-poke {
+  header .topbar .header-container .logo .font-poke {
     margin-top: -5px;
     padding-top: 0;
     font-size: 20px;
     line-height: 35px;
     margin-bottom: 0;
   }
-
-  header .topbar .search {
+  header .topbar .header-container .profile {
+    top: 5px;
+    right: 5px;
+    margin-top: 0;
+    margin-right: 30px;
+    position: absolute;
+  }
+  header .topbar .header-container .profile .headlink {
+    font-size: 0.9rem;
+  }
+  header .topbar .header-container .profile img {
+    width: 15px;
+    height: 15px;
+    margin-left: -5px;
+  }
+  header .topbar .header-container .search {
     margin-top: 2px;
     margin-left: 0;
   }
-
-  header .topbar .search-input input {
+  header .topbar .header-container .search .search-input button {
+    margin-left: -25px;
+  }
+  header .topbar .header-container .search .search-input input {
     width: 270px;
     height: 10px;
   }
-
-  header .topbar .search-input input:focus {
+  header .topbar .header-container .search .search-input input:focus {
     width: 270px;
   }
 
-  header .topbar .search-input button {
-    margin-left: -25px;
-  }
-
-  /* -------------- |NAV NAV----------NAV| --*/
-  /* -------------- |NAV --NAV--------NAV| --*/
-  /* -------------- |NAV ----NAV------NAV|- --*/
-  /* ---------------|NAV -------NAV---NAV| --*/
-  /* ---------------|NAV --------NAV--NAV|- --*/
   nav {
     grid-area: "nav";
     grid-row-start: 2;
@@ -539,7 +470,6 @@ nav div ul li .navlink {
     width: 100vw;
     margin: auto;
   }
-
   nav .navbar {
     display: flex;
     /* overflow: scroll;*/
@@ -548,8 +478,7 @@ nav div ul li .navlink {
     width: 100%;
     margin: auto;
   }
-
-  .navlink {
+  nav .navbar .navlink {
     font-size: 0.8rem;
   }
 
