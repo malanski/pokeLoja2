@@ -1454,7 +1454,6 @@ main .grid-main .pok12 {
   height: 100%;
   margin-top: 1%;
 }
-
 .top-pokes h3 {
   text-align: center;
   text-transform: uppercase;
@@ -1464,12 +1463,25 @@ main .grid-main .pok12 {
   padding: 5% 0;
   margin: 0;
 }
-
-footer .top-pokes h3 {
-  font-family: Pokemon;
-  font-size: 25px;
-  border-bottom: solid 1px #DDD;
-  padding: 3% 0;
+.top-pokes ol {
+  list-style-type: decimal;
+}
+.top-pokes ol li .poke-img {
+  max-width: 70px;
+  margin: 0 8px;
+}
+.top-pokes ol li span {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-shadow: none;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: -20px;
+}
+.top-pokes li::before {
+  content: counter(li) "º";
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 0;
 }
 
 aside .top-pokes ol {
@@ -1481,18 +1493,7 @@ aside .top-pokes ol {
   color: #012bff;
   text-shadow: 4px 4px 1px #FFDE00;
 }
-
-footer .top-pokes ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  height: 75%;
-  font-family: Pokemon;
-  color: #FFDE00;
-  text-shadow: 4px 4px 1px #012bff;
-}
-
-aside .top-pokes li {
+aside .top-pokes ol li {
   transition: all ease 0.3s;
   background: linear-gradient(-45deg, white, #8a23ff, white, white);
   background-size: 400% 400%;
@@ -1504,61 +1505,11 @@ aside .top-pokes li {
   cursor: pointer;
   height: auto;
 }
-
-footer .top-pokes li {
-  transition: all ease 0.5s;
-  background: linear-gradient(180deg, #262626, #262626, #BA0A00, #262626);
-  background-size: 600% 600%;
-  counter-increment: li;
-  display: flex;
-  align-items: center;
-  padding: 2%;
-  cursor: pointer;
-  height: auto;
-}
-
-.top-pokes span {
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  text-shadow: none;
-  font-size: 20px;
-  font-weight: 300;
-  margin-left: -20px;
-}
-
-footer .top-pokes span {
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  text-shadow: none;
-  font-size: 20px;
-  font-weight: 400;
-  margin-left: -20px;
-}
-
-aside .top-pokes li:hover {
+aside .top-pokes ol li:hover {
   animation: topPokeAnima 5s ease infinite;
   color: #FFDE00;
   text-shadow: 4px 4px 1px #012bff;
 }
-
-footer .top-pokes li:hover {
-  animation: topPokeFootAnima 3s ease infinite;
-  border-bottom: solid 1px #DDD;
-  padding: 5%;
-  color: #FFDE00;
-  text-shadow: 4px 4px 1px #012bff;
-}
-
-footer .top-pokes li:last-child {
-  border-bottom: 0;
-  text-shadow: 4px 4px 1px #012bff;
-}
-
-.top-pokes li::before {
-  content: counter(li) "º";
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 0;
-}
-
 @keyframes topPokeAnima {
   0% {
     background-position: 0% 5%;
@@ -1569,6 +1520,54 @@ footer .top-pokes li:last-child {
   100% {
     background-position: 0% 50%;
   }
+}
+
+footer .top-pokes {
+  max-width: 60vw;
+}
+footer .top-pokes h3 {
+  font-family: Pokemon;
+  font-size: 25px;
+  border-bottom: solid 1px #DDD;
+  padding: 3% 0;
+}
+footer .top-pokes ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 75%;
+  font-family: Pokemon;
+  color: #FFDE00;
+  text-shadow: 4px 4px 1px #012bff;
+}
+footer .top-pokes ol li {
+  transition: all ease 0.5s;
+  background: linear-gradient(180deg, #262626, #262626, #BA0A00, #262626);
+  background-size: 600% 600%;
+  counter-increment: li;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  cursor: pointer;
+  height: auto;
+}
+footer .top-pokes ol li .poke-img {
+  margin: 0 8px;
+  max-width: 150px;
+}
+footer .top-pokes ol li span {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-shadow: none;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: -20px;
+}
+footer .top-pokes ol li:hover {
+  animation: topPokeFootAnima 3s ease infinite;
+  border-bottom: solid 1px #DDD;
+  padding: 5%;
+  color: #FFDE00;
+  text-shadow: 4px 4px 1px #012bff;
 }
 @keyframes topPokeFootAnima {
   0% {
@@ -1581,46 +1580,25 @@ footer .top-pokes li:last-child {
     background-position: 0% 50%;
   }
 }
-.top-pokes .poke-img {
-  max-width: 70px;
-  margin: 0 8px;
+footer .top-pokes ol li:last-child {
+  border-bottom: 0;
+  text-shadow: 4px 4px 1px #012bff;
 }
 
-footer .top-pokes {
-  max-width: 60vw;
-}
-
-footer .top-pokes .poke-img {
-  margin: 0 8px;
-  max-width: 150px;
-}
-
-.top.pokes ol {
-  list-style-type: decimal;
-}
-
-/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
-/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 @media screen and (max-width: 720px) {
   .top-pokes h3 {
     font-size: 19px;
   }
-
   .top-pokes ol {
     font-size: 0.9rem;
   }
-
-  .top-pokes span {
-    font-size: 1.5rem;
-    margin-left: 0;
-  }
-
-  .top-pokes .poke-img {
+  .top-pokes ol .poke-img {
     max-width: 20vw;
     margin-left: -5px;
+  }
+  .top-pokes ol span {
+    font-size: 1.5rem;
+    margin-left: 0;
   }
 }
 

@@ -4,175 +4,161 @@
     transform: all ease 0.5s;
     height: 100%;
     margin-top: 1%;
-}
-
-.top-pokes h3 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 35px;
-    border-bottom: solid 1px #DDD;
-    padding: 5% 0;
-    margin: 0;
-}
-footer .top-pokes h3 {
-    font-family: config.$pokeFont;
-    font-size: 25px;
-    border-bottom: solid 1px #DDD;
-    padding: 3% 0;
-}
-
-
-aside .top-pokes ol {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 75%;
-    font-family: config.$pokeFont;
-    color: config.$bluePok;
-    text-shadow: config.$texShadowRev;
-}
-
-footer .top-pokes ol {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 75%;
-    font-family: config.$pokeFont;
-    color: config.$yellowPok;
-    text-shadow: config.$texShadow;
-}
-
-aside .top-pokes li {
-    transition: all ease 0.3s;
-    background: config.$topBtnBg;
-    background-size: 400% 400%;
-    counter-increment: li;
-    display: flex;
-    align-items: center;
-    padding: 2%;
-    border-bottom: solid 1px #DDD;
-    cursor: pointer;
-    height: auto;
-}
-footer .top-pokes li {
-    transition: all ease 0.5s;
-    background: config.$topBtnFoot;
-    background-size: 600% 600%;
-    counter-increment: li;
-    display: flex;
-    align-items: center;
-    padding: 2%;
-    cursor: pointer;
-    height: auto;
-}
-
-.top-pokes span {
-    font-family: config.$fontText;
-    text-shadow: none;
-    font-size: 20px;
-    font-weight: 300;
-    margin-left: -20px;
-}
-footer .top-pokes span {
-    font-family: config.$fontText;
-    text-shadow: none;
-    font-size: 20px;
-    font-weight: 400;
-    margin-left: -20px;
-}
-
-aside .top-pokes li:hover {
-    animation: topPokeAnima 5s ease infinite;
-
-    color: config.$hovTopColor;
-    text-shadow: config.$texShadow;
-}
-
-footer .top-pokes li:hover {
-    animation: topPokeFootAnima 3s ease infinite;
-    border-bottom: solid 1px #DDD;
-    padding: 5%;
-    color: config.$hovTopColor;
-    text-shadow: config.$texShadow;
-}
-
-footer .top-pokes li:last-child {
-    border-bottom: 0;
-    text-shadow: config.$texShadow;
-}
-
-.top-pokes li::before {
-    content: counter(li) "º";
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 0;
-}
-
-
-@keyframes topPokeAnima {
-    0% {
-        background-position: 0% 5%;
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 35px;
+        border-bottom: solid 1px #DDD;
+        padding: 5% 0;
+        margin: 0;
     }
-    50% {
-        background-position: 100% 50%;
+    ol {
+        list-style-type: decimal;
+        li {
+            .poke-img {
+                max-width: 70px;
+                margin: 0 8px;
+            }
+            span {
+                font-family: config.$fontText;
+                text-shadow: none;
+                font-size: 20px;
+                font-weight: 300;
+                margin-left: -20px;
+            }
+        }
     }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-@keyframes topPokeFootAnima {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 0% 50%;
+    li::before {
+        content: counter(li) "º";
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 0;
     }
 }
 
-.top-pokes .poke-img {
-    max-width: 70px;
-    margin: 0 8px;
+aside {
+    .top-pokes {
+        ol {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 75%;
+            font-family: config.$pokeFont;
+            color: config.$bluePok;
+            text-shadow: config.$texShadowRev;
+            li {
+                transition: all ease 0.3s;
+                background: config.$topBtnBg;
+                background-size: 400% 400%;
+                counter-increment: li;
+                display: flex;
+                align-items: center;
+                padding: 2%;
+                border-bottom: solid 1px #DDD;
+                cursor: pointer;
+                height: auto;
+            }
+            li:hover {
+                animation: topPokeAnima 5s ease infinite;
+                color: config.$hovTopColor;
+                text-shadow: config.$texShadow;
+            }
+            @keyframes topPokeAnima {
+                0% {
+                    background-position: 0% 5%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        }
+    }
 }
 
-footer .top-pokes {
-    max-width: 60vw;
+footer {
+    .top-pokes {
+        max-width: 60vw;
+        h3 {
+            font-family: config.$pokeFont;
+            font-size: 25px;
+            border-bottom: solid 1px #DDD;
+            padding: 3% 0;
+        }
+        ol {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 75%;
+            font-family: config.$pokeFont;
+            color: config.$yellowPok;
+            text-shadow: config.$texShadow;
+            li {
+                transition: all ease 0.5s;
+                background: config.$topBtnFoot;
+                background-size: 600% 600%;
+                counter-increment: li;
+                display: flex;
+                align-items: center;
+                padding: 2%;
+                cursor: pointer;
+                height: auto;
+                .poke-img {
+                    margin: 0 8px;
+                    max-width: 150px;
+                }
+                span {
+                    font-family: config.$fontText;
+                    text-shadow: none;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-left: -20px;
+                }
+            }
+            li:hover {
+                animation: topPokeFootAnima 3s ease infinite;
+                border-bottom: solid 1px #DDD;
+                padding: 5%;
+                color: config.$hovTopColor;
+                text-shadow: config.$texShadow;
+            }
+            @keyframes topPokeFootAnima {
+                0% {
+                    background-position: 0% 0%;
+                }
+                50% {
+                    background-position: 0% 100%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            li:last-child {
+                border-bottom: 0;
+                text-shadow: config.$texShadow;
+            }
+        }
+    }
 }
 
-footer .top-pokes .poke-img {
-    margin: 0 8px;
-    max-width: 150px;
-
-}
-
-.top.pokes ol {
-    list-style-type: decimal;
-}
-
-
-/*-&&&&&&&&&&&&&&---&&&&&&&&%%%%&&&&&999--*/
-/*-&&&&&&&&&&&&&&---&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&%%%%%%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
-/*-----&&&&&&-------&&&&&&&&-----%%%%999--*/
 @media screen and (max-width: 720px){
-    .top-pokes h3 {
-        font-size: 19px;
-    }
-
-    .top-pokes ol {
-        font-size: 0.9rem;
-    }
-
-    .top-pokes span {
-        font-size: 1.5rem;
-        margin-left: 0;
-    }
-    .top-pokes .poke-img {
-        max-width: 20vw;
-        margin-left: -5px;
+    .top-pokes {
+        h3 {
+            font-size: 19px;
+        }
+        ol {
+            font-size: 0.9rem;
+            .poke-img {
+                max-width: 20vw;
+                margin-left: -5px;
+            }
+            span {
+                font-size: 1.5rem;
+                margin-left: 0;
+            }
+        }
     }
 }
