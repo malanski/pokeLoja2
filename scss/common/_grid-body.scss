@@ -12,9 +12,9 @@ body {
     display: grid;
     width: 100vw;
     grid-template-rows:
-    100px 70px auto auto auto;
+    130px 70px auto auto auto;
     grid-template-columns:
-    10vw   60vw     20vw    10vw;
+    5vw   60vw     30vw    5vw;
     grid-template-areas:
     'blankhl        header  header blankhr'
     'blanknl        nav     nav    blanknr'

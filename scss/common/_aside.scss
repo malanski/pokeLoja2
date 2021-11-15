@@ -32,6 +32,27 @@ aside .gambeta {
     height: auto;
     width: 100%;
 }
+aside a {
+    text-decoration: none;
+}
+
+.gambeta .font-poke {
+    position: relative;
+    color: config.$yellowPok;
+    text-shadow: config.$texShadow;
+    line-height: auto;
+    font-family: config.$pokeFont;
+    font-size: 50px;
+    transition: all ease 0.9s;
+    text-transform: uppercase;
+    animation-duration: 3s;
+    animation-name: slidein;
+    margin-left: 10px;
+}
+.gambeta .font-poke:hover {
+    text-shadow:
+    5px 12px 8px  config.$bluePok;
+}
 
 aside .gambeta::before {
     position: absolute;

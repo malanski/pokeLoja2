@@ -9,7 +9,7 @@ header {
     grid-column-end: 3;
     background-color: config.$headerColor;
     height: auto;
-    width: 80vw;
+    width: 90vw;
     padding-right: 1%;
     padding-left: 0;
     .topbar {
@@ -30,6 +30,12 @@ header {
                 justify-content: start;
                 flex: 1 0 100%;
                 flex-wrap: nowrap;
+                .logo-img {
+                    width: 300px;
+                    height: 130px;
+                    margin-bottom: 1%;
+                    padding: 10px;
+                }
                 .path-curvex {
                     margin-top: 20px;
                     margin-left: -250px;
@@ -47,22 +53,6 @@ header {
                 }
                 a {
                     text-decoration: none;
-                }
-                .font-poke:hover {
-                    text-shadow:
-                    5px 12px 8px  config.$bluePok;
-                }
-                .font-poke {
-                    color: config.$yellowPok;
-                    text-shadow: config.$texShadow;
-                    line-height: 0;
-                    font-family: config.$pokeFont;
-                    font-size: 50px;
-                    transition: all ease 0.9s;
-                    text-transform: uppercase;
-                    animation-duration: 3s;
-                    animation-name: slidein;
-                    margin-bottom: 20px;
                 }
                 .pika-run {
                     margin: 0;
@@ -213,7 +203,7 @@ nav {
     grid-column-start: 2;
     grid-column-end: 3;
     height: auto;
-    width: 80vw;
+    width: 90vw;
     padding-left: 0;
     /*padding-right: 9%;*/
     margin: 0;

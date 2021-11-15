@@ -3,13 +3,6 @@
 /*COLOR THEME */
 /* Costeletas-Ribs-Sider's */
 /* Product Images */
-footer .logo-img {
-  width: 150px;
-  height: 90px;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 body {
   overflow-x: hidden;
 }
@@ -23,8 +16,8 @@ body {
   font-family: "Yanone Kaffeesatz", sans-serif;
   display: grid;
   width: 100vw;
-  grid-template-rows: 100px 70px auto auto auto;
-  grid-template-columns: 10vw 60vw 20vw 10vw;
+  grid-template-rows: 130px 70px auto auto auto;
+  grid-template-columns: 5vw 60vw 30vw 5vw;
   grid-template-areas: "blankhl        header  header blankhr" "blanknl        nav     nav    blanknr" "costeleta-left content aside costeleta-right" "blankfl        footer  footer blankfr";
 }
 
@@ -211,7 +204,7 @@ header {
   grid-column-end: 3;
   background-color: #ED6000;
   height: auto;
-  width: 80vw;
+  width: 90vw;
   padding-right: 1%;
   padding-left: 0;
 }
@@ -236,6 +229,12 @@ header .topbar .header-container .logo {
   flex: 1 0 100%;
   flex-wrap: nowrap;
 }
+header .topbar .header-container .logo .logo-img {
+  width: 300px;
+  height: 130px;
+  margin-bottom: 1%;
+  padding: 10px;
+}
 header .topbar .header-container .logo .path-curvex {
   margin-top: 20px;
   margin-left: -250px;
@@ -253,21 +252,6 @@ header .topbar .header-container .logo #curve {
 }
 header .topbar .header-container .logo a {
   text-decoration: none;
-}
-header .topbar .header-container .logo .font-poke:hover {
-  text-shadow: 5px 12px 8px #012bff;
-}
-header .topbar .header-container .logo .font-poke {
-  color: #FFDE00;
-  text-shadow: 4px 4px 1px #012bff;
-  line-height: 0;
-  font-family: Pokemon;
-  font-size: 50px;
-  transition: all ease 0.9s;
-  text-transform: uppercase;
-  animation-duration: 3s;
-  animation-name: slidein;
-  margin-bottom: 20px;
 }
 header .topbar .header-container .logo .pika-run {
   margin: 0;
@@ -406,7 +390,7 @@ nav {
   grid-column-start: 2;
   grid-column-end: 3;
   height: auto;
-  width: 80vw;
+  width: 90vw;
   padding-left: 0;
   /*padding-right: 9%;*/
   margin: 0;
@@ -1168,6 +1152,28 @@ aside .gambeta {
   width: 100%;
 }
 
+aside a {
+  text-decoration: none;
+}
+
+.gambeta .font-poke {
+  position: relative;
+  color: #FFDE00;
+  text-shadow: 4px 4px 1px #012bff;
+  line-height: auto;
+  font-family: Pokemon;
+  font-size: 50px;
+  transition: all ease 0.9s;
+  text-transform: uppercase;
+  animation-duration: 3s;
+  animation-name: slidein;
+  margin-left: 10px;
+}
+
+.gambeta .font-poke:hover {
+  text-shadow: 5px 12px 8px #012bff;
+}
+
 aside .gambeta::before {
   position: absolute;
   content: " ";
@@ -1684,12 +1690,6 @@ aside .top-pokes ol li:hover {
 
 footer .top-pokes {
   max-width: 60vw;
-}
-footer .top-pokes .logo-img {
-  width: 150px;
-  height: 90px;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 footer .top-pokes h3 {
   font-family: Pokemon;
