@@ -16,8 +16,8 @@ $bluePok: #012bff;
 $blue2Pok: #5671f7;
 $pokeRed: #BA0A00;
 $headerColor: #ED6000;
-$navBgColor: #BA0A00;
-$navColor: black;
+$navBgColor: #000000;
+$navColor: white;
 $fontWhite: white;
 $cardBorder: 1px solid #9FF1FF;
 $footerColor: #262626;
@@ -49,3 +49,12 @@ $pokeArticu: url("../images/articuno-01.png");
 $pokeAbsol: url("../images/absol-01.png");
 $pokeBeedri: url("../images/beedrill-01.png");
 $pokeHeracro: url("../images/heracross-01.png");
+
+footer{
+    .logo-img {
+        width: 150px;
+        height: 90px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+} 

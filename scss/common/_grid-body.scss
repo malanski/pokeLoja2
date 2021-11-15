@@ -7,6 +7,7 @@ body {
     src: url(Pokemon-Solid.ttf);
 }
 .gridzera {
+    margin: 0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     display: grid;
     width: 100vw;
@@ -194,7 +195,13 @@ body {
     .gridzera {
         grid-template-rows:
         13vh 7vh auto auto auto;
-        row-gap: 0.5%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .gridzera {
+        grid-template-rows:
+        15vh 10vh auto auto auto;
     }
 }
 

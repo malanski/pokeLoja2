@@ -10,7 +10,8 @@ header {
     background-color: config.$headerColor;
     height: auto;
     width: 80vw;
-    padding: 1% 0;
+    padding-right: 1%;
+    padding-left: 0;
     .topbar {
         grid-area: "header";
         max-height: auto;
@@ -18,7 +19,7 @@ header {
         margin-left: 2%;
         .header-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
             width: auto;
             margin-left: -50px;
@@ -319,14 +320,15 @@ nav {
         }
     }
     nav {
-        grid-area: 'nav';
+        grid-area: "nav";
         grid-row-start: 2;
         grid-row-end: 2;
         grid-column-start: 1;
         grid-column-end: 1;
         height: auto;
-        width: auto;
-        padding-right: 0;
+        width: 100vw;
+        padding-right: 50px;
+        margin-left: -40px;
         .nav-container {
             .navbar {
                 display: flex;
@@ -334,6 +336,7 @@ nav {
                 justify-content: flex-start;
                 align-items: flex-end;
                 width: 80%;
+                flex: 0;
                 margin: auto;
                 .navlink {
                     font-size: 0.7rem;
@@ -399,7 +402,7 @@ nav {
         line-height: 100%;
         .nav-container {
             .navbar {
-                margin-left: -30px;
+                margin-left: 5px;
             }
             .social1 {
                 .socialfoot {
@@ -408,6 +411,120 @@ nav {
                     margin-left: 3%;
                     margin-right: 3%;
                     margin-bottom: 8%;
+                }
+            }
+        }
+    }
+}
+@media screen and (width: 414px){
+    header {
+        height: 110%;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .topbar {
+            .header-container {
+                .font-poke {
+                    margin-bottom: 0;
+                    font-size: 15px;
+                }
+            }
+            .search {
+                margin-top: 2px;
+                margin-left: 0;
+            }
+            .search-input {
+                button {
+                    margin-left: -25px;
+                }
+                input {
+                    width: 260px;
+                    height: 10%;
+                }
+                input:focus {
+                    width: 260px;
+                }
+            }
+            .profile {
+                .headlink {
+                    font-size: 0.8rem;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    nav {
+        width: 100vw;
+        line-height: 100%;
+        .nav-container {
+            .navbar {
+                margin-left: 5px;
+            }
+            .social1 {
+                .socialfoot {
+                    max-width: 19px;
+                    max-height: 19px;
+                    margin-left: 3%;
+                    margin-right: 3%;
+                    margin-bottom: 8%;
+                }
+            }
+        }
+    }
+}
+@media screen and (width: 375px){
+    header {
+        height: 110%;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .topbar {
+            .header-container {
+                .font-poke {
+                    margin-bottom: 0;
+                    font-size: 15px;
+                }
+            }
+            .search {
+                margin-top: 2px;
+                margin-left: 0;
+            }
+            .search-input {
+                button {
+                    margin-left: -25px;
+                }
+                input {
+                    width: 260px;
+                    height: 10%;
+                }
+                input:focus {
+                    width: 260px;
+                }
+            }
+            .profile {
+                .headlink {
+                    font-size: 0.8rem;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    nav {
+        width: 100vw;
+        line-height: 100%;
+        .nav-container {
+            margin-top: 20px;
+            .navbar {
+                margin-left: 5px;
+                margin-right: 0;
+            }
+            .social1 {
+                margin-right: 0;
+                .socialfoot {
+                    max-width: 19px;
+                    max-height: 19px;
+                    margin-left: 13%;
+                    margin-right: 0;
                 }
             }
         }
