@@ -145,19 +145,23 @@ footer {
 }
 
 @media screen and (max-width: 720px){
-    .top-pokes {
-        h3 {
-            font-size: 19px;
-        }
-        ol {
-            font-size: 0.9rem;
-            .poke-img {
-                max-width: 20vw;
-                margin-left: -5px;
+    footer {
+        .top-pokes {
+            h3 {
+                font-size: 18px;
             }
-            span {
-                font-size: 1.5rem;
-                margin-left: 0;
+            ol {
+                font-size: 0.9rem;
+                li {
+                    .poke-img {
+                        max-width: 20vw;
+                        margin-left: -5px;
+                    }
+                    span {
+                        font-size: 1.5rem;
+                        margin-left: 0;
+                    }
+                }
             }
         }
     }

@@ -8,7 +8,7 @@ main {
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 2;
 }
 
 main .grid-main {
@@ -310,14 +310,12 @@ main .card-flex .card-head {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
 @media screen and (max-width: 720px){
-    .main {
+    main {
         grid-area: 'content';
-        grid-row-start: 3;
-        grid-row-end: 3;
         grid-column-start: 1;
-        grid-column-end: 2;
-        width: fit-content;
-        height: auto;
+        grid-column-end: 1;
+        width: 100%;
+        height: 170vh;
         margin-bottom: 10%;
         row-gap: 5%;
     }

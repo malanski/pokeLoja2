@@ -14,7 +14,7 @@ footer {
     grid-row-start: 4;
     grid-row-end: 4;
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 3;
     /*  display: flex;
     justify-content: space-between; */
     width: 78vw;
@@ -41,12 +41,15 @@ footer {
             }
         }
         .social2 {
-            .socialfoot {
-                width: 25px;
-                height: 25px;
-                border-radius: 5px;
-                margin-top: 10%;
-                transition: all ease 0.4s;
+            a {
+                text-decoration: none;
+                .socialfoot {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 5px;
+                    margin-top: 10%;
+                    transition: all ease 0.4s;
+                }
             }
         }
     }
@@ -123,18 +126,25 @@ footer {
         grid-row-start: 5;
         grid-row-end: 5;
         grid-column-start: 1;
-        grid-column-end: 2;
+        grid-column-end: 1;
         padding-left: 0;
         width: 100vw;
         .containerfoot {
+            margin-left: 0;
             .footer-nav {
+                margin-left: 0;
                 li {
+                    margin-left: 0;
                     a {
+                        margin-left: -30px;
                         font-size: 0.9rem;
                     }
                 }
             }
             .social2 {
+                display: flex;
+                flex-direction: column;
+                padding-right: 3%;
                 .socialfoot {
                     width: 18px;
                     height: 18px;

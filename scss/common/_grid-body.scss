@@ -11,14 +11,14 @@ body {
     display: grid;
     width: 100vw;
     grid-template-rows:
-    17vh 7vh auto auto auto;
+    100px 70px auto auto auto;
     grid-template-columns:
-       10vw   20vw    40vw    20vw    10vw;
+    10vw   60vw     20vw    10vw;
     grid-template-areas:
-    'blankhl        header  header  header blankhr'
-    'blanknl        nav     nav     nav    blanknr'
-    'costeleta-left content content aside costeleta-right'
-    'blankfl        footer  footer  footer blankfr';
+    'blankhl        header  header blankhr'
+    'blanknl        nav     nav    blanknr'
+    'costeleta-left content aside costeleta-right'
+    'blankfl        footer  footer blankfr';
 }
 
 .blankhl {
@@ -34,8 +34,8 @@ body {
     grid-area: "hblankr";
     grid-row-start: 1;
     grid-row-end: 1;
-    grid-column-start: 5;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 4;
     background-color: config.$headerColor;
 }
 .blanknl {
@@ -51,8 +51,8 @@ body {
     grid-area: "hblankr";
     grid-row-start: 2;
     grid-row-end: 2;
-    grid-column-start: 5;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 4;
     background-color: config.$navBgColor;
     height: auto;
 }
@@ -74,8 +74,8 @@ body {
     grid-area: "costeleta-right";
     grid-row-start: 3;
     grid-row-end: 3;
-    grid-column-start: 5;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 4;
     background-image:
     config.$sideBlancright;
     background-repeat: no-repeat;
@@ -97,8 +97,8 @@ body {
     grid-area: "blankr";
     grid-row-start: 4;
     grid-row-end: 4;
-    grid-column-start: 5;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 4;
     background-color:
     config.$footerColor;
 }
@@ -106,15 +106,14 @@ body {
 @media screen and (max-width: 720px){
     .gridzera {
         grid-template-rows:
-        13vh 7vh auto auto auto;
-        grid-template-columns:
-        0 50vw    50vw   0;
+        13vh 10vh auto auto auto;
+        grid-template-columns: 100vw;
         grid-template-areas:
-        'header  header '
-        'nav     nav    '
-        'content content'
-        'aside   aside'
-        'footer  footer';
+        'header'
+        'nav'
+        'content'
+        'aside'
+        'footer';
         row-gap: 0.01%;
         margin-bottom: 10%;
         margin-left: 0;

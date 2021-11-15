@@ -6,31 +6,48 @@ header {
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 3;
     background-color: config.$headerColor;
-    height: 100%;
+    height: auto;
     width: 80vw;
     padding: 1% 0;
-
     .topbar {
         grid-area: "header";
-        max-height: 10vh;
+        max-height: auto;
         margin-right: 2%;
         margin-left: 2%;
         .header-container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
-            width: 75vw;
-            margin: auto;
+            width: auto;
+            margin-left: -50px;
+            margin-right: -50px;
             .logo {
                 display: flex;
                 flex-direction: row;
-                flex: 1;
+                justify-content: start;
+                flex: 1 0 100%;
+                flex-wrap: nowrap;
+                .path-curvex {
+                    margin-top: 20px;
+                    margin-left: -250px;
+                    padding-right: 0;
+                }
+                path {
+                    fill: transparent;
+                }
+                text {
+                    text-align: center;
+                    fill: config.$yellowPok;
+                }
+                #curve {
+                    max-width: 150px;
+                }
                 a {
                     text-decoration: none;
                 }
-                a .font-poke:hover {
+                .font-poke:hover {
                     text-shadow:
                     5px 12px 8px  config.$bluePok;
                 }
@@ -39,19 +56,23 @@ header {
                     text-shadow: config.$texShadow;
                     line-height: 0;
                     font-family: config.$pokeFont;
-                    font-size: 8vh;
+                    font-size: 50px;
                     transition: all ease 0.9s;
                     text-transform: uppercase;
                     animation-duration: 3s;
                     animation-name: slidein;
+                    margin-bottom: 20px;
                 }
                 .pika-run {
+                    margin: 0;
                     animation-duration: 3s;
                     animation-name: runing;
                 }
             }
             .search {
-                margin-left: 15px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 0;
                 .search-input {
                     position: relative;
                     button {
@@ -163,7 +184,8 @@ header {
     background-size: 150%;
     margin-left: 100%;
     width: 50%;
-    filter:blur(2px)
+    filter:blur(2px);
+    transform: all ease 2s;
     }
     75% {
         background-image: url("../images/pikachu-thunder.png");
@@ -174,6 +196,7 @@ header {
         width: 70%;
         filter: contrast(200%)
         hue-rotate(180deg);
+        animation-name: 'pika-spin';
     }
     to {
         background-color: none;
@@ -187,24 +210,25 @@ nav {
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
-    grid-column-end: 4;
-    height: 100%;
-    width: 75vw;
+    grid-column-end: 3;
+    height: auto;
+    width: 80vw;
     padding-left: 0;
-    padding-right: 9%;
+    /*padding-right: 9%;*/
     margin: 0;
     background-color: config.$navBgColor;
     .nav-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
         flex-wrap: nowrap;
             .navbar {
                 display: flex;
                 justify-content: space-between;
+                align-items: baseline;
                 list-style-type: none;
-                margin: auto;
+                margin-top: 5%;
             li {
                 .navlink{
                     color: white;
@@ -220,13 +244,16 @@ nav {
             }
         }
         .social1 {
-            .socialfoot {
-                width: 25px;
-                height: 25px;
-                border-radius: 5px;
-                margin-top: 1%;
-                margin-top: 2%;
-                transition: all ease 0.4s;
+            a {
+                text-decoration: none;
+                .socialfoot {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 5px;
+                    margin-top: 1%;
+                    margin-top: 2%;
+                    transition: all ease 0.4s;
+                }
             }
         }
     }
@@ -238,16 +265,16 @@ nav {
         grid-row-start: 1;
         grid-row-end: 1;
         grid-column-start: 1;
-        grid-column-end: 2;
+        grid-column-end: 1;
         width: 100vw;
         margin: 0;
         padding: 0;
         .topbar {
             .header-container {
                 display: block;
-                padding: 0 15px;
+
+                padding: 2 15px;
                 margin: 0;
-                display: block;
                 .logo {
                     .font-poke{
                         margin-top: -5px;
@@ -296,35 +323,41 @@ nav {
         grid-row-start: 2;
         grid-row-end: 2;
         grid-column-start: 1;
-        grid-column-end: 2;
-        height: 100%;
-        width: 100vw;
-        margin: auto;
+        grid-column-end: 1;
+        height: auto;
+        width: auto;
+        padding-right: 0;
         .nav-container {
             .navbar {
                 display: flex;
                 /* overflow: scroll;*/
                 justify-content: flex-start;
                 align-items: flex-end;
-                width: 100%;
+                width: 80%;
                 margin: auto;
                 .navlink {
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
+                    font-weight: 600;
                 }
             }
             .social1 {
-                .socialfoot {
-                    max-width: 15px;
-                    max-height: 15px;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    margin-bottom: 8%;
+                display: flex;
+                flex-direction: row;
+                margin-right: 5px;
+                a {
+                    .socialfoot {
+                            width: 25px;
+                            height: 25px;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                            margin-bottom: 0;
+                    }
                 }
             }
         }
     }
 }
-@media screen and (max-width: 414px){
+@media screen and (width: 414px){
     header {
         height: 110%;
         margin: 0;
