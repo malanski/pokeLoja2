@@ -13,15 +13,11 @@ header {
     .topbar {
         grid-area: "header";
         max-height: auto;
-        margin-right: 2%;
-        margin-left: 2%;
         .header-container {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             width: auto;
-            margin-left: -50px;
-            margin-right: -50px;
             .logo {
                 display: flex;
                 flex-direction: row;
@@ -359,8 +355,7 @@ nav {
     header {
         height: 110%;
         margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
+     
         .topbar {
             .header-container {
                 .font-poke {
