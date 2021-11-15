@@ -1298,6 +1298,7 @@ footer {
 footer .containerfoot {
   display: flex;
   justify-content: space-between;
+  margin-right: 20px;
 }
 footer .containerfoot .footer-nav li {
   margin-bottom: 10px;
