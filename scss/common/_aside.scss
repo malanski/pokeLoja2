@@ -138,6 +138,7 @@ aside .poke-ads-font {
 
 @media screen and (max-width: 720px){
     aside {
+        margin: 0;
         grid-row-start: 4;
         grid-row-end: 4;
         grid-column-start: 1;
@@ -148,11 +149,18 @@ aside .poke-ads-font {
         padding-right: 0;
         margin-top: 10%;
         padding-top: 20%;
+        .gambeta {
+            width: 100vw;
+        }
     }
 }
 @media screen and (max-width: 414px){
     aside {
         margin-top: 10%;
         padding-top: 50%;
+        .gambeta {
+            width: 100vw;
+        }
     }
+    
 }

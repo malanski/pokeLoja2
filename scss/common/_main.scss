@@ -312,6 +312,7 @@ main .card-flex .card-head {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 @media screen and (max-width: 720px){
     main {
+        margin: 0;
         grid-area: 'content';
         grid-column-start: 1;
         grid-column-end: 1;
@@ -322,6 +323,7 @@ main .card-flex .card-head {
     }
 
     main .grid-main {
+        margin: 0;
         font-family:
         'Yanone Kaffeesatz', sans-serif;
         display: grid;
@@ -339,8 +341,7 @@ main .card-flex .card-head {
         'prox prox';
         grid-column-gap: 0.5%;
         grid-row-gap: 0.5%;
-        margin-bottom: 10%;
-        left: 0;
+
     }
 
     main .grid-main .pok3 {

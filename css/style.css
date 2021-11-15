@@ -23,97 +23,22 @@ body {
 
 @media screen and (max-width: 720px) {
   .gridzera {
-    grid-template-rows: 13vh 10vh auto auto auto;
+    grid-template-rows: 130px 10vh auto auto auto;
     grid-template-columns: 100vw;
     grid-template-areas: "header" "nav" "content" "aside" "footer";
     row-gap: 0.01%;
     margin-bottom: 10%;
     margin-left: 0;
   }
-
-  .blankhl {
-    grid-area: "hblankl";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: #ED6000;
-  }
-
-  .blankhr {
-    grid-area: "hblankr";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: #ED6000;
-  }
-
-  .blanknl {
-    grid-area: "hblankl";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: black;
-  }
-
-  .blanknr {
-    grid-area: "hblankr";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: black;
-  }
-
-  .costeleta-left {
-    display: none;
-    visibility: hidden;
-    grid-area: "costeleta-left";
-    background-image: none;
-    background-repeat: none;
-    background-size: none;
-    background-position: center;
-    width: 0;
-  }
-
-  .costeleta-right {
-    display: none;
-    visibility: hidden;
-    grid-area: "costeleta-right";
-    background-image: none;
-    background-repeat: none;
-    background-size: none;
-    background-position: center;
-  }
-
-  .blankfl {
-    grid-area: "blankl";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: #000000;
-  }
-
-  .blankfr {
-    grid-area: "blankr";
-    grid-row-start: none;
-    grid-row-end: none;
-    grid-column-start: none;
-    grid-column-end: none;
-    background-color: #000000;
-  }
 }
 @media screen and (max-width: 414px) {
   .gridzera {
-    grid-template-rows: 13vh 7vh auto auto auto;
+    grid-template-rows: 250px 7vh auto auto auto;
   }
 }
 @media screen and (max-width: 375px) {
   .gridzera {
-    grid-template-rows: 15vh 10vh auto auto auto;
+    grid-template-rows: 250px 10vh auto auto auto;
   }
 }
 header {
@@ -888,6 +813,7 @@ main .card-flex .card-head {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 @media screen and (max-width: 720px) {
   main {
+    margin: 0;
     grid-area: "content";
     grid-column-start: 1;
     grid-column-end: 1;
@@ -898,6 +824,7 @@ main .card-flex .card-head {
   }
 
   main .grid-main {
+    margin: 0;
     font-family: "Yanone Kaffeesatz", sans-serif;
     display: grid;
     grid-template-rows: 33vh 33vh 33vh 33vh 33vh 33vh 2vh;
@@ -905,8 +832,6 @@ main .card-flex .card-head {
     grid-template-areas: "pok1 pok2" "pok3  pok4" "pok5 pok6" "pok7  pok8" "pok9 pok10" "pok11 pok12" "prox prox";
     grid-column-gap: 0.5%;
     grid-row-gap: 0.5%;
-    margin-bottom: 10%;
-    left: 0;
   }
 
   main .grid-main .pok3 {
@@ -1184,6 +1109,7 @@ aside .poke-ads-font {
 /*------------ASIDE-------ASIDE---------*/
 @media screen and (max-width: 720px) {
   aside {
+    margin: 0;
     grid-row-start: 4;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -1195,11 +1121,17 @@ aside .poke-ads-font {
     margin-top: 10%;
     padding-top: 20%;
   }
+  aside .gambeta {
+    width: 100vw;
+  }
 }
 @media screen and (max-width: 414px) {
   aside {
     margin-top: 10%;
     padding-top: 50%;
+  }
+  aside .gambeta {
+    width: 100vw;
   }
 }
 /*-- |FOOTER-FOOTER-FOOTER| -----*/
@@ -1357,6 +1289,7 @@ footer .copyright .bottom .defaut-clean {
     margin-top: 10%;
     margin-bottom: 10%;
     margin-right: 10%;
+    margin-left: 30%;
   }
 }
 main .grid-main .pok1 {
