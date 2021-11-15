@@ -5,13 +5,11 @@ header {
     grid-area: "header";
     grid-row-start: 1;
     grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     background-color: config.$headerColor;
     height: auto;
-    width: 90vw;
-    padding-right: 1%;
-    padding-left: 0;
+    width: 100vw;
     .topbar {
         grid-area: "header";
         max-height: auto;
@@ -30,11 +28,17 @@ header {
                 justify-content: start;
                 flex: 1 0 100%;
                 flex-wrap: nowrap;
+                .pika-spin {
+                    margin-top: 20px;
+                }
                 .logo-img {
                     width: 300px;
                     height: 130px;
                     margin-bottom: 1%;
                     padding: 10px;
+                }
+                .logo-img:hover{
+                    padding: 12px;
                 }
                 .path-curvex {
                     margin-top: 20px;
@@ -55,7 +59,8 @@ header {
                     text-decoration: none;
                 }
                 .pika-run {
-                    margin: 0;
+                    margin-top: 15px;
+                    margin-bottom: 0;
                     animation-duration: 3s;
                     animation-name: runing;
                 }
@@ -200,11 +205,10 @@ nav {
     grid-area: "nav";
     grid-row-start: 2;
     grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     height: auto;
-    width: 90vw;
-    padding-left: 0;
+    width: 100vw;
     /*padding-right: 9%;*/
     margin: 0;
     background-color: config.$navBgColor;
@@ -235,6 +239,7 @@ nav {
             }
         }
         .social1 {
+            margin-right: 40px;
             a {
                 text-decoration: none;
                 .socialfoot {

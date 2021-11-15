@@ -17,88 +17,8 @@ body {
   display: grid;
   width: 100vw;
   grid-template-rows: 130px 70px auto auto auto;
-  grid-template-columns: 5vw 60vw 30vw 5vw;
-  grid-template-areas: "blankhl        header  header blankhr" "blanknl        nav     nav    blanknr" "costeleta-left content aside costeleta-right" "blankfl        footer  footer blankfr";
-}
-
-.blankhl {
-  grid-area: "hblankl";
-  grid-row-start: 1;
-  grid-row-end: 1;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  background-color: #ED6000;
-}
-
-.blankhr {
-  grid-area: "hblankr";
-  grid-row-start: 1;
-  grid-row-end: 1;
-  grid-column-start: 4;
-  grid-column-end: 4;
-  background-color: #ED6000;
-}
-
-.blanknl {
-  grid-area: "hblankl";
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  background-color: #000000;
-  height: auto;
-}
-
-.blanknr {
-  grid-area: "hblankr";
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 4;
-  grid-column-end: 4;
-  background-color: #000000;
-  height: auto;
-}
-
-.costeleta-left {
-  grid-area: "costeleta-left";
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  background-image: url("../images/pokeball-left-01.png");
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
-}
-
-.costeleta-right {
-  grid-area: "costeleta-right";
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column-start: 4;
-  grid-column-end: 4;
-  background-image: url("../images/pokeball-right-01.png");
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center;
-}
-
-.blankfl {
-  grid-area: "blankl";
-  grid-row-start: 4;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  background-color: #262626;
-}
-
-.blankfr {
-  grid-area: "blankr";
-  grid-row-start: 4;
-  grid-row-end: 4;
-  grid-column-start: 4;
-  grid-column-end: 4;
-  background-color: #262626;
+  grid-template-columns: 70vw 30vw;
+  grid-template-areas: "header      header" "nav         nav" "content     aside" "footer      footer";
 }
 
 @media screen and (max-width: 720px) {
@@ -174,7 +94,7 @@ body {
     grid-row-end: none;
     grid-column-start: none;
     grid-column-end: none;
-    background-color: #262626;
+    background-color: #000000;
   }
 
   .blankfr {
@@ -183,7 +103,7 @@ body {
     grid-row-end: none;
     grid-column-start: none;
     grid-column-end: none;
-    background-color: #262626;
+    background-color: #000000;
   }
 }
 @media screen and (max-width: 414px) {
@@ -200,13 +120,11 @@ header {
   grid-area: "header";
   grid-row-start: 1;
   grid-row-end: 1;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
   background-color: #ED6000;
   height: auto;
-  width: 90vw;
-  padding-right: 1%;
-  padding-left: 0;
+  width: 100vw;
 }
 header .topbar {
   grid-area: "header";
@@ -229,11 +147,17 @@ header .topbar .header-container .logo {
   flex: 1 0 100%;
   flex-wrap: nowrap;
 }
+header .topbar .header-container .logo .pika-spin {
+  margin-top: 20px;
+}
 header .topbar .header-container .logo .logo-img {
   width: 300px;
   height: 130px;
   margin-bottom: 1%;
   padding: 10px;
+}
+header .topbar .header-container .logo .logo-img:hover {
+  padding: 12px;
 }
 header .topbar .header-container .logo .path-curvex {
   margin-top: 20px;
@@ -254,7 +178,8 @@ header .topbar .header-container .logo a {
   text-decoration: none;
 }
 header .topbar .header-container .logo .pika-run {
-  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
   animation-duration: 3s;
   animation-name: runing;
 }
@@ -387,11 +312,10 @@ nav {
   grid-area: "nav";
   grid-row-start: 2;
   grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
   height: auto;
-  width: 90vw;
-  padding-left: 0;
+  width: 100vw;
   /*padding-right: 9%;*/
   margin: 0;
   background-color: #000000;
@@ -420,6 +344,9 @@ nav .nav-container .navbar li .navlink {
 }
 nav .nav-container .navbar li .navlink:hover {
   color: #FFDE00;
+}
+nav .nav-container .social1 {
+  margin-right: 40px;
 }
 nav .nav-container .social1 a {
   text-decoration: none;
@@ -665,18 +592,19 @@ nav .nav-container .social1 a .socialfoot {
   }
 }
 main {
+  margin: 20px;
   grid-area: "content";
   grid-row-start: 3;
   grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
 }
 
 main .grid-main {
   font-family: "Yanone Kaffeesatz", sans-serif;
   display: grid;
   grid-template-rows: 65vh 65vh 65vh 5vh;
-  grid-template-columns: 14vw 14vw 14vw 14vw;
+  grid-template-columns: 16vw 16vw 16vw 16vw;
   grid-template-areas: "pok1 pok2  pok3  pok4" "pok5 pok6  pok7  pok8" "pok9 pok10 pok11 pok12" "prox prox prox prox";
   grid-column-gap: 1vw;
   grid-row-gap: 3.5vh;
@@ -1123,13 +1051,14 @@ aside {
   grid-area: "sidenav";
   grid-row-start: 3;
   grid-row-end: 3;
-  grid-column-start: 3;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  margin: 20px;
 }
 
 .loop {
@@ -1148,8 +1077,9 @@ aside .gambeta {
   background-image: url("../images/tenor-wave.gif");
   background-size: cover;
   background-position: center center;
-  height: auto;
-  width: 100%;
+  height: 80vh;
+  width: 30vw;
+  margin-right: 20px;
 }
 
 aside a {
@@ -1285,20 +1215,21 @@ footer {
   grid-area: "footer";
   grid-row-start: 4;
   grid-row-end: 4;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
   /*  display: flex;
   justify-content: space-between; */
-  width: 90vw;
-  padding-right: 2%;
-  padding-left: 2%;
-  background-color: #262626;
+  width: 100vw;
+  background-color: #000000;
   color: white;
 }
 footer .containerfoot {
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
+}
+footer .containerfoot .footer-nav {
+  margin-left: 20px;
 }
 footer .containerfoot .footer-nav li {
   margin-bottom: 10px;
@@ -1326,6 +1257,7 @@ footer .containerfoot .social2 a .socialfoot {
   transition: all ease 0.4s;
 }
 footer #cf {
+  margin-right: 50px;
   flex: 1;
   align-self: center;
   position: relative;
@@ -1712,7 +1644,7 @@ footer .top-pokes ol {
 }
 footer .top-pokes ol li {
   transition: all ease 0.5s;
-  background: linear-gradient(180deg, #262626, #262626, #BA0A00, #262626);
+  background: linear-gradient(180deg, #000000, #000000, #BA0A00, #262626);
   background-size: 600% 600%;
   counter-increment: li;
   display: flex;

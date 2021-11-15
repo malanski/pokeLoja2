@@ -4,11 +4,12 @@
 
 
 main {
+    margin: 20px;
     grid-area: "content";
     grid-row-start: 3;
     grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
 }
 
 main .grid-main {
@@ -18,7 +19,7 @@ main .grid-main {
     grid-template-rows:
     65vh 65vh 65vh 5vh;
     grid-template-columns:
-    14vw 14vw 14vw 14vw;
+    16vw 16vw 16vw 16vw;
     grid-template-areas:
     'pok1 pok2  pok3  pok4'
     'pok5 pok6  pok7  pok8'
