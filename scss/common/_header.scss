@@ -29,10 +29,11 @@ header {
                     margin-left: 20px;
                 }
                 .logo-img {
-                    width: 300px;
-                    height: 130px;
-                    margin-bottom: 1%;
-                    padding: 10px;
+                    width: 340px;
+                    height: 150px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    padding: 20px;
                 }
                 .logo-img:hover{
                     padding: 12px;
@@ -322,15 +323,13 @@ nav {
         grid-column-end: 1;
         height: auto;
         width: 100vw;
-        padding-right: 50px;
-        margin-left: -40px;
         .nav-container {
             .navbar {
                 display: flex;
                 /* overflow: scroll;*/
                 justify-content: flex-start;
                 align-items: flex-end;
-                width: 100%;
+                width: auto;
                 flex: 0;
                 margin: auto;
                 .navlink {
@@ -355,7 +354,7 @@ nav {
         }
     }
 }
-@media screen and (width: 412px){
+@media screen and (max-width: 414px){
     header {
         grid-area: "header";
         grid-column-start: 1;
@@ -363,23 +362,27 @@ nav {
         margin: 0;
         .topbar {
             .header-container {
-                .font-poke {
-                    margin-bottom: 0;
-                    font-size: 15px;
+                .logo {
+                    .logo-img {
+                        width: 380px;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        margin-left: 0;
+                    }
                 }
                 .search {
                     margin-top: 2px;
                     margin-left: 20px;
                     .search-input {
                         input {
-                            width: 260px;
-                            height: 10%;
+                            width: 350px;
+                            height: 20%;
                         }
                         input:focus {
-                            width: 260px;
+                            width: 350px;
                         }
                         button {
-                            margin-right: 75px;
+                            margin-right: 25px;
                         }
                     }
                 }
@@ -396,10 +399,16 @@ nav {
         width: 100vw;
         line-height: 100%;
         .nav-container {
+            justify-content: flex-start;
+            margin-left: 0;
             .navbar {
                 margin-left: 5px;
+                li a {
+                    margin: 0;
+                }
             }
             .social1 {
+                margin: 0;
                 .socialfoot {
                     max-width: 19px;
                     max-height: 19px;
@@ -411,16 +420,13 @@ nav {
         }
     }
 }
-@media screen and (width: 414px){
+@media screen and (width: 375px){
     header {
-        height: 110%;
         margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
         .topbar {
             .header-container {
                 .search {
-                    margin-top: 2px;
+                    margin-top: 0;
                     margin-left: 20px;
                     .search-input {
                         input {
@@ -435,7 +441,6 @@ nav {
                             margin-left: -5px;
                             position: absolute;
                         }
-                       
                     }
                 }
             }
@@ -451,8 +456,13 @@ nav {
         width: 100vw;
         line-height: 100%;
         .nav-container {
+            margin: 0;
             .navbar {
-                margin: 10px;
+                margin: 0;
+                justify-content: flex-start;
+                li a{
+                    align-items: flex-start;
+                }
             }
             .social1 {
                 .socialfoot {
@@ -479,21 +489,21 @@ nav {
                     margin-bottom: 0;
                     font-size: 15px;
                 }
-            }
-            .search {
-                margin-top: 2px;
-                margin-left: 0;
-            }
-            .search-input {
-                button {
-                    margin-left: -25px;
-                }
-                input {
-                    width: 260px;
-                    height: 10%;
-                }
-                input:focus {
-                    width: 260px;
+                .search {
+                    margin-top: 2px;
+                    margin-left: 20px;
+                    .search-input {
+                        input {
+                            width: 333px;
+                            height: 10%;
+                        }
+                        input:focus {
+                            width: 333px;
+                        }
+                        button {
+                            margin-left: -25px;
+                        }
+                    }
                 }
             }
             .profile {
@@ -510,6 +520,10 @@ nav {
         .nav-container {
             margin-top: 20px;
             .navbar {
+                margin-left: 20px;
+                a.navlink {
+                    margin: 15%;
+                }
             }
             .social1 {
                 margin-right: 0;

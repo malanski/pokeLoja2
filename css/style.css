@@ -3,17 +3,25 @@
 /*COLOR THEME */
 /* Costeletas-Ribs-Sider's */
 /* Product Images */
-body {
-  overflow-x: hidden;
+* {
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Pokemon;
-  src: url(Pokemon-Solid.ttf);
+body, html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
+@font-face {
+  body, html {
+    font-family: Pokemon;
+    src: url(Pokemon-Solid.ttf);
+  }
+}
+
 .gridzera {
   margin: 0;
-  font-family: "Yanone Kaffeesatz", sans-serif;
   display: grid;
   width: 100vw;
   grid-template-rows: 130px 70px auto auto auto;
@@ -70,10 +78,11 @@ header .topbar .header-container .logo .pika-spin {
   margin-left: 20px;
 }
 header .topbar .header-container .logo .logo-img {
-  width: 300px;
-  height: 130px;
-  margin-bottom: 1%;
-  padding: 10px;
+  width: 340px;
+  height: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 header .topbar .header-container .logo .logo-img:hover {
   padding: 12px;
@@ -343,15 +352,13 @@ nav .nav-container .social1 a .socialfoot {
     grid-column-end: 1;
     height: auto;
     width: 100vw;
-    padding-right: 50px;
-    margin-left: -40px;
   }
   nav .nav-container .navbar {
     display: flex;
     /* overflow: scroll;*/
     justify-content: flex-start;
     align-items: flex-end;
-    width: 100%;
+    width: auto;
     flex: 0;
     margin: auto;
   }
@@ -372,30 +379,32 @@ nav .nav-container .social1 a .socialfoot {
     margin-bottom: 0;
   }
 }
-@media screen and (width: 412px) {
+@media screen and (max-width: 414px) {
   header {
     grid-area: "header";
     grid-column-start: 1;
     grid-column-end: 1;
     margin: 0;
   }
-  header .topbar .header-container .font-poke {
+  header .topbar .header-container .logo .logo-img {
+    width: 380px;
+    padding-bottom: 0;
     margin-bottom: 0;
-    font-size: 15px;
+    margin-left: 0;
   }
   header .topbar .header-container .search {
     margin-top: 2px;
     margin-left: 20px;
   }
   header .topbar .header-container .search .search-input input {
-    width: 260px;
-    height: 10%;
+    width: 350px;
+    height: 20%;
   }
   header .topbar .header-container .search .search-input input:focus {
-    width: 260px;
+    width: 350px;
   }
   header .topbar .header-container .search .search-input button {
-    margin-right: 75px;
+    margin-right: 25px;
   }
   header .topbar .profile .headlink {
     font-size: 0.8rem;
@@ -406,8 +415,18 @@ nav .nav-container .social1 a .socialfoot {
     width: 100vw;
     line-height: 100%;
   }
+  nav .nav-container {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
   nav .nav-container .navbar {
     margin-left: 5px;
+  }
+  nav .nav-container .navbar li a {
+    margin: 0;
+  }
+  nav .nav-container .social1 {
+    margin: 0;
   }
   nav .nav-container .social1 .socialfoot {
     max-width: 19px;
@@ -417,15 +436,12 @@ nav .nav-container .social1 a .socialfoot {
     margin-bottom: 8%;
   }
 }
-@media screen and (width: 414px) {
+@media screen and (width: 375px) {
   header {
-    height: 110%;
     margin: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
   header .topbar .header-container .search {
-    margin-top: 2px;
+    margin-top: 0;
     margin-left: 20px;
   }
   header .topbar .header-container .search .search-input input {
@@ -449,8 +465,15 @@ nav .nav-container .social1 a .socialfoot {
     width: 100vw;
     line-height: 100%;
   }
+  nav .nav-container {
+    margin: 0;
+  }
   nav .nav-container .navbar {
-    margin: 10px;
+    margin: 0;
+    justify-content: flex-start;
+  }
+  nav .nav-container .navbar li a {
+    align-items: flex-start;
   }
   nav .nav-container .social1 .socialfoot {
     max-width: 19px;
@@ -471,19 +494,19 @@ nav .nav-container .social1 a .socialfoot {
     margin-bottom: 0;
     font-size: 15px;
   }
-  header .topbar .search {
+  header .topbar .header-container .search {
     margin-top: 2px;
-    margin-left: 0;
+    margin-left: 20px;
   }
-  header .topbar .search-input button {
-    margin-left: -25px;
-  }
-  header .topbar .search-input input {
-    width: 260px;
+  header .topbar .header-container .search .search-input input {
+    width: 333px;
     height: 10%;
   }
-  header .topbar .search-input input:focus {
-    width: 260px;
+  header .topbar .header-container .search .search-input input:focus {
+    width: 333px;
+  }
+  header .topbar .header-container .search .search-input button {
+    margin-left: -25px;
   }
   header .topbar .profile .headlink {
     font-size: 0.8rem;
@@ -496,6 +519,12 @@ nav .nav-container .social1 a .socialfoot {
   }
   nav .nav-container {
     margin-top: 20px;
+  }
+  nav .nav-container .navbar {
+    margin-left: 20px;
+  }
+  nav .nav-container .navbar a.navlink {
+    margin: 15%;
   }
   nav .nav-container .social1 {
     margin-right: 0;
@@ -815,7 +844,6 @@ main .card-flex .card-head {
   }
 
   main .grid-main {
-    margin-bottom: -50px;
     font-family: "Yanone Kaffeesatz", sans-serif;
     display: grid;
     grid-template-rows: 33vh 33vh 33vh 33vh 33vh 33vh 2vh;
