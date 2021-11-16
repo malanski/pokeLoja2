@@ -11,6 +11,17 @@ aside {
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 20px;
+    .aside-head {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        .poke-ads-title {
+            background-color: config.$pokeRed;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
 }
 
 .loop {
@@ -70,12 +81,7 @@ aside .gambeta::before {
     opacity: 0.3;
 }
 
-aside .poke-ads-title {
-    background-color: config.$pokeRed;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    text-align: center;
-}
+aside 
 
 aside .poke-ads-description {
     font-size: 2rem;
@@ -153,7 +159,7 @@ aside .poke-ads-font {
         }
     }
 }
-@media screen and (max-width: 412px){
+@media screen and (max-width: 414px){
     aside {
         margin-top: 11vh;
         padding-top: 50%;
@@ -161,7 +167,6 @@ aside .poke-ads-font {
             width: 100vw;
         }
     }
-    
 }
 @media screen and (max-width: 375px){
     aside {
