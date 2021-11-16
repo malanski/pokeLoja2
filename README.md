@@ -54,5 +54,5 @@
             'prox prox';
   
   
-  ##### Page#1 é um local de testes prara ezercicios CSS.
+  ##### Page#1 é um local de testes prara exercícios CSS.
   
