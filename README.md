@@ -13,10 +13,10 @@
   ##### Gridzera is the name of de class in css, it is the grid that holds the whole structure of the Home(index.html).
    
     grid-template-areas:   
-      'blankhl---------- header ----header -- header---blankhr'  
-      'blanknl---------- nav ------ nav ----- nav ---- blanknr'  
-      'costeleta-left--- **content -- content**-- aside----costeleta-right'  
-      'blankfl---------- footer --- footer -- footer---blankfr';  
+      'header -- header--'  
+      'nav ----- nav ----'  
+      'content - aside---'  
+      'footer -- footer--;  
 }
   
   #### the Content have inside of it another grid called grid-main.  
