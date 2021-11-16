@@ -147,7 +147,7 @@ aside {
 /*------------ASIDE-------ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: config.$mobileBreakpointG){
     aside {
         grid-row-start: 4;
         grid-row-end: 4;
@@ -161,12 +161,27 @@ aside {
         padding-top: 20%;
         .aside-head {
             .gambeta {
-                width: 100vw;
+                align-self: center;
+                width: 70vw;
+                height: 50vh;
+                a {
+                    .font-poke {
+                        margin-left: 120px;
+                    }
+                }
+            }
+        }
+        .crossfade {
+            
+            .pikachuu {
+                margin-top: 100px;
+                width: 300px;
+                height: 200px;
             }
         }
     }
 }
-@media screen and (max-width: 414px){
+@media screen and (max-width: config.$mobileBreakpointM){
     aside {
         margin-top: 11vh;
         padding-top: 50%;
@@ -177,7 +192,7 @@ aside {
         }
     }
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: config.$mobileBreakpointP){
     aside {
         .gambeta {
         }

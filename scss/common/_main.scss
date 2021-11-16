@@ -310,7 +310,7 @@ main .card-flex .card-head {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
-@media screen and (max-width: 720px){
+@media screen and (max-width: config.$mobileBreakpointG){
     main {
         margin: 0;
         grid-area: 'content';
@@ -475,7 +475,7 @@ main .card-flex .card-head {
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: config.$mobileBreakpointP){
     .prox {
         width: 70%;
         margin-bottom: 0;

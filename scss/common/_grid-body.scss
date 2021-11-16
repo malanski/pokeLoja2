@@ -30,10 +30,10 @@ body, html {
     'footer      footer';
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: config.$mobileBreakpointG){
     .gridzera {
         grid-template-rows:
-        130px 10vh auto auto auto;
+        250px 10vh auto auto auto;
         grid-template-columns: 100vw;
         grid-template-areas:
         'header'
@@ -44,17 +44,17 @@ body, html {
     }
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: config.$mobileBreakpointM){
     .gridzera {
         grid-template-rows:
-        230px 7vh auto auto auto;
+        250px 7vh auto auto auto;
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: config.$mobileBreakpointP){
     .gridzera {
         grid-template-rows:
-        230px 10vh auto auto auto;
+        250px 10vh auto auto auto;
     }
 }
 

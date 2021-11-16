@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Mobile Media Querie*/
 @font-face {
   font-family: Pokemon;
   src: url(Pokemon-Solid.ttf);
@@ -23,21 +24,21 @@ body, html {
   grid-template-areas: "header      header" "nav         nav" "content     aside" "footer      footer";
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 810px) {
   .gridzera {
-    grid-template-rows: 130px 10vh auto auto auto;
+    grid-template-rows: 250px 10vh auto auto auto;
     grid-template-columns: 100vw;
     grid-template-areas: "header" "nav" "content" "aside" "footer";
   }
 }
 @media screen and (max-width: 414px) {
   .gridzera {
-    grid-template-rows: 230px 7vh auto auto auto;
+    grid-template-rows: 250px 7vh auto auto auto;
   }
 }
 @media screen and (max-width: 375px) {
   .gridzera {
-    grid-template-rows: 230px 10vh auto auto auto;
+    grid-template-rows: 250px 10vh auto auto auto;
   }
 }
 header {
@@ -285,7 +286,7 @@ nav .nav-container .social1 a .socialfoot {
   transition: all ease 0.4s;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 810px) {
   header {
     grid-area: "header";
     grid-row-start: 1;
@@ -298,7 +299,7 @@ nav .nav-container .social1 a .socialfoot {
   }
   header .topbar .header-container {
     display: block;
-    padding: 2 15px;
+    padding: 15px;
     margin: 0;
   }
   header .topbar .header-container .logo .font-poke {
@@ -324,18 +325,22 @@ nav .nav-container .social1 a .socialfoot {
     margin-left: -5px;
   }
   header .topbar .header-container .search {
+    margin-bottom: 20px;
     margin-top: 2px;
     margin-left: 0;
   }
+  header .topbar .header-container .search .search-input {
+    margin-left: 300px;
+  }
   header .topbar .header-container .search .search-input button {
-    margin-left: -25px;
+    margin-right: 100px;
   }
   header .topbar .header-container .search .search-input input {
-    width: 270px;
+    width: 370px;
     height: 10px;
   }
   header .topbar .header-container .search .search-input input:focus {
-    width: 270px;
+    width: 370px;
   }
 
   nav {
@@ -825,7 +830,7 @@ main .card-flex .card-head {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 810px) {
   main {
     margin: 0;
     grid-area: "content";
@@ -978,7 +983,7 @@ main .card-flex .card-head {
     margin-right: 110px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
   .prox {
     width: 70%;
     margin-bottom: 0;
@@ -1131,7 +1136,7 @@ aside .crossfade .pikachuu {
 /*------------ASIDE-------ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 810px) {
   aside {
     grid-row-start: 4;
     grid-row-end: 4;
@@ -1145,7 +1150,17 @@ aside .crossfade .pikachuu {
     padding-top: 20%;
   }
   aside .aside-head .gambeta {
-    width: 100vw;
+    align-self: center;
+    width: 70vw;
+    height: 50vh;
+  }
+  aside .aside-head .gambeta a .font-poke {
+    margin-left: 120px;
+  }
+  aside .crossfade .pikachuu {
+    margin-top: 100px;
+    width: 300px;
+    height: 200px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -1277,7 +1292,7 @@ footer .copyright .bottom .defaut-clean {
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 810px) {
   footer {
     grid-area: "footer";
     grid-row-start: 5;
@@ -1655,7 +1670,7 @@ footer .top-pokes ol li:last-child {
   text-shadow: 4px 4px 1px #012bff;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 810px) {
   footer .top-pokes h3 {
     font-size: 18px;
   }

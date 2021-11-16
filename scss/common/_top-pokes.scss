@@ -144,7 +144,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: config.$mobileBreakpointG){
     footer {
         .top-pokes {
             h3 {
