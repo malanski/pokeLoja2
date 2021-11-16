@@ -1,8 +1,8 @@
 @charset "UTF-8";
-/* Content Styles */
-/*COLOR THEME */
-/* Costeletas-Ribs-Sider's */
-/* Product Images */
+@font-face {
+  font-family: Pokemon;
+  src: url(Pokemon-Solid.ttf);
+}
 * {
   box-sizing: border-box;
 }
@@ -12,12 +12,6 @@ body, html {
   margin: 0;
   overflow-x: hidden;
   font-family: "Yanone Kaffeesatz", sans-serif;
-}
-@font-face {
-  body, html {
-    font-family: Pokemon;
-    src: url(Pokemon-Solid.ttf);
-  }
 }
 
 .gridzera {
@@ -1017,18 +1011,7 @@ aside .aside-head .poke-ads-title {
   font-size: 1.5rem;
   text-align: center;
 }
-
-.loop {
-  cursor: pointer;
-  position: relative;
-}
-
-aside .sizing {
-  width: 100%;
-  height: 100%;
-}
-
-aside .gambeta {
+aside .aside-head .gambeta {
   position: relative;
   display: block;
   background-image: url("../images/tenor-wave.gif");
@@ -1038,12 +1021,10 @@ aside .gambeta {
   width: 30vw;
   margin-right: 20px;
 }
-
-aside a {
+aside .aside-head .gambeta a {
   text-decoration: none;
 }
-
-.gambeta .font-poke {
+aside .aside-head .gambeta a .font-poke {
   position: relative;
   color: #FFDE00;
   text-shadow: 4px 4px 1px #012bff;
@@ -1056,12 +1037,10 @@ aside a {
   animation-name: slidein;
   margin-left: 10px;
 }
-
-.gambeta .font-poke:hover {
+aside .aside-head .gambeta a .font-poke:hover {
   text-shadow: 5px 12px 8px #012bff;
 }
-
-aside .gambeta::before {
+aside .aside-head .gambeta .gambeta::before {
   position: absolute;
   content: " ";
   width: 100%;
@@ -1074,19 +1053,25 @@ aside .gambeta::before {
   opacity: 0.3;
 }
 
-aside aside .poke-ads-description {
+aside .loop {
+  cursor: pointer;
+  position: relative;
+}
+aside .sizing {
+  width: 100%;
+  height: 100%;
+}
+aside .poke-ads-description {
   font-size: 2rem;
   text-align: center;
   margin: 0;
 }
-
 aside .poke-ads-description-2 {
   font-size: 1.5rem;
   text-align: center;
   margin: 0;
   color: white;
 }
-
 aside .poke-ads-font {
   font-family: Pokemon;
   font-size: 1.5rem;
@@ -1095,28 +1080,24 @@ aside .poke-ads-font {
   text-align: center;
   margin: 0;
 }
-
-.news {
+aside .news {
   background: #EEE;
   margin-top: 40px;
   padding: 30px 10px;
 }
-
-.news h4 {
+aside .news h4 {
   text-transform: uppercase;
   font-weight: 600;
   margin-top: 0;
   text-align: center;
   font-size: 0.8rem;
 }
-
-.news input {
+aside .news input {
   padding: 8px;
   border: 0;
   width: 90%;
 }
-
-.news button {
+aside .news button {
   margin-top: 20px;
   width: 100%;
   padding: 12px;
