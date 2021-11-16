@@ -28,8 +28,8 @@ aside {
             url('../images/tenor-wave.gif');
             background-size: cover;
             background-position: center center;
-            height: 80vh;
-            width: 30vw;
+            height: 450px;
+            width: 27vw;
             margin-right: 20px;
             a {
                 text-decoration: none;
@@ -37,63 +37,35 @@ aside {
                     position: relative;
                     color: config.$yellowPok;
                     text-shadow: config.$texShadow;
-                    line-height: auto;
+                    line-height: 50px;
                     font-family: config.$pokeFont;
-                    font-size: 50px;
+                    font-size: 65px;
                     transition: all ease 0.9s;
                     text-transform: uppercase;
                     animation-duration: 3s;
                     animation-name: slidein;
-                    margin-left: 10px;
+                    margin-left: 20px;
+                    text-align: center;
                 }
                 .font-poke:hover {
+                    position: absolute;
                     text-shadow:
                     5px 12px 8px  config.$bluePok;
                 }
             }
-            .gambeta::before {
-                position: absolute;
-                content: " ";
-                width: 100%;
-                height: 100%;
-                background-image:
-                url('../images/tenor-wave-2.gif');
-                background-position: auto;
-                background-repeat: repeat;
-                top: 0;
-                left: 0;
-                opacity: 0.3;
-            }
         }
-    }
-}
-aside {
-    .loop {
-        cursor: pointer;
-        position: relative;
-    }
-    .sizing  {
-        width: 100%;
-        height: 100%;
-    }
-    .poke-ads-description {
-        font-size: 2rem;
-        text-align: center;
-        margin: 0;
-    }
-    .poke-ads-description-2 {
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 0;
-        color: white;
-    }
-    .poke-ads-font {
-        font-family: Pokemon;
-        font-size: 1.5rem;
-        color: config.$yellowPok;
-        text-shadow: config.$texShadow;
-        text-align: center;
-        margin: 0;
+        .gambeta::before {
+            content: " ";
+            width: 100%;
+            height: 100%;
+            background-image:
+            url('../images/tenor-wave-2.gif');
+            background-position: auto;
+            background-repeat: repeat;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
     }
     .news {
         background: #EEE;
@@ -118,11 +90,55 @@ aside {
             border: 0;
             color: #fff;
             background: #000;
-            border-radius: 1% 1%;    
+            border-radius: 1% 1%;
         }
     }
 
+    .crossfade {
+        display: flex;
+        flex-grow: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        .pikachuu {
+            align-self: center;
+            height: 150px;
+            width: 250px;
+        }
+    }
 }
+
+.loop {
+    align-self: center;
+    cursor: pointer;
+    position: relative;
+    height: 270px;
+    width: 250px;
+}
+.sizing  {
+    width: 100%;
+    height: auto;
+}
+.poke-ads-description {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+.poke-ads-description-2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+.poke-ads-font {
+    font-family: Pokemon;
+    font-size: 1.5rem;
+    color: config.$yellowPok;
+    text-shadow: config.$texShadow;
+    text-align: center;
+    margin: 0;
+}
+
 
 /*------------ASIDE-ASIDE-ASIDE---------*/
 /*------------ASIDE-------ASIDE---------*/
@@ -143,8 +159,10 @@ aside {
         padding-right: 0;
         margin-top: 10%;
         padding-top: 20%;
-        .gambeta {
-            width: 100vw;
+        .aside-head {
+            .gambeta {
+                width: 100vw;
+            }
         }
     }
 }
@@ -152,8 +170,10 @@ aside {
     aside {
         margin-top: 11vh;
         padding-top: 50%;
-        .gambeta {
-            width: 100vw;
+        .aside-head {
+            .gambeta {
+                width: 100vw;
+            }
         }
     }
 }

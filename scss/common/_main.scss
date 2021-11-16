@@ -10,33 +10,33 @@ main {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
+    .grid-main {
+        font-family:
+        'Yanone Kaffeesatz', sans-serif;
+        display: grid;
+        grid-template-rows:
+        65vh 65vh 65vh 5vh;
+        grid-template-columns:
+        16vw 16vw 16vw 16vw;
+        grid-template-areas:
+        'pok1 pok2  pok3  pok4'
+        'pok5 pok6  pok7  pok8'
+        'pok9 pok10 pok11 pok12'
+        'prox prox prox prox';
+        grid-column-gap: 1vw;
+        grid-row-gap: 3.5vh;
+        margin: 0.5vh 0.5vw;
+        .poke-table {
+            text-align: center;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+            margin-left: 1vh;
+            margin-right: 1vh;
+        }
+    }
 }
 
-main .grid-main {
-    font-family:
-    'Yanone Kaffeesatz', sans-serif;
-    display: grid;
-    grid-template-rows:
-    65vh 65vh 65vh 5vh;
-    grid-template-columns:
-    16vw 16vw 16vw 16vw;
-    grid-template-areas:
-    'pok1 pok2  pok3  pok4'
-    'pok5 pok6  pok7  pok8'
-    'pok9 pok10 pok11 pok12'
-    'prox prox prox prox';
-    grid-column-gap: 1vw;
-    grid-row-gap: 3.5vh;
-    margin: 0.5vh 0.5vw;
-}
 
-main .poke-table {
-    text-align: center;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    margin-left: 1vh;
-    margin-right: 1vh;
-}
 
 main div .poke-table button {
     list-style: none;
