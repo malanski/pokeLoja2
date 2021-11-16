@@ -26,19 +26,16 @@ body {
     grid-template-rows: 130px 10vh auto auto auto;
     grid-template-columns: 100vw;
     grid-template-areas: "header" "nav" "content" "aside" "footer";
-    row-gap: 0.01%;
-    margin-bottom: 10%;
-    margin-left: 0;
   }
 }
 @media screen and (max-width: 414px) {
   .gridzera {
-    grid-template-rows: 250px 7vh auto auto auto;
+    grid-template-rows: 230px 7vh auto auto auto;
   }
 }
 @media screen and (max-width: 375px) {
   .gridzera {
-    grid-template-rows: 250px 10vh auto auto auto;
+    grid-template-rows: 230px 10vh auto auto auto;
   }
 }
 header {
@@ -46,7 +43,7 @@ header {
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 2;
   background-color: #ED6000;
   height: auto;
   width: 100vw;
@@ -70,6 +67,7 @@ header .topbar .header-container .logo {
 }
 header .topbar .header-container .logo .pika-spin {
   margin-top: 20px;
+  margin-left: 20px;
 }
 header .topbar .header-container .logo .logo-img {
   width: 300px;
@@ -99,6 +97,7 @@ header .topbar .header-container .logo a {
   text-decoration: none;
 }
 header .topbar .header-container .logo .pika-run {
+  margin-right: 35px;
   margin-top: 15px;
   margin-bottom: 0;
   animation-duration: 3s;
@@ -234,10 +233,11 @@ nav {
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 2;
   height: auto;
   width: 100vw;
   /*padding-right: 9%;*/
+  padding: 0;
   margin: 0;
   background-color: #000000;
 }
@@ -267,7 +267,8 @@ nav .nav-container .navbar li .navlink:hover {
   color: #FFDE00;
 }
 nav .nav-container .social1 {
-  margin-right: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 nav .nav-container .social1 a {
   text-decoration: none;
@@ -350,7 +351,7 @@ nav .nav-container .social1 a .socialfoot {
     /* overflow: scroll;*/
     justify-content: flex-start;
     align-items: flex-end;
-    width: 80%;
+    width: 100%;
     flex: 0;
     margin: auto;
   }
@@ -371,32 +372,34 @@ nav .nav-container .social1 a .socialfoot {
     margin-bottom: 0;
   }
 }
-@media screen and (width: 414px) {
+@media screen and (width: 412px) {
   header {
-    height: 110%;
+    grid-area: "header";
+    grid-column-start: 1;
+    grid-column-end: 1;
     margin: 0;
   }
   header .topbar .header-container .font-poke {
     margin-bottom: 0;
     font-size: 15px;
   }
-  header .topbar .search {
+  header .topbar .header-container .search {
     margin-top: 2px;
-    margin-left: 0;
+    margin-left: 20px;
   }
-  header .topbar .search-input button {
-    margin-left: -25px;
-  }
-  header .topbar .search-input input {
+  header .topbar .header-container .search .search-input input {
     width: 260px;
     height: 10%;
   }
-  header .topbar .search-input input:focus {
+  header .topbar .header-container .search .search-input input:focus {
     width: 260px;
+  }
+  header .topbar .header-container .search .search-input button {
+    margin-right: 75px;
   }
   header .topbar .profile .headlink {
     font-size: 0.8rem;
-    margin-left: 0;
+    margin: 20px;
   }
 
   nav {
@@ -421,23 +424,21 @@ nav .nav-container .social1 a .socialfoot {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  header .topbar .header-container .font-poke {
-    margin-bottom: 0;
-    font-size: 15px;
-  }
-  header .topbar .search {
+  header .topbar .header-container .search {
     margin-top: 2px;
-    margin-left: 0;
+    margin-left: 20px;
   }
-  header .topbar .search-input button {
-    margin-left: -25px;
-  }
-  header .topbar .search-input input {
-    width: 260px;
+  header .topbar .header-container .search .search-input input {
+    position: relative;
+    width: 79vw;
     height: 10%;
   }
-  header .topbar .search-input input:focus {
-    width: 260px;
+  header .topbar .header-container .search .search-input input:focus {
+    width: 79vw;
+  }
+  header .topbar .header-container .search .search-input button {
+    margin-left: -5px;
+    position: absolute;
   }
   header .topbar .profile .headlink {
     font-size: 0.8rem;
@@ -449,7 +450,7 @@ nav .nav-container .social1 a .socialfoot {
     line-height: 100%;
   }
   nav .nav-container .navbar {
-    margin-left: 5px;
+    margin: 10px;
   }
   nav .nav-container .social1 .socialfoot {
     max-width: 19px;
@@ -495,10 +496,6 @@ nav .nav-container .social1 a .socialfoot {
   }
   nav .nav-container {
     margin-top: 20px;
-  }
-  nav .nav-container .navbar {
-    margin-left: 5px;
-    margin-right: 0;
   }
   nav .nav-container .social1 {
     margin-right: 0;
@@ -818,7 +815,7 @@ main .card-flex .card-head {
   }
 
   main .grid-main {
-    margin: 0;
+    margin-bottom: -50px;
     font-family: "Yanone Kaffeesatz", sans-serif;
     display: grid;
     grid-template-rows: 33vh 33vh 33vh 33vh 33vh 33vh 2vh;
@@ -1103,7 +1100,6 @@ aside .poke-ads-font {
 /*------------ASIDE-------ASIDE---------*/
 @media screen and (max-width: 720px) {
   aside {
-    margin: 0;
     grid-row-start: 4;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -1119,9 +1115,9 @@ aside .poke-ads-font {
     width: 100vw;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 412px) {
   aside {
-    margin-top: 10%;
+    margin-top: 11vh;
     padding-top: 50%;
   }
   aside .gambeta {
@@ -1255,7 +1251,8 @@ footer .copyright .bottom .defaut-clean {
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 1;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
     width: 100vw;
   }
   footer .containerfoot {
@@ -1284,6 +1281,17 @@ footer .copyright .bottom .defaut-clean {
     margin-bottom: 10%;
     margin-right: 10%;
     margin-left: 30%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .footer {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .footer .containerfoot {
+    margin: 0;
+    padding: 0;
   }
 }
 main .grid-main .pok1 {

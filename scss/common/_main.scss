@@ -323,7 +323,7 @@ main .card-flex .card-head {
     }
 
     main .grid-main {
-        margin: 0;
+        margin-bottom: -50px;
         font-family:
         'Yanone Kaffeesatz', sans-serif;
         display: grid;
@@ -341,7 +341,6 @@ main .card-flex .card-head {
         'prox prox';
         grid-column-gap: 0.5%;
         grid-row-gap: 0.5%;
-
     }
 
     main .grid-main .pok3 {

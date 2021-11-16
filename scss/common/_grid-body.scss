@@ -33,23 +33,20 @@ body {
         'content'
         'aside'
         'footer';
-        row-gap: 0.01%;
-        margin-bottom: 10%;
-        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 414px){
     .gridzera {
         grid-template-rows:
-        250px 7vh auto auto auto;
+        230px 7vh auto auto auto;
     }
 }
 
 @media screen and (max-width: 375px){
     .gridzera {
         grid-template-rows:
-        250px 10vh auto auto auto;
+        230px 10vh auto auto auto;
     }
 }
 
