@@ -112,11 +112,11 @@ main .card-flex .card-head {
     align-self: flex-end;
 }
 
-.card .poke-void img {
+.poke-void img {
     transform: all ease 0.5s;
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 0;
-    margin-right: 0.8rem;
+    margin-right: 20px;
 }
 
 .poke-void img:hover {
@@ -136,23 +136,28 @@ main .card-flex .card-head {
     font-size: 0.5rem;
 }
 
-.card-flex .card-feet {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 0;
+.card-flex {
+    .card-feet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0;
+        h2 {
+            .poke-name {
+                color: black;
+                font-weight: 800;
+                font-size: 0.5rem;
+            }
+        }
+    }
 }
 
-.card-flex .card .prices {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
 
 .old-price {
     flex: auto;
-    align-self: flex-start;
+    align-self: center;
     text-decoration: line-through;
     color: red;
 }
