@@ -299,13 +299,14 @@ nav {
                     }
                 }
                 .search {
+                    align-self: flex-start;
                     margin-bottom: 20px;
                     margin-top: 2px;
                     margin-left: 0;
                     .search-input {
-                        margin-left: 300px;
+                        margin-left: 0;
                         button {
-                            margin-right: 100px;
+                            margin-right: 0;
                         }
                         input {
                             width: 370px;
@@ -434,7 +435,6 @@ nav {
                     margin-left: 20px;
                     .search-input {
                         input {
-                            position: relative;
                             width: 79vw;
                             height: 10%;
                         }
@@ -443,7 +443,6 @@ nav {
                         }
                         button {
                             margin-left: -5px;
-                            position: absolute;
                         }
                     }
                 }
