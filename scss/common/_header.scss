@@ -10,91 +10,98 @@ header {
     background-color: config.$headerColor;
     height: auto;
     width: 100vw;
-    .topbar {
-        grid-area: "header";
-        max-height: auto;
-        .header-container {
+    .header-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        width: auto;
+        .logo {
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: auto;
-            .logo {
-                display: flex;
-                flex-direction: row;
-                justify-content: start;
-                flex: 1 0 100%;
-                flex-wrap: nowrap;
-                .pika-spin {
-                    margin-top: 20px;
-                    margin-left: 20px;
-                }
-                .logo-img {
-                    width: 340px;
-                    height: 150px;
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                    padding: 20px;
-                }
-                .logo-img:hover{
-                    padding: 12px;
-                }
-                .path-curvex {
-                    margin-top: 20px;
-                    margin-left: -250px;
-                    padding-right: 0;
-                }
-                path {
-                    fill: transparent;
-                }
-                text {
-                    text-align: center;
-                    fill: config.$yellowPok;
-                }
-                #curve {
-                    max-width: 150px;
-                }
-                a {
-                    text-decoration: none;
-                }
-                .pika-run {
-                    margin-right: 35px;
-                    margin-top: 15px;
-                    margin-bottom: 0;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            .pika-spin {
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            a {
+                text-decoration: none;
+                .font-poke {
+                    position: relative;
+                    color: config.$yellowPok;
+                    text-shadow: config.$texShadow;
+                    line-height: 50px;
+                    font-family: config.$pokeFont;
+                    font-size: 35px;
+                    transition: all ease 0.9s;
+                    text-transform: uppercase;
                     animation-duration: 3s;
-                    animation-name: runing;
+                    animation-name: slidein;
+                    margin-left: 20px;
+                    text-align: center;
+                }
+                .font-poke:hover {
+                    position: absolute;
+                    text-shadow:
+                    5px 12px 8px  config.$bluePok;
                 }
             }
-            .search {
-                margin-left: 20px;
-                margin-right: 20px;
-                margin-top: 0;
-                .search-input {
-                    position: relative;
-                    button {
-                        position: absolute;
-                        right: 3px;
-                        top: 3px;
-                        background:
-                        url("../images/pokeball-1.png");
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: 100%;
-                        width: 20px;
-                        height: 20px;
-                        border: 0;
-                        cursor: grabbing;
-                    }
-                    input {
-                        transition: width 0.3s ease-in-out;
-                        border-radius: 5px;
-                        border: 0;
-                        width: 130px;
-                        padding: 15px 33px 15px 17px;
-                    }
-                    input:focus {
-                        width: 230px;
-                        outline: 3px solid config.$bluePok;
-                    }
+            .path-curvex {
+                margin-top: 20px;
+                margin-left: -250px;
+                padding-right: 0;
+            }
+            path {
+                fill: transparent;
+            }
+            text {
+                text-align: center;
+                fill: config.$yellowPok;
+            }
+            #curve {
+                max-width: 150px;
+            }
+            a {
+                text-decoration: none;
+            }
+            .pika-run {
+                margin-right: 35px;
+                margin-top: 15px;
+                margin-bottom: 0;
+                animation-duration: 3s;
+                animation-name: runing;
+            }
+        }
+        .search {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 0;
+            .search-input {
+                position: relative;
+                button {
+                    position: absolute;
+                    right: 3px;
+                    top: 3px;
+                    background:
+                    url("../images/pokeball-1.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    width: 20px;
+                    height: 20px;
+                    border: 0;
+                    cursor: grabbing;
+                }
+                input {
+                    transition: width 0.3s ease-in-out;
+                    border-radius: 5px;
+                    border: 0;
+                    width: 130px;
+                    padding: 15px 33px 15px 17px;
+                }
+                input:focus {
+                    width: 230px;
+                    outline: 3px solid config.$bluePok;
                 }
             }
         }
@@ -137,6 +144,7 @@ header {
         }
     }
 }
+
 
 .pika-spin {
     animation: pikaspin 3s infinite linear;
@@ -271,7 +279,6 @@ nav {
         .topbar {
             .header-container {
                 display: block;
-
                 padding:15px;
                 margin: 0;
                 .logo {
@@ -306,14 +313,14 @@ nav {
                     .search-input {
                         margin-left: 0;
                         button {
-                            margin-right: 0;
+                            margin-right: 150px;
                         }
                         input {
-                            width: 370px;
+                            width: 400px;
                             height: 10px;
                         }
                         input:focus {
-                            width: 370px;
+                            width: 400px;
                         }
                     }
                 }
