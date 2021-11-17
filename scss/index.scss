@@ -1,0 +1,241 @@
+
+@use 'config';
+
+main {
+    margin: 20px;
+    grid-area: "content";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+.grid-main {
+    font-family: config.$fontText;
+    display: grid;
+    grid-template-rows:
+    65vh 65vh 65vh 5vh;
+    grid-template-columns:
+    16vw 16vw 16vw 16vw;
+    grid-template-areas:
+    'pok1 pok2  pok3  pok4'
+    'pok5 pok6  pok7  pok8'
+    'pok9 pok10 pok11 pok12'
+    'prox prox prox prox';
+    grid-column-gap: 1vw;
+    grid-row-gap: 3.5vh;
+    margin: 0.5vh 0.5vw;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    .poke-card {
+        transform: all ease 0.5s;
+        text-align: center;
+        border: solid #DDD;
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: stretch;
+        justify-content: space-between;
+        .card-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin-bottom: 0;
+            width: 100%;
+            .poke-void {
+                align-self: flex-end;
+                transform: all ease 0.5s;
+                margin-top: 20px;
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+            .poke-void:hover {
+                animation: pikaspin 3s infinite linear;
+                background-image:
+                url("../images/pokeball-2.png");
+                background-position-y: 40%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor:grabbing;
+            }
+        }
+        .card-feet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 0;
+            h2 {
+                .poke-name {
+                    color: black;
+                    font-weight: 800;
+                    font-size: 0.5rem;
+                }
+            }
+            .old-price {
+                flex: auto;
+                align-self: center;
+                text-decoration: line-through;
+                color: red;
+            }
+            .actual-price {
+                color: black;
+                font-weight: bold;
+                font-size: 2.5vh;
+            }
+            .btn {
+                display: flex;
+                justify-content: space-between;
+                background: config.$btnCardBg;
+                background-size: 400% 400%;
+                cursor: pointer;
+                img {
+                    height: 1.9rem;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-right: 0.3rem;
+                    margin-left: 0.3rem;
+                }
+                span {
+                    color: rgb(0, 0, 0);
+                    line-height: auto;
+                }
+                .buy {
+                    flex: 0 1 100%;
+                }
+            }
+        }
+    }
+    .pok1 {
+        grid-area: "pok1";
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .pok2 {
+        grid-area: "pok2";
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    .pok3 {
+        grid-area: "pok3";
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 3;
+        grid-column-end: 3;
+    }
+    .pok4 {
+        grid-area: "pok4";
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 4;
+        grid-column-end: 4;
+    }
+    .pok5 {
+        grid-area: "pok5";
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .pok6 {
+        grid-area: "pok6";
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    .pok7 {
+        grid-area: "pok7";
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 3;
+    }
+    .pok8 {
+        grid-area: "pok8";
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 4;
+        grid-column-end: 4;
+    }
+    .pok9 {
+        grid-area: "pok9";
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .pok10 {
+        grid-area: "pok10";
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    .pok11 {
+        grid-area: "pok11";
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 3;
+    }
+    .pok12 {
+        grid-area: "pok12";
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 4;
+    }
+    .prox {
+        grid-area: "prox";
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding-bottom: 5%;
+        margin-bottom: 1%;
+        margin-top: 15%;
+        margin-left: 30%;
+        align-self: center;
+        .prox-box{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            flex: 1 1 100%;
+            transition: all ease 0.4s;
+            width: 100%;
+            margin: auto;
+            .prox-item {
+                border: 1px solid black;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                padding-left: 8%;
+                padding-right: 8%;
+                margin-left: 5%;
+                margin-right: 5%;
+                border-radius: 2%;
+                background: config.$nextBtnBg;
+                background-size: 300% 300%;
+                cursor: pointer;
+                a {
+                    align-self: center;
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                    font-size: 1.2rem;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+}

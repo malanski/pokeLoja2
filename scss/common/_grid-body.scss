@@ -28,6 +28,19 @@ body, html {
     'nav         nav'
     'content     aside'
     'footer      footer';
+
+    .center-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+    }
 }
 
 @media screen and (max-width: config.$mobileBreakpointG){
