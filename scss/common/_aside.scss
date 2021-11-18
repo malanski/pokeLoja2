@@ -33,6 +33,9 @@ aside {
             background-position: center center;
             height: 450px;
             width: 95%;
+            img {
+                margin-top: 130px;
+            }
             .logo-img {
                 align-self: center;
                 width: 300px;
@@ -41,20 +44,22 @@ aside {
                 padding-right: 20px;
             }
             .logo-img:hover{
-                background-image: url("../images/pikachu-thunder.png");
+                background-image: url("../images/");
                 background-size: cover;
             }
         }
         .gambeta::before {
+            position: absolute;
             content: " ";
             width: 100%;
             height: 100%;
             background-image:
-            url('../images/tenor-wave-2.gif');
-            background-position: auto;
-            background-repeat: repeat;
-            top: 0;
-            left: 0;
+            url('../images/fireworks-sparks.gif');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /*top: 0;
+            left: 0;*/
             opacity: 0.3;
         }
     }
@@ -170,7 +175,6 @@ aside {
         .aside-head {
             .gambeta {
                 width: 70vw;
-
             }
         }
     }
@@ -179,5 +183,5 @@ aside {
     aside {
         .gambeta {
         }
-    }    
+    }
 }
