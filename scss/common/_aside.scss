@@ -5,12 +5,13 @@ aside {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2;
-    width: 100%;
+    width: 85%;
     height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 20px;
+    margin: 30px;
+    border: 1px solid rgb(128, 128, 128);
     .aside-head {
         display: flex;
         flex-direction: column;
@@ -22,6 +23,7 @@ aside {
             text-align: center;
         }
         .gambeta {
+            align-self: center;
             position: relative;
             display: block;
             background-image:
@@ -29,14 +31,13 @@ aside {
             background-size: cover;
             background-position: center center;
             height: 450px;
-            width: 27vw;
-            margin-right: 20px;
+            width: 95%;
             .logo-img {
+                align-self: center;
                 width: 300px;
                 height: 200px;
                 margin-top: -80px;
-                margin-left: 20px;
-                padding: 20px;
+                padding-right: 20px;
             }
             .logo-img:hover{
                 background-image: url("../images/pikachu-thunder.png");
@@ -61,6 +62,7 @@ aside {
         margin-top: 40px;
         padding: 30px 10px;
         h4 {
+            color: #000;
             text-transform: uppercase;
             font-weight: 600;
             margin-top: 0;
@@ -68,6 +70,7 @@ aside {
             font-size: 0.8rem;
         }
         input {
+            background-color: #EEE;
             padding: 8px;
             border: 0;
             width: 90%;
@@ -91,8 +94,8 @@ aside {
         justify-content: center;
         .pikachuu {
             align-self: center;
-            height: 150px;
-            width: 250px;
+            height: 180px;
+            width: 280px;
         }
     }
 }
