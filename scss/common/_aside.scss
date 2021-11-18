@@ -13,6 +13,7 @@ aside {
     margin: 30px;
     border: 1px solid rgb(128, 128, 128);
     .aside-head {
+        text-align: center;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -145,12 +146,9 @@ aside {
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 1;
-        width: 100vw;
+        width: 95%;
         height: auto;
-        padding-left: 0;
-        padding-right: 0;
-        margin-top: 10%;
-        padding-top: 20%;
+        margin: 20px;
         .aside-head {
             .gambeta {
                 align-self: center;
@@ -174,11 +172,12 @@ aside {
 }
 @media screen and (max-width: config.$mobileBreakpointM){
     aside {
-        margin-top: 11vh;
-        padding-top: 50%;
+        width: 90%;
+        margin: 20px;
         .aside-head {
             .gambeta {
-                width: 100vw;
+                width: 70vw;
+
             }
         }
     }
@@ -187,6 +186,5 @@ aside {
     aside {
         .gambeta {
         }
-    }
-    
+    }    
 }
