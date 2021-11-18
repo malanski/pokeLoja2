@@ -95,8 +95,8 @@ aside {
         justify-content: center;
         .pikachuu {
             align-self: center;
-            height: 180px;
-            width: 280px;
+            height: 20vh;
+            width: 20vw;
         }
     }
 }
@@ -132,13 +132,6 @@ aside {
     margin: 0;
 }
 
-
-/*------------ASIDE-ASIDE-ASIDE---------*/
-/*------------ASIDE-------ASIDE---------*/
-/*------------ASIDE-ASIDE-ASIDE---------*/
-/*------------ASIDE-------ASIDE---------*/
-/*------------ASIDE-------ASIDE---------*/
-/*------------ASIDE-------ASIDE---------*/
 
 @media screen and (max-width: config.$mobileBreakpointG){
     aside {
