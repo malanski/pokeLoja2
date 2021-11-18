@@ -47,14 +47,14 @@ body, html {
 @media screen and (max-width: config.$mobileBreakpointM){
     .gridzera {
         grid-template-rows:
-        250px 7vh auto auto auto;
+        200px 7vh auto auto auto;
     }
 }
 
 @media screen and (max-width: config.$mobileBreakpointP){
     .gridzera {
         grid-template-rows:
-        250px 10vh auto auto auto;
+        180px 7vh auto auto auto;
     }
 }
 

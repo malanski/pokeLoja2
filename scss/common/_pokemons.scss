@@ -1,20 +1,20 @@
 @use '../config';
 
-main .grid-main .pok1 {
+.pok1 {
     grid-area: "pok1";
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 1;
 }
-main .grid-main .pok2  {
+.pok2  {
     grid-area: "pok2";
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
     grid-column-end: 2;
 }
-main .grid-main .pok3 {
+.pok3 {
     grid-area: "pok3";
     grid-row-start: 1;
     grid-row-end: 1;
@@ -22,7 +22,7 @@ main .grid-main .pok3 {
     grid-column-end: 3;
 }
 
-main .grid-main .pok4 {
+.pok4 {
     grid-area: "pok4";
     grid-row-start: 1;
     grid-row-end: 1;
@@ -30,7 +30,7 @@ main .grid-main .pok4 {
     grid-column-end: 4;
 }
 
-main .grid-main .pok5 {
+.pok5 {
     grid-area: "pok5";
     grid-row-start: 2;
     grid-row-end: 2;
@@ -38,7 +38,7 @@ main .grid-main .pok5 {
     grid-column-end: 1;
 }
 
-main .grid-main .pok6 {
+.pok6 {
     grid-area: "pok6";
     grid-row-start: 2;
     grid-row-end: 2;
@@ -46,7 +46,7 @@ main .grid-main .pok6 {
     grid-column-end: 2;
 }
 
-main .grid-main .pok7 {
+.pok7 {
     grid-area: "pok7";
     grid-row-start: 2;
     grid-row-end: 2;
@@ -54,7 +54,7 @@ main .grid-main .pok7 {
     grid-column-end: 3;
 }
 
-main .grid-main .pok8 {
+.pok8 {
     grid-area: "pok8";
     grid-row-start: 2;
     grid-row-end: 2;
@@ -62,7 +62,7 @@ main .grid-main .pok8 {
     grid-column-end: 4;
 }
 
-main .grid-main .pok9 {
+.pok9 {
     grid-area: "pok9";
     grid-row-start: 3;
     grid-row-end: 3;
@@ -70,7 +70,7 @@ main .grid-main .pok9 {
     grid-column-end: 1;
 }
 
-main .grid-main .pok10 {
+.pok10 {
     grid-area: "pok10";
     grid-row-start: 3;
     grid-row-end: 3;
@@ -78,7 +78,7 @@ main .grid-main .pok10 {
     grid-column-end: 2;
 }
 
-main .grid-main .pok11 {
+.pok11 {
     grid-area: "pok11";
     grid-row-start: 3;
     grid-row-end: 3;
@@ -86,7 +86,7 @@ main .grid-main .pok11 {
     grid-column-end: 3;
 }
 
-main .grid-main .pok12 {
+.pok12 {
     grid-area: "pok12";
     grid-row-start: 3;
     grid-row-end: 3;
@@ -95,7 +95,7 @@ main .grid-main .pok12 {
 }
 
 @media screen and (max-width: config.$mobileBreakpointG){
-    main .grid-main .pok3 {
+    .pok3 {
         grid-area: "pok3";
         grid-row-start: 2;
         grid-row-end: 2;
@@ -103,7 +103,7 @@ main .grid-main .pok12 {
         grid-column-end: 1;
     }
 
-    main .grid-main .pok4 {
+    .pok4 {
         grid-area: "pok4";
         grid-row-start: 2;
         grid-row-end: 2;
@@ -111,7 +111,7 @@ main .grid-main .pok12 {
         grid-column-end: 2;
     }
 
-    main .grid-main .pok5 {
+    .pok5 {
         grid-area: "pok5";
         grid-row-start: 3;
         grid-row-end: 3;
@@ -119,7 +119,7 @@ main .grid-main .pok12 {
         grid-column-end: 1;
     }
 
-    main .grid-main .pok6 {
+    .pok6 {
         grid-area: "pok6";
         grid-row-start: 3;
         grid-row-end: 3;
@@ -127,7 +127,7 @@ main .grid-main .pok12 {
         grid-column-end: 2;
     }
 
-    main .grid-main .pok7 {
+    .pok7 {
         grid-area: "pok7";
         grid-row-start: 4;
         grid-row-end: 4;
@@ -135,7 +135,7 @@ main .grid-main .pok12 {
         grid-column-end: 1;
     }
 
-    main .grid-main .pok8 {
+    .pok8 {
         grid-area: "pok8";
         grid-row-start: 4;
         grid-row-end: 4;
@@ -143,7 +143,7 @@ main .grid-main .pok12 {
         grid-column-end: 2;
     }
 
-    main .grid-main .pok9 {
+    .pok9 {
         grid-area: "pok9";
         grid-row-start: 5;
         grid-row-end: 5;
@@ -151,7 +151,7 @@ main .grid-main .pok12 {
         grid-column-end: 1;
     }
 
-    main .grid-main .pok10 {
+    .pok10 {
         grid-area: "pok10";
         grid-row-start: 5;
         grid-row-end: 5;
@@ -159,7 +159,7 @@ main .grid-main .pok12 {
         grid-column-end: 2;
     }
 
-    main .grid-main .pok11 {
+    .pok11 {
         grid-area: "pok11";
         grid-row-start: 6;
         grid-row-end: 6;
@@ -167,62 +167,11 @@ main .grid-main .pok12 {
         grid-column-end: 1;
     }
 
-    main .grid-main .pok12 {
+    .pok12 {
         grid-area: "pok12";
         grid-row-start: 6;
         grid-row-end: 6;
         grid-column-start: 2;
         grid-column-end: 2;
-    }
-
-    .prox {
-        grid-area: "prox";
-        grid-row-start: 7;
-        grid-row-end: 7;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        margin-bottom: 1%;
-        width: 70%;
-        margin-left: 65%;
-    }
-
-    .pro-box {
-        margin: auto;
-    }
-
-    .card-flex .poke-data {
-        height: fit-content;
-    }
-
-    .poke-void img {
-        width: 15px;
-    }
-
-    .poke-name {
-        font-size: 1.2rem;
-        margin-left: -10px;
-    }
-
-    .old-price {
-        font-size: 1rem;
-    }
-
-    .actual-price {
-        font-size: 1.2rem;
-    }
-
-    .card-flex button img {
-        max-width: 20px;
-        max-height: 20px;
-    }
-
-    .btn .buy {
-        font-size: 1.2rem;
-    }
-
-    .prox {
-        width: 70%;
-        margin-bottom: 0;
-        margin-right: 110px;
     }
 }

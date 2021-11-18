@@ -11,7 +11,7 @@ main {
         font-family: config.$fontText;
         display: grid;
         grid-template-rows:
-        360px 360px 360px 5vh;
+        360px 360px 360px 50px;
         grid-template-columns:
         16vw 16vw 16vw 16vw;
         grid-template-areas:
@@ -150,6 +150,57 @@ main {
         .card:hover {
             box-shadow: 2px 3px 20px config.$bluePok;
         }
+        .prox {
+            grid-area: "prox";
+            grid-row-start: 4;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            padding-bottom: 5%;
+            margin-bottom: 1%;
+            margin-top: 15%;
+            margin-left: 30%;
+            align-self: center;
+            .prox-box{
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                justify-content: center;
+                flex: 1 1 100%;
+                transition: all ease 0.4s;
+                width: 100%;
+                margin: auto;
+                .prox-item {
+                    border: 1px solid black;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    padding-left: 8%;
+                    padding-right: 8%;
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    border-radius: 2%;
+                    background: config.$nextBtnBg;
+                    background-size: 300% 300%;
+                    cursor: pointer;
+                    a {
+                        align-self: center;
+                        text-decoration: none;
+                        color: rgb(0, 0, 0);
+                        font-size: 1.2rem;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                    }
+                }
+                .prox-item:hover {
+                    animation: pokeProxAnimation 1.8s ease infinite;
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                }
+                .prox-item:last-child {
+                    margin-right: 0.1%;
+                }
+            }
+        }
     }
 }
 
@@ -175,77 +226,6 @@ main {
     }
 }
 
-
-
-/*_________||PROX BUTTONS BUTTONS-------*/
-/*_________||PROX BUTTONS BUTTONS-------*/
-/*_________||PROX         BUTTONS-------*/
-/*_________||PROX         BUTTONS-------*/
-/*_________||PROX BUTTONS BUTTONS-------*/
-/*_________||PROX BUTTONS---------------*/
-/*_________||PROX BUTTONS---------------*/
-/*_________||PROX BUTTONS---------------*/
-.prox {
-    grid-area: "prox";
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    padding-bottom: 5%;
-    margin-bottom: 1%;
-    margin-top: 15%;
-    margin-left: 30%;
-    align-self: center;
-}
-
-.prox-box{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    flex: 1 1 100%;
-    transition: all ease 0.4s;
-    width: 100%;
-    margin: auto;
-}
-
-/* AQUI eu não entendo porque */
-/* nao pude centralizar prox-item*/
-/* no final a unica forma q deu*/
-/* certo foi forçar a margem esquerda */
-
-.prox-item a {
-
-    align-self: center;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 1.2rem;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.prox-item {
-    border: 1px solid black;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 8%;
-    padding-right: 8%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 2%;
-    background: config.$nextBtnBg;
-    background-size: 300% 300%;
-    cursor: pointer;
-}
-
-.prox-box .prox-item:hover {
-    animation: pokeProxAnimation 1.8s ease infinite;
-    font-size: 1.1rem;
-    font-weight: 800;
-}
-.prox-item:last-child {
-    margin-right: 0.1%;
-}
 @keyframes pokeProxAnimation {
     0% {
         background-position: 0% 5%;
@@ -264,9 +244,6 @@ main {
         font-size: 1.3rem;
     }
 }
-
-
-
 /*---------|MAN-|MAIN|-----|MAIN|-|MAIN------*/
 /*---------|MAN-|MAIN|-----|MAIN|-|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
@@ -274,85 +251,76 @@ main {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 @media screen and (max-width: config.$mobileBreakpointG){
     main {
-        margin: 0;
         grid-area: 'content';
         grid-column-start: 1;
         grid-column-end: 1;
         width: 100%;
-        height: 170vh;
-        margin-bottom: 10%;
-        row-gap: 5%;
-    }
-
-    main .grid-main {
-
-        font-family:
-        'Yanone Kaffeesatz', sans-serif;
-        display: grid;
-        grid-template-rows:
-        33vh 33vh 33vh 33vh 33vh 33vh 2vh;
-        grid-template-columns:
-        50% 50%;
-        grid-template-areas:
-        'pok1 pok2'
-        'pok3  pok4'
-        'pok5 pok6'
-        'pok7  pok8'
-        'pok9 pok10'
-        'pok11 pok12'
-        'prox prox';
-        grid-column-gap: 0.5%;
-        grid-row-gap: 0.5%;
-    }
-    .prox {
-        grid-area: "prox";
-        grid-row-start: 7;
-        grid-row-end: 7;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        margin-bottom: 1%;
-        width: 70%;
-        margin-left: 65%;
-    }
-
-    .pro-box {
-        margin: auto;
-    }
-
-    .card-flex .poke-data {
-        height: fit-content;
-    }
-
-    .poke-void img {
-        width: 15px;
-    }
-
-    .poke-name {
-        font-size: 1.2rem;
-        margin-left: -10px;
-    }
-
-    .old-price {
-        font-size: 1rem;
-    }
-
-    .actual-price {
-        font-size: 1.2rem;
-    }
-
-    .card-flex button img {
-        max-width: 20px;
-        max-height: 20px;
-    }
-
-    .btn .buy {
-        font-size: 1.2rem;
-    }
-
-    .prox {
-        width: 70%;
-        margin-bottom: 0;
-        margin-right: 110px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        .grid-main {
+            grid-template-rows:
+            360px 360px 360px 360px 360px 360px 5vh;
+            grid-template-columns:
+            50% 50%;
+            grid-template-areas:
+            'pok1 pok2'
+            'pok3  pok4'
+            'pok5 pok6'
+            'pok7  pok8'
+            'pok9 pok10'
+            'pok11 pok12'
+            'prox prox';
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            .card {
+                .card-head {
+                    .poke-void {
+                        img {
+                            width: 15px;
+                        }
+                    }
+                }
+                .poke-pic {
+                }
+                .card-feet {
+                    h2 .poke-name{
+                        font-size: 1.2rem;
+                        margin-left: -10px;
+                    }
+                }
+                .old-price {
+                    font-size: 1rem;
+                }
+                .actual-price {
+                    font-size: 1.2rem;
+                }
+                button {
+                }
+                .btn {
+                    .img {
+                        max-width: 20px;
+                        max-height: 20px;
+                    }
+                    .buy {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .prox {
+                grid-area: "prox";
+                grid-row-start: 7;
+                grid-row-end: 7;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                margin-bottom: 1%;
+                width: 70%;
+                margin-left: 65%;
+                margin-right: 110px;
+                .pro-box {
+                    margin: auto;
+                }
+            }
+        }
     }
 }
 

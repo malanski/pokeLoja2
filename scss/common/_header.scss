@@ -451,85 +451,22 @@ nav {
         }
     }
     nav {
-        width: 100vw;
         line-height: 100%;
         .nav-container {
-            margin-left: -50px;
+            width: 80vw;
+            margin-left: 0;
             .navbar {
                 /*justify-content: flex-start;*/
                 li a{
-                    margin: 20px;
+                    margin: 0;
                 }
             }
             .social1 {
-                margin-left: 20px;
+                margin-left: 10px;
                 .socialfoot {
                     max-width: 19px;
                     max-height: 19px;
-                    margin-left: 3%;
-                    margin-right: 3%;
-                    margin-bottom: 8%;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (width: 375px){
-    header {
-        height: 110%;
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        .topbar {
-            .header-container {
-                .font-poke {
-                    margin-bottom: 0;
-                    font-size: 15px;
-                }
-                .search {
-                    margin-top: 2px;
-                    margin-left: 20px;
-                    .search-input {
-                        input {
-                            width: 333px;
-                            height: 10%;
-                        }
-                        input:focus {
-                            width: 333px;
-                        }
-                        button {
-                            margin-left: -25px;
-                        }
-                    }
-                }
-            }
-            .profile {
-                .headlink {
-                    font-size: 0.8rem;
-                    margin-left: 0;
-                }
-            }
-        }
-    }
-    nav {
-        width: 100vw;
-        line-height: 100%;
-        .nav-container {
-            margin-top: 20px;
-            .navbar {
-                margin-left: 20px;
-                a.navlink {
-                    margin: 15%;
-                }
-            }
-            .social1 {
-                margin-right: 0;
-                .socialfoot {
-                    max-width: 19px;
-                    max-height: 19px;
-                    margin-left: 13%;
-                    margin-right: 0;
+                    margin: 10px;
                 }
             }
         }
