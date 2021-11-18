@@ -6,8 +6,6 @@ main .grid-main .pok1 {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 1;
-    /*background-image:
-    /*config.$pokePikachu;*/
 }
 main .grid-main .pok2  {
     grid-area: "pok2";
@@ -15,16 +13,6 @@ main .grid-main .pok2  {
     grid-row-end: 1;
     grid-column-start: 2;
     grid-column-end: 2;
-    background-image:
-    config.$pokeSquirtle;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
 }
 main .grid-main .pok3 {
     grid-area: "pok3";
@@ -32,15 +20,6 @@ main .grid-main .pok3 {
     grid-row-end: 1;
     grid-column-start: 3;
     grid-column-end: 3;
-    background-image:
-    config.$pokePsyduck;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
 }
 
 main .grid-main .pok4 {
@@ -49,15 +28,6 @@ main .grid-main .pok4 {
     grid-row-end: 1;
     grid-column-start: 4;
     grid-column-end: 4;
-    background-image:
-    config.$pokeJigg;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
 }
 
 main .grid-main .pok5 {
@@ -66,15 +36,6 @@ main .grid-main .pok5 {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-image:
-    config.$pokeDitto;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
 }
 
 main .grid-main .pok6 {
@@ -83,16 +44,6 @@ main .grid-main .pok6 {
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 2;
-    background-image:
-    config.$pokeZapdos;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
 }
 
 main .grid-main .pok7 {
@@ -101,16 +52,6 @@ main .grid-main .pok7 {
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 3;
-    background-image:
-    config.$pokeMotres;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
 }
 
 main .grid-main .pok8 {
@@ -119,17 +60,6 @@ main .grid-main .pok8 {
     grid-row-end: 2;
     grid-column-start: 4;
     grid-column-end: 4;
-    background-image:
-    config.$pokeMew;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
-
 }
 
 main .grid-main .pok9 {
@@ -138,16 +68,6 @@ main .grid-main .pok9 {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    background-image:
-    config.$pokeArticu;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
 }
 
 main .grid-main .pok10 {
@@ -156,16 +76,6 @@ main .grid-main .pok10 {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2;
-    background-image:
-    config.$pokeAbsol;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
 }
 
 main .grid-main .pok11 {
@@ -174,17 +84,6 @@ main .grid-main .pok11 {
     grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 3;
-    background-image:
-    config.$pokeBeedri;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
-
 }
 
 main .grid-main .pok12 {
@@ -193,16 +92,6 @@ main .grid-main .pok12 {
     grid-row-end: 3;
     grid-column-start: 4;
     grid-column-end: 4;
-    background-image:
-    config.$pokeHeracro;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 1%;
-    border: config.$cardBorder;
-    margin: 0;
-    height: 100%;
-
 }
 
 @media screen and (max-width: config.$mobileBreakpointG){

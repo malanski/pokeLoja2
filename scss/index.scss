@@ -37,7 +37,7 @@ main {
             /*justify-content: flex-end;*/
             transform: all ease 0.5s;
             text-align: center;
-            border: solid #DDD;
+            border: 1px solid rgb(173, 200, 255);
             .card-head {
                 align-self: center;
                 display: flex;
@@ -110,6 +110,7 @@ main {
                 button {
                     list-style: none;
                     text-align: center;
+                    margin-left: 10px;
                 }
                 .btn {
                     /*flex-wrap: wrap;*/
@@ -121,7 +122,7 @@ main {
                     display: flex;
                     justify-content: space-between;
                     border: 1px solid rgb(0, 0, 0);
-                    border-radius: 4%;
+                    border-radius: 10px;
                     padding-left: 3%;
                     padding-right: 12%;
                     padding-bottom: 3%;
@@ -129,8 +130,10 @@ main {
                     font-size: 2.5vh;
                     font-weight: 600;
                     line-height: 2.4vh;
-                    width: 100%;
-                    margin: 0;
+                    width: 90%;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    margin-bottom: 10px;
                     img {
                         height: 1.9rem;
                         margin-top: 0;
