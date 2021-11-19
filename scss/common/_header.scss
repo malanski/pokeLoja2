@@ -27,7 +27,6 @@ header {
             a {
                 text-decoration: none;
                 .font-poke {
-                    position: relative;
                     color: config.$yellowPok;
                     text-shadow: config.$texShadow;
                     line-height: 50px;
@@ -36,12 +35,17 @@ header {
                     transition: all ease 0.9s;
                     text-transform: uppercase;
                     animation-duration: 3s;
-                    animation-name: slidein;
+                    animation-name: runing;
                     margin-left: 20px;
                     text-align: center;
                 }
                 .font-poke:hover {
-                    position: absolute;
+                    background: url("../images/pikachu-thunder.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 250% 150%;
+                    padding-left: 40px;
+                    padding-right: 40px;
                     text-shadow:
                     5px 12px 8px  config.$bluePok;
                 }
