@@ -23,6 +23,21 @@ aside {
             font-size: 1.5rem;
             text-align: center;
         }
+        .user-button {
+            align-self: center;
+            width: 50%;
+            height: 40px;
+            border-radius: 5px;
+            background: config.$nextBtnBg;
+            color: #000;
+            background-size: 300% 300%;
+
+
+        }
+        .user-button:hover {
+            animation: pokeProxAnimation 0.7s ease infinite;
+            cursor: pointer;
+        }
         .gambeta {
             align-self: center;
             position: relative;

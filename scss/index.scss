@@ -58,14 +58,14 @@ main {
                         margin-right: 5px;
                     }
                     img:hover {
+                        width: 25px;
                         animation: pikaspin 3s infinite linear;
                         background-image:
                         url("../images/pokeball-2.png");
                         background-position-y: 40%;
                         background-repeat: no-repeat;
                         background-size: cover;
-                        cursor:grabbing;
-                        cursor: zoom-in;
+                        cursor:progress ;
                     }
                 }
             }
