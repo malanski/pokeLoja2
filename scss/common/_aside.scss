@@ -31,12 +31,21 @@ aside {
             background: config.$nextBtnBg;
             color: #000;
             background-size: 300% 300%;
-
-
         }
         .user-button:hover {
             animation: pokeProxAnimation 0.7s ease infinite;
             cursor: pointer;
+        }
+        .loop {
+            align-self: center;
+            background-image: url("../images/tenor-wave-2.gif");
+            background-size: cover;
+            align-self: center;
+            cursor: pointer;
+            position: relative;
+            height: 270px;
+            width: 250px;
+            margin: auto;
         }
         .gambeta {
             align-self: center;
@@ -121,13 +130,7 @@ aside {
     }
 }
 
-.loop {
-    align-self: center;
-    cursor: pointer;
-    position: relative;
-    height: 270px;
-    width: 250px;
-}
+
 .sizing  {
     width: 100%;
     height: auto;
@@ -151,7 +154,6 @@ aside {
     text-align: center;
     margin: 0;
 }
-
 
 @media screen and (max-width: config.$mobileBreakpointG){
     aside {
