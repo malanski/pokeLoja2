@@ -34,7 +34,22 @@ function defineNomeUsuario() {
 
 if(!localStorage.getItem('nome')) {
   defineNomeUsuario();
-} else {
+}
+else {
   let nomeGuardado = localStorage.getItem('nome');
   myAsideUser.textContent = 'Welcome to the Pokéloja, ' + nomeGuardado;
+}
+
+function defineNomeUsuario() {
+  let meuNome = prompt('Type your name or type nickname please.');
+  if(!meuNome || meuNome ===null) {
+    defineNomeUsuario();  
+  }
+  else {
+    localStorage.setItem('nome',meuNome);
+    myAsideUser.innerHTML = 'Welcome to the Pokéloja, ' + meuNome;
+  }
+}
+
+myButton.onclick = function() {defineNomeUsuario();
 }
