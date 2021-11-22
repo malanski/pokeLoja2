@@ -134,7 +134,7 @@ header {
                     text-shadow:
                     5px 5px 2px config.$bluePok;
                 }
-                .shop-list {                    
+                .shop-list {
                     .fa-cart-plus {
                         text-decoration: none;
                         color: black;
@@ -271,6 +271,12 @@ nav {
             }
         }
     }
+}
+
+.active {
+    filter: drop-shadow(30px 10px 4px #4444dd);
+    filter: grayscale(90%);
+    cursor: none;
 }
 
 @media screen and (max-width: config.$mobileBreakpointG){
