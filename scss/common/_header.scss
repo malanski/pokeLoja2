@@ -134,7 +134,11 @@ header {
                     text-shadow:
                     5px 5px 2px config.$bluePok;
                 }
-                .shop-list {
+                .shop-list {                    
+                    .fa-cart-plus {
+                        text-decoration: none;
+                        color: black;
+                    }
                     .buycart {
                         width: 20px;
                         height: 20px;
