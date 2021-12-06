@@ -162,10 +162,8 @@ main {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 4;
-    padding: 5%;
-    margin-bottom: 1%;
-    margin-top: 15%;
-    margin-left: 30%;
+    padding: 0;
+    margin: 0;
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -174,14 +172,13 @@ main {
     flex: 1 1 100%;
     transition: all ease 0.4s;
     width: 500px;
-    margin: auto;
     cursor: pointer;
     border: 1px solid black;
         button {
-            padding-top: 2%;
-            padding-bottom: 2%;
-            padding-left: 8%;
-            padding-right: 8%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
             margin-left: 5%;
             margin-right: 5%;
             border-radius: 2%;
@@ -200,6 +197,10 @@ main {
                 .btn-pro {
 
                 }
+        }
+        button:hover {
+            animation: pokeProxAnimation 1.5s ease infinite;
+            font-weight: 600;
         }
 }
 
@@ -257,7 +258,7 @@ main {
             font-weight: 400;
         }
     }
-}
+}*/
 
 @keyframes pokeBtnAnimation {
     0% {
@@ -284,19 +285,15 @@ main {
 @keyframes pokeProxAnimation {
     0% {
         background-position: 0% 5%;
-        font-size: 1.1rem;
     }
     25% {
         background-position: 100% 50%;
-        font-size: 1rem;
     }
     50% {
         background-position: 100% 50%;
-        font-size: 0.8rem;
     }
     100% {
         background-position: 0% 50%;
-        font-size: 1.3rem;
     }
 }
 /*---------|MAN-|MAIN|-----|MAIN|-|MAIN------*/
