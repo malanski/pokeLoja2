@@ -37,10 +37,10 @@ class Pokemon {
 
 
 
-async function getPokemons() {
+async function getPokemons(page = 0) {
   const limit = 20;
 
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
 
   const json = await response.json();
 
@@ -50,13 +50,21 @@ async function getPokemons() {
 
   return json;
 }
+function temAnterior(page) {
+  const bntAnt = document.querySelector('.btn-ant');
 
+  if (page === 0) bntAnt.style.visibility="hidden";
+}
 
 // Execute when the page finish loading
 window.onload = async () => {
   const pokeList = document.querySelector('.poke-list');
 
-  const response = await getPokemons();
+  const page = 0;
+
+  const response = await getPokemons(page);
+
+  temAnterior(page);
 
   const pokemons = response.results.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
 
