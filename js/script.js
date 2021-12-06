@@ -35,7 +35,7 @@ class Pokemon {
   }
 };
 
-
+let page = 0;
 
 async function getPokemons(page = 0) {
   const limit = 20;
@@ -46,32 +46,43 @@ async function getPokemons(page = 0) {
 
   const pages = Math.ceil(json.count  / limit);
 
-  console.log(pages);
-
   return json;
 }
+
 function temAnterior(page) {
   const bntAnt = document.querySelector('.btn-ant');
 
-  if (page === 0) bntAnt.style.visibility="hidden";
+  if (page === 0) bntAnt.style.visibility = "hidden";
 }
 
-// Execute when the page finish loading
-window.onload = async () => {
+function btnProx () {
+  const btnProx = document.querySelector('.btn-prox');
+
+  btnProx.onclick = async() => {
+    const response = await getPokemons(page += 1);
+
+    listaPokemons(response.results);
+  }
+}
+
+function listaPokemons(pokemonsApi) {
   const pokeList = document.querySelector('.poke-list');
 
-  const page = 0;
+  pokeList.innerHTML = '';
 
-  const response = await getPokemons(page);
-
-  temAnterior(page);
-
-  const pokemons = response.results.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
-
-  console.log(pokemons);
+  const pokemons = pokemonsApi.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
 
   pokemons.forEach((pokemon) => {
     const html = pokemon.html();
     pokeList.appendChild(html)
   });
+}
+
+// Execute when the page finish loading
+window.onload = async () => {
+  const response = await getPokemons(page);
+
+  listaPokemons(response.results);
+  btnProx();
+  temAnterior(page);
 }
