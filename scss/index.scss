@@ -7,17 +7,19 @@ main {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    .grid-main {
+    .poke-list {
         font-family: config.$fontText;
         display: grid;
         grid-template-rows:
-        360px 360px 360px 50px;
+        360px 360px 360px 360px 360px 50px;
         grid-template-columns:
         16vw 16vw 16vw 16vw;
         grid-template-areas:
         'pok1 pok2  pok3  pok4'
         'pok5 pok6  pok7  pok8'
         'pok9 pok10 pok11 pok12'
+        'pok13 pok14 pok15 pok16'
+        'pok17 pok18 pok19 pok20'
         'prox prox prox prox';
         grid-column-gap: 20px;
         grid-row-gap: 20px;
@@ -26,7 +28,7 @@ main {
         margin-bottom: 20px;
         margin-left: 20px;
         margin-right: 20px;
-        .card {
+        .poke {
             height: 100%;
             display: flex;
             flex-direction: column;

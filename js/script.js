@@ -1,55 +1,69 @@
+class Pokemon {
+  constructor (nome, url) {
+    this.nome = nome;
+    this.url = url;
+    this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/', '').replace('/', '');
+    //
+    this.imagem=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
 
-let minhaImagem = document.querySelector('.loop');
-
-minhaImagem.onclick = function() {
-    let meuSrc = minhaImagem.getAttribute('src');
-        if(meuSrc === 'images/ash-poke-pc2.png') {
-    minhaImagem.setAttribute ('src','images/ash-poke-pc1.png');
-        } else {
-    minhaImagem.setAttribute ('src','images/ash-poke-pc2.png');
-    }
-}
-
-
-let vaporWave = document.querySelector('.pikachuu');
-
-vaporWave.onclick = function() {
-    let mySrc = vaporWave.getAttribute('src');
-        if(mySrc === 'images/tenor-pikachu.gif') {
-    vaporWave.setAttribute ('src','images/pikachu-dance.gif');
-        } else {
-    vaporWave.setAttribute ('src','images/tenor-pikachu.gif');
-    }
-}
-/*var audio = document.getElementsByTagName("audio")[0];
-audio.play();*/
-let myButton = document.querySelector('button.user-button');
-let myAsideUser = document.querySelector('h4');
-
-function defineNomeUsuario() {
-  let meuNome = prompt('Type your name or type nickname please.');
-  localStorage.setItem('nome', meuNome);
-  myAsideUser.textContent = 'Welcome to the Pokéloja, ' + meuNome;
-}
-
-if(!localStorage.getItem('nome')) {
-  defineNomeUsuario();
-}
-else {
-  let nomeGuardado = localStorage.getItem('nome');
-  myAsideUser.textContent = 'Welcome to the Pokéloja, ' + nomeGuardado;
-}
-
-function defineNomeUsuario() {
-  let meuNome = prompt('Type your name or type nickname please.');
-  if(!meuNome || meuNome ===null) {
-    defineNomeUsuario();  
+    this.preco = Math.floor(Math.random() * 100);
   }
-  else {
-    localStorage.setItem('nome',meuNome);
-    myAsideUser.innerHTML = 'Welcome to the Pokéloja, ' + meuNome;
+
+  html() {
+    const pokeDiv = document.createElement('div');
+    pokeDiv.className = "poke";
+    pokeDiv.innerHTML = `
+      <div class="card-head">
+        <a class="poke-void" href="pages/product1.html">
+            <img width="20px" src="images/pokeball-1.png" alt="pokeball icon">
+        </a>
+      </div>
+      <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
+
+      <div class="card-feet">
+          <h2 class="poke-name">${this.nome}</h2>
+          <p class="old-price"><small>R$${this.preco}</small></p><br>
+          <p class="actual-price"><small>R$</small>${(this.preco * 0.8).toFixed(2)}</p>
+          <button class="btn">
+            <img src="images/pokeball-color.png"
+                title="got a Code discount?">
+            <span class="buy">Buy</span>
+          </button>
+      </div>
+    `;
+    return pokeDiv;
   }
+};
+
+
+
+async function getPokemons() {
+  const limit = 20;
+
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
+
+  const json = await response.json();
+
+  const pages = Math.ceil(json.count  / limit);
+
+  console.log(pages);
+
+  return json;
 }
 
-myButton.onclick = function() {defineNomeUsuario();
+
+// Execute when the page finish loading
+window.onload = async () => {
+  const pokeList = document.querySelector('.poke-list');
+
+  const response = await getPokemons();
+
+  const pokemons = response.results.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
+
+  console.log(pokemons);
+
+  pokemons.forEach((pokemon) => {
+    const html = pokemon.html();
+    pokeList.appendChild(html)
+  });
 }
