@@ -38,6 +38,9 @@ class Pokemon {
 let page = 0;
 
 async function getPokemons(page = 0) {
+  const pokeList = document.querySelector('.poke-list');
+  pokeList.innerHTML = '<div>Loading Pokémons...</div>';
+
   const limit = 20;
 
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
@@ -60,7 +63,7 @@ function btnProx () {
 
   btnProx.onclick = async() => {
     const response = await getPokemons(page += 1);
-
+    
     listaPokemons(response.results);
   }
 }
@@ -80,9 +83,9 @@ function listaPokemons(pokemonsApi) {
 
 // Execute when the page finish loading
 window.onload = async () => {
-  const response = await getPokemons(page);
+    const response = await getPokemons(page);
 
-  listaPokemons(response.results);
-  btnProx();
-  temAnterior(page);
+    listaPokemons(response.results);
+    btnProx();
+    temAnterior(page);
 }
