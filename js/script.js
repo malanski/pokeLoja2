@@ -55,17 +55,39 @@ async function getPokemons(page = 0) {
 function temAnterior(page) {
   const bntAnt = document.querySelector('.btn-ant');
 
-  if (page === 0) bntAnt.style.visibility = "hidden";
+  if (page === 0) {
+    bntAnt.style.visibility = "hidden";
+  } else {
+    bntAnt.style.visibility = "visible";
+  }
 }
+
+function temProx(page) {
+  const bntProx = document.querySelector('.btn-prox');
+  debugger;
+  if (page >= 2) {
+    bntProx.style.visibility = "hidden";
+  } else {
+    bntProx.style.visibility = "visible";
+  }
+}
+
+async function mudaPagina (newPage) {
+  page = newPage;
+
+
+  const pagination = await getPokemons(page);
+  
+  listaPokemons(pagination.results);
+
+  temAnterior(page)
+  temProx(page);
+} 
 
 function btnProx () {
   const btnProx = document.querySelector('.btn-prox');
 
-  btnProx.onclick = async() => {
-    const response = await getPokemons(page += 1);
-    
-    listaPokemons(response.results);
-  }
+  btnProx.onclick = () => mudaPagina(page + 1);
 }
 
 function listaPokemons(pokemonsApi) {
@@ -88,4 +110,5 @@ window.onload = async () => {
     listaPokemons(response.results);
     btnProx();
     temAnterior(page);
+    temProx(page);
 }
