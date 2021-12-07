@@ -55,15 +55,21 @@ async function getPokemons(page = 0) {
 function temAnterior(page) {
   const bntAnt = document.querySelector('.btn-ant');
 
-  if (page === 0) bntAnt.style.visibility = "hidden";
+  if (page === 0) {
+    bntAnt.style.visibility = "hidden";
+  } else {
+    bntAnt.style.visibility = "visible";
+  }
 }
 
-function btnProx () {
+function btnProx (page) {
   const btnProx = document.querySelector('.btn-prox');
+
+  if (page === 56) bntAnt.style.visibility = "hidden";
 
   btnProx.onclick = async() => {
     const response = await getPokemons(page += 1);
-    
+
     listaPokemons(response.results);
   }
 }
