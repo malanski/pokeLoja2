@@ -65,7 +65,7 @@ function temAnterior(page) {
 function temProx(page) {
   const bntProx = document.querySelector('.btn-prox');
   // debugger;
-  if (page >= 56) {
+  if (page >= 55) {
     bntProx.style.visibility = "hidden";
   } else {
     bntProx.style.visibility = "visible";
@@ -74,7 +74,6 @@ function temProx(page) {
 
 async function mudaPagina (newPage) {
   page = newPage;
-
 
   const pagination = await getPokemons(page);
 
@@ -94,6 +93,14 @@ function btnAnterior () {
   const btnAnterior = document.querySelector('.btn-ant');
 
   btnAnterior.onclick = () => mudaPagina(page - 1);
+}
+
+function pageLogger() {
+  const pageLogs = document.querySelector('.page-log');
+
+  listaPokemons(pagination.results);
+  
+  return nome.length;
 }
 
 function listaPokemons(pokemonsApi) {
