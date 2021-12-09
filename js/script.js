@@ -79,6 +79,8 @@ async function mudaPagina (newPage) {
 
   listaPokemons(pagination.results);
 
+  pageLogger('Actual Page ' + page);
+
   temAnterior(page)
   temProx(page);
 }
@@ -89,18 +91,19 @@ function btnProx () {
   btnProx.onclick = () => mudaPagina(page + 1);
 }
 
+
 function btnAnterior () {
   const btnAnterior = document.querySelector('.btn-ant');
 
   btnAnterior.onclick = () => mudaPagina(page - 1);
 }
 
-function pageLogger() {
+function pageLogger(page) {
   const pageLogs = document.querySelector('.page-log');
 
-  listaPokemons(pagination.results);
+  pageLogs.innerHTML = `${page}`;
   
-  return nome.length;
+  
 }
 
 function listaPokemons(pokemonsApi) {
@@ -122,6 +125,7 @@ window.onload = async () => {
 
     listaPokemons(response.results);
     btnProx();
+    pageLogger('Actual page ' + page)
     btnAnterior();
     temAnterior(page);
     temProx(page);
