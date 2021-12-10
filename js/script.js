@@ -4,11 +4,11 @@ let page = 0;
 
 async function getPokemons(page = 0) {
   const pokeList = document.querySelector('.poke-list');
-  pokeList.innerHTML = '<div>Loading Pokémons...</div>';
+  pokeList.innerHTML = '<div class="loading">Loading Pokémons...</div>';
 
   const limit = 20;
 
-  window.scrollTo({top: 250, behavior: 'smooth'})
+  window.scrollTo({top: 150, behavior: 'smooth'})
 
   await fakePromise();
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
@@ -16,7 +16,7 @@ async function getPokemons(page = 0) {
   const json = await response.json();
 
 
-  const pages = Math.ceil(json.count  / limit);
+  const pages = Math.ceil(json.count / limit);
 
   return json;
 }
