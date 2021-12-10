@@ -3,9 +3,7 @@ class Pokemon {
     this.nome = nome;
     this.url = url;
     this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/', '').replace('/', '');
-    //
     this.imagem=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
-
     this.preco = Math.floor(Math.random() * 100);
   }
 
@@ -35,6 +33,8 @@ class Pokemon {
   }
 };
 
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 2500));
+
 let page = 0;
 
 async function getPokemons(page = 0) {
@@ -43,9 +43,13 @@ async function getPokemons(page = 0) {
 
   const limit = 20;
 
+  window.scrollTo({top: 250, behavior: 'smooth'})
+
+  await fakePromise();
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
 
   const json = await response.json();
+
 
   const pages = Math.ceil(json.count  / limit);
 
@@ -79,7 +83,7 @@ async function mudaPagina (newPage) {
 
   listaPokemons(pagination.results);
 
-  pageLogger('Actual Page ' + page);
+  pageLogger('Actual page is ' + page + ' of 56 pages.');
 
   temAnterior(page)
   temProx(page);
@@ -102,8 +106,6 @@ function pageLogger(page) {
   const pageLogs = document.querySelector('.page-log');
 
   pageLogs.innerHTML = `${page}`;
-  
-  
 }
 
 function listaPokemons(pokemonsApi) {
@@ -125,7 +127,7 @@ window.onload = async () => {
 
     listaPokemons(response.results);
     btnProx();
-    pageLogger('Actual page ' + page)
+    pageLogger('Actual page is ' + page + ' of 56 pages')
     btnAnterior();
     temAnterior(page);
     temProx(page);

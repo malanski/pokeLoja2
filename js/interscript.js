@@ -21,11 +21,33 @@ vaporWave.onclick = function() {
 
 }
 
-let myButton = document.querySelector('button.user-button');
 let myAsideUser = document.querySelector('h4');
+let myButton = document.querySelector('button.user-button');
+myButton.onclick = function() {defineUserName();}
 
-function difineUserName() {
+function defineUserName() {
+
     let userName = prompt('Please Type your name here:');
     localStorage.setItem('name', userName);
     myAsideUser.textContent = 'welcome to the pokéloja, ' + userName;
 }
+
+if(!localStorage.getItem('nome')){
+    defineUserName();
+}
+else {
+    let storedName = localStorage.getItem('nome');
+    myAsideUser.textContent = 'welcome to the pokéloja, ' + storedName;
+}
+
+
+function defineUserName() {
+    let userName = prompt('Please Type your name here:');
+    if(!userName || userName === null) {
+        defineUserName();
+    } else {
+        localStorage.setItem('nome',userName);
+        myAsideUser.innerHTML = 'welcome to the pokéloja, ' + userName;
+    }
+}
+
