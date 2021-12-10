@@ -4,7 +4,7 @@ let page = 0;
 
 async function getPokemons(page = 0) {
   const pokeList = document.querySelector('.poke-list');
-  pokeList.innerHTML = '<div class="loading">Loading Pokémons...</div>';
+  pokeList.innerHTML = '<div class="loading">Now Loading... please wait...</div>';
 
   const limit = 20;
 

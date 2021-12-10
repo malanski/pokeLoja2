@@ -28,9 +28,7 @@ main {
         margin-bottom: 20px;
         margin-left: 20px;
         margin-right: 20px;
-        /*display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;*/
+        /**/
         .poke {
             height: 100%;
             display: flex;
@@ -156,16 +154,16 @@ main {
             box-shadow: 2px 3px 20px config.$bluePok;
         }
         .loading {
+            margin: 20%;
             font-size: 50px;
             font-family: config.$pokeFont;
             text-shadow: config.$texShadowRev;
             color: config.$bluePok;
-            align-self: center;
             background-image: url('../images/sofi-ilona-lohonen-pikachu-runcycle8.gif');
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
-            width: 100%;
+            width: 60vw;
             height: 100%;
         }
     }
