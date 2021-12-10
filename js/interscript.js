@@ -22,7 +22,9 @@ vaporWave.onclick = function() {
 }
 
 let myAsideUser = document.querySelector('h4');
+
 let myButton = document.querySelector('button.user-button');
+
 myButton.onclick = function() {defineUserName();}
 
 function defineUserName() {
