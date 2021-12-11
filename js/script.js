@@ -16,11 +16,11 @@ async function getPokemons(page = 0) {
   const json = await response.json();
 
   const pages = Math.ceil(json.count / limit);
-  console.log(pages)
+  console.log(pages - 1);
 
   // const pageTotal = ;
 
-  // pageLogger('Actual page is ' + page + ' of ' + pageTotal + ' pages.')
+  pageLogger('Actual page is ' + (page + 1) + ' of ' + pages + ' pages.')
 
 
   return json;
