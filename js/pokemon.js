@@ -12,11 +12,13 @@ class Pokemon {
         const pokeDiv = document.createElement('div');
         pokeDiv.className = 'poke';
         pokeDiv.innerHTML = `
+            <!--
             <div class="card-head">
                 <a class="poke-void" href="">
                     <img width="20px" src="images/pokeball-1.png" alt="pokeball icon">
                 </a>
             </div>
+            -->
             <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
             <div class="card-feet">
                 <h2 class="poke-name">${this.nome}</h2>
