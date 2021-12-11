@@ -191,7 +191,7 @@ main {
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
     transition: all ease 0.4s;
     width: 100%;
     border: 1px solid black;
@@ -391,7 +391,7 @@ main {
     main {
         .pagination {
             grid-area: "prox";
-            width: 100vw;
+            width: 90vw;
 
         }
     }
@@ -400,7 +400,7 @@ main {
     main {
         .pagination {
             grid-area: "prox";
-            width: 100vw;
+            width: 90vw;
 
         }
     }

@@ -8,7 +8,7 @@ async function getPokemons(page = 0) {
 
   const limit = 20;
 
-  window.scrollTo({top: 150, behavior: 'smooth'})
+  window.scrollTo({top: 0, behavior: 'smooth'})
 
   await fakePromise();
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
@@ -63,7 +63,7 @@ async function mudaPagina (newPage) {
 
   const pagination = await getPokemons(page);
 
-  let pageTotal = getPokemons.length;
+  let pageTotal = await getPokemons(pages);
 
   listaPokemons(pagination.results);
 
@@ -129,6 +129,7 @@ window.onload = async () => {
     btnEnd();
     btnPrimeiro();
     btnAnterior();
+
     temPrimeiro(page)
     temAnterior(page);
     temProx(page);
