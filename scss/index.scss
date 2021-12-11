@@ -11,7 +11,7 @@ main {
         font-family: config.$fontText;
         display: grid;
         grid-template-rows:
-        360px 360px 360px 360px 360px;
+        360px 360px 360px 360px 360px 5vh;
         grid-template-columns:
         16vw 16vw 16vw 16vw;
         grid-template-areas:
@@ -19,8 +19,8 @@ main {
         'pok5 pok6  pok7  pok8'
         'pok9 pok10 pok11 pok12'
         'pok13 pok14 pok15 pok16'
-        'pok17 pok18 pok19 pok20';
-        /*'prox prox prox prox';*/
+        'pok17 pok18 pok19 pok20'
+        'prox prox prox prox';
         grid-column-gap: 20px;
         grid-row-gap: 20px;
         text-align: center;
@@ -197,7 +197,7 @@ main {
     border: 1px solid black;
         .paginate {
             cursor: pointer;
-           
+
             text-decoration: none;
             color: rgb(0, 0, 0);
             font-size: 1.2rem;
@@ -211,7 +211,6 @@ main {
             margin-left: 3%;
             margin-right: 3%;
             border-radius: 3%;
-
         }
         button:hover {
             animation: pokeProxAnimation 1.5s ease infinite;
