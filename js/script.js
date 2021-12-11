@@ -16,8 +16,27 @@ async function getPokemons(page = 0) {
   const json = await response.json();
 
   const pages = Math.ceil(json.count / limit);
+  console.log(pages)
+
+  // const pageTotal = ;
+
+  // pageLogger('Actual page is ' + page + ' of ' + pageTotal + ' pages.')
+
 
   return json;
+}
+
+async function mudaPagina (newPage) {
+  page = newPage;
+
+  const pagination = await getPokemons(page);
+
+  listaPokemons(pagination.results);
+
+  temPrimeiro(page);
+  temAnterior(page);
+  temProx(page);
+  temEnd(page);
 }
 
 function temPrimeiro(page) {
@@ -56,23 +75,6 @@ function temEnd(page) {
   } else {
     btnEnd.style.visibility = "visible";
   }
-}
-
-async function mudaPagina (newPage) {
-  page = newPage;
-
-  const pagination = await getPokemons(page);
-
-  let pageTotal = await getPokemons(pages);
-
-  listaPokemons(pagination.results);
-
-  pageLogger('Actual page is ' + page + ' of ' + pageTotal + ' pages.')
-
-  temPrimeiro(page);
-  temAnterior(page);
-  temProx(page);
-  temEnd(page);
 }
 
 function btnProx () {
@@ -118,7 +120,6 @@ function listaPokemons(pokemonsApi) {
     pokeList.appendChild(html)
   });
 }
-
 // Execute when the page finish loading
 window.onload = async () => {
     const response = await getPokemons(page);
