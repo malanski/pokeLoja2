@@ -181,11 +181,11 @@ main {
 }
 
 .pagination {
-    /*grid-area: "prox";
+    grid-area: "prox";
     grid-row-start: 4;
     grid-row-end: 4;
     grid-column-start: 1;
-    grid-column-end: 4;*/
+    grid-column-end: 4;
     padding: 0;
     margin: 10px;
     display: flex;
@@ -195,27 +195,23 @@ main {
     transition: all ease 0.4s;
     width: 100%;
     border: 1px solid black;
-        button {
+        .paginate {
             cursor: pointer;
-            background: config.$nextBtnBg;
-            background-size: 300% 300%;
-            align-self: center;
-
+           
             text-decoration: none;
             color: rgb(0, 0, 0);
             font-size: 1.2rem;
 
+            background: config.$nextBtnBg;
+            background-size: 300% 300%;
             margin-bottom: 0;
             margin-top: 0;
             width: 80vw;
             padding: 10px 20px;
-            margin-left: 5%;
-            margin-right: 5%;
-            border-radius: 2%;
-            .paginate {
-                margin: 0;
+            margin-left: 3%;
+            margin-right: 3%;
+            border-radius: 3%;
 
-            }
         }
         button:hover {
             animation: pokeProxAnimation 1.5s ease infinite;
@@ -236,11 +232,7 @@ main {
     margin-left: 30%;
     align-self: center;
     .prox-box{
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
-        flex: 1 1 100%;
+        
         transition: all ease 0.4s;
         width: 100%;
         margin: auto;
@@ -371,8 +363,6 @@ main {
                 .actual-price {
                     font-size: 1.2rem;
                 }
-                button {
-                }
                 .btn {
                     .img {
                         max-width: 20px;
@@ -383,32 +373,32 @@ main {
                     }
                 }
             }
-            .prox {
-                grid-area: "prox";
-                grid-row-start: 7;
-                grid-row-end: 7;
-                grid-column-start: 1;
-                grid-column-end: 2;
-                margin-bottom: 1%;
-                width: 70vw;
-                margin-left: 65%;
-                margin-right: 110px;
-                .pro-box {
-                    margin: auto;
-                }
-            }
             .loading {
                 width: 80vw;
             }
         }
-
+        .pagination {
+            grid-area: "prox";
+            width: 100vw;
+        }
     }
 }
 
+@media screen and (max-width: config.$mobileBreakpointM){
+    main {
+        .pagination {
+            grid-area: "prox";
+            width: 100vw;
+
+        }
+    }
+}
 @media screen and (max-width: config.$mobileBreakpointP){
-    .prox {
-        width: 70%;
-        margin-bottom: 0;
-        margin-left: 110px;
+    main {
+        .pagination {
+            grid-area: "prox";
+            width: 100vw;
+
+        }
     }
 }
