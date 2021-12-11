@@ -20,7 +20,7 @@ async function getPokemons(page = 0) {
 
   // const pageTotal = ;
 
-  pageLogger('Actual page is ' + (page + 1) + ' of ' + pages + ' pages.')
+  pageLogger('Page ' + (page + 1) + ' of ' + pages)
 
 
   return json;
