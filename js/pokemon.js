@@ -13,7 +13,7 @@ class Pokemon {
         pokeDiv.className = 'poke';
         pokeDiv.innerHTML = `
             <div class="card-head">
-                <a class="poke-void" href="pages/product1.html">
+                <a class="poke-void" href="">
                     <img width="20px" src="images/pokeball-1.png" alt="pokeball icon">
                 </a>
             </div>

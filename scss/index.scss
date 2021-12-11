@@ -75,8 +75,8 @@ main {
             .poke-pic {
                 flex-basis: auto;
                 align-self: center;
-                width: 160px;
-                height: 160px;
+                width: 15vw;
+                height: 110%;
             }
             .card-feet {
                 display: flex;
@@ -89,6 +89,7 @@ main {
                 flex: 1;
                 align-items: center;
                 h2 {
+                    text-transform: capitalize;
                     margin-bottom: -15px;
                     .poke-name {
                         color: black;
@@ -150,8 +151,16 @@ main {
                 }
             }
         }
-        .card:hover {
+        .poke:hover {
             box-shadow: 2px 3px 20px config.$bluePok;
+            background-color: rgb(150, 150, 150);
+            
+            h2 {
+            font-family: config.$pokeFont;
+            margin-top: -30px;
+            color:config.$yellowPok;
+            text-shadow: config.$texShadow;
+            }
         }
         .loading {
             margin: 20%;
