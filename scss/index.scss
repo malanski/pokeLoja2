@@ -41,6 +41,7 @@ main {
             transform: all ease 0.5s;
             text-align: center;
             border: 1px solid rgb(173, 200, 255);
+            margin: 0;
             .card-head {
                 align-self: center;
                 display: flex;
@@ -91,7 +92,7 @@ main {
                 align-items: center;
                 h2 {
                     text-transform: capitalize;
-                    margin-bottom: -15px;
+                    margin: -15px;
                     .poke-name {
                         color: black;
                         font-weight: 800;
@@ -157,10 +158,10 @@ main {
             background-color: #969696;
 
             h2 {
-            font-family: config.$pokeFont;
-            margin-top: -30px;
+            // font-family: config.$pokeFont;
+            // margin-top: -30px;
             color:config.$yellowPok;
-            text-shadow: config.$texShadow;
+            // text-shadow: config.$texShadow;
             }
         }
         .loading {
