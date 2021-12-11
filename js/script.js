@@ -40,6 +40,15 @@ function temProx(page) {
     bntProx.style.visibility = "visible";
   }
 }
+function temEnd(page) {
+  const btnEnd = document.querySelector('.btn-end');
+  // debugger;
+  if (page >= 55) {
+    btnEnd.style.visibility = "hidden";
+  } else {
+    btnEnd.style.visibility = "visible";
+  }
+}
 
 async function mudaPagina (newPage) {
   page = newPage;
@@ -58,6 +67,12 @@ function btnProx () {
   const btnProx = document.querySelector('.btn-prox');
 
   btnProx.onclick = () => mudaPagina(page + 1);
+}
+
+function btnEnd () {
+  const btnEnd = document.querySelector('.btn-end');
+
+  btnEnd.onclick = () => mudaPagina(page = 55);
 }
 
 
@@ -92,8 +107,10 @@ window.onload = async () => {
 
     listaPokemons(response.results);
     btnProx();
+    btnEnd();
     pageLogger('Actual page is ' + page + ' of 56 pages')
     btnAnterior();
     temAnterior(page);
     temProx(page);
+    temEnd(page);
 }
