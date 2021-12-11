@@ -182,11 +182,11 @@ main {
 
 .pagination {
     grid-area: "prox";
-    grid-row-start: 4;
-    grid-row-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 4;
-    padding: 0;
+    padding: 10px;
     margin: 10px;
     display: flex;
     flex-direction: row;
@@ -378,7 +378,11 @@ main {
         }
         .pagination {
             grid-area: "prox";
-            width: 100vw;
+            grid-row-start: 11;
+            grid-row-end: 11;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            width: 90vw;
         }
     }
 }
