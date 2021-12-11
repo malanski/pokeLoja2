@@ -1,4 +1,4 @@
-  const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 2500));
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 2500));
 
 let page = 0;
 
@@ -15,12 +15,20 @@ async function getPokemons(page = 0) {
 
   const json = await response.json();
 
-
   const pages = Math.ceil(json.count / limit);
 
   return json;
 }
 
+function temPrimeiro(page) {
+  const bntZero = document.querySelector('.btn-zero');
+
+  if (page === 0) {
+    bntZero.style.visibility = "hidden";
+  } else {
+    bntZero.style.visibility = "visible";
+  }
+}
 function temAnterior(page) {
   const bntAnt = document.querySelector('.btn-ant');
 
@@ -43,7 +51,7 @@ function temProx(page) {
 function temEnd(page) {
   const btnEnd = document.querySelector('.btn-end');
   // debugger;
-  if (page >= 55) {
+  if (page === 55) {
     btnEnd.style.visibility = "hidden";
   } else {
     btnEnd.style.visibility = "visible";
@@ -55,12 +63,16 @@ async function mudaPagina (newPage) {
 
   const pagination = await getPokemons(page);
 
+  let pageTotal = getPokemons.length;
+
   listaPokemons(pagination.results);
 
-  pageLogger('Actual page is ' + page + ' of 56 pages.');
+  pageLogger('Actual page is ' + page + ' of ' + pageTotal + ' pages.')
 
-  temAnterior(page)
+  temPrimeiro(page);
+  temAnterior(page);
   temProx(page);
+  temEnd(page);
 }
 
 function btnProx () {
@@ -80,6 +92,12 @@ function btnAnterior () {
   const btnAnterior = document.querySelector('.btn-ant');
 
   btnAnterior.onclick = () => mudaPagina(page - 1);
+}
+
+function btnPrimeiro () {
+  const btnPrimeiro = document.querySelector('.btn-zero');
+
+  btnPrimeiro.onclick = () => mudaPagina(page = 0);
 }
 
 function pageLogger(page) {
@@ -106,10 +124,12 @@ window.onload = async () => {
     const response = await getPokemons(page);
 
     listaPokemons(response.results);
+    // pageLogger('Actual page is ' + page + ' of ' + pageTotal.length + ' pages.')
     btnProx();
     btnEnd();
-    pageLogger('Actual page is ' + page + ' of 56 pages')
+    btnPrimeiro();
     btnAnterior();
+    temPrimeiro(page)
     temAnterior(page);
     temProx(page);
     temEnd(page);
