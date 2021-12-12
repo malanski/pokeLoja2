@@ -7,7 +7,7 @@
     <img height="70em" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/891.png">
   </div>
   <br>
-  ##### This project is about creating a responsive web store using Html and Css(with a pinch os JavaScript too)
+  ##### This project is about creating a responsive web store using Html and Css, also javaScript an API manipulation.
   #### Project Struture
   <br>
   ##### Gridzera is the name of de class in css, it is the grid that holds the whole structure of the Home(index.html).
@@ -38,11 +38,11 @@
   #### For Media Queries every grid shape change to 2 columns
     
          grid-template-areas:
-            'header  header '
-            'nav     nav    '
-            'content content'
-            'aside   aside'
-            'footer  footer';  
+            'header  '
+            'nav     '
+            'content '
+            'aside   '
+            'footer  ';  
         
         grid-template-areas:
             'pok1 pok2'
