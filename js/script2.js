@@ -1,7 +1,8 @@
 const meuLink = document.querySelector('#meu-link');
 
-meuLink.addEventListener('click', function() {
-    console.log('clicou');
+const meuClique = function(event) {
+    event.preventDefault();
 
-});
-
+    console.log(event);
+}
+meuLink.addEventListener('click', meuClique)

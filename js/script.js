@@ -4,28 +4,37 @@ let page = 0;
 
 async function getPokemons(page = 0) {
   const pokeList = document.querySelector('.poke-list');
+
+  // inserir Aviso temporário de Loading + FakePromise
   pokeList.innerHTML = '<div class="loading">Now Loading... please wait...</div>';
 
+  // Limita aquantidade de Pokémon por Página
   const limit = 20;
 
+  // Faz pagina subir depois de clicar mudar pagina
   window.scrollTo({top: 0, behavior: 'smooth'})
 
-  await fakePromise();
+
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
 
   const json = await response.json();
 
+  // Arredonda a quantidade de páginas
   const pages = Math.ceil(json.count / limit);
-  console.log(pages - 1);
 
-  // const pageTotal = ;
-
-  pageLogger('Page ' + (page + 1) + ' of ' + pages)
-
+  // mostra numero de paginas atual e total: logger
+  pageLogger('Page ' + (page + 1) + ' of ' + pages);
+  await fakePromise();
 
   return json;
 }
+function pageLogger(page) {
+  const pageLogs = document.querySelector('.page-log');
 
+  pageLogs.innerHTML = `${page}`;
+}
+
+// função para troca de páginas
 async function mudaPagina (newPage) {
   page = newPage;
 
@@ -39,6 +48,7 @@ async function mudaPagina (newPage) {
   temEnd(page);
 }
 
+// Esconder Botão p/Primeira página na primeira página 
 function temPrimeiro(page) {
   const bntZero = document.querySelector('.btn-zero');
 
@@ -48,6 +58,8 @@ function temPrimeiro(page) {
     bntZero.style.visibility = "visible";
   }
 }
+
+// Esconder Botão p/Anterior na primeira página
 function temAnterior(page) {
   const bntAnt = document.querySelector('.btn-ant');
 
@@ -58,18 +70,21 @@ function temAnterior(page) {
   }
 }
 
+// Esconder botão p/Proximo na ultima pagina
 function temProx(page) {
   const bntProx = document.querySelector('.btn-prox');
-  // debugger;
+
   if (page >= 55) {
     bntProx.style.visibility = "hidden";
   } else {
     bntProx.style.visibility = "visible";
   }
 }
+
+// Esconder Botão p/Ultima pagina na ultima pagina
 function temEnd(page) {
   const btnEnd = document.querySelector('.btn-end');
-  // debugger;
+
   if (page === 55) {
     btnEnd.style.visibility = "hidden";
   } else {
@@ -77,36 +92,35 @@ function temEnd(page) {
   }
 }
 
+// Evento Click p/Proxima página
 function btnProx () {
   const btnProx = document.querySelector('.btn-prox');
 
   btnProx.onclick = () => mudaPagina(page + 1);
 }
 
+// Evento Click p/Ultima página
 function btnEnd () {
   const btnEnd = document.querySelector('.btn-end');
 
   btnEnd.onclick = () => mudaPagina(page = 55);
 }
 
-
+// Evento Click p/Anterior página
 function btnAnterior () {
   const btnAnterior = document.querySelector('.btn-ant');
 
   btnAnterior.onclick = () => mudaPagina(page - 1);
 }
 
+// Evento Click p/Primeira página
 function btnPrimeiro () {
   const btnPrimeiro = document.querySelector('.btn-zero');
 
   btnPrimeiro.onclick = () => mudaPagina(page = 0);
 }
 
-function pageLogger(page) {
-  const pageLogs = document.querySelector('.page-log');
 
-  pageLogs.innerHTML = `${page}`;
-}
 
 function listaPokemons(pokemonsApi) {
   const pokeList = document.querySelector('.poke-list');
@@ -125,12 +139,14 @@ window.onload = async () => {
     const response = await getPokemons(page);
 
     listaPokemons(response.results);
-    // pageLogger('Actual page is ' + page + ' of ' + pageTotal.length + ' pages.')
+
+// chama as funções de paginação
     btnProx();
     btnEnd();
     btnPrimeiro();
     btnAnterior();
 
+// chama as funções de esconder botões
     temPrimeiro(page)
     temAnterior(page);
     temProx(page);

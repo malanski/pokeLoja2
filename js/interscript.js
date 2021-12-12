@@ -1,3 +1,5 @@
+
+// Giff Click interativo do Aside: Ash Computer
 const minhaImagem = document.querySelector('.loop');
 
 minhaImagem.onclick = function() {
@@ -9,6 +11,7 @@ minhaImagem.onclick = function() {
     }
 }
 
+// Giff Click interativo do Aside: Pikachuu
 const vaporWave = document.querySelector('.pikachuu');
 
 vaporWave.onclick = function() {
@@ -18,31 +21,34 @@ vaporWave.onclick = function() {
     } else {
         vaporWave.setAttribute ('src', 'images/tenor-pikachu.gif')
     }
-
 }
 
+
+// Define nome de usuario
 let myAsideUser = document.querySelector('h4');
 
-let myButton = document.querySelector('button.user-button');
-
-myButton.onclick = function() {defineUserName();}
-
 function defineUserName() {
-
     let userName = prompt('Please Type your name here:');
+
     localStorage.setItem('name', userName);
+
     myAsideUser.textContent = 'welcome to the pokéloja, ' + userName;
 }
 
+// USER BUTTON
+// Botão de Troca de Usuário
+let myButton = document.querySelector('button.user-button');
+myButton.onclick = function() {defineUserName();}
+
+// Verificação de Usuario e Pedido de Entrada de Nome
 if(!localStorage.getItem('nome')){
     defineUserName();
-}
-else {
+} else {
     let storedName = localStorage.getItem('nome');
+
     myAsideUser.textContent = 'welcome to the pokéloja, ' + storedName;
 }
-
-
+// checador para nome vazio
 function defineUserName() {
     let userName = prompt('Please Type your name here:');
     if(!userName || userName === null) {
