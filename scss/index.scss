@@ -7,11 +7,12 @@ main {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
+    width: 50%;
     .poke-list {
         font-family: config.$fontText;
         display: grid;
         grid-template-rows:
-        360px 360px 360px 360px 360px 5vh;
+        60vh 60vh 60vh 60vh 60vh 5vh;
         grid-template-columns:
         16vw 16vw 16vw 16vw;
         grid-template-areas:
@@ -192,7 +193,7 @@ main {
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     transition: all ease 0.4s;
     width: 90%;
         .paginate {
@@ -212,6 +213,9 @@ main {
         }
         button:hover {
             animation: pokeProxAnimation 1.5s ease infinite;
+        }
+        .page-log {
+            
         }
 }
 

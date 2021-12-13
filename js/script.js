@@ -134,11 +134,20 @@ function listaPokemons(pokemonsApi) {
     pokeList.appendChild(html)
   });
 }
+
 // Execute when the page finish loading
 window.onload = async () => {
     const response = await getPokemons(page);
-
     listaPokemons(response.results);
+
+    //Tosqueira TODO
+    const btnCart = document.querySelector('#btn-cart');
+
+    btnCart.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      document.body.className = 'carrinho-aberto';
+    });
 
 // chama as funções de paginação
     btnProx();

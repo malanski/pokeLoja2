@@ -40,7 +40,7 @@ function defineUserName() {
 let myButton = document.querySelector('button.user-button');
 myButton.onclick = function() {defineUserName();}
 
-// Verificação de Usuario e Pedido de Entrada de Nome
+// Verificação de Usuario + Pedido de Entrada de Nome
 if(!localStorage.getItem('nome')){
     defineUserName();
 } else {
