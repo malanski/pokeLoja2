@@ -1,4 +1,4 @@
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 2500));
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 2000));
 
 let page = 0;
 
@@ -134,29 +134,26 @@ function listaPokemons(pokemonsApi) {
     pokeList.appendChild(html)
   });
 }
+const btnCart = document.querySelector('#btn-cart');
 
 function carrinhoTosco() {
-
+// Abre o carrinho de compras
     const btnCart = document.querySelector('#btn-cart');
-
     btnCart.addEventListener('click', function(event) {
       event.preventDefault();
-
       document.body.className = 'carrinho-aberto';
     });
 
+// Fecha o Carrinho De Compras
     const btnCartX = document.querySelector('#btn-cart-x');
-
     btnCartX.addEventListener('click', function(event) {
       event.preventDefault();
 
-      const btnCartOp = document.querySelector('.carrinho');
+      document.body.className = '';
+      });
+    };
 
-      document.body.className = 'carrinho-aberto';
 
-      btnCartOp.style.visibility = "hidden";
-    });
-}
 
 
 // Execute when the page finish loading
@@ -166,7 +163,7 @@ window.onload = async () => {
 
 // Tosqueira TODO
 
-    carrinhoTosco()
+    carrinhoTosco();
 
 // chama as funções de paginação
     btnProx();

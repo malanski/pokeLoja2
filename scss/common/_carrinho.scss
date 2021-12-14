@@ -18,10 +18,26 @@ body.carrinho-aberto {
     opacity: 0.9;
     border-radius: 2% 0  0 2%;
     border: solid 1px gray;
-    padding: 15px;    
+    padding: 15px;
     transition: all ease-in .3s;
+    // display: flex;
+    // align-items: flex-start;
+    // justify-content: space-between;
+
+    button {
+        cursor: pointer;
+        top: 0;
+        margin-left: -14px;
+        background: white;
+        border: 0;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size:  16px;
+    }
 
     h4 {
+        text-align: right;
+        right: 0;
         font-size: 20px;
         margin: 0;
     }
