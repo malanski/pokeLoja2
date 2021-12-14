@@ -135,12 +135,8 @@ function listaPokemons(pokemonsApi) {
   });
 }
 
-// Execute when the page finish loading
-window.onload = async () => {
-    const response = await getPokemons(page);
-    listaPokemons(response.results);
+function carrinhoTosco() {
 
-    //Tosqueira TODO
     const btnCart = document.querySelector('#btn-cart');
 
     btnCart.addEventListener('click', function(event) {
@@ -148,6 +144,29 @@ window.onload = async () => {
 
       document.body.className = 'carrinho-aberto';
     });
+
+    const btnCartX = document.querySelector('#btn-cart-x');
+
+    btnCartX.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      const btnCartOp = document.querySelector('.carrinho');
+
+      document.body.className = 'carrinho-aberto';
+
+      btnCartOp.style.visibility = "hidden";
+    });
+}
+
+
+// Execute when the page finish loading
+window.onload = async () => {
+    const response = await getPokemons(page);
+    listaPokemons(response.results);
+
+// Tosqueira TODO
+
+    carrinhoTosco()
 
 // chama as funções de paginação
     btnProx();

@@ -1,7 +1,10 @@
+@use '../config';
+
 body.carrinho-aberto {
     .carrinho {
         box-shadow: 1px 1px 18px 4px #000000;
         right: 0;
+        transition: all ease-out .3s;
     }
 }
 
