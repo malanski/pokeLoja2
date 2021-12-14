@@ -141,17 +141,25 @@ function carrinhoTosco() {
     const btnCart = document.querySelector('#btn-cart');
     btnCart.addEventListener('click', function(event) {
       event.preventDefault();
-      document.body.className = 'carrinho-aberto';
+
+      const openCartClass = 'carrinho-aberto';
+
+      document.body.className.includes(openCartClass) ? document.body.className = '': document.body.className = openCartClass;
+      // document.body.className.includes(openCartClass);
+
+      // document.body.className = openCartClass;
     });
 
 // Fecha o Carrinho De Compras
-    const btnCartX = document.querySelector('#btn-cart-x');
-    btnCartX.addEventListener('click', function(event) {
+    const btnCartClose = document.querySelector('#btn-cart-x');
+    btnCartClose.addEventListener('click', function(event) {
       event.preventDefault();
 
       document.body.className = '';
-      });
-    };
+
+      // document.body.classList.add();
+    });
+};
 
 
 
