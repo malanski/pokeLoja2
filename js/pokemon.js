@@ -12,7 +12,7 @@ class Pokemon {
         const pokeDiv = document.createElement('div');
         pokeDiv.className = 'poke';
         pokeDiv.innerHTML = `
-            <a href="">
+            <a href="pokemon.html?id=${this.id}">
                 <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
                 <div class="card-feet">
                     <h2 class="poke-name">${this.nome}</h2>
@@ -22,7 +22,7 @@ class Pokemon {
                         <img src="images/pokeball-color.png"
                             title="got a Code discount?">
                         <span class="buy">Buy</span>
-                    </button>
+                    </button>   
                 </div>
             </a>
         `;
@@ -32,3 +32,26 @@ class Pokemon {
     }
 
 }
+
+function getQueryparameters() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+}
+
+async function getPokemonData(id) {
+    const url =  `https://pokeapi.co/api/v2/pokemon/${id}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    console.log(data);
+};
+
+
+window.onload =  async function() {
+    const { id } = getQueryparameters(url);
+
+    await getPokemonData(id);
+    // console.log();
+};
+

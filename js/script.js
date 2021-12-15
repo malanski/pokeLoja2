@@ -1,4 +1,4 @@
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 2000));
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1500));
 
 let page = 0;
 
@@ -137,6 +137,8 @@ window.onload = async () => {
     listaPokemons(response.results);
 
     if (window.Carrinho) Carrinho();
+
+
 
 // chama as funções de paginação
     btnProx();
