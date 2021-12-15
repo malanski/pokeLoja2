@@ -47,6 +47,10 @@ main {
             text-align: center;
             border: 1px solid rgb(173, 200, 255);
             margin: 0;
+            a {
+                text-decoration: none;
+                color: black;
+            }
             .card-head {
                 align-self: center;
                 display: flex;
@@ -99,7 +103,6 @@ main {
                     text-transform: capitalize;
                     margin: -15px;
                     .poke-name {
-                        color: black;
                         font-weight: 800;
                         font-size: 0.4rem;
                     }

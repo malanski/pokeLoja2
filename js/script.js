@@ -14,7 +14,6 @@ async function getPokemons(page = 0) {
   // Faz pagina subir depois de clicar mudar pagina
   window.scrollTo({top: 0, behavior: 'smooth'})
 
-
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
 
   const json = await response.json();
@@ -120,8 +119,6 @@ function btnPrimeiro () {
   btnPrimeiro.onclick = () => mudaPagina(page = 0);
 }
 
-
-
 function listaPokemons(pokemonsApi) {
   const pokeList = document.querySelector('.poke-list');
 
@@ -134,44 +131,12 @@ function listaPokemons(pokemonsApi) {
     pokeList.appendChild(html)
   });
 }
-const btnCart = document.querySelector('#btn-cart');
-
-function carrinhoTosco() {
-// Abre o carrinho de compras
-    const btnCart = document.querySelector('#btn-cart');
-    btnCart.addEventListener('click', function(event) {
-      event.preventDefault();
-
-      const openCartClass = 'carrinho-aberto';
-
-      document.body.className.includes(openCartClass) ? document.body.className = '': document.body.className = openCartClass;
-      // document.body.className.includes(openCartClass);
-
-      // document.body.className = openCartClass;
-    });
-
-// Fecha o Carrinho De Compras
-    const btnCartClose = document.querySelector('#btn-cart-x');
-    btnCartClose.addEventListener('click', function(event) {
-      event.preventDefault();
-
-      document.body.className = '';
-
-      // document.body.classList.add();
-    });
-};
-
-
-
-
 // Execute when the page finish loading
 window.onload = async () => {
     const response = await getPokemons(page);
     listaPokemons(response.results);
 
-// Tosqueira TODO
-
-    carrinhoTosco();
+    if (window.Carrinho) Carrinho();
 
 // chama as funções de paginação
     btnProx();
@@ -184,4 +149,5 @@ window.onload = async () => {
     temAnterior(page);
     temProx(page);
     temEnd(page);
+
 }
