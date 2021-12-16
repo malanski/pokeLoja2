@@ -172,20 +172,6 @@ main {
             // text-shadow: config.$texShadow;
             }
         }
-        .loading {
-            margin: 0;
-            font-size: 3rem;
-            font-family: config.$pokeFont;
-            text-shadow: config.$texShadowRev;
-            color: config.$bluePok;
-            background-image: url('../images/sofi-ilona-lohonen-pikachu-runcycle8.gif');
-            background-position: center;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            width: 60vw;
-            height: 100%;
-            line-height: 100%;
-        }
     }
 }
 

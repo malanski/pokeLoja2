@@ -1,12 +1,50 @@
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1500));
+
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 3000));
 
 let page = 0;
+class Pokemon {
+  constructor(nome, url){
+      this.nome = nome;
+      this.url = url;
+      this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/', '');
+      this.imagem = `
+  https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
+
+      this.preco = Math.floor(Math.random() * 100);
+  }
+  html() {
+      const pokeDiv = document.createElement('div');
+      pokeDiv.className = 'poke';
+      pokeDiv.innerHTML = `
+          <a href="pokemon.html?id=${this.id}">
+              <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
+              <div class="card-feet">
+                  <h2 class="poke-name">${this.nome}</h2>
+                  <p class="old-price"><small>R$${this.preco}</small></p><br>
+                  <p class="actual-price"><small>R$</small>${(this.preco * 0.8).toFixed(2)}</p>
+                  <button class="btn">
+                      <img src="images/pokeball-color.png"
+                          title="got a Code discount?">
+                      <span class="buy">Buy</span>
+                  </button>   
+              </div>
+          </a>
+      `;
+      return pokeDiv;
+  }
+}
 
 async function getPokemons(page = 0) {
   const pokeList = document.querySelector('.poke-list');
 
   // inserir Aviso temporário de Loading + FakePromise
-  pokeList.innerHTML = '<div class="loading">Now Loading... please wait...</div>';
+  pokeList.innerHTML = `
+    <div>
+      <div class="loading">
+        <p>Now Loading... please wait...</p>
+      </div>
+    </div>
+  `;
 
   // Limita aquantidade de Pokémon por Página
   const limit = 20;
@@ -14,6 +52,7 @@ async function getPokemons(page = 0) {
   // Faz pagina subir depois de clicar mudar pagina
   window.scrollTo({top: 0, behavior: 'smooth'})
 
+  await fakePromise();
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${limit * page}`);
 
   const json = await response.json();
@@ -23,7 +62,6 @@ async function getPokemons(page = 0) {
 
   // mostra numero de paginas atual e total: logger
   pageLogger('Page ' + (page + 1) + ' of ' + pages);
-  await fakePromise();
 
   return json;
 }

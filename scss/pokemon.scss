@@ -5,3 +5,17 @@
 @use 'common/footer';
 @use 'common/top-pokes';
 @use 'common/carrinho';
+@use 'common/loading';
+
+
+main {
+    padding: 20px;
+    grid-area: "content";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    width: 75%;
+    .pokemon {       
+    }
+}

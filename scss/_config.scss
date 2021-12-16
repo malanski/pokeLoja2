@@ -51,3 +51,15 @@ $mobileBreakpointGg: 926px;
 $mobileBreakpointG: 810px;
 $mobileBreakpointM: 428px;
 $mobileBreakpointP: 360px;
+
+.error {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 150px;
+    margin: 10px;
+    background-image: url('../images/pikachu-sad.gif');
+    background-size: cover;
+    height: 280px;
+    color: red;
+}

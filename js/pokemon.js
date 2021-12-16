@@ -1,41 +1,40 @@
-class Pokemon {
-    constructor(nome, url){
-        this.nome = nome;
-        this.url = url;
-        this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/', '');
-        this.imagem = `
-    https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
-
-        this.preco = Math.floor(Math.random() * 100);
+class PokemonSelected {
+    constructor(options) {
+        this.name = options.name;
+        this.types = options.types.map(typeItem => typeItem.type.name);
+        this.abilities = options.abilities.map(abilityType => abilityType.ability.name);
     }
+
     html() {
-        const pokeDiv = document.createElement('div');
-        pokeDiv.className = 'poke';
-        pokeDiv.innerHTML = `
-            <a href="pokemon.html?id=${this.id}">
-                <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
-                <div class="card-feet">
-                    <h2 class="poke-name">${this.nome}</h2>
-                    <p class="old-price"><small>R$${this.preco}</small></p><br>
-                    <p class="actual-price"><small>R$</small>${(this.preco * 0.8).toFixed(2)}</p>
-                    <button class="btn">
-                        <img src="images/pokeball-color.png"
-                            title="got a Code discount?">
-                        <span class="buy">Buy</span>
-                    </button>   
-                </div>
-            </a>
-        `;
-
-        return pokeDiv;
-
+        // <div class="pokemon">
+        //         <img src="" alt="">
+        //         <h1>Nome do Pokémon</h1>
+        //         <hr>
+        //             <h2>Tipo</h2>
+        //             <ul>
+        //                 <li>Tipo 1</li>
+        //                 <li>Tipo 2</li>
+        //             </ul>
+        //         </hr>
+        //         <h2>Habilidades</h2>
+        //         <ul>
+        //             <li>Habilidade 1</li>
+        //             <li>Habilidade 2</li>
+        //             <li>Habilidade 3</li>
+        //         </ul>
+        //    </div>
     }
-
 }
 
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 3000));
+
+
+//  procura Url de cada pokemon na API
 function getQueryparameters() {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
+
+    return params;
 }
 
 async function getPokemonData(id) {
@@ -44,14 +43,28 @@ async function getPokemonData(id) {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
+    return data;
 };
 
 
 window.onload =  async function() {
-    const { id } = getQueryparameters(url);
+    const { id } = getQueryparameters();
 
-    await getPokemonData(id);
-    // console.log();
+    const pokemonDiv = document.querySelector('.pokemon');
+
+    try {
+        await fakePromise();
+        
+        const data = await getPokemonData(id);
+
+        const pokemon = new PokemonSelected(data);
+    } catch (error) {
+        pokemonDiv.innerHTML = `<div class="error">Nenhum resultado Encontrado</div>`;
+
+    };
+    Carrinho();
+
+    //  Gabeta para ver os dados todos do JSON
+    // pokemonDiv.innerHTML = JSON.stringify(data);
 };
 
