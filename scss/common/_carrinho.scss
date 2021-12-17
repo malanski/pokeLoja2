@@ -6,6 +6,11 @@ body.carrinho-aberto {
         right: 0;
         transition: all ease-out .3s;
     }
+    .opn-cart {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
 .carrinho {
