@@ -6,7 +6,11 @@ main {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    width: 100%;
+    // display: flex;
+    // justify-content: baseline;
+    // flex-direction: column;
+    // align-items: center;
+    width: 67vw;
     margin: 10px;
     .poke-list {
         font-family: config.$fontText;
