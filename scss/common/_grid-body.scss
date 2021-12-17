@@ -16,24 +16,31 @@ body, html {
 }
 
 .gridzera {
-    margin: 0;
-    display: grid;
-    width: 100vw;
-    grid-template-rows:
-    70px 70px auto auto auto;
-    grid-template-columns:
-    70vw     30vw;
-    grid-template-areas:
-    'header      header'
-    'nav         nav'
-    'content     aside'
-    'footer      footer';
+    // margin: 0;
+    // display: grid;
+    // width: 100vw;
+    // grid-template-rows: 70px 70px auto auto auto;
+    // grid-template-columns: 70vw 30vw;
+    // grid-template-areas:
+    // 'header      header'
+    // 'nav         nav'
+    // 'content     asides'
+    // 'footer      footer';
+    .flex{
+        // grid-area: 'content';
+        // grid-row-start: 3;
+        // grid-row-end: 3;
+        // grid-column-start: 1;
+        // grid-column-end: 2;
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        margin: auto;
+    }
 }
 
-// .flex {
-//     display: flex;
-    
-// }
+
+
 
 @media screen and (max-width: config.$mobileBreakpointGg){
     .gridzera {

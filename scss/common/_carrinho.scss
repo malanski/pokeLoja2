@@ -28,8 +28,7 @@ body.carrinho-aberto {
     // display: flex;
     // align-items: flex-start;
     // justify-content: space-between;
-
-    button {
+    button{
         cursor: pointer;
         top: 0;
         margin-left: -14px;
@@ -39,8 +38,7 @@ body.carrinho-aberto {
         font-weight: bold;
         font-size:  16px;
     }
-
-    h4 {
+    h4{
         text-align: right;
         right: 0;
         font-size: 20px;
@@ -49,7 +47,7 @@ body.carrinho-aberto {
     p{
         font-size: 27px;
     }
-    img {
+    img{
         width: 100%;
     }
 }
