@@ -1,7 +1,6 @@
 @use 'config';
 
 main {
-    margin-top: 10px;
     grid-area: "content";
     grid-row-start: 3;
     grid-row-end: 3;
@@ -12,6 +11,7 @@ main {
     // flex-direction: column;
     // align-items: center;
     width: 67vw;
+    margin: 10px;
     .poke-list {
         font-family: config.$fontText;
         display: grid;
@@ -29,23 +29,18 @@ main {
         grid-column-gap: 10px;
         grid-row-gap: 10px;
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-        /**/
         .poke {
             height: auto;
             display: flex;
             flex-direction: column;
-            align-content: flex-start;
+            align-content: center;
             // align-items: stretch;
-            // flex: 1;
+            flex: 1;
             justify-content: center;
             transform: all ease 0.5s;
             text-align: center;
             border: 1px solid rgb(173, 200, 255);
-            margin: 10px;
+            border-radius: 5px;
             padding: 10px;
             position: relative;
             a {
@@ -54,24 +49,16 @@ main {
                 position: absolute;
             }
             .poke-pic {
-                flex-basis: auto;
                 align-self: center;
                 width: 100%;
                 height: 100%;
-                margin-top: 0;
                 position: relative;
-
+                margin-top: -50px;
+                margin-bottom: 10px;
             }
             .card-feet {
-                display: flex;
-                flex-direction: column;
-                align-content: center;
+                align-self: center;
                 margin: 0;
-                flex-wrap: wrap;
-                // justify-content: center;
-                padding: 0;
-                // flex: 1;
-                align-items: center;
                 position: relative;
 
                 h2 {
@@ -86,15 +73,15 @@ main {
                     flex-shrink: 1;
                     text-decoration: line-through;
                     color: red;
-                    font-size: 18px;
+                    font-size: 22px;
                     margin-bottom: -15px;
                 }
                 .actual-price {
                     flex-shrink: 1;
                     color: rgb(25, 184, 0);
                     font-weight: bold;
-                    font-size: 20px;
-                    margin-bottom: 0;
+                    font-size: 22px;
+                    margin-top: 0;
                 }
                 button {
                     list-style: none;
