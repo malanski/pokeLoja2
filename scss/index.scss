@@ -1,17 +1,17 @@
 @use 'config';
 
 main {
-    margin-top: 20px;
+    margin-top: 10px;
     grid-area: "content";
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    display: flex;
-    justify-content: baseline;
-    flex-direction: column;
+    // display: flex;
+    // justify-content: baseline;
+    // flex-direction: column;
     // align-items: center;
-    width: 70vw;
+    width: 67vw;
     .poke-list {
         font-family: config.$fontText;
         display: grid;
@@ -26,68 +26,41 @@ main {
         'pok13 pok14 pok15 pok16'
         'pok17 pok18 pok19 pok20'
         'prox prox prox prox';
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
         text-align: center;
         margin-top: 10px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
         /**/
         .poke {
-            height: 100%;
+            height: auto;
             display: flex;
             flex-direction: column;
-            align-content: flex-end;
-            align-items: stretch;
-            flex: 1;
-            justify-content: space-between;
-            /*justify-content: flex-end;*/
+            align-content: flex-start;
+            // align-items: stretch;
+            // flex: 1;
+            justify-content: center;
             transform: all ease 0.5s;
             text-align: center;
             border: 1px solid rgb(173, 200, 255);
-            margin: 0;
+            margin: 10px;
+            padding: 10px;
+            position: relative;
             a {
                 text-decoration: none;
                 color: black;
-            }
-            .card-head {
-                align-self: center;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: space-between;
-                align-items: flex-end;
-                font-size: 0.8rem;
-                margin-bottom: 0;
-                width: 80%;
-                flex: 1;
-                .poke-void {
-                //     align-self: flex-end;
-                //     img {
-                //         transform: all ease 0.5s;
-                //         margin-top: 5px;
-                //         margin-bottom: 5px;
-                //         margin-right: 5px;
-                //     }
-                //     img:hover {
-                //         width: 25px;
-                //         animation: pikaspin 3s infinite linear;
-                //         background-image:
-                //         url("../images/pokeball-2.png");
-                //         background-position-y: 40%;
-                //         background-repeat: no-repeat;
-                //         background-size: cover;
-                //         cursor:progress ;
-                //     }
-                }
+                position: absolute;
             }
             .poke-pic {
                 flex-basis: auto;
                 align-self: center;
                 width: 100%;
                 height: 100%;
-                margin-top: -10px;
+                margin-top: 0;
+                position: relative;
+
             }
             .card-feet {
                 display: flex;
@@ -95,10 +68,12 @@ main {
                 align-content: center;
                 margin: 0;
                 flex-wrap: wrap;
-                justify-content: center;
+                // justify-content: center;
                 padding: 0;
-                flex: 1;
+                // flex: 1;
                 align-items: center;
+                position: relative;
+
                 h2 {
                     text-transform: capitalize;
                     margin: -15px;
@@ -127,6 +102,7 @@ main {
                     margin-left: 10px;
                 }
                 .btn {
+                    position: absolute;
                     /*flex-wrap: wrap;*/
                     text-align: center;
                     /*padding-right: 2.5rem;*/

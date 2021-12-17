@@ -15,7 +15,42 @@ main {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    width: 75%;
-    .pokemon {       
+    width: 100%;
+    .pokemon {
+        border: 1px solid gray;
+        border-radius: 20px;
+        padding: 10px;
+        display: flex;
+        text-transform: capitalize;
+        background-color: rgb(170, 255, 255);
+        .poke-img {
+            background-color: rgb(208, 233, 255);
+            margin-left: 20px;
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 20px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .poke-status {
+            background-color: rgb(208, 233, 255);
+
+            border: 1px solid gray;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 10px;
+            h1{
+                color: config.$headerColor;
+            }
+            h2{
+                font-size: 20px;
+            }
+            li{
+                font-size: 16px;
+                margin: 5px;
+            }
+        }
     }
 }

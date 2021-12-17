@@ -1,9 +1,10 @@
 @use '../config';
 
 .top-pokes {
+    width: 90%;
     transform: all ease 0.5s;
     height: 100%;
-    margin-top: 1%;
+    margin: 10px;
     h3 {
         text-align: center;
         text-transform: uppercase;

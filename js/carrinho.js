@@ -1,5 +1,5 @@
 
-function Carrinho() {
+function Carrinho(){
   // Abre o carrinho de compras
   const btnCart = document.querySelector('#btn-cart');
   btnCart.addEventListener('click', function(event) {
@@ -24,7 +24,7 @@ function Carrinho() {
 
   //  document.body.classList.add();
   });
-  
+
   const clickOutCart = document.querySelector('.opn-cart');
   clickOutCart.addEventListener('click', function(event) {
     event.preventDefault();

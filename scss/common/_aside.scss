@@ -10,13 +10,15 @@ aside {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 30px;
+    margin: 10px;
     border: 1px solid rgb(128, 128, 128);
     .aside-head {
         text-align: center;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        width: 90%;
+        margin: 10px;
         .logo-img {
             align-self: center;
             width: 200px;
@@ -54,7 +56,7 @@ aside {
             cursor: pointer;
             position: relative;
             height: 270px;
-            width: 250px;
+            width: 90%;
             margin: 20px;
         }
         .gambeta {
@@ -66,7 +68,7 @@ aside {
             background-size: cover;
             background-position: center center;
             height: 450px;
-            width: 95%;
+            width: 90%;
             img {
                 margin-top: 130px;
             }
@@ -87,8 +89,10 @@ aside {
         }
     }
     .news {
+        width: 90%;
         background: #EEE;
         margin-top: 40px;
+        margin-left: 10px;
         padding: 30px 10px;
         h4 {
             color: #000;
@@ -124,7 +128,7 @@ aside {
         .pikachuu {
             align-self: center;
             height: 20vh;
-            width: 20vw;
+            width: 90%;
         }
     }
 }

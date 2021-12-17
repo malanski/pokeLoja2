@@ -1,5 +1,5 @@
 
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 3000));
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
 let page = 0;
 class Pokemon {
@@ -26,7 +26,7 @@ class Pokemon {
                       <img src="images/pokeball-color.png"
                           title="got a Code discount?">
                       <span class="buy">Buy</span>
-                  </button>   
+                  </button>
               </div>
           </a>
       `;
@@ -37,7 +37,7 @@ class Pokemon {
 async function getPokemons(page = 0) {
   const pokeList = document.querySelector('.poke-list');
 
-  // inserir Aviso temporário de Loading + FakePromise
+  // Loading + FakePromise
   pokeList.innerHTML = `
     <div>
       <div class="loading">
