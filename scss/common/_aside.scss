@@ -1,11 +1,11 @@
 @use '../config';
 aside {
-    grid-area: 'asides';
+    grid-area: 'content';
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2; 
-    width: 85%;
+    width: 30vw;
     height: auto;
     display: flex;
     flex-direction: column;

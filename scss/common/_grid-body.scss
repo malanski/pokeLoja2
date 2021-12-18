@@ -24,18 +24,20 @@ body, html {
     grid-template-areas:
     'header      header'
     'nav         nav'
-    'content     asides'
+    'content     content'
     'footer      footer';
+    
     .flex{
-        // grid-area: 'content';
-        // grid-row-start: 3;
-        // grid-row-end: 3;
-        // grid-column-start: 1;
-        // grid-column-end: 2;
+        grid-area: 'content';
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
         display: flex;
         justify-content: space-between;
-        width: 100vw;
-        margin: auto;
+        flex: 1;
+        // width: 100vw;
+        // margin: auto;
     }
 }
 
