@@ -13,12 +13,13 @@ main {
     width: 67vw;
     margin: 10px;
     .poke-list {
+        // width: 68vw;
         font-family: config.$fontText;
         display: grid;
         grid-template-rows:
-        300px 300px 300px 300px 300px 5%;
+        65vh 65vh 65vh 65vh 65vh 5vh;
         grid-template-columns:
-        150px 150px 150px 150px;
+        16vw 16vw 16vw 16vw;
         grid-template-areas:
         'pok1 pok2  pok3  pok4'
         'pok5 pok6  pok7  pok8'
@@ -53,13 +54,14 @@ main {
                 width: 100%;
                 height: 100%;
                 position: relative;
-                margin-top: -50px;
-                margin-bottom: 10px;
+                margin-top: 20px;
+                margin-bottom: -10px;
             }
             .card-feet {
                 align-self: center;
-                margin: 0;
-                position: relative;
+                margin: 10px;
+                padding: 10px;
+                // position: relative;
 
                 h2 {
                     text-transform: capitalize;
@@ -89,7 +91,7 @@ main {
                     margin-left: 10px;
                 }
                 .btn {
-                    position: absolute;
+                    position: relative;
                     /*flex-wrap: wrap;*/
                     text-align: center;
                     /*padding-right: 2.5rem;*/
@@ -136,44 +138,45 @@ main {
             }
         }
     }
+    .pagination {
+        grid-area: "prox";
+        grid-row-start: 6;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        transition: all ease 0.4s;
+        width: 70vw;
+            .paginate {
+                align-self: center;
+                cursor: pointer;
+    
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                font-size: 1.2rem;
+    
+                background: config.$nextBtnBg;
+                background-size: 300% 300%;
+                margin: 1%;
+                width: 80vw;
+                padding: 5px 10px;
+                border-radius: 3%;
+            }
+            button:hover {
+                animation: pokeProxAnimation 1.5s ease infinite;
+            }
+            .page-log {
+                font-size: 15px;
+            }
+    }
 }
 
-.pagination {
-    grid-area: "prox";
-    grid-row-start: 6;
-    grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
-    transition: all ease 0.4s;
-    width: 90%;
-        .paginate {
-            align-self: center;
-            cursor: pointer;
 
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-size: 1.2rem;
-
-            background: config.$nextBtnBg;
-            background-size: 300% 300%;
-            margin: 1%;
-            width: 80vw;
-            padding: 5px 10px;
-            border-radius: 3%;
-        }
-        button:hover {
-            animation: pokeProxAnimation 1.5s ease infinite;
-        }
-        .page-log {
-            
-        }
-}
 
 
 

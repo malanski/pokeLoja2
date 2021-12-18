@@ -5,12 +5,13 @@ aside {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2; 
-    width: 30vw;
+    width: 27vw;
     height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 10px;
+    padding: 10px;
     border: 1px solid rgb(128, 128, 128);
     .aside-head {
         text-align: center;

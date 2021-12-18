@@ -16,7 +16,7 @@ main {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    width: 100vw;
+    width: 70vw;
     .pokemon {
         border: 1px solid gray;
         border-radius: 10px;
@@ -24,7 +24,7 @@ main {
         display: flex;
         text-transform: capitalize;
         background-color: rgb(0, 0, 0);
-        width: 70vw;
+        width: 100%;
         .poke-img {
             background-color: rgb(208, 233, 255);
             margin: 10px;
