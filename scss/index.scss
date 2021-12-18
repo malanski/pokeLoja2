@@ -19,7 +19,7 @@ main {
         grid-template-rows:
         300px 300px 300px 300px 300px 70px;
         grid-template-columns:
-        230px 230px 230px 230px;
+        16,75vw 16,75vw 16,75vw 16,75vw;
         grid-template-areas:
         'slot slot slot slot'
         'slot slot slot slot'
@@ -27,7 +27,7 @@ main {
         'slot slot slot slot'
         'slot slot slot slot'
         'prox prox prox prox';
-        grid-column-gap: 15px;
+        grid-column-gap: 10px;
         grid-row-gap: 35px;
         text-align: center;        
     }
@@ -35,10 +35,10 @@ main {
         height: auto;
         display: flex;
         flex-direction: column;
-        align-content: center;
+        align-items: center;
         // align-items: stretch;
-        // flex: 1;
-        justify-content: center;
+        flex: 1;
+        justify-content: space-evenly;
         transform: all ease 0.5s;
         text-align: center;
         border: 1px solid rgb(173, 200, 255);
