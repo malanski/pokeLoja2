@@ -2,7 +2,7 @@
 @use '../config';
 
 header {
-    grid-area: "header";
+    grid-area: header;
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 1;
@@ -73,7 +73,7 @@ header {
                 /*margin-right: 35px;*/
                 margin-top: 15px;
                 margin-bottom: 0;
-                animation-duration: 3s;
+                animation-duration: 1s;
                 animation-name: runing;
             }
         }
@@ -218,7 +218,7 @@ header {
 }
 
 nav {
-    grid-area: "nav";
+    grid-area: nav;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;

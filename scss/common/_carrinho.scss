@@ -7,6 +7,8 @@ body.carrinho-aberto {
         transition: all ease-out .3s;
     }
     .opn-cart {
+        top: 0;
+        left: 0;
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -24,10 +26,10 @@ body.carrinho-aberto {
     border-radius: 2% 0  0 2%;
     border: solid 1px gray;
     padding: 15px;
-    transition: all ease-in .3s;
-    // display: flex;
-    // align-items: flex-start;
-    // justify-content: space-between;
+    transition: all ease-in-out .3s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     button{
         cursor: pointer;
         top: 0;

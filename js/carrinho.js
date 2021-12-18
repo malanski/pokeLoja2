@@ -7,7 +7,7 @@ function Carrinho(){
     const openCartClass = 'carrinho-aberto';
     document.body.className.includes(openCartClass) ? document.body.className = '': document.body.className = openCartClass;
 
-    keyboardPress = addEventListener('keydown', function(event){
+    keyboardPress = addEventListener('keydown', function(event) {
         if(event.key === "Escape") {
         document.body.className = '';
       };

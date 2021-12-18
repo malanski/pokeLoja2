@@ -1,6 +1,6 @@
 @use '../config';
 aside {
-    grid-area: 'content';
+    grid-area: asides;
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -161,11 +161,12 @@ aside {
 
 @media screen and (max-width: config.$mobileBreakpointG){
     aside {
+        grid-area: asides;
         grid-row-start: 4;
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 1;
-        width: 95%;
+        width: 100vw;
         height: auto;
         margin: 20px;
         .aside-head {

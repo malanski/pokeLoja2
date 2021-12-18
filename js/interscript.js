@@ -1,3 +1,17 @@
+class TopPokes {
+    constructor(options) {
+        this.name = options.name;
+        this.id = options.id;
+        this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
+    }
+    html() {
+        const asideTop = document.querySelector('.top-poke-img')
+        asideTop.innerHTML =`
+            <img src="${this.imagem}" alt="${this.name}">
+        `
+        return TopPokes
+    }
+}
 
 // Giff Click interativo do Aside: Ash Computer
 const minhaImagem = document.querySelector('.loop');
@@ -58,4 +72,6 @@ function defineUserName() {
         myAsideUser.innerHTML = 'welcome to the pokéloja, ' + userName;
     }
 }
+
+
 

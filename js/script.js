@@ -1,7 +1,5 @@
 
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1000));
-
-let page = 0;
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 500));
 class Pokemon {
   constructor(nome, url){
       this.nome = nome;
@@ -34,10 +32,11 @@ class Pokemon {
   }
 }
 
+let page = 0;
 async function getPokemons(page = 0) {
   const pokeList = document.querySelector('.poke-list');
 
-  // Loading + FakePromise
+  // Loading
   pokeList.innerHTML = `
     <div>
       <div class="loading">
@@ -65,25 +64,28 @@ async function getPokemons(page = 0) {
 
   return json;
 }
+
 function pageLogger(page) {
   const pageLogs = document.querySelector('.page-log');
 
   pageLogs.innerHTML = `${page}`;
 }
 
-// função para troca de páginas
-async function mudaPagina (newPage) {
-  page = newPage;
+function listaPokemons(pokemonsApi) {
+  const pokeList = document.querySelector('.poke-list');
 
-  const pagination = await getPokemons(page);
+  pokeList.innerHTML = '';
 
-  listaPokemons(pagination.results);
+  const pokemons = pokemonsApi.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
 
-  temPrimeiro(page);
-  temAnterior(page);
-  temProx(page);
-  temEnd(page);
+  pokemons.forEach((pokemon) => {
+    const html = pokemon.html();
+    pokeList.appendChild(html)
+  });
 }
+
+
+
 
 // Esconder Botão p/Primeira página na primeira página 
 function temPrimeiro(page) {
@@ -129,6 +131,19 @@ function temEnd(page) {
   }
 }
 
+// função para troca de páginas
+async function mudaPagina (newPage) {
+  page = newPage;
+
+  const pagination = await getPokemons(page);
+  listaPokemons(pagination.results);
+
+  temPrimeiro(page);
+  temAnterior(page);
+  temProx(page);
+  temEnd(page);
+}
+
 // Evento Click p/Proxima página
 function btnProx () {
   const btnProx = document.querySelector('.btn-prox');
@@ -157,18 +172,7 @@ function btnPrimeiro () {
   btnPrimeiro.onclick = () => mudaPagina(page = 0);
 }
 
-function listaPokemons(pokemonsApi) {
-  const pokeList = document.querySelector('.poke-list');
 
-  pokeList.innerHTML = '';
-
-  const pokemons = pokemonsApi.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
-
-  pokemons.forEach((pokemon) => {
-    const html = pokemon.html();
-    pokeList.appendChild(html)
-  });
-}
 // Execute when the page finish loading
 window.onload = async () => {
     const response = await getPokemons(page);
