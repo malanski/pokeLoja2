@@ -16,16 +16,16 @@ body, html {
 }
 
 .gridzera {
-    // margin: 0;
-    // display: grid;
-    // width: 100vw;
-    // grid-template-rows: 70px 70px auto auto auto;
-    // grid-template-columns: 70vw 30vw;
-    // grid-template-areas:
-    // 'header      header'
-    // 'nav         nav'
-    // 'content     asides'
-    // 'footer      footer';
+    margin: 0;
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 70px 70px auto auto auto;
+    grid-template-columns: 70vw 30vw;
+    grid-template-areas:
+    'header      header'
+    'nav         nav'
+    'content     asides'
+    'footer      footer';
     .flex{
         // grid-area: 'content';
         // grid-row-start: 3;
