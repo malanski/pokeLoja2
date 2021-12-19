@@ -1,26 +1,34 @@
 @use '../config';
 
 body.carrinho-aberto {
-    .carrinho {
-        box-shadow: 1px 1px 18px 4px #000000;
-        right: 0;
-        transition: all ease-out .3s;
+    aside{
+        opacity: 0.6;
     }
     .opn-cart {
+        opacity: 0.5;
+        margin: auto;
         top: 0;
         left: 0;
         position: fixed;
         width: 100vw;
         height: 100vh;
     }
+    .carrinho {
+        box-shadow: 1px 1px 18px 4px #000000;
+        right: 0;
+        // transition: all ease-out .3s;
+    }
 }
 
 .carrinho {
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    width: 25vw;
+    align-items: flex-start;
+    right: -300px;
+    width: 300px;
     height: 100vh;
     top: 0;
-    right: -25vw;
     background-color: rgb(123, 159, 159);
     opacity: 0.9;
     border-radius: 2% 0  0 2%;
@@ -42,14 +50,18 @@ body.carrinho-aberto {
     }
     h4{
         text-align: right;
-        right: 0;
         font-size: 20px;
-        margin: 0;
+        margin: 10px;
     }
     p{
+        text-align: left;
+        margin: 10px;
         font-size: 27px;
     }
     img{
-        width: 100%;
+        width: 150px;
+    }
+    .poke-container{
+        border: 1px solid grey;
     }
 }
