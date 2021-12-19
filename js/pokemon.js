@@ -5,6 +5,7 @@ class PokemonSelected {
         this.abilities = options.abilities.map(abilityType => abilityType.ability.name);
         this.id = options.id;
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;   
+        
     }
     html() {
         const pokeDiv = document.querySelector('.poke-data')
@@ -48,24 +49,35 @@ async function getPokemonData(id) {
     const response = await fetch(url);
     const data = await response.json();
 
+
+//  ProXimo Pokemon
+function nextPoke(id) {
+    const pokeNext = document.querySelector('.next-poke');
+    pokeNext.innerHTML = `
+        <a href="pokemon.html?id=${this.id + 1}">
+            <button>NEXT-></button>
+        </a>`
+}
+function backPoke() {
+    const pokeBack = document.querySelector('.back-poke');
+    pokeBack.innerHTML = `
+        <a href="pokemon.html?id=${this.id - 1}">
+            <button><-BACK</button>
+        </a>`
+}
+ nextPoke();
+    backPoke();
+
     return data;
 };
 
-function nextPoke(id) {
-    const pokeNext = document.querySelector('.next-poke');
-    pokeNext.addEventListener('click', function(event){
-        event.preventDefault();
-        pokeNext.onclick = () => getPokemonData(id + 1);
-        // pokeNext.innerHTML = `<a href="pokemon.html?id=${this.id}">`;
-    });
-}
 
 const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
 window.onload =  async function() {
     const { id } = getQueryparameters();
     const pokemonDiv = document.querySelector('.poke-data');
-    nextPoke();
+   
 
     if (window.Carrinho) Carrinho();
 

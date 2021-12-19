@@ -24,11 +24,11 @@ body, html {
     grid-template-areas:
     'header      header'
     'nav         nav'
-    'content     asides'
+    'conteudo     asides'
     'footer      footer';
     
     .flex{
-        grid-area: content / asides;
+        grid-area: conteudo / asides;
         grid-row-start: 3;
         grid-row-end: 3;
         grid-column-start: 1;

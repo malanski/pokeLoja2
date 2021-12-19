@@ -17,14 +17,16 @@ class Pokemon {
           <a href="pokemon.html?id=${this.id}">
               <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
               <div class="card-feet">
-                  <h2 class="poke-name">${this.nome}</h2>
-                  <p class="old-price"><small>R$${this.preco}</small></p><br>
+                  <h2>${this.nome}</h2>
+                  <p class="old-price"><small>R$${this.preco}</small></p>
                   <p class="actual-price"><small>R$</small>${(this.preco * 0.8).toFixed(2)}</p>
+                  <p class="parcela-price"><small>12x R$ </small>${(this.preco / 12).toFixed(2)}</p>
+                  <div>
                   <button class="btn">
-                      <img src="images/pokeball-color.png"
-                          title="got a Code discount?">
+                      <img src="images/pokeball-color.png" title="Buy ${this.nome} Now">
                       <span class="buy">Buy</span>
-                  </button>
+                    </button>
+                  </div>
               </div>
           </a>
       `;
