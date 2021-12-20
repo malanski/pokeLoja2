@@ -17,7 +17,7 @@ main {
         font-family: config.$fontText;
         display: grid;
         grid-template-rows:
-        300px 300px 300px 300px 300px 70px;
+        330px 330px 330px 330px 330px 70px;
         grid-template-columns:
         16.5vw 16.5vw 16.5vw 16.5vw;
         grid-template-areas:
@@ -29,119 +29,114 @@ main {
         'prox prox prox prox';
         grid-column-gap: 10px;
         grid-row-gap: 35px;
-        text-align: center;        
-    }
-    .poke {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        // align-items: stretch;
-        flex-grow: 2;
-        justify-content: space-evenly;
-        transform: all ease 0.5s;
         text-align: center;
-        border: 1px solid rgb(173, 200, 255);
-        border-radius: 5px;
-        padding: 10px;
-        // position: relative;
-        a {
-            text-decoration: none;
-            color: black;
-            // position: absolute;
+        .poke {
+            height: auto;
+            transform: all ease-out 9s;
+            text-align: center;
+            border: 1px solid rgb(173, 200, 255);
+            border-radius: 5px;
+            padding: 10px;
+            a {
+                text-decoration: none;
+                color: black;
+                .card-feet {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: center;
+                    align-self: center;
+                    max-height: 100px;
+                    width: auto;
+                    height: auto;
+                    .poke-pic {
+                        // align-self: center;
+                        width:150px;
+                        height:150px;
+                        margin: 0;
+                        // margin-bottom: 20px;
+                    }
+                    h2 {
+                        text-transform: capitalize;
+                        // margin-top: 20px;
+                        // margin-bottom: 0;
+                        margin: 0;
+                        padding: 0;
+                        font-weight: 800;
+                        font-size: 30px;
+                    }
+                    .old-price {
+                        // flex-shrink: 1;
+                        text-decoration: line-through;
+                        color: red;
+                        font-size: 23px;
+                        // margin-bottom: 5px;
+                        margin: 0;
+                    }
+                    .actual-price {
+                        // flex-shrink: 1;
+                        color: rgb(25, 184, 0);
+                        font-weight: bold;
+                        font-size: 27px;
+                        // margin: 0;
+                        margin: 0;
+                    }
+                    .parcela-price {
+                        color: rgb(0, 9, 184);
+                        font-weight: bold;
+                        font-size: 23px;
+                        margin: 0;
+                        // margin-top: 0;
+                    }
+                    button{
+                        margin: 0;
+                        // margin-bottom: 10px;
+                        width: 16.5vw;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .btn {
+                        /*padding-right: 2.5rem;*/
+                        background: config.$btnCardBg;
+                        background-size: 400% 400%;
+                        cursor: pointer;
+                        border: 1px solid rgb(0, 0, 0);
+                        border-radius: 5px;
+                        padding: 10px;
+                        img {
+                            height: 1.9rem;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            margin-right: 0.3rem;
+                            margin-left: 0.3rem;
+                        }
+                        span{
+                            font-size: 1rem;
+                            font-weight: 600;
+                        }
+                    }
+                    button:hover {
+                        animation: pokeBtnAnimation 5s ease infinite;
+                        span{
+                            animation: buyAnimation 4s ease infinite;
+                        }
+                    }
+                }
+
+            }
         }
-        .poke-pic {
-            align-self: center;
-            width:150px;
-            height:150px;
-            margin-top: 20px;
-            margin-bottom: -25px;
-        }
-        .card-feet {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            // align-self: center;
-            margin: 10px;
+        .poke:hover {
+            box-shadow: 2px 3px 20px config.$bluePok;
+            background-color: #969696;
+            transition: 3s;
 
             h2 {
-                text-transform: capitalize;
-                margin-top: -5px;
-                margin-bottom: 0;
-                padding: 0;
-                font-weight: 800;
-                font-size: 1.7rem;
+            // font-family: config.$pokeFont;
+            // margin-top: -30px;
+            color:config.$yellowPok;
+            // text-shadow: config.$texShadow;
             }
-            .old-price {
-                flex-shrink: 1;
-                text-decoration: line-through;
-                color: red;
-                font-size: 22px;
-                margin-bottom: 5px;
-                // margin: 10px;
-
-            }
-            .actual-price {
-                flex-shrink: 1;
-                color: rgb(25, 184, 0);
-                font-weight: bold;
-                font-size: 25px;
-                margin: 0;
-            }
-            .parcela-price {
-                flex-shrink: 1;
-                color: rgb(0, 9, 184);
-                font-weight: bold;
-                font-size: 22px;
-                margin-top: 0;
-            }
-            button{
-                margin-bottom: 10px;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-
-            }
-            .btn {
-                /*padding-right: 2.5rem;*/
-                background: config.$btnCardBg;
-                background-size: 400% 400%;
-                cursor: pointer;
-                border: 1px solid rgb(0, 0, 0);
-                border-radius: 5px;
-                padding: 10px;
-                font-size: 1rem;
-                font-weight: 600;
-                margin-top: -25px;
-                // margin-left: 5px;
-                // margin-right: 5px;
-                // margin-bottom: 10px;
-                img {
-                    height: 1.9rem;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    margin-right: 0.3rem;
-                    margin-left: 0.3rem;
-                }
-            }
-            .btn:hover {
-                animation: pokeBtnAnimation 5s ease infinite;
-            }
-        }
-    }
-    .poke:hover {
-        box-shadow: 2px 3px 20px config.$bluePok;
-        background-color: #969696;
-        transition: 3s;
-
-        h2 {
-        // font-family: config.$pokeFont;
-        // margin-top: -30px;
-        color:config.$yellowPok;
-        // text-shadow: config.$texShadow;
         }
     }
     .pagination {
@@ -183,6 +178,24 @@ main {
 }
 
 
+@keyframes buyAnimation {
+    0% {
+        color: #DDD;
+        text-shadow:
+        0.2px 0.5vh 0.1vw config.$blue2Pok;
+        font-family: Pokemon;
+    }
+    50% {
+        font-size: 1.3rem;
+        font-family: Pokemon;
+    }
+    100% {
+        color: config.$yellowPok;
+        text-shadow:
+        0.2rem 0.5vh 0.1vw config.$bluePok;
+        font-family: Pokemon;
+    }
+}
 @keyframes pokeBtnAnimation {
     0% {
         background-position: 0% 5%;
@@ -229,7 +242,7 @@ main {
         grid-area: conteudo;
         grid-column-start: 1;
         grid-column-end: 1;
-        width: 100%;
+        width: 100vw;
         margin-bottom: 10px;
         margin-left: 0;
         .poke-list {

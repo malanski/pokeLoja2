@@ -15,14 +15,15 @@ class Pokemon {
       pokeDiv.className = 'poke';
       pokeDiv.innerHTML = `
           <a href="pokemon.html?id=${this.id}">
-              <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
               <div class="card-feet">
                   <h2>${this.nome}</h2>
+                  <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
+
                   <p class="old-price"><small>R$${this.preco}</small></p>
                   <p class="actual-price"><small>R$</small>${(this.preco * 0.8).toFixed(2)}</p>
-                  <p class="parcela-price"><small>12x R$ </small>${(this.preco / 12).toFixed(2)}</p>
+                  <p class="parcela-price"><small>12x R$ </small>${(this.preco / 12).toFixed(2)}</p><br>
                   <div>
-                  <button class="btn">
+                    <button class="btn">
                       <img src="images/pokeball-color.png" title="Buy ${this.nome} Now">
                       <span class="buy">Buy</span>
                     </button>
@@ -62,7 +63,7 @@ async function getPokemons(page = 0) {
   const pages = Math.ceil(json.count / limit);
 
   // mostra numero de paginas atual e total: logger
-  pageLogger('Page ' + (page + 1) + ' of ' + pages);
+  pageLogger((page + 1) + '/' + pages);
 
   return json;
 }

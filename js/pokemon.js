@@ -51,21 +51,21 @@ async function getPokemonData(id) {
 
 
 //  ProXimo Pokemon
-function nextPoke(id) {
-    const pokeNext = document.querySelector('.next-poke');
-    pokeNext.innerHTML = `
-        <a href="pokemon.html?id=${this.id + 1}">
-            <button>NEXT-></button>
-        </a>`
-}
-function backPoke() {
-    const pokeBack = document.querySelector('.back-poke');
-    pokeBack.innerHTML = `
-        <a href="pokemon.html?id=${this.id - 1}">
-            <button><-BACK</button>
-        </a>`
-}
- nextPoke();
+    function nextPoke(id) {
+        const pokeNext = document.querySelector('.next-poke');
+        pokeNext.innerHTML = `
+            <a href="pokemon.html?id=${this.id + 1}">
+                <button>NEXT-></button>
+            </a>`
+    }
+    function backPoke() {
+        const pokeBack = document.querySelector('.back-poke');
+        pokeBack.innerHTML = `
+            <a href="pokemon.html?id=${this.id - 1}">
+                <button><-BACK</button>
+            </a>`
+    }
+    nextPoke();
     backPoke();
 
     return data;

@@ -124,7 +124,8 @@ header {
                 .headlink {
                     text-decoration: none;
                     color: black;
-                    font-size: 2.1vh;
+                    font-size: 22px;
+                    font-weight: 800;
                     transition: all ease 0.4s;
                 }
                 .headlink:hover {
@@ -244,6 +245,7 @@ nav {
                 margin-top: 5%;
             li {
                 .navlink {
+                    font-size: 25px;
                     color: white;
                     border-right: solid 1px white;
                     padding-right: 0.5rem;
