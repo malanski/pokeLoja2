@@ -22,7 +22,7 @@ class PokemonSelected {
                     <h2>Tipo</h2>
                     <ul>
                         <li>${this.types}</li>
-                        <li>${this.types.type.names.name}</li>
+                        <li>${this.types.type}</li>
                     </ul>
                 </hr>
                 <h2>Habilidades</h2>
@@ -43,7 +43,10 @@ function getQueryparameters() {
     const params = Object.fromEntries(urlSearchParams.entries());
     return params;
 }
-async function getPokemonData(id) {
+
+let id = 0;
+
+async function getPokemonData(id = 0) {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
     const response = await fetch(url);
@@ -51,10 +54,10 @@ async function getPokemonData(id) {
 
 
 //  ProXimo Pokemon
-    function nextPoke(id) {
+    function nextPoke(id) { //ERA PRA FAZER O ID +1 mas ta dando NAN 
         const pokeNext = document.querySelector('.next-poke');
         pokeNext.innerHTML = `
-            <a href="pokemon.html?id=${this.id + 1}">
+            <a href="pokemon.html?id=${this.id +=1}"> 
                 <button>NEXT-></button>
             </a>`
     }

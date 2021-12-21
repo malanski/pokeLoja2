@@ -1,60 +1,42 @@
 
-function Carrinho(){
-  // Abre o carrinho de compras
-  const btnCart = document.querySelector('#btn-cart');
-  btnCart.addEventListener('click', function(event) {
-    event.preventDefault();
-    const openCartClass = 'carrinho-aberto';
-    document.body.className.includes(openCartClass) ? document.body.className = '' : document.body.className = openCartClass;
+class Carrinho {
 
-    keyboardPress = addEventListener('keydown', function(event) {
-        if(event.key === "Escape") {
-        document.body.className = '';
-      };
-    });
-       //  document.body.className.includes(openCartClass);
-       //  document.body.className = openCartClass;
-  });
+	btnCart = document.querySelector('#btn-cart');
+	btnCartClose = document.querySelector('#btn-cart-x');
+	clickOutCart = document.querySelector('.opn-cart');
 
-  //  Fecha o Carrinho De Compras
-  const btnCartClose = document.querySelector('#btn-cart-x');
-  btnCartClose.addEventListener('click', function(event) {
-    event.preventDefault();
-    document.body.className = '';
+	constructor() {
+		this.btnCart.addEventListener('click', this.abrirCarrinho);
 
-  //  document.body.classList.add();
-  });
+		this.btnCartClose.addEventListener('click', this.fecharCarrinho);
+		// console.log('carrinho carregado...........');
 
-  const clickOutCart = document.querySelector('.opn-cart');
-  clickOutCart.addEventListener('click', function(event) {
-    event.preventDefault();
-    document.body.className = '';
+		this.clickOutCart.addEventListener('click', function(event) {
+		event.preventDefault();
+		document.body.className = '';
+		});
 
-  });
+		this.keyboardPress = addEventListener('keydown', function(event) {
+			if(event.key === "Escape") {
+			document.body.className = '';
+			}
+		});
+	}
+
+	abrirCarrinho(event) {
+		event.preventDefault();
+		const openCartClass = 'carrinho-aberto';
+
+		document.body.className.includes(openCartClass) ? document.body.className = '' : document.body.className = openCartClass;
+	}
+
+	fecharCarrinho(event) {
+		event.preventDefault();
+
+		document.body.className = '';
+	}
 }
-      // btnCartClose.addEventListener('keypress', function(event) {
-      //   event.preventDefault();
 
-      //   document.body.className = '';
-      // });
-
-
-    //   document.body.classList.add('Esc', function() {
-    //     alert("Esc pressed");
-    // });
-  
-      //   document.addEventListener('keydown', function(event) {
-    //     if(KeyboardEvent.keyCode: 27) {
-    //     }
-    // });
-
-
-
-
-  
-  // document.onkeydown = function(evt) {
-  //   evt = evt || window.event;
-  //   if (evt.key == 27) {
-  //       alert('Esc key pressed.');
-  //   }
-  // };
+window.addEventListener('load', async () => {
+	new Carrinho();
+})

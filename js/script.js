@@ -81,13 +81,22 @@ function listaPokemons(pokemonsApi) {
 
   const pokemons = pokemonsApi.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
 
+
   pokemons.forEach((pokemon) => {
     const html = pokemon.html();
     pokeList.appendChild(html)
   });
+  const buyButtons = document.querySelectorAll('.btn');
+  // console.log(buyButtons);
+
+  buyButtons.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      console.log('comprar');
+    });
+  });
+
 }
-
-
 
 
 // Esconder Botão p/Primeira página na primeira página 
@@ -181,7 +190,7 @@ window.onload = async () => {
     const response = await getPokemons(page);
     listaPokemons(response.results);
 
-    if (window.Carrinho) Carrinho();
+    // if (window.Carrinho) new Carrinho();
 
 
 

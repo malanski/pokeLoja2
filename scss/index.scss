@@ -32,7 +32,7 @@ main {
         text-align: center;
         .poke {
             height: auto;
-            transform: all ease-out 9s;
+            transition: all ease-in-out 3s;
             text-align: center;
             border: 1px solid rgb(173, 200, 255);
             border-radius: 5px;
@@ -128,8 +128,8 @@ main {
         }
         .poke:hover {
             box-shadow: 2px 3px 20px config.$bluePok;
-            background-color: #969696;
-            transition: 3s;
+            background-color: #000000;
+            transition: all ease-in-out 3s;
 
             h2 {
             // font-family: config.$pokeFont;

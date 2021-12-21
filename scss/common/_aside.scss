@@ -13,6 +13,7 @@ aside {
     margin: 10px;
     padding: 10px;
     border: 1px solid rgb(128, 128, 128);
+    border-radius: 5px;
     background-color: #000;
     .aside-head {
         text-align: center;
@@ -27,11 +28,16 @@ aside {
             height: 100px;
             padding-right: 20px;
         }
+        h4{
+            font-size: 20px;
+            color: #fff;
+        }
         .logo-img:hover{
             background-image: url("../images/");
             background-size: cover;
         }
         .poke-ads-title {
+            border-radius: 5px;
             background-color: config.$pokeRed;
             text-transform: uppercase;
             font-size: 1.5rem;
@@ -60,8 +66,10 @@ aside {
             height: auto;
             width: 90%;
             margin: 20px;
+            border-radius: 5px;
         }
         .gambeta {
+            border-radius: 5px;
             align-self: center;
             position: relative;
             display: block;
@@ -91,26 +99,31 @@ aside {
         }
     }
     .news {
+        border-radius: 5px;
         width: 90%;
-        background: #EEE;
+        background: config.$headerColor;
         margin-top: 40px;
         margin-left: 10px;
         padding: 30px 10px;
+        display: flex;
+        flex-direction: column;
         h4 {
             color: #000;
             text-transform: uppercase;
             font-weight: 600;
             margin-top: 0;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 25px;
         }
         input {
+            align-self: center;
             background-color: #EEE;
             padding: 8px;
             border: 0;
             width: 90%;
         }
         button {
+            border-radius: 5px;
             margin-top: 20px;
             width: 100%;
             padding: 12px;
@@ -131,6 +144,8 @@ aside {
             align-self: center;
             height: 20vh;
             width: 90%;
+            border-radius: 5px;
+
         }
     }
 }

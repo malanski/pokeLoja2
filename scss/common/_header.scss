@@ -124,31 +124,26 @@ header {
                 .headlink {
                     text-decoration: none;
                     color: black;
-                    font-size: 22px;
+                    font-size: 28px;
                     font-weight: 800;
                     transition: all ease 0.4s;
                 }
                 .headlink:hover {
                     /* transition: background-color .1s linear;*/
-                    font-size: 15px;
                     color: config.$yellowPok;
-                    text-shadow:
-                    5px 5px 2px config.$bluePok;
+                    // text-shadow: 5px 5px 2px config.$bluePok;
                 }
                 .shop-list {
-                    .fa-cart-plus {
+                    margin-right: 35px;
+                    .fa-solid {
                         text-decoration: none;
                         color: black;
                     }
-                    .buycart {
-                        width: 20px;
-                        height: 20px;
-                        margin-right: 30px;
-                    }
-                    .buycart:hover {
-                        width: 28px;
-                        height: 28px;
-                    }
+                }
+                .fa-solid:hover {
+                    color: config.$yellowPok;
+                    text-shadow: 5px 5px 20px config.$yellowPok;
+
                 }
             }
         }

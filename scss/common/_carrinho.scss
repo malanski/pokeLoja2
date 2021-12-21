@@ -21,10 +21,7 @@ body.carrinho-aberto {
 }
 
 .carrinho {
-    display: flex;
-    flex-direction: column;
     position: fixed;
-    align-items: flex-start;
     right: -300px;
     width: 300px;
     height: 100vh;
@@ -32,12 +29,13 @@ body.carrinho-aberto {
     background-color: rgb(139, 123, 159);
     opacity: 0.9;
     border-radius: 2% 0  0 2%;
-    border: solid 1px gray;
-    padding: 15px;
+    border: solid 20px rgb(0, 13, 162);
+    padding: 10px;
     transition: all ease-in-out .3s;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
     button{
         cursor: pointer;
         top: 0;
@@ -50,7 +48,7 @@ body.carrinho-aberto {
     }
     h4{
         text-align: right;
-        font-size: 20px;
+        font-size: 25px;
         margin: 10px;
     }
     p{
@@ -60,8 +58,11 @@ body.carrinho-aberto {
     }
     img{
         width: 150px;
+        align-self: center;
     }
     .poke-container{
-        border: 1px solid grey;
+        width: auto;
+        border-radius: 5px;
+        border: 1px solid rgb(0, 0, 0);
     }
 }

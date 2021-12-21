@@ -17,11 +17,11 @@ main {
     grid-column-end: 1;
     width: 70vw;
         .poke-data {
-            background-color: rgb(162, 208, 248);
+            background-color: rgb(63, 50, 248);
             padding: 10px;
             border: 1px solid black;
             border-radius: 5px;
-            box-shadow: 1px 1px 18px 4px #000000;
+            box-shadow: 1px 1px 18px 4px #40014f;
 
             .pokemon {
                 // position: relative;
@@ -29,44 +29,52 @@ main {
                 border-radius: 5px;
                 padding: 10px;
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
                 text-transform: capitalize;
                 background-color: rgb(0, 0, 0);
                 width: 100%;
                 // height: auto;
                 .poke-img {
-                    background-color: rgb(208, 233, 255);
+                    background-color: rgb(251, 242, 251);
                     // margin-top: -20px;
                     // margin: 10px;
                     border: 1px solid black;
+                    transition: all ease-in-out .3s;
                     border-radius: 5px;
                     // position: relative;
                     h1{
                         color: config.$headerColor;
-                        margin-left: 40px;
-                        margin-top: 10px;
+                        text-shadow:  4px 4px 1px #ffdf0d;
+                        text-align: center;
                         margin-bottom: 0;
                         font-family: config.$pokeFont;
-                        font-size: 25px;
+                        font-size: 45px;
                     }
                     img{
+                        align-self: center;
                         width: 90%;
                         height: 90%;
                         padding: 10px;
                         margin-top: -25px;
-                        margin-bottom: 10px;
+                        margin-bottom: 55px;
                     }
                 }
+                .poke-img:hover{
+                    transition: all ease-in-out .3s;
+                    background-color: black;
+                }
                 .poke-status {
-                    background-color: rgb(208, 233, 255);
+                    background-color: rgb(195, 124, 243);
                     border: 1px solid gray;
                     border-radius: 5px;
                     margin: 20px;
-                    padding: 10px;
+                    padding: 50px;
                     h2{
-                        font-size: 20px;
+                        font-size: 27px;
                     }
                     li{
-                        font-size: 16px;
+                        font-size: 22px;
                         margin: 5px;
                     }
                 }
