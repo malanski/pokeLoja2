@@ -22,7 +22,7 @@ class PokemonSelected {
                     <h2>Tipo</h2>
                     <ul>
                         <li>${this.types}</li>
-                        <li>${this.types.type}</li>
+                        <li>${this.types.type.names.name}</li>
                     </ul>
                 </hr>
                 <h2>Habilidades</h2>
