@@ -9,6 +9,7 @@ class PokemonSelected {
     }
     html() {
         const pokeDiv = document.querySelector('.poke-data')
+        console.log(this.abilities)
         pokeDiv.innerHTML =`
         <div class="pokemon">
             <div class="poke-img">
@@ -21,15 +22,23 @@ class PokemonSelected {
                 <hr>
                     <h2>Tipo</h2>
                     <ul>
-                        <li>${this.types}</li>
-                        <li>${this.types.type}</li>
+                        ${
+                            this.types.map(tipo => `<li>${tipo}</li>`)
+                            .join('')
+                        }
+
+                        <!--
+                        <li>${this.types[0]}</li>
+                        <li>${this.types[1]}</li>
+                        -->
                     </ul>
                 </hr>
                 <h2>Habilidades</h2>
                 <ul>
-                    <li>${this.abilities}</li>
-                    <li>${this.abilities.ability}</li>
-                    <li>Habilidade 3</li>
+                    ${
+                        this.abilities.map(habilidade => `<li>${habilidade}</li>`)
+                        .join('')
+                    }
                 </ul>
             </div>
         </div>`
@@ -44,7 +53,6 @@ function getQueryparameters() {
     return params;
 }
 
-let id = 0;
 
 async function getPokemonData(id = 0) {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
@@ -54,22 +62,23 @@ async function getPokemonData(id = 0) {
 
 
 //  ProXimo Pokemon
-    function nextPoke(id) { //ERA PRA FAZER O ID +1 mas ta dando NAN 
+    function nextPoke() { //ERA PRA FAZER O ID +1 mas ta dando NAN 
         const pokeNext = document.querySelector('.next-poke');
         pokeNext.innerHTML = `
-            <a href="pokemon.html?id=${this.id +=1}"> 
+            <a href="pokemon.html?id=${+id + 1}"> 
                 <button>NEXT-></button>
             </a>`
+            console.log(id);
     }
     function backPoke() {
         const pokeBack = document.querySelector('.back-poke');
         pokeBack.innerHTML = `
-            <a href="pokemon.html?id=${this.id - 1}">
+            <a href="pokemon.html?id=${+id - 1}">
                 <button><-BACK</button>
             </a>`
     }
-    nextPoke();
-    backPoke();
+    nextPoke(1);
+    backPoke(1);
 
     return data;
 };

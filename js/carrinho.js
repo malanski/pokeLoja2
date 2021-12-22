@@ -18,7 +18,8 @@ class Carrinho {
 
 		this.keyboardPress = addEventListener('keydown', function(event) {
 			if(event.key === "Escape") {
-			document.body.className = '';
+			// document.body.className = '';
+      document.body.classList = [];
 			}
 		});
 	}
