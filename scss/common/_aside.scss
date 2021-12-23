@@ -60,7 +60,6 @@ aside {
             align-self: center;
             background-image: url("../images/tenor-wave-2.gif");
             background-size: cover;
-            align-self: center;
             cursor: pointer;
             position: relative;
             height: auto;
@@ -182,14 +181,21 @@ aside {
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 1;
-        width: 90vw;
+        width: 98vw;
         height: auto;
-        margin: 20px;
+        margin: 5px;
         .aside-head {
+            margin: 5px;
+            .loop {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
             .gambeta {
                 align-self: center;
-                width: 70vw;
-                height: 50vh;
+                width: 90%;
+                height: 90%;
+                margin-left: 10px;
+                margin-right: 10px;
                 a {
                     .font-poke {
                         margin-left: 120px;
@@ -198,8 +204,11 @@ aside {
             }
         }
         .crossfade {
+            margin: 5px;
             .pikachuu {
                 margin-top: 100px;
+                margin-left: 10px;
+                margin-right: 10px;
                 width: 300px;
                 height: 200px;
             }
@@ -212,7 +221,7 @@ aside {
         margin: 20px;
         .aside-head {
             .gambeta {
-                width: 70vw;
+                width: 90%;
             }
         }
     }

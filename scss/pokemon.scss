@@ -47,7 +47,7 @@ main {
                         color: config.$headerColor;
                         text-shadow:  4px 4px 1px #ffdf0d;
                         text-align: center;
-                        margin-bottom: 0;
+                        margin-top: 0;
                         font-family: config.$pokeFont;
                         font-size: 45px;
                     }
@@ -89,4 +89,82 @@ main {
                 font-weight: 800;
             }
         }
+}
+@media screen and(max-width:config.$mobileBreakpointG) {
+    main{
+        width: 100vw;
+        // height: 100vh;
+        margin: 0;
+        margin-top: 5px;
+        .poke-data .pokemon{
+            width: 100%;
+            .poke-img {
+                height: 100%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                h1{
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+                img{
+                    width: 420px;
+                    height: 580px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+            .poke-status {
+                padding: 15px;
+                margin: 5px;
+                h2{
+                    font-size: 25px;
+                }
+                li{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width:config.$mobileBreakpointM) {
+    main{
+        width: 100vw;
+        height: 100vh;
+
+        margin-top: 5px;
+        .poke-data .pokemon{
+            width: auto;
+            .poke-img {
+                height: 100%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                h1{
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+                img{
+                    width: 220px;
+                    height: 380px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+            .poke-status {
+                padding: 15px;
+                margin: 5px;
+                h2{
+                    font-size: 22px;
+                }
+                li{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
 }

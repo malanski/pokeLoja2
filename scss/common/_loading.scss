@@ -1,22 +1,27 @@
 @use '../config';
 
 .loading {
-    margin: 0;
+    margin: 50px;
     background-image: url('../images/sofi-ilona-lohonen-pikachu-runcycle8.gif');
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     width: 60vw;
-    height: 100%;
+    height: 350px;
     position: relative;
     overflow: hidden;
+    align-self: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: white;
 
     p {
-        font-size: 2.5rem;
+        font-size: 35px;
         font-family: config.$pokeFont;
         text-shadow: config.$texShadowRev;
         color: config.$bluePok;
-        line-height: 10px;
+        line-height: 40px;
+        text-align: center;
     }
     &:after{
         content: '';
@@ -26,5 +31,17 @@
         content: '';
         position: absolute;
         z-index: 1;
+    }
+}
+
+@media screen and (max-width: config.$mobileBreakpointG){
+    .loading{
+        width: 90%;
+        margin: 10px;
+    }
+}
+@media screen and (max-width: config.$mobileBreakpointM){
+    .loading{
+        width: 90%;
     }
 }

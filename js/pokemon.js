@@ -5,11 +5,10 @@ class PokemonSelected {
         this.abilities = options.abilities.map(abilityType => abilityType.ability.name);
         this.id = options.id;
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;   
-        
     }
     html() {
         const pokeDiv = document.querySelector('.poke-data')
-        console.log(this.abilities)
+        // console.log(this.abilities)
         pokeDiv.innerHTML =`
         <div class="pokemon">
             <div class="poke-img">
@@ -62,13 +61,48 @@ async function getPokemonData(id = 0) {
 
 
 //  ProXimo Pokemon
-    function nextPoke() { //ERA PRA FAZER O ID +1 mas ta dando NAN 
+    function nextPoke() {
         const pokeNext = document.querySelector('.next-poke');
+        
+        // pular id's de 899 até 10000
+        // if (id === 898){
+        //     pokeNext.innerHTML = `
+        //     <a href="pokemon.html?id=${+id + 9103}">
+        //         <button>NEXT-></button>
+        //     </a>`
+        // } else (id <= 897 || id >= 10001) {
+        //     pokeNext.innerHTML = `
+        //     <a href="pokemon.html?id=${+id + 1}">
+        //         <button>NEXT-></button>
+        //     </a>`
+        //     console.lg(id);
+        // }
+        // else(id === 10220) {
+        //     pokeNext.style.visibility = "hidden";
+        // }
+
+        // if (id <= 898 && id >= 10001){
+        //     pokeNext.innerHTML = `
+        //     <a href="pokemon.html?id=${+id + 1}">
+        //         <button>NEXT-></button>
+        //     </a>`;
+        // } else if (id === 898) {
+        //         pokeNext.innerHTML = `
+        //         <a href="pokemon.html?id=${+id + 9103}">
+        //             <button>NEXT-></button>
+        //         </a>`;
+        // } else if (id === 10220){
+        //     pokeNext.style.visibility = "hidden";
+        // } else {
+        //     pokeNext.style.visibility = "visible";
+        // }
+
+
+        //o + antes do id converte String em Numeros positivos
         pokeNext.innerHTML = `
-            <a href="pokemon.html?id=${+id + 1}"> 
+            <a href="pokemon.html?id=${+id + 1}">
                 <button>NEXT-></button>
-            </a>`
-            console.log(id);
+            </a>`;
     }
     function backPoke() {
         const pokeBack = document.querySelector('.back-poke');
@@ -76,9 +110,13 @@ async function getPokemonData(id = 0) {
             <a href="pokemon.html?id=${+id - 1}">
                 <button><-BACK</button>
             </a>`
+            if (id === 1) {
+                pokeNext.style.visibility = "hidden";
+            }
     }
     nextPoke(1);
     backPoke(1);
+    console.log(id);
 
     return data;
 };
@@ -100,9 +138,18 @@ window.onload =  async function() {
         pokemon.html();
     } catch (error) {
         pokemonDiv.innerHTML = `<div class="error">Nenhum resultado Encontrado</div>`;
-    };
 
-    //  Gabeta para ver os dados todos do JSON
-    // pokemonDiv.innerHTML = JSON.stringify(data);
+        const pokeNext = document.querySelector('.next-poke');
+        pokeNext.innerHTML = `
+            <a href="pokemon.html?id=${+id + 1}">
+                <button>NEXT-></button>
+            </a>`;
+
+        const pokeBack = document.querySelector('.back-poke');
+        pokeBack.innerHTML = `
+            <a href="pokemon.html?id=${+id - 1}">
+                <button><-BACK</button>
+            </a>`
+    };
 };
 
