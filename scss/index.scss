@@ -91,7 +91,7 @@ main {
                     div button{
                         margin: 0;
                         // margin-bottom: 10px;
-                        width: 40vw;
+                        width: 16.5vw;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -123,7 +123,6 @@ main {
                         }
                     }
                 }
-
             }
         }
         .poke:hover {
@@ -264,22 +263,11 @@ main {
             'prox prox';
             grid-column-gap: 10px;
             grid-row-gap: 10px;
-            .card {
-                .card-head {
-                    .poke-void {
-                        img {
-                            width: 15px;
-                        }
-                    }
-                }
-                .poke-pic {
-                }
-                .card-feet {
-                    h2 .poke-name{
-                        font-size: 1.2rem;
-                        margin-left: -10px;
-                        text: capitalize;
-                    }
+
+            .poke a .card-feet {
+                width: 40vw;
+                h2 .poke-name{
+
                 }
                 .old-price {
                     font-size: 1rem;
@@ -287,13 +275,16 @@ main {
                 .actual-price {
                     font-size: 1.2rem;
                 }
-                .btn {
-                    .img {
-                        max-width: 20px;
-                        max-height: 20px;
-                    }
-                    .buy {
-                        font-size: 1.2rem;
+                div button {
+                    width: 40vw;
+                    .btn {
+                        .img {
+                            max-width: 20px;
+                            max-height: 20px;
+                        }
+                        .buy {
+                            font-size: 1.2rem;
+                        }
                     }
                 }
             }
@@ -301,34 +292,148 @@ main {
                 width: 80vw;
             }
         }
-    }
-    .pagination {
-        grid-area: prox;
-        grid-row-start: 11;
-        grid-row-end: 11;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        width: 80vw;
-        align-self: center;
-        margin-left: 20px;
-        .paginate {
-            font-size: 0.9rem;
+        .pagination {
+            grid-area: prox;
+            grid-row-start: 11;
+            grid-row-end: 11;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            width: 80vw;
+            align-self: center;
+            margin-left: 20px;
+            .paginate {
+                font-size: 0.9rem;
+            }
         }
-
     }
 }
-
 @media screen and (max-width: config.$mobileBreakpointM){
-    .pagination {
+    main {
+        grid-area: conteudo;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        width: 100vw;
+        margin-bottom: 10px;
+        margin-left: 0;
+        .poke-list {
+            grid-template-rows:
+            360px 360px 360px 360px 360px 360px 360px 360px 360px 360px 5vh;
+            grid-template-columns:
+            50% 50%;
+            .poke a .card-feet {
+                width: 40vw;
+                h2 .poke-name{
 
-        margin-left: 35x;
-        width: 80vw;
-
+                }
+                .old-price {
+                    font-size: 1rem;
+                }
+                .actual-price {
+                    font-size: 1.2rem;
+                }
+                div button {
+                    width: 40vw;
+                    .btn {
+                        .img {
+                            max-width: 20px;
+                            max-height: 20px;
+                        }
+                        .buy {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .loading {
+                width: 80vw;
+            }
+        }
+        .pagination {
+            grid-area: prox;
+            grid-row-start: 11;
+            grid-row-end: 11;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            width: 80vw;
+            align-self: center;
+            margin-left: 20px;
+            .paginate {
+                font-size: 0.9rem;
+            }
+        }
     }
 }
 @media screen and (max-width: config.$mobileBreakpointP){
-    .pagination {
-        margin-left: 40px;
-        width: 80vw;
+    main {
+        grid-area: conteudo;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        width: 100vw;
+        margin-bottom: 10px;
+        margin-left: 0;
+        .poke-list {
+            grid-template-rows:
+            360px 360px 360px 360px 360px 360px 360px 360px 360px 360px 5vh;
+            grid-template-columns:
+            50% 50%;
+            grid-template-areas:
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'slot slot'
+            'prox prox';
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+
+            .poke a .card-feet {
+                width: 40vw;
+                h2 .poke-name{
+                    font-size: 1.2rem;
+                    margin-left: -10px;
+                    text-transform: capitalize;
+                }
+                .old-price {
+                    font-size: 1rem;
+                }
+                .actual-price {
+                    font-size: 1.2rem;
+                }
+                div button {
+                    width: 40vw;
+                    .btn {
+                        .img {
+                            max-width: 20px;
+                            max-height: 20px;
+                        }
+                        .buy {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .loading {
+                width: 80vw;
+            }
+        }
+        .pagination {
+            grid-area: prox;
+            grid-row-start: 11;
+            grid-row-end: 11;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            width: 80vw;
+            align-self: center;
+            margin-left: 20px;
+            .paginate {
+                font-size: 0.9rem;
+            }
+        }
     }
 }
+
