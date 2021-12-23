@@ -26,7 +26,7 @@ body, html {
     'nav         nav'
     'conteudo     asides'
     'footer      footer';
-    
+
     .flex{
         grid-area: conteudo / asides;
         grid-row-start: 3;
@@ -54,7 +54,7 @@ body, html {
 @media screen and (max-width: config.$mobileBreakpointG){
     .gridzera {
         grid-template-rows:
-        180px 75px auto auto auto;
+        180px 80px auto auto auto;
         grid-template-columns: 100vw;
         grid-template-areas:
         'header'
@@ -79,17 +79,19 @@ body, html {
     }
 }
 
+
 @media screen and (max-width: config.$mobileBreakpointM){
     .gridzera {
         grid-template-rows:
-        200px 75px auto auto auto;
+        200px 85px auto auto auto;
     }
 }
+
 
 @media screen and (max-width: config.$mobileBreakpointP){
     .gridzera {
         grid-template-rows:
-        180px 7vh auto auto auto;
+        180px 85px auto auto auto;
     }
 }
 

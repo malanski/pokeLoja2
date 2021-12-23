@@ -15,6 +15,8 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        margin-right: 30px;
+        margin-left: 5px;
         .logo {
             display: flex;
             flex-direction: row;
@@ -219,7 +221,6 @@ nav {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
-    height: auto;
     width: 100vw;
     /*padding-right: 9%;*/
     padding: 0;
@@ -231,32 +232,30 @@ nav {
         justify-content: space-between;
         align-items: baseline;
         flex-wrap: nowrap;
-        margin-left: 10px;
+        margin: 5px;
+        padding: 5px;
             .navbar {
                 display: flex;
                 justify-content: space-between;
                 align-items: baseline;
                 list-style-type: none;
-                margin-top: 5%;
-            li {
-                .navlink {
-                    font-size: 25px;
-                    line-height: 26px;
-                    color: white;
-                    border-right: solid 1px white;
-                    padding-right: 0.7rem;
-                    margin-right: 0.7rem;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                }
-                .navlink:hover {
-                    color: config.$yellowPok;
-                }
+
+            li .navlink {
+                font-size: 25px;
+                line-height: 26px;
+                color: white;
+                border-right: solid 1px white;
+                padding-right: 0.7rem;
+                margin-right: 0.7rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .navlink:hover {
+                color: config.$yellowPok;
             }
         }
         .social1 {
-            margin-left: 30px;
-            margin-right: 30px;
+            margin: 10px;
             a {
                 text-decoration: none;
                 .socialfoot {
@@ -274,7 +273,7 @@ nav {
 
 @media screen and (max-width: config.$mobileBreakpointG){
     header {
-        grid-area: 'header';
+        grid-area: header;
         grid-row-start: 1;
         grid-row-end: 1;
         grid-column-start: 1;
@@ -333,7 +332,7 @@ nav {
         }
     }
     nav {
-        grid-area: "nav";
+        grid-area: nav;
         grid-row-start: 2;
         grid-row-end: 2;
         grid-column-start: 1;
@@ -341,21 +340,13 @@ nav {
         width: 100vw;
         padding: 10px;
         .nav-container {
-            // margin-left: 80px;
-
-            justify-content: space-between;
-
-            // margin: 5px;
-            // width: 80vw;
-            .navbar {
+            justify-content: center;
+            ul .navbar {
                 display: flex;
-                /* overflow: scroll;*/
                 justify-content: center;
                 align-items: center;
-                width: 99%;
                 flex: 0;
-                margin: auto;
-                .navlink {
+                li a.navlink {
                     font-size: 15px;
                     font-weight: 600;
                 }
@@ -383,7 +374,7 @@ nav {
 
 @media screen and (max-width: config.$mobileBreakpointM){
     header {
-        grid-area: "header";
+        grid-area: header;
         grid-column-start: 1;
         grid-column-end: 1;
         margin: 0;
@@ -396,6 +387,7 @@ nav {
             }
             .search {
                 margin-top: 30px;
+                margin-bottom: 5px;
                 margin-left: 5px;
                 .search-input {
                     input {
@@ -423,21 +415,25 @@ nav {
     nav {
         width: 100vw;
         margin: 0;
+        padding: 0;
         .nav-container {
-            justify-content: center;
-            margin-left: 5px;
-            margin-right: 5px;
+            justify-content: right;
+            align-items: center;
+            padding-left: 5px;
+            padding-right: 5px;
             flex: 1;
             .navbar {
                 align-self: center;
-                padding-left: 0;
-                margin-left: 5px;
-                .navlink {
-                    font-size: 12px;
+                left: 0;
+                align-items: center;
+                margin-left: 15px;
+                margin-right: 15px;
+                li .navlink {
+                    font-size: 20px;
                 }
             }
             .social1 {
-                margin-left: 5px;
+                margin-left: 2px;
                 margin-right: 5px;
                 .socialfoot {
                     max-width: 19px;
@@ -485,7 +481,7 @@ nav {
             margin-left: 50px;
             .navbar {
                 padding-left: 0;
-                .navlink {
+                li a .navlink {
                     font-size: 12px;
                 }
             }
