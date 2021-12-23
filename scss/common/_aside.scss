@@ -64,7 +64,7 @@ aside {
             position: relative;
             height: auto;
             width: 90%;
-            margin: 20px;
+            margin: 10px;
             border-radius: 5px;
         }
         .gambeta {
@@ -103,6 +103,7 @@ aside {
         background: config.$headerColor;
         margin-top: 40px;
         margin-left: 10px;
+        margin-right: 10px;
         padding: 30px 10px;
         display: flex;
         flex-direction: column;

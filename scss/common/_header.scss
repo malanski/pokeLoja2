@@ -10,11 +10,11 @@ header {
     background-color: config.$headerColor;
     height: auto;
     width: 100vw;
+    padding: 5px;
     .header-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: baseline;
-        width: auto;
         .logo {
             display: flex;
             flex-direction: row;
@@ -29,7 +29,7 @@ header {
                 .font-poke {
                     color: config.$yellowPok;
                     text-shadow: config.$texShadow;
-                    line-height: 50px;
+                    line-height: 40px;
                     font-family: config.$pokeFont;
                     font-size: 35px;
                     transition: all ease 0.9s;
@@ -241,10 +241,11 @@ nav {
             li {
                 .navlink {
                     font-size: 25px;
+                    line-height: 26px;
                     color: white;
                     border-right: solid 1px white;
-                    padding-right: 0.5rem;
-                    margin-right: 0.5rem;
+                    padding-right: 0.7rem;
+                    margin-right: 0.7rem;
                     text-decoration: none;
                     text-transform: uppercase;
                 }
@@ -283,8 +284,8 @@ nav {
         padding: 0;
         .header-container {
             display: block;
-            padding:15px;
-            margin: 20px;
+            padding: 5px;
+            margin: 10px;
             .logo {
                 a {
                     .font-poke{
@@ -337,21 +338,21 @@ nav {
         grid-row-end: 2;
         grid-column-start: 1;
         grid-column-end: 1;
-        height: auto;
         width: 100vw;
+        padding: 10px;
         .nav-container {
-            margin-left: 80px;
+            // margin-left: 80px;
 
-            justify-content: center;
+            justify-content: space-between;
 
             // margin: 5px;
-            width: 80vw;
+            // width: 80vw;
             .navbar {
                 display: flex;
                 /* overflow: scroll;*/
                 justify-content: center;
                 align-items: center;
-                width: auto;
+                width: 99%;
                 flex: 0;
                 margin: auto;
                 .navlink {
@@ -378,20 +379,24 @@ nav {
         }
     }
 }
+
+
 @media screen and (max-width: config.$mobileBreakpointM){
     header {
         grid-area: "header";
         grid-column-start: 1;
         grid-column-end: 1;
         margin: 0;
-        padding: 0;
+        padding: 5px;
         .header-container {
+            margin: 5px;
             .logo {
-                margin-top: 20px;
+                margin-top: 35px;
+                margin-bottom: 15px;
             }
             .search {
                 margin-top: 30px;
-                margin-left: -20px;
+                margin-left: 5px;
                 .search-input {
                     input {
                         width: 350px;
@@ -417,12 +422,14 @@ nav {
     }
     nav {
         width: 100vw;
-        line-height: 100%;
+        margin: 0;
         .nav-container {
             justify-content: center;
-            margin-left: 35px;
-            width: 80vw;
+            margin-left: 5px;
+            margin-right: 5px;
+            flex: 1;
             .navbar {
+                align-self: center;
                 padding-left: 0;
                 margin-left: 5px;
                 .navlink {
