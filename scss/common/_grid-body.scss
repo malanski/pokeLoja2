@@ -19,51 +19,79 @@ body, html {
     margin: 0;
     display: grid;
     width: 100vw;
-    grid-template-rows:
-    70px 70px auto auto auto;
-    grid-template-columns:
-    70vw     30vw;
+    grid-template-rows: 70px 70px auto auto auto;
+    grid-template-columns: 70vw 30vw;
     grid-template-areas:
     'header      header'
     'nav         nav'
-    'content     aside'
+    'conteudo     asides'
     'footer      footer';
+
+    .flex{
+        grid-area: conteudo / asides;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        width: 100vw;
+        margin-right: 10px;
+    }
 }
+
+
+
 
 @media screen and (max-width: config.$mobileBreakpointGg){
     .gridzera {
         width: 100vw;
     }
-
-
 }
 
 
 @media screen and (max-width: config.$mobileBreakpointG){
     .gridzera {
         grid-template-rows:
-        200px 70px auto auto auto;
+        180px 80px auto auto auto;
         grid-template-columns: 100vw;
         grid-template-areas:
         'header'
         'nav'
         'content'
-        'aside'
+        'asides'
         'footer';
+
+        .flex{
+            grid-area: conteudo;
+            grid-row-start: 3;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-between;
+            // flex: 1;
+            width: 100vw;
+            margin-right: 10px;
+        }
     }
 }
+
 
 @media screen and (max-width: config.$mobileBreakpointM){
     .gridzera {
         grid-template-rows:
-        200px 7vh auto auto auto;
+        200px 85px auto auto auto;
     }
 }
+
 
 @media screen and (max-width: config.$mobileBreakpointP){
     .gridzera {
         grid-template-rows:
-        180px 7vh auto auto auto;
+        180px 85px auto auto auto;
     }
 }
 

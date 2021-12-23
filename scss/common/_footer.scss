@@ -10,7 +10,7 @@
 /*-- |FOOTER|              ------*/
 /*-- |FOOTER|              ------*/
 footer {
-    grid-area: "footer";
+    grid-area: footer;
     grid-row-start: 4;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -21,6 +21,7 @@ footer {
     background-color:
     config.$footerColor;
     color: config.$fontWhite;
+    margin-top: 10px;
     .containerfoot {
         display: flex;
         justify-content: space-between;

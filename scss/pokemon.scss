@@ -1,0 +1,170 @@
+@use 'config';
+@use 'common/grid-body';
+@use 'common/header';
+@use 'common/aside';
+@use 'common/footer';
+@use 'common/top-pokes';
+@use 'common/carrinho';
+@use 'common/loading';
+
+main {
+    margin: 10px;
+    padding: 10px;
+    grid-area: "content";
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    width: 70vw;
+        .poke-data {
+            background-color: rgb(63, 50, 248);
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 1px 1px 18px 4px #40014f;
+
+            .pokemon {
+                // position: relative;
+                border: 1px solid gray;
+                border-radius: 5px;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: capitalize;
+                background-color: rgb(0, 0, 0);
+                width: 100%;
+                // height: auto;
+                .poke-img {
+                    background-color: rgb(251, 242, 251);
+                    // margin-top: -20px;
+                    // margin: 10px;
+                    border: 1px solid black;
+                    transition: all ease-in-out .3s;
+                    border-radius: 5px;
+                    // position: relative;
+                    h1{
+                        color: config.$headerColor;
+                        text-shadow:  4px 4px 1px #ffdf0d;
+                        text-align: center;
+                        margin-top: 0;
+                        font-family: config.$pokeFont;
+                        font-size: 45px;
+                    }
+                    img{
+                        align-self: center;
+                        width: 90%;
+                        height: 90%;
+                        padding: 10px;
+                        margin-top: -25px;
+                        margin-bottom: 55px;
+                    }
+                }
+                .poke-img:hover{
+                    transition: all ease-in-out .3s;
+                    background-color: black;
+                }
+                .poke-status {
+                    background-color: rgb(195, 124, 243);
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    margin: 20px;
+                    padding: 50px;
+                    h2{
+                        font-size: 27px;
+                    }
+                    li{
+                        font-size: 22px;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            button{
+                font-size: 25px;
+                font-weight: 800;
+            }
+        }
+}
+@media screen and(max-width:config.$mobileBreakpointG) {
+    main{
+        width: 100vw;
+        // height: 100vh;
+        margin: 0;
+        margin-top: 5px;
+        .poke-data .pokemon{
+            width: 100%;
+            .poke-img {
+                height: 100%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                h1{
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+                img{
+                    width: 420px;
+                    height: 580px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+            .poke-status {
+                padding: 15px;
+                margin: 5px;
+                h2{
+                    font-size: 25px;
+                }
+                li{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width:config.$mobileBreakpointM) {
+    main{
+        width: 100vw;
+        height: 100vh;
+
+        margin-top: 5px;
+        .poke-data .pokemon{
+            width: auto;
+            .poke-img {
+                height: 100%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                h1{
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+                img{
+                    width: 220px;
+                    height: 380px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+            .poke-status {
+                padding: 15px;
+                margin: 5px;
+                h2{
+                    font-size: 22px;
+                }
+                li{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}

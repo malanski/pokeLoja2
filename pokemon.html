@@ -5,30 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="./js/pokemon.js" defer></script>
     <script src="./js/carrinho.js" defer></script>
     <script src="./js/interscript.js" defer></script>
-    <script src="./js/script.js" defer></script>
 
-    <link rel="icon" href="images/favicon-ulisses.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap">
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrer policy="no-referrer" />
-    <!--<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    -->
+        href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/pokemon.css">
+    <link rel="icon" href="images/favicon-ulisses.ico">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
-
-    <title>Pokéloja</title>
+    <title>Pokémon</title>
 </head>
 <body>
     <div class="opn-cart"></div>
-
     <div class="gridzera">
+        
         <header>
             <div class="header-container">
                 <div class="logo">
@@ -42,31 +39,14 @@
                         title="Pokémon Official Home Page">
                             <text class="font-poke">Pokéloja</text>
                         </a>
-    
-                    <!--<div class="path-curvex">
-                        <svg viewBox="0 0 850 159">
-                            <path id="curve"
-                            d="M 73.2  125.6
-                                c 4-6.1   65.5-96.8  178.6-95.6
-                                c 111.3  1.2  170.8  90.3  175.1  97" />
-                            <text width="auto" height="auto">
-                                <textPath xlink:href="#curve">
-                                    <a class="font-poke"
-                                        href="https://www.pokemon.com/"
-                                        title="Official Home Page">
-                                        ------ > Pokéloja < -----
-                                    </a>
-                                </textPath>
-                            </text>
-                        </svg>
-                    </div>-->
-    
+
                     <div>
                         <img class="pika-run" width="50px"
                         src="images/pikachu-run.png"
                         alt="small image of pikachu sprinting">
                     </div>
                 </div>
+    
     
                 <form class="search" action="#">
                     <div class="search-input">
@@ -86,13 +66,13 @@
                 </ul>
             </div>
         </header>
-    
+
         <nav>
             <div class="nav-container">
                 <div>
                     <ul class="navbar">
-                        <li><a href="#"
-                            class="navlink active">Home</a></li>
+                        <li><a href="index.html"
+                            class="navlink">Home</a></li>
                         <li><a href="#"
                             class="navlink">Category</a></li>
                         <li><a href="#"
@@ -116,21 +96,24 @@
                     </a>
                 </div>
             </div>
-
+    
         </nav>
+
         <section class="flex">
-
+            
             <main>
-                <div class="poke-list"></div>
+                <div class="poke-data">
+                    <div class="loading">
+                        <p>Now Loading... please wait...</p>
+                    </div>
+                </div>
 
-                <div class="pagination">
-                    <button class="btn-zero paginate">First</button>
-                    <button class="btn-ant paginate">Previous</button>
-                    <span class="page-log"></span>
-                    <button class="btn-prox paginate">Next</button>
-                    <button class="btn-end paginate">Last</button>
+                <div class="buttons">
+                    <div class="back-poke"></div>
+                    <div class="next-poke"></div>
                 </div>
             </main>
+
 
             <aside>
                 <section>
@@ -149,14 +132,16 @@
 
                             <img class="sizing" src="images/pikachu-happy.gif"
                             alt="image of pikachu with hat jumping">
+
+
                         </div>
                     </div>
                     <div class="crossfade">
                         <p class="poke-ads-font">
-                            Click above 
+                            Click above
                         </p>
                         <img class="pikachuu" src="images/tenor-pikachu.gif"
-                        alt="gif of pikachu"
+                        alt="javaScript changeable animated gif of pikachu thunder strike"
                         title="Let's go Pikachu">
                     </div>
                 </section>
@@ -193,8 +178,8 @@
                     <button>Sing in</button>
                 </section>
             </aside>
-        </section>
 
+        </section>
 
         <footer>
             <div class="containerfoot">
@@ -204,7 +189,7 @@
                     <li><a href="#">Top Pokemon's</a></li>
                     <li><a href="#">Blog</a></li>
                 </ul>
-
+    
                 <section class="top-pokes">
                     <h3>Top<sub>3</sub> <big>Rare</big> Pokémons</h3>
                     <ol>
@@ -228,7 +213,7 @@
                         </li>
                     </ol>
                 </section>
-
+    
                 <div class="social2">
                     <a href="https://www.facebook.com/ulisses.malanski/">
                         <img src="images/face.png" class="socialfoot"
@@ -243,8 +228,9 @@
                         alt="image of twitter logo icon" title="linkedin">
                     </a>
                 </div>
+    
             </div>
-
+    
             <div id="cf">
                 <a href="#">
                     <img class="image-bottom" width="10%" src="images/pikachu-kick.png">
@@ -258,22 +244,18 @@
                     <a class="defaut-clean" href="https://www.pokemon.com/">©</a> 2021 Pokéloja All Rights Reserved.
                     <h4>Developed by <big>Ulisses Malanski</big> at Awari School</h4>
                 </h3>
-
+                
                 <a href="#">TOP</a>
             </div>
         </footer>
-
+    
         <section class="carrinho">
             <button id="btn-cart-x">X</button>
             <h4>Carrinho</h4>
             <p>Total = 00,00R$</p>
-            <div class="poke-container">
-                <p>My Pokemons</p>
-            </div>
             <img src="./images/pokeloja-logo-png.png" alt="pokeloja logo-name">
 
         </section>
-
     </div>
-</body>
+    </body>
 </html>
