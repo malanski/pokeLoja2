@@ -1,12 +1,14 @@
 @use '../config';
 
 .top-pokes {
+    
     align-self: center;
     width: 95%;
     transform: all ease 0.5s;
     height: 100%;
     margin-top: 20px;
     h3 {
+        color: #DDD;
         text-align: center;
         text-transform: uppercase;
         font-weight: bold;
@@ -14,15 +16,12 @@
         border-bottom: solid 1px #DDD;
         padding: 5% 0;
         margin: 0;
-        background: config.$topBtnBg;
-        border-radius: 5px;
     }
     ol {
         list-style-type: decimal;
         border-radius: 5px;
 
         li {
-        border-radius: 5px;
             .poke-img {
                 max-width: 70px;
                 margin: 0 8px;
@@ -88,7 +87,8 @@ aside {
 
 footer {
     .top-pokes {
-        max-width: 60vw;
+        margin-top: 5px;
+        width: 30%;
         h3 {
             font-family: config.$pokeFont;
             font-size: 25px;
