@@ -26,11 +26,13 @@ aside {
             align-self: center;
             width: 200px;
             height: 100px;
-            padding-right: 20px;
         }
         h4{
             font-size: 20px;
             color: #fff;
+        }
+        button {
+            margin: 5px;
         }
         .logo-img:hover{
             background-image: url("../images/");
@@ -63,9 +65,9 @@ aside {
             cursor: pointer;
             position: relative;
             height: auto;
-            width: 90%;
-            margin: 10px;
+            width: 100%;
             border-radius: 5px;
+            margin-bottom: 5px;
         }
         .gambeta {
             border-radius: 5px;
@@ -77,16 +79,16 @@ aside {
             background-size: cover;
             background-position: center center;
             height: 450px;
-            width: 90%;
+            width: 100%;
             img {
                 margin-top: 130px;
+                width: 100%;
+                height: auto;
             }
         }
         .gambeta::before {
             position: absolute;
             content: " ";
-            width: 100%;
-            height: 100%;
             background-image:
             url('../images/fireworks-sparks.gif');
             background-position: center;
@@ -95,6 +97,30 @@ aside {
             /*top: 0;
             left: 0;*/
             opacity: 0.3;
+        }
+    }
+    .crossfade{
+        display: flex;
+        flex-grow: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        p {
+            font-family: Pokemon;
+            font-size: 1.5rem;
+            color: config.$yellowPok;
+            text-shadow: config.$texShadow;
+            text-align: center;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .pikachuu {
+            align-self: flex-start;
+            height: 200px;
+            width: 90%;
+            border-radius: 5px;
+            margin: 10px;
         }
     }
     .news {
@@ -113,7 +139,7 @@ aside {
             font-weight: 600;
             margin-top: 0;
             text-align: center;
-            font-size: 25px;
+            font-size: 28px;
         }
         input {
             align-self: center;
@@ -133,28 +159,10 @@ aside {
             border-radius: 1% 1%;
         }
     }
-
-    .crossfade {
-        display: flex;
-        flex-grow: 0;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        .pikachuu {
-            align-self: center;
-            height: 20vh;
-            width: 90%;
-            border-radius: 5px;
-
-        }
-    }
 }
 
 
-.sizing  {
-    width: 100%;
-    height: auto;
-}
+
 .poke-ads-description {
     font-size: 2rem;
     text-align: center;
@@ -167,12 +175,7 @@ aside {
     color: white;
 }
 .poke-ads-font {
-    font-family: Pokemon;
-    font-size: 1.5rem;
-    color: config.$yellowPok;
-    text-shadow: config.$texShadow;
-    text-align: center;
-    margin: 0;
+    
 }
 
 @media screen and (max-width: config.$mobileBreakpointG){
