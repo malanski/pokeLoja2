@@ -11,12 +11,13 @@ header {
     height: auto;
     width: 100vw;
     padding: 15px;
+
     .header-container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-right: 30px;
-        margin-left: 5px;
+        margin-right: 50px;
+        margin-left: 0;
         .logo {
             display: flex;
             flex-direction: row;
@@ -86,11 +87,8 @@ header {
             margin-top: 0;
             margin-bottom: 5px;
             position: relative;
-            border: 2px solid white;
-            border-radius: 7px;
-            box-shadow: 1px 1px 8px 6px #f5ccff;
-
             .search-input {
+
                 button {
                     position: absolute;
                     right: 3px;
@@ -106,6 +104,7 @@ header {
                     cursor: grabbing;
                 }
                 input {
+                    box-shadow: 1px 1px 4px 4px #f5ccff;
                     background-color: #caf1ffe5;
                     color: rgb(76, 76, 76);
                     transition: width 0.3s ease-in-out;
@@ -122,6 +121,7 @@ header {
         }
         .profile {
             display: flex;
+            justify-content: flex-start;
             align-items: center;
             list-style-type: none;
             margin: 0;
@@ -137,21 +137,7 @@ header {
                     transition: all ease 0.4s;
                 }
                 .headlink:hover {
-                    /* transition: background-color .1s linear;*/
                     color: config.$yellowPok;
-                    // text-shadow: 5px 5px 2px config.$bluePok;
-                }
-                .shop-list {
-                    margin-right: 35px;
-                    .fa-solid {
-                        text-decoration: none;
-                        color: black;
-                    }
-                }
-                .fa-solid:hover {
-                    color: config.$yellowPok;
-                    text-shadow: 5px 5px 20px config.$yellowPok;
-
                 }
             }
         }
@@ -325,7 +311,7 @@ nav {
                 top: 5px;
                 right: 5px;
                 margin-top: 0;
-                margin-right: 30px;
+                margin-right: 50px;
                 position: absolute;
                 .headlink {
                     font-size: 0.9rem;
@@ -365,13 +351,13 @@ nav {
                 margin-right: 10px;
                 a {
                     .socialfoot {
-                            width: 25px;
-                            height: 25px;
-                            margin-left: 5px;
-                            margin-right: 5px;
-                            margin-top: 1%;
-                            margin-top: 2%;
-                        }
+                        width: 25px;
+                        height: 25px;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        margin-top: 1%;
+                        margin-top: 2%;
+                    }
                 }
             }
         }
@@ -411,7 +397,7 @@ nav {
             }
             .profile {
                 margin-top: 10px;
-                margin-right: 30px;
+                margin-right: 150px;
                 .headlink {
                     font-size: 0.8rem;
 
