@@ -10,11 +10,11 @@ header {
     background-color: config.$headerColor;
     height: auto;
     width: 100vw;
-    padding: 5px;
+    padding: 15px;
     .header-container {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: flex-start;
         margin-right: 30px;
         margin-left: 5px;
         .logo {
@@ -22,6 +22,7 @@ header {
             flex-direction: row;
             justify-content: space-around;
             flex-wrap: nowrap;
+            margin-bottom: 5px;
             .pika-spin {
                 margin-top: 20px;
                 margin-left: 20px;
@@ -83,8 +84,13 @@ header {
             margin-left: 20px;
             margin-right: 20px;
             margin-top: 0;
+            margin-bottom: 5px;
+            position: relative;
+            border: 2px solid white;
+            border-radius: 7px;
+            box-shadow: 1px 1px 8px 6px #f5ccff;
+
             .search-input {
-                position: relative;
                 button {
                     position: absolute;
                     right: 3px;
@@ -232,7 +238,8 @@ nav {
         justify-content: space-between;
         align-items: baseline;
         flex-wrap: nowrap;
-        margin: 5px;
+        margin-left: 5px;
+        margin-right: 25px;
         padding: 5px;
             .navbar {
                 display: flex;
