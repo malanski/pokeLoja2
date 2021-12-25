@@ -40,9 +40,30 @@ class PokemonSelected {
                     }
                 </ul>
             </div>
-        </div>`
-    return pokeDiv;
+        </div>
+        <div class="poke-info">
+        <h5> ${this.name} History</h5>
+            <p>
+                Lorem Ipsum is ${this.name} simply dummy text of the printing and typesetting industry.  
+                Lorem Ipsum ${this.name} has been the industry's ${this.types[0]} standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to ${this.abilities} make a type 
+                specimen book. ${this.name} has survived not only five centuries, but also the leap into 
+                electronic typesetting, remaining essentially unchanged. ${this.name} was popularised in the 
+                1960s with the release of ${this.name} Letraset sheets containing Lorem Ipsum passages, and more 
+                recently with ${this.types[1]} desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            
+        </div>
+        `
+        return pokeDiv;
     }
+    // html() {
+    //     const pokeInfo = document.querySelector('.poke-info');
+    //     pokeInfo.innerHTML = `
+    //     `
+    //     return pokeInfo;
+    // }
+
 }
 
 //  procura Url de cada pokemon na API
@@ -122,7 +143,7 @@ async function getPokemonData(id = 0) {
 };
 
 
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1000));
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1500));
 
 window.onload =  async function() {
     const { id } = getQueryparameters();

@@ -63,6 +63,7 @@ main {
                 .poke-img:hover{
                     transition: all ease-in-out .3s;
                     background-color: black;
+                    border: 1px solid white;
                 }
                 .poke-status {
                     background-color: rgb(195, 124, 243);
@@ -77,6 +78,16 @@ main {
                         font-size: 22px;
                         margin: 5px;
                     }
+                }
+            }
+
+            .poke-info {
+                h5{
+                    font-size: 25px;
+                    text-transform: capitalize;
+                }
+                p{
+                    font-size: 17px;
                 }
             }
         }

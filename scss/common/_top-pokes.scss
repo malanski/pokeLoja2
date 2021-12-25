@@ -85,8 +85,8 @@ aside {
     }
 }
 
-footer {
-    .top-pokes {
+
+footer .top-pokes {
         margin-top: 5px;
         width: 30%;
         h3 {
@@ -118,38 +118,38 @@ footer {
                     max-width: 150px;
                 }
                 span {
-                    font-family: config.$fontText;
-                    text-shadow: none;
-                    font-size: 20px;
-                    font-weight: 400;
-                    margin-left: -20px;
-                }
+                font-family: config.$fontText;
+                text-shadow: none;
+                font-size: 20px;
+                font-weight: 400;
+                margin-left: -20px;
             }
-            li:hover {
-                animation: topPokeFootAnima 3s ease infinite;
-                border-bottom: solid 1px #DDD;
-                padding: 5%;
-                color: config.$hovTopColor;
-                text-shadow: config.$texShadow;
+        }
+        li:hover {
+            animation: topPokeFootAnima 3s ease infinite;
+            border-bottom: solid 1px #DDD;
+            padding: 5%;
+            color: config.$hovTopColor;
+            text-shadow: config.$texShadow;
+        }
+        @keyframes topPokeFootAnima {
+            0% {
+                background-position: 0% 0%;
             }
-            @keyframes topPokeFootAnima {
-                0% {
-                    background-position: 0% 0%;
-                }
-                50% {
-                    background-position: 0% 100%;
-                }
-                100% {
-                    background-position: 0% 50%;
-                }
+            50% {
+                background-position: 0% 100%;
             }
-            li:last-child {
-                border-bottom: 0;
-                text-shadow: config.$texShadow;
+            100% {
+                background-position: 0% 50%;
             }
+        }
+        li:last-child {
+            border-bottom: 0;
+            text-shadow: config.$texShadow;
         }
     }
 }
+
 
 @media screen and (max-width: config.$mobileBreakpointG){
     footer {
