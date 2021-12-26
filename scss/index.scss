@@ -317,10 +317,12 @@ main {
         margin-left: 0;
         .poke-list {
             grid-template-rows:
-            360px 360px 360px 360px 360px 360px 360px 360px 360px 360px 5vh;
+            320px 320px 320px 320px 320px 320px 320px 320px 320px 320px 5vh;
             grid-template-columns:
-            50% 50%;
+            47vw 47vw;
+            margin: 5px;
             .poke a .card-feet {
+                height: 360px;
                 width: 40vw;
                 h2 .poke-name{
 
