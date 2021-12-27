@@ -1,8 +1,9 @@
 class Carrinho {
-
 	btnCart = document.querySelector('#btn-cart');
 	btnCartClose = document.querySelector('#btn-cart-x');
 	clickOutCart = document.querySelector('.opn-cart');
+	itens = [];
+	total = 0;
 
 	constructor() {
 		this.btnCart.addEventListener('click', this.abrirCarrinho);
@@ -35,8 +36,16 @@ class Carrinho {
 
 		document.body.className = '';
 	}
+
+	adicionar(pokemon) {
+		this.itens.push(pokemon);
+		// Calcular preço TOTAL
+		console.log(pokemon.preco)
+		console.log(pokemon.imagem)
+		console.log(pokemon.nome)
+	}
 }
 
 window.addEventListener('load', async () => {
-	new Carrinho();
+	window.carrinho = new Carrinho();
 })

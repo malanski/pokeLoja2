@@ -84,7 +84,6 @@ function renderPokemons(pokemonsApi) {
 
     this.pokemons = pokemons;
 
-
     pokemons.forEach((pokemon) => {
         const html = pokemon.html();
         pokeList.appendChild(html)
@@ -97,6 +96,9 @@ function renderPokemons(pokemonsApi) {
         btn.addEventListener('click', (event) => {
         event.preventDefault();
         const id = event.target.getAttribute('data-id');
+
+        const pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
+        window.carrinho.adicionar(pokemon);
         });
     });
 }
