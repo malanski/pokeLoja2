@@ -54,24 +54,7 @@ header {
                     5px 12px 8px  config.$bluePok;
                 }
             }
-            .path-curvex {
-                margin-top: 20px;
-                margin-left: -250px;
-                padding-right: 0;
-            }
-            path {
-                fill: transparent;
-            }
-            text {
-                text-align: center;
-                fill: config.$yellowPok;
-            }
-            #curve {
-                max-width: 150px;
-            }
-            a {
-                text-decoration: none;
-            }
+            
             .pika-run {
                 margin-left: 20px;
                 /*margin-right: 35px;*/

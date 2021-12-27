@@ -1,4 +1,3 @@
-
 class Carrinho {
 
 	btnCart = document.querySelector('#btn-cart');

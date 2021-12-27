@@ -22,7 +22,7 @@ class Pokemon {
                     <p class="actual-price"><small>R$</small>${(this.preco * 0.8).toFixed(2)}</p>
                     <p class="parcela-price"><small>12x R$ </small>${(this.preco / 12).toFixed(2)}</p><br>
                     <div>
-                        <button class="btn">
+                        <button data-id="${this.id}" class="btn">
                         <img src="images/pokeball-color.png" title="Buy ${this.nome} Now">
                         <span class="buy">Buy</span>
                         </button>
@@ -35,6 +35,9 @@ class Pokemon {
 }
 
 let page = 0;
+const limit = 20;
+let pokemons = [];
+
 async function getPokemons(page = 0) {
     const pokeList = document.querySelector('.poke-list');
 
@@ -48,7 +51,6 @@ async function getPokemons(page = 0) {
     `;
 
     // Limita aquantidade de Pokémon por Página
-    const limit = 20;
 
     // Faz pagina subir depois de clicar mudar pagina
     window.scrollTo({top: 0, behavior: 'smooth'})
@@ -73,25 +75,28 @@ function pageLogger(page) {
     pageLogs.innerHTML = `${page}`;
 }
 
-function listaPokemons(pokemonsApi) {
+function renderPokemons(pokemonsApi) {
     const pokeList = document.querySelector('.poke-list');
 
     pokeList.innerHTML = '';
 
     const pokemons = pokemonsApi.map((pokemon) => new Pokemon(pokemon.name, pokemon.url));
 
+    this.pokemons = pokemons;
+
 
     pokemons.forEach((pokemon) => {
         const html = pokemon.html();
         pokeList.appendChild(html)
     });
+
+    // Adiciona Click nos Buy Buttons
     const buyButtons = document.querySelectorAll('.btn');
-    // console.log(buyButtons);
 
     buyButtons.forEach((btn) => {
         btn.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log('comprar');
+        const id = event.target.getAttribute('data-id');
         });
     });
 }
@@ -145,7 +150,7 @@ async function mudaPagina (newPage) {
     page = newPage;
 
     const pagination = await getPokemons(page);
-    listaPokemons(pagination.results);
+    renderPokemons(pagination.results);
 
     temPrimeiro(page);
     temAnterior(page);
@@ -185,7 +190,7 @@ function btnPrimeiro () {
 // Execute when the page finish loading
 window.onload = async () => {
     const response = await getPokemons(page);
-    listaPokemons(response.results);
+    renderPokemons(response.results);
 
     // if (window.Carrinho) new Carrinho();
 
