@@ -42,6 +42,7 @@ class Carrinho {
 
 	adicionar(pokemon) {
 		this.itens.push(pokemon);
+		// this.preco.push(pokemon.preco);
 		// Calcular preço TOTAL
 
 		const pokeNoCarrinho = document.querySelector ('.poke-container');
@@ -54,6 +55,7 @@ class Carrinho {
 						<li><img src="${pokemon.imagem}"></li>
 						<li class="preco-cart"><small>un. 01x</small></li>
 						<li class="preco-cart">${pokemon.preco} <small>R$</small></li>
+						<li><input type="checkbox"></li>
 					</ul>
 				</li>
 
