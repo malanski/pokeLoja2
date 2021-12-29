@@ -75,6 +75,7 @@ function pageLogger(page) {
     pageLogs.innerHTML = `${page}`;
 }
 
+//  RENDERIZA OS POKEMONS NA LISTA
 function renderPokemons(pokemonsApi) {
     const pokeList = document.querySelector('.poke-list');
 

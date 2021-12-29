@@ -22,8 +22,8 @@ body.carrinho-aberto {
 
 .carrinho {
     position: fixed;
-    right: -300px;
-    width: 300px;
+    right: -400px;
+    width: 400px;
     height: 100vh;
     top: 0;
     background-color: rgb(139, 123, 159);
@@ -61,8 +61,29 @@ body.carrinho-aberto {
         align-self: center;
     }
     .poke-container{
-        width: auto;
+        width: 100%;
         border-radius: 5px;
         border: 1px solid rgb(0, 0, 0);
+        
+        ol {
+            list-style-type: decimal;
+
+        }
+        .mini-card{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            li{
+                margin: 5px;
+                text-transform: capitalize;
+                font-size: 25px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
     }
 }

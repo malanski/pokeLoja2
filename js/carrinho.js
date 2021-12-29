@@ -5,8 +5,11 @@ class Carrinho {
 	itens = [];
 	total = 0;
 
-	constructor() {
+	constructor(options) {
 		this.btnCart.addEventListener('click', this.abrirCarrinho);
+
+		// this.preco = Math.floor();
+		// this.itens = options.itens.map(itens.preco => itens.preco);
 
 		this.btnCartClose.addEventListener('click', this.fecharCarrinho);
 		// console.log('carrinho carregado...........');
@@ -40,6 +43,39 @@ class Carrinho {
 	adicionar(pokemon) {
 		this.itens.push(pokemon);
 		// Calcular preço TOTAL
+
+		const pokeNoCarrinho = document.querySelector ('.poke-container');
+		pokeNoCarrinho.innerHTML = `
+			<ol>
+				<li>
+					<ul class="mini-card">
+						<li>${pokemon.nome}</li>
+						<li><img src="${pokemon.imagem}"></li>
+						<li><small>R$</small> ${pokemon.preco}</li>
+
+					</ul>
+				</li>
+
+				<li>
+					<ul class="mini-card">
+						<li>${pokemon.nome}</li>
+						<li><img src="${pokemon.imagem}"></li>
+						<li><small>R$</small> ${pokemon.preco}</li>
+
+					</ul>
+				</li>
+
+				<li>
+					<ul class="mini-card">
+						<li>${pokemon.nome}</li>
+						<li><img src="${pokemon.imagem}"></li>
+						<li><small>R$</small> ${pokemon.preco}</li>
+
+					</ul>
+				</li>
+			</ol>
+		`
+
 		console.log(pokemon.preco)
 		console.log(pokemon.imagem)
 		console.log(pokemon.nome)
