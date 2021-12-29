@@ -53,31 +53,18 @@ class Carrinho {
 						<li>${pokemon.nome}</li>
 						<li><img src="${pokemon.imagem}"></li>
 						<li class="preco-cart"><small>un. 01x</small></li>
-						<li class="preco-cart"><small>R$</small> ${pokemon.preco}</li>
+						<li class="preco-cart">${pokemon.preco} <small>R$</small></li>
 					</ul>
 				</li>
-				<li>
-					<ul class="mini-card">
-						<li><button title="remove" class="remove-cart"><img src="./images/bin.png"></button></li>
-						<li>${pokemon.nome}</li>
-						<li><img src="${pokemon.imagem}"></li>
-						<li class="preco-cart"><small>un. 01x</small></li>
-						<li class="preco-cart"><small>R$</small> ${pokemon.preco}</li>
-					</ul>
-				</li>
-				<li>
-					<ul class="mini-card">
-						<li><button title="remove" class="remove-cart"><img src="./images/bin.png"></button></li>
-						<li>${pokemon.nome}</li>
-						<li><img src="${pokemon.imagem}"></li>
-						<li class="preco-cart"><small>un. 01x</small></li>
-						<li class="preco-cart"><small>R$</small> ${pokemon.preco}</li>
-					</ul>
-				</li>
-				
-			</ol>
-		`
 
+			</ol>
+			<div class="preco-carrinho">
+				<h2 class="total-preco">Total = ${pokemon.preco} R$<input type="checkbox"></h2>
+				<h3 class="total-parcela">Parcelado Total = 12 x ${(pokemon.preco / 12).toFixed(2)} R$<input type="checkbox"></h3>
+				<h2 class="total-avista">AVISTA Total = ${(pokemon.preco * 0.8).toFixed(2)} R$<input type="checkbox"></h2>
+			</div>
+
+		`
 		console.log(pokemon.preco)
 		console.log(pokemon.imagem)
 		console.log(pokemon.nome)
