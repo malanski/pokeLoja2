@@ -58,6 +58,26 @@ class Carrinho {
 						<li><input type="checkbox"></li>
 					</ul>
 				</li>
+				<li>
+					<ul class="mini-card">
+						<li><button class="remove-cart" title="remove"><img src="./images/bin.png"></button></li>
+						<li>${pokemon.nome}</li>
+						<li><img src="${pokemon.imagem}"></li>
+						<li class="preco-cart"><small>un. 01x</small></li>
+						<li class="preco-cart">${pokemon.preco} <small>R$</small></li>
+						<li><input type="checkbox"></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="mini-card">
+						<li><button class="remove-cart" title="remove"><img src="./images/bin.png"></button></li>
+						<li>${pokemon.nome}</li>
+						<li><img src="${pokemon.imagem}"></li>
+						<li class="preco-cart"><small>un. 01x</small></li>
+						<li class="preco-cart">${pokemon.preco} <small>R$</small></li>
+						<li><input type="checkbox"></li>
+					</ul>
+				</li>
 
 			</ol>
 			<div class="preco-carrinho">
