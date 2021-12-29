@@ -49,30 +49,32 @@ class Carrinho {
 			<ol>
 				<li>
 					<ul class="mini-card">
+						<li><button class="remove-cart" title="remove"><img src="./images/bin.png"></button></li>
 						<li>${pokemon.nome}</li>
 						<li><img src="${pokemon.imagem}"></li>
-						<li><small>R$</small> ${pokemon.preco}</li>
-
+						<li class="preco-cart"><small>un. 01x</small></li>
+						<li class="preco-cart"><small>R$</small> ${pokemon.preco}</li>
 					</ul>
 				</li>
-
 				<li>
 					<ul class="mini-card">
+						<li><button title="remove" class="remove-cart"><img src="./images/bin.png"></button></li>
 						<li>${pokemon.nome}</li>
 						<li><img src="${pokemon.imagem}"></li>
-						<li><small>R$</small> ${pokemon.preco}</li>
-
+						<li class="preco-cart"><small>un. 01x</small></li>
+						<li class="preco-cart"><small>R$</small> ${pokemon.preco}</li>
 					</ul>
 				</li>
-
 				<li>
 					<ul class="mini-card">
+						<li><button title="remove" class="remove-cart"><img src="./images/bin.png"></button></li>
 						<li>${pokemon.nome}</li>
 						<li><img src="${pokemon.imagem}"></li>
-						<li><small>R$</small> ${pokemon.preco}</li>
-
+						<li class="preco-cart"><small>un. 01x</small></li>
+						<li class="preco-cart"><small>R$</small> ${pokemon.preco}</li>
 					</ul>
 				</li>
+				
 			</ol>
 		`
 

@@ -22,15 +22,15 @@ body.carrinho-aberto {
 
 .carrinho {
     position: fixed;
-    right: -400px;
-    width: 400px;
+    right: -360px;
+    width: 360px;
     height: 100vh;
     top: 0;
     background-color: rgb(139, 123, 159);
     opacity: 0.9;
     border-radius: 2% 0  0 2%;
-    border: solid 20px rgb(0, 13, 162);
-    padding: 10px;
+    border: solid 20px config.$headerColor;
+    padding: 5px;
     transition: all ease-in-out .3s;
     display: flex;
     align-items: flex-start;
@@ -64,26 +64,60 @@ body.carrinho-aberto {
         width: 100%;
         border-radius: 5px;
         border: 1px solid rgb(0, 0, 0);
+        padding: 5px;
+        background-color: #000000;
+        color: white;
         
         ol {
             list-style-type: decimal;
-
-        }
-        .mini-card{
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-            li{
-                margin: 5px;
-                text-transform: capitalize;
-                font-size: 25px;
-                img{
-                    width: 40px;
-                    height: 40px;
+            margin-left: -15px;
+            margin-right: 0;
+            width: fit-content;
+            
+            .mini-card{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-grow: 1;
+                align-items: center;
+                flex-wrap: nowrap;
+                border: 1px solid white;
+                border-radius: 5px;
+                background-color: rgb(139, 123, 159);
+                margin-left: -10px;
+                margin-bottom: 5px;
+                width: 100%;
+    
+                li{
+                    color: #000000;
+                    margin: 5px;
+                    text-transform: capitalize;
+                    font-size: 22px;
+                    
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .remove-cart{
+                        font-size: 12px;
+                        border-radius: 5px;
+                        img{
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                    
+                }
+                .preco-cart{
+                    font-size: 17px;
                 }
             }
         }
+    }
+    .final-buy {
+        border-radius: 5px;
+        margin-top: 5px;
+        align-self: flex-end;
     }
 }

@@ -251,12 +251,23 @@
         </footer>
 
         <section class="carrinho">
-            <button id="btn-cart-x">X</button>
+            <button id="btn-cart-x" title="close">X</button>
             <h4>Carrinho</h4>
             <!-- <p>Total = 00,00R$</p> -->
             <div class="poke-container">
-                <p>My Pokemons</p>
+                <ol>
+                    <li>
+                        <ul class="mini-card">
+                            <li><button class="remove-cart"><img src="images/bin.png" title="remove"></button></li>
+                            <li>nome</li>
+                            <li><small>un. 00</small></li>
+                            <li><img src="images/pokeball.png"></li>
+                            <li><small>R$</small>00.00</li>
+                        </ul>
+                    </li>
+                </ol>
             </div>
+            <button class="final-buy">Submit Purchase</button>
             <img src="./images/pokeloja-logo-png.png" alt="pokeloja logo-name">
 
         </section>

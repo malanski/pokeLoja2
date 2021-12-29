@@ -7,7 +7,7 @@ class Pokemon {
         this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/', '');
         this.imagem = `
             https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
-        this.preco = Math.floor(Math.random() * 100);
+        this.preco = Math.floor(Math.random() * 100).toFixed(2);
     }
     html() {
         const pokeDiv = document.createElement('div');
