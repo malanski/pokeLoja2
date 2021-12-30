@@ -17,7 +17,7 @@ main {
         font-family: config.$fontText;
         display: grid;
         grid-template-rows:
-        330px 330px 330px 330px 330px 70px;
+        335px 330px 330px 330px 330px 70px;
         grid-template-columns:
         16.5vw 16.5vw 16.5vw 16.5vw;
         grid-template-areas:
@@ -43,12 +43,13 @@ main {
                 .card-feet {
                     display: flex;
                     flex-direction: column;
-                    justify-content: start;
+                    justify-content: space-between;
                     align-items: center;
-                    align-self: center;
                     max-height: 100px;
                     width: auto;
                     height: auto;
+                    margin-left: 3px;
+                    margin-right: 6px;
                     .poke-pic {
                         // align-self: center;
                         width:150px;
@@ -277,7 +278,6 @@ main {
                     font-size: 1.2rem;
                 }
                 div button {
-                    width: 40vw;
                     .btn {
                         .img {
                             max-width: 20px;
@@ -324,7 +324,6 @@ main {
             margin: 5px;
             .poke a .card-feet {
                 height: 360px;
-                width: 40vw;
                 h2 .poke-name{
 
                 }
@@ -335,7 +334,8 @@ main {
                     font-size: 1.2rem;
                 }
                 div button {
-                    width: 40vw;
+                    align-self: center;
+                    width: 195px;
                     .btn {
                         .img {
                             max-width: 20px;
@@ -408,7 +408,6 @@ main {
                     font-size: 1.2rem;
                 }
                 div button {
-                    width: 40vw;
                     .btn {
                         .img {
                             max-width: 20px;
