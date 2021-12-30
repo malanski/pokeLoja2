@@ -381,8 +381,15 @@ nav {
                 }
             }
             .profile {
-                margin-top: 10px;
-                margin-right: 150px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                // margin-top: 10px;
+                // margin-right: 150px;
                 .headlink {
                     font-size: 0.8rem;
 
@@ -444,13 +451,7 @@ nav {
                 }
             }
             .profile {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                margin-top: 5px;
-                margin-left: 5px;
-                margin-right: 5px;
-                margin-bottom: 5px;
+                
                 .headlink {
                     font-size: 0.8rem;
                     margin-left: 0;
