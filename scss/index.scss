@@ -395,7 +395,7 @@ main {
             grid-row-gap: 10px;
 
             .poke {
-                height: 85%;
+                height: 80%;
                 a .card-feet {
                     width: 40vw;
                     margin-left: 2px;
@@ -415,6 +415,7 @@ main {
                         width: 170px;
     
                         .btn {
+                            padding: 5px;
                             .img {
                                 max-width: 20px;
                                 max-height: 20px;
