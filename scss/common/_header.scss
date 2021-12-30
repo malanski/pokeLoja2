@@ -210,6 +210,7 @@ nav {
         margin-left: 5px;
         margin-right: 25px;
         padding: 5px;
+        width: 98vw;
             .navbar {
                 display: flex;
                 justify-content: space-between;
@@ -217,12 +218,13 @@ nav {
                 list-style-type: none;
 
             li .navlink {
+                width: 100%;
                 font-size: 25px;
                 line-height: 26px;
                 color: white;
                 border-right: solid 1px white;
-                padding-right: 0.7rem;
-                margin-right: 0.7rem;
+                padding-right: 5px;
+                margin-right: 5px;
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -450,10 +452,9 @@ nav {
         }
     }
     nav {
-        line-height: 100%;
         .nav-container {
             justify-content: center;
-            width: 60vw;
+            width: 69vw;
             margin-left: 50px;
             .navbar {
                 padding-left: 0;
