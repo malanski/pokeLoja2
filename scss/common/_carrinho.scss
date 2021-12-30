@@ -157,5 +157,13 @@ body.carrinho-aberto {
     .carrinho{
         right: -360px;
         width: 360px;
+        .poke-container{
+            width: 309px;
+            ol{
+                li{
+                    width: 298px;
+                }
+            }
+        }
     }
 }
