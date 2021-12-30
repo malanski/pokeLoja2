@@ -275,9 +275,11 @@ nav {
             padding: 5px;
             margin: 10px;
             .logo {
+                margin-left: 0px;
+                margin-top: 50px;
                 a {
                     .font-poke{
-                        margin-top: -5px;
+                        margin-top: 50px;
                         padding-top: 0;
                         font-size: 45px;
                         line-height: 35px;
@@ -445,6 +447,14 @@ nav {
     header {
         margin: 0;
         .header-container {
+            .logo {
+                a{
+                    .font-poke{
+                        margin-left: 0px;
+                        margin-top: 5px;
+                    }
+                }
+            }
             .search {
                 margin-top: 20px;
                 margin-left: 20px;

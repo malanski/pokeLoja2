@@ -245,12 +245,12 @@ main {
         grid-column-end: 1;
         width: 100vw;
         margin-bottom: 10px;
-        margin-left: 0;
+        margin-left: 5px;
         .poke-list {
             grid-template-rows:
             360px 360px 360px 360px 360px 360px 360px 360px 360px 360px 5vh;
             grid-template-columns:
-            50% 50%;
+            48% 48%;
             grid-template-areas:
             'slot slot'
             'slot slot'
@@ -283,6 +283,8 @@ main {
                         font-size: 1.2rem;
                     }
                     div button {
+                        width: 250px;
+
                         .btn {
                             .img {
                                 max-width: 20px;

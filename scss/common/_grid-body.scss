@@ -55,7 +55,7 @@ body, html {
 @media screen and (max-width: config.$mobileBreakpointG){
     .gridzera {
         grid-template-rows:
-        180px 80px auto auto auto;
+        200px 80px auto auto auto;
         grid-template-columns: 100vw;
         grid-template-areas:
         'header'
