@@ -137,6 +137,7 @@ footer {
         width: 100vw;
         .containerfoot {
             margin-left: 0;
+            margin-right: 0;
             .footer-nav {
                 margin-left: 0;
                 li {
@@ -170,7 +171,18 @@ footer {
         margin: 0;
         padding: 0;
         .containerfoot {
-            margin: 0;
+            margin-right: 5px;
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width: config.$mobileBreakpointP){
+    .footer {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        .containerfoot {
+            margin-right: 5px;
             padding: 0;
         }
     }
