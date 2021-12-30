@@ -10,13 +10,13 @@ header {
     background-color: config.$headerColor;
     height: auto;
     width: 100vw;
-    padding: 15px;
+    padding: 5px;
 
     .header-container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-right: 50px;
+        margin-right: 55px;
         margin-left: 0;
         .logo {
             display: flex;
@@ -67,7 +67,7 @@ header {
         .search {
             margin-left: 20px;
             margin-right: 20px;
-            margin-top: 0;
+            margin-top: 10px;
             margin-bottom: 5px;
             position: relative;
             .search-input {
@@ -107,9 +107,14 @@ header {
             justify-content: flex-start;
             align-items: center;
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 52px;
+            padding-left: 5px;
             text-transform: uppercase;
+            border: 1px solid black;
+            border-radius: 5px;
             li {
                 margin-left: 8%;
                 .headlink {
@@ -123,6 +128,12 @@ header {
                     color: config.$yellowPok;
                 }
             }
+        }
+        .profile:hover{
+            // box-shadow: 2px 3px 10px config.$yellowPok;
+            border: 1px solid config.$yellowPok;
+
+
         }
     }
 }
@@ -360,7 +371,7 @@ nav {
         .header-container {
             margin: 5px;
             .logo {
-                margin-top: 35px;
+                margin-top: 55px;
                 margin-bottom: 15px;
             }
             .search {
@@ -383,7 +394,7 @@ nav {
             .profile {
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
+                width: 94%;
                 margin-top: 5px;
                 margin-left: 5px;
                 margin-right: 5px;
@@ -446,7 +457,7 @@ nav {
                         width: 79vw;
                     }
                     button {
-                        margin-right: -30px;
+                        margin-right: 5px;
                     }
                 }
             }

@@ -48,7 +48,7 @@ main {
                     max-height: 100px;
                     width: auto;
                     height: auto;
-                    margin-left: 3px;
+                    margin-left: 6px;
                     margin-right: 6px;
                     .poke-pic {
                         // align-self: center;
@@ -398,6 +398,8 @@ main {
                 height: 85%;
                 a .card-feet {
                     width: 40vw;
+                    margin-left: 2px;
+                    margin-right: 2px;
                     h2 .poke-name{
                         font-size: 1.2rem;
                         margin-left: -10px;
