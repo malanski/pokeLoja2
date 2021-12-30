@@ -190,7 +190,7 @@ aside {
         height: auto;
         margin: 5px;
         .aside-head {
-            margin: 5px;
+            margin: 15px;
             .loop {
                 margin-left: 10px;
                 margin-right: 10px;
@@ -212,11 +212,14 @@ aside {
             margin: 5px;
             .pikachuu {
                 margin-top: 100px;
-                margin-left: 10px;
+                margin-left: 0px;
                 margin-right: 10px;
-                width: 300px;
+                width: 340px;
                 height: 200px;
             }
+        }
+        .news{
+            width: 94%;
         }
     }
 }
@@ -229,11 +232,21 @@ aside {
                 width: 90%;
             }
         }
+        .crossfade{
+            .pikachuu{
+                width: 340px;
+            }
+        }
     }
 }
 @media screen and (max-width: config.$mobileBreakpointP){
     aside {
         .gambeta {
+        }
+        .crossfade{
+            .pikachuu{
+                width: 295px;
+            }
         }
     }
 }

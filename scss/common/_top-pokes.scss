@@ -152,8 +152,9 @@ footer .top-pokes {
 
 
 @media screen and (max-width: config.$mobileBreakpointG){
-    footer {
+    aside{
         .top-pokes {
+            width: 100%;
             h3 {
                 font-size: 18px;
             }
@@ -163,6 +164,26 @@ footer .top-pokes {
                     .poke-img {
                         max-width: 20vw;
                         margin-left: -5px;
+                    }
+                    span {
+                        font-size: 1.5rem;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .top-pokes {
+            h3 {
+                font-size: 11px;
+            }
+            ol {
+                font-size: 0.9rem;
+                li {
+                    .poke-img {
+                        max-width: 20vw;
+                        margin-left: 5px;
                     }
                     span {
                         font-size: 1.5rem;
