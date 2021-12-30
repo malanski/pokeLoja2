@@ -31,7 +31,7 @@ main {
         grid-row-gap: 35px;
         text-align: center;
         .poke {
-            height: auto;
+            height: 95%;
             transition: all ease-in-out 3s;
             text-align: center;
             border: 1px solid rgb(173, 200, 255);
@@ -114,6 +114,7 @@ main {
                         span{
                             font-size: 1rem;
                             font-weight: 600;
+                            color: white;
                         }
                     }
                     button:hover {

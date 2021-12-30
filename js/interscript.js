@@ -39,14 +39,14 @@ vaporWave.onclick = function() {
 
 
 // Define nome de usuario
-let myAsideUser = document.querySelector('h4');
+let myUserName = document.querySelector('.welcome');
 
 function defineUserName() {
     let userName = prompt('Please Type your name here:');
 
     localStorage.setItem('name', userName);
 
-    myAsideUser.textContent = 'welcome to the pokéloja, ' + userName;
+    myUserName.textContent = 'welcome to the pokéloja, ' + userName;
 }
 
 // USER BUTTON
@@ -60,7 +60,7 @@ if(!localStorage.getItem('nome')){
 } else {
     let storedName = localStorage.getItem('nome');
 
-    myAsideUser.textContent = 'welcome to the pokéloja, ' + storedName;
+    myUserName.textContent = 'welcome to the pokéloja, ' + storedName;
 }
 // checador para nome vazio
 function defineUserName() {
@@ -69,7 +69,7 @@ function defineUserName() {
         defineUserName();
     } else {
         localStorage.setItem('nome',userName);
-        myAsideUser.innerHTML = 'welcome to the pokéloja, ' + userName;
+        myUserName.innerHTML = 'welcome to the pokéloja, ' + userName;
     }
 }
 

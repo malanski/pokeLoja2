@@ -47,6 +47,7 @@ class Carrinho {
 
 		const pokeNoCarrinho = document.querySelector ('.poke-container');
 		pokeNoCarrinho.innerHTML = `
+			<h4 class="user-name"></h4>
 			<ol>
 				<li>
 					<ul class="mini-card">
