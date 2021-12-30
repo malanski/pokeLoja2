@@ -394,30 +394,35 @@ main {
             grid-column-gap: 10px;
             grid-row-gap: 10px;
 
-            .poke a .card-feet {
-                width: 40vw;
-                h2 .poke-name{
-                    font-size: 1.2rem;
-                    margin-left: -10px;
-                    text-transform: capitalize;
-                }
-                .old-price {
-                    font-size: 1rem;
-                }
-                .actual-price {
-                    font-size: 1.2rem;
-                }
-                div button {
-                    .btn {
-                        .img {
-                            max-width: 20px;
-                            max-height: 20px;
-                        }
-                        .buy {
-                            font-size: 1.2rem;
+            .poke {
+                height: 85%;
+                a .card-feet {
+                    width: 40vw;
+                    h2 .poke-name{
+                        font-size: 1.2rem;
+                        margin-left: -10px;
+                        text-transform: capitalize;
+                    }
+                    .old-price {
+                        font-size: 1rem;
+                    }
+                    .actual-price {
+                        font-size: 1.2rem;
+                    }
+                    div button {
+                        width: 170px;
+    
+                        .btn {
+                            .img {
+                                max-width: 20px;
+                                max-height: 20px;
+                            }
+                            .buy {
+                                font-size: 1.2rem;
+                            }
                         }
                     }
-                }
+            }
             }
             .loading {
                 width: 80vw;
