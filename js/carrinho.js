@@ -15,8 +15,8 @@ class Carrinho {
 		// console.log('carrinho carregado...........');
 
 		this.clickOutCart.addEventListener('click', function(event) {
-		event.preventDefault();
-		document.body.className = '';
+			event.preventDefault();
+			document.body.className = '';
 		});
 
 		this.keyboardPress = addEventListener('keydown', function(event) {
