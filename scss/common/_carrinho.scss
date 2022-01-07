@@ -22,14 +22,14 @@ body.carrinho-aberto {
 
 .carrinho {
     position: fixed;
-    right: -412px;
-    width: 412px;
+    right: -280px;
+    width: 280px;
     height: 100vh;
     top: 0;
     background-color: rgb(139, 123, 159);
     opacity: 0.9;
     border-radius: 2% 0  0 2%;
-    border: solid 20px config.$headerColor;
+    border-left: solid 20px config.$headerColor;
     padding: 5px;
     transition: all ease-in-out .3s;
     display: flex;
@@ -73,7 +73,7 @@ body.carrinho-aberto {
         align-self: center;
     }
     .poke-container{
-        width: 362px;
+        width: 100%;
         border-radius: 5px;
         border: 1px solid rgb(0, 0, 0);
         padding: 5px;
@@ -87,49 +87,39 @@ body.carrinho-aberto {
             
             li {
                 margin-left: -15px;
-                width: 350px;
-                .mini-card{
-                    list-style: none;
+                margin-top: -20px;
+                margin-bottom: 20px;
+                width: 100%;
+                font-size: 25px;
+                .buy-card {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
-                    flex-grow: 1;
                     align-items: center;
-                    flex-wrap: nowrap;
-                    border: 1px solid white;
-                    border-radius: 5px;
-                    background-color: rgb(139, 123, 159);
-                    margin-left: -20px;
-                    margin-bottom: 5px;
-                    margin-top: 10px;
-                    width: 100%;
-        
-                    li{
-                        color: #000000;
-                        margin: -5px;
-                        padding: 5px;
-                        text-transform: capitalize;
-                        font-size: 22px;
-                        
-                        img{
-                            width: 40px;
-                            height: 40px;
-                            margin-left: 5px;
-                        }
-                        .remove-cart{
-                            font-size: 12px;
-                            border-radius: 5px;
-                            img{
-                                width: 10px;
-                                height: 10px;
-                            }
-                        }
-                        
+                    justify-content: space-between;
+                    img {
+                        width: 50px;
+                        margin-right: -20px;
                     }
-                    .preco-cart{
-                        font-size: 14px;
-                        padding: 1px;
-                        margin: 0;
+                    i{
+                        font-size: 12px;
+                    }
+                    i:hover{
+                        color: config.$yellowPok;
+                    }
+                    .item-price {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        flex-direction: column;
+                        h6{
+                            margin-left: -20px;
+                            margin-bottom: 5px;
+                            margin-top: 10px;
+                            font-size: 25px;
+                        }
+                        span{
+                            font-size: 20px;
+                        }
                     }
                 }
             }

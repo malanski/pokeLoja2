@@ -99,7 +99,11 @@ function renderPokemons(pokemonsApi) {
         const id = event.target.getAttribute('data-id');
 
         const pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
+        
+        const openCartClass = document.querySelectorAll('.btn');
         window.carrinho.adicionar(pokemon);
+        
+        window.carrinho.abrirCarrinho(openCartClass);
         });
     });
 }

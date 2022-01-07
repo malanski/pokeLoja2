@@ -4,6 +4,7 @@ class Carrinho {
 	clickOutCart = document.querySelector('.opn-cart');
 	itens = [];
 	total = 0;
+	item = document.querySelector('.inside');
 
 	constructor(options) {
 		this.btnCart.addEventListener('click', this.abrirCarrinho);
@@ -28,7 +29,7 @@ class Carrinho {
 	}
 
 	abrirCarrinho(event) {
-		event.preventDefault();
+		// event.preventDefault();
 		const openCartClass = 'carrinho-aberto';
 
 		document.body.className.includes(openCartClass) ? document.body.className = '' : document.body.className = openCartClass;
@@ -46,41 +47,29 @@ class Carrinho {
 		// Calcular preço TOTAL
 
 		const pokeNoCarrinho = document.querySelector ('.poke-container');
+
+
+        // this.types = options.types.map(typeItem => typeItem.type.name);
+
+		// this.item.innerHTML =`
+		// 			<div class="buy-card">
+		// 				<img src="${pokemon.imagem}">
+		// 				<div class="item-price">
+		// 					<h6>${pokemon.nome}</h6>
+		// 					<span><small>1 X </small>${pokemon.preco}<small> R$ </small></span>
+		// 				</div>
+		// 				<i class="fas fa-trash" title="Remove"></i>
+		// 			</div>`
+
 		pokeNoCarrinho.innerHTML = `
 			<h4 class="user-name"></h4>
 			<ol>
-				<li>
-					<ul class="mini-card">
-						<li><button class="remove-cart" title="remove"><img src="./images/bin.png"></button></li>
-						<li>${pokemon.nome}</li>
-						<li><img src="${pokemon.imagem}"></li>
-						<li class="preco-cart"><small>un. 01x</small></li>
-						<li class="preco-cart">${pokemon.preco} <small>R$</small></li>
-						<li><input type="checkbox"></li>
-					</ul>
-				</li>
-				<li>
-					<ul class="mini-card">
-						<li><button class="remove-cart" title="remove"><img src="./images/bin.png"></button></li>
-						<li>${pokemon.nome}</li>
-						<li><img src="${pokemon.imagem}"></li>
-						<li class="preco-cart"><small>un. 01x</small></li>
-						<li class="preco-cart">${pokemon.preco} <small>R$</small></li>
-						<li><input type="checkbox"></li>
-					</ul>
-				</li>
-				<li>
-					<ul class="mini-card">
-						<li><button class="remove-cart" title="remove"><img src="./images/bin.png"></button></li>
-						<li>${pokemon.nome}</li>
-						<li><img src="${pokemon.imagem}"></li>
-						<li class="preco-cart"><small>un. 01x</small></li>
-						<li class="preco-cart">${pokemon.preco} <small>R$</small></li>
-						<li><input type="checkbox"></li>
-					</ul>
-				</li>
-
+				${
+					this.itens.map(itemPoke => `<li class="inside">${this.item}</li>`)
+					.join('')
+				}
 			</ol>
+
 			<div class="preco-carrinho">
 				<h2 class="total-preco">Total = ${pokemon.preco} R$<input type="checkbox"></h2>
 				<h3 class="total-parcela">Parcelado Total = 12 x ${(pokemon.preco / 12).toFixed(2)} R$<input type="checkbox"></h3>

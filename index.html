@@ -42,7 +42,6 @@
                         title="Pokémon Official Home Page">
                             <text class="font-poke">Pokéloja</text>
                         </a>
-
     
                     <div>
                         <img class="pika-run" width="50px"
@@ -60,14 +59,20 @@
     
                 <ul class="profile">
                     <li>
-                        <a href="" class="headlink">About</a>
+                        <a href="" class="headlink">
+                            <span>About</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="#" class="headlink">Contact</a>
+                        <a href="#" class="headlink">
+                            <span>
+                                Contact
+                            </span>
+                        </a>
                     </li>
                     <li>
                         <a id="btn-cart" href="#" class="headlink">
-                            <i class="fa-solid fa-cart-plus"></i>
+                            <span><i class="fa-solid fa-cart-plus"></i></span>
                         </a>
                     </li>
                 </ul>
@@ -258,18 +263,19 @@
             </div>
             <div class="poke-container">
                 <ol>
-                    <li>
-                        <ul class="mini-card">
-                            <li><button class="remove-cart"><img src="images/bin.png" title="remove"></button></li>
-                            <li>nome</li>
-                            <li><img src="images/pokeball.png"></li>
-                            <li><small>un. 00</small></li>
-                            <li><small>R$</small>00.00</li>
-                        </ul>
+                    <li class="inside">
+                        <div class="buy-card">
+                            <img src="images/pikachu-01.png">
+                            <div class="item-price">
+                                <h6>Pikachu</h6>
+                                <span><small>1 X </small> 100.00 <small> R$ </small></span>
+                            </div>
+                            <i class="fas fa-trash" title="Remove"></i>
+                        </div>
                     </li>
                 </ol>
 
-                <h2 class="total-preco">Total = 00,00 R$</h2>
+                <h2 class="total-preco">Total = 100,00 R$</h2>
 
             </div>
             <button class="final-buy">Submit Purchase</button>
