@@ -1,16 +1,42 @@
-  <br>
-  <div align="center">
-    # PokéLoja<br>
-    version 0.2 by Ulisses Malanski<br>
-    <img height="320em" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/890.png">
-    <img height="110em" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/889.png">
-    <img height="70em" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/891.png">
-  </div>
-  <br>
-  ##### This project is about creating a responsive web store using Html and Css, also javaScript an API manipulation.
-  #### Project Struture
-  <br>
-  ##### Gridzera is the name of de class in css, it is the grid that holds the whole structure of the Home(index.html).
+
+<div align="left">
+  
+# PokeSTORE - AWARI FullStack Course
+
+</div>
+
+<div align="right">
+https://github.com/malanski/pokeLoja2/
+</div>
+
+<div align="left">
+    
+### HTML + (SASS)SCSS + JavaScript with API 
+    
+</div> 
+
+
+<div align="left" margin-top="-150px">
+    
+| <img height="100px" src="https://avatars.githubusercontent.com/u/87362996?v=4"> | <a href="https://github.com/malanski">Ulisses Malanski</a> " - Web Developer/Visual Artist and musician in his spare time.  |
+| ----------- | ----------- |
+| inicio do projeto | desde outubro 2021 |
+| STATUS | em Desenvolvimento |
+
+    
+<div>
+
+<div align="center">  
+  <img height="320em" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/890.png">
+  <img height="110em" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/889.png">
+  <img height="70em" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/891.png">
+</div>
+
+##### This project is one of my first attempt of creating a responsive web store using Html and Css, also javaScript an API manipulation.
+
+#### Project Struture <br>
+
+##### Gridzera is the name of de class in css, it is the grid that holds the whole structure of the Home(index.html).
    
     grid-template-areas:   
       'header -- header--'  
