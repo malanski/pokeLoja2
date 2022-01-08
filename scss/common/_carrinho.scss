@@ -52,15 +52,20 @@ body.carrinho-aberto {
             margin-bottom: 20px;
         }
         button{
+            color: #000000;
             cursor: pointer;
-            top: 0;
-            margin-left: -14px;
+            margin-left: -30px;
+            margin-top: 10px;
             background: white;
-            border: 0;
             border: 1px solid black;
             border-radius: 50%;
-            font-weight: bold;
-            font-size:  16px;
+            font-size:  18px;
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            i{
+                margin: 0;
+            }
         }
     }
     p{

@@ -93,6 +93,7 @@ main {
                         margin: 0;
                         // margin-bottom: 10px;
                         width: 16.5vw;
+                        height: 45px;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -111,6 +112,7 @@ main {
                             margin-bottom: 0;
                             margin-right: 0.3rem;
                             margin-left: 0.3rem;
+                            opacity: 0.5;
                         }
                         span{
                             font-size: 1rem;
@@ -120,7 +122,7 @@ main {
                     }
                     button:hover {
                         animation: pokeBtnAnimation 5s ease infinite;
-                        height: 50px;
+                        height: 45px;
                         span{
                             animation: buyAnimation 4s ease infinite;
                         }
