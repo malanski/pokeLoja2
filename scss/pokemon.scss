@@ -75,13 +75,13 @@ main {
                 }
                 .poke-status {
                     background-color: rgb(195, 124, 243);
-                    border: 1px solid gray;
+                    border: 5px solid config.$pokeRed;
                     border-radius: 5px;
                     margin: 20px;
-                    padding: 50px;
+                    padding: 10px;
                     img {
                         width: 180px;
-                        margin-top: -55px;
+                        margin-top: -35px;
 
                     }
                     .name-animated{
@@ -89,6 +89,7 @@ main {
                         flex-direction: row;
                         justify-content: space-between;
                         width: 100%;
+                        margin-top: 20px;
                         .animated {
                             width: 50px;
                             margin-left: 15px;

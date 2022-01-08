@@ -137,7 +137,7 @@ async function getPokemonData(id = 0) {
         const pokeBack = document.querySelector('.back-poke');
         pokeBack.innerHTML = `
             <a href="pokemon.html?id=${+id - 1}">
-                <button><i class="fas fa-arrow-left">BACK</button>
+                <button><i class="fas fa-arrow-left"></i>BACK</button>
             </a>`
             if (id === 1) {
                 pokeNext.style.visibility = "hidden";

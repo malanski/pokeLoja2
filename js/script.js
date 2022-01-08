@@ -7,6 +7,8 @@ class Pokemon {
         this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/', '');
         this.imagem = `
             https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
+        this.imagem3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
+        
         this.preco = Math.floor(Math.random() * 100).toFixed(2);
         // this.precoTotal = this.precoTotal.map(totalPrice => totalPrice.push(preco))
     }
@@ -25,7 +27,7 @@ class Pokemon {
                     <p class="parcela-price"><small>12x R$ </small>${(this.preco / 12).toFixed(2)}</p><br>
                     <div>
                         <button data-id="${this.id}" class="btn">
-                        <img data-id="${this.id}" src="images/pokeball-1.png" title="Buy ${this.nome} Now">
+                        <img data-id="${this.id}" src="${this.imagem3}" title="Buy ${this.nome} Now">
                         <!--<i class="far fa-dot-circle"></i>-->
                         <span data-id="${this.id}" class="buy">Buy</span>
                         </button>

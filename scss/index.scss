@@ -47,7 +47,7 @@ main {
                     align-items: center;
                     max-height: 100px;
                     width: auto;
-                    height: auto;
+                    height: 330px;
                     margin-left: 6px;
                     margin-right: 6px;
                     .poke-pic {
@@ -106,8 +106,9 @@ main {
                         border: 1px solid rgb(0, 0, 0);
                         border-radius: 5px;
                         padding: 10px;
+                        margin-bottom: 0;
                         img {
-                            height: 1.9rem;
+                            height: 35px;
                             margin-top: 0;
                             margin-bottom: 0;
                             margin-right: 0.3rem;
