@@ -7,6 +7,7 @@ class PokemonSelected {
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;   
         this.imagem2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${this.id}.png`;   
         this.imagem3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
+        this.imagem32 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/${this.id}.gif`;   
         this.imagem4 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/${this.id}.png`;   
         this.imagem5 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/${this.id}.png`;   
         this.imagem6 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/female/${this.id}.png`;   
@@ -69,12 +70,31 @@ class PokemonSelected {
                 1960s with the release of ${this.name} Letraset sheets containing Lorem Ipsum passages, and more 
                 recently with ${this.types[1]} desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
-
+            <img src="${this.imagem2}" alt="${this.name} shiny image" title="${this.name} shiny">
+            
             <div class="other-images">
-                <img src="${this.imagem5}" alt="${this.name} shiny image" title="${this.name} shiny">
-                <img src="${this.imagem6}" alt="${this.name} Female image" title="${this.name} Female">
-                <img src="${this.imagem7}" alt="${this.name} icon image" title="${this.name} icon">
+                <p> 
+                    <img src="${this.imagem3}" alt="${this.name} animated" title="${this.name} animated">
+                    <img src="${this.imagem32}" alt="${this.name} back" title="${this.name} back">
+                </p>
             </div>
+
+            
+
+            <table>
+                <tr>
+                    <th>Red - Blue</th>
+                    <th>Shiny</th>
+                    <th>Female</th>
+                    <th>Icon</th>
+                </tr>
+                <tr>
+                    <td><img src="${this.imagem4}" alt="${this.name} shiny image" title="${this.name} shiny"></td>
+                    <td><img src="${this.imagem5}" alt="${this.name} shiny " title="${this.name} shiny"></td>
+                    <td><img src="${this.imagem6}" alt="${this.name} Female " title="${this.name} Female"></td>
+                    <td><img src="${this.imagem7}" alt="${this.name} Female " title="${this.name} Female"></td>
+                </tr>
+            </table>
 
             
         </div>

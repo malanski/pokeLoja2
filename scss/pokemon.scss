@@ -110,6 +110,9 @@ main {
                 .info-head {
                     display: flex;
                     flex-direction: row;
+                    img{
+                        width: 80px;
+                    }
                 }
                 h5{
                     font-size: 25px;
@@ -117,13 +120,21 @@ main {
                 }
                 p{
                     font-size: 17px;
+                    text-align: justify;
                 }
+                img{
+                    width: 100%;
+                }
+                
                 .other-images {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
                     width: 100%;
+                    img {
+                        width: 150px;
+                    }
                 }
             }
         }
