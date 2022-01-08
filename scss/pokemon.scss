@@ -107,12 +107,23 @@ main {
             }
 
             .poke-info {
+                .info-head {
+                    display: flex;
+                    flex-direction: row;
+                }
                 h5{
                     font-size: 25px;
                     text-transform: capitalize;
                 }
                 p{
                     font-size: 17px;
+                }
+                .other-images {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
                 }
             }
         }

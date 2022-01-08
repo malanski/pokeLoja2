@@ -7,6 +7,10 @@ class PokemonSelected {
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;   
         this.imagem2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${this.id}.png`;   
         this.imagem3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
+        this.imagem4 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/${this.id}.png`;   
+        this.imagem5 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/${this.id}.png`;   
+        this.imagem6 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/female/${this.id}.png`;   
+        this.imagem7 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/female/${this.id}.png`;   
     }
     html() {
         const pokeDiv = document.querySelector('.poke-data')
@@ -50,7 +54,12 @@ class PokemonSelected {
             </div>
         </div>
         <div class="poke-info">
-        <h5> ${this.name} History</h5>
+
+        <div class="info-head">
+            <h5> ${this.name} History</h5>
+            <img src="${this.imagem4}" alt="${this.name} red-blue">
+        </div>
+
             <p>
                 Lorem Ipsum is ${this.name} simply dummy text of the printing and typesetting industry.  
                 Lorem Ipsum ${this.name} has been the industry's ${this.types[0]} standard dummy text ever since the 1500s,
@@ -60,6 +69,13 @@ class PokemonSelected {
                 1960s with the release of ${this.name} Letraset sheets containing Lorem Ipsum passages, and more 
                 recently with ${this.types[1]} desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
+
+            <div class="other-images">
+                <img src="${this.imagem5}" alt="${this.name} shiny image" title="${this.name} shiny">
+                <img src="${this.imagem6}" alt="${this.name} Female image" title="${this.name} Female">
+                <img src="${this.imagem7}" alt="${this.name} icon image" title="${this.name} icon">
+            </div>
+
             
         </div>
         `
