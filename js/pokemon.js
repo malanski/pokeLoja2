@@ -73,15 +73,21 @@ class PokemonSelected {
             <img src="${this.imagem2}" alt="${this.name} shiny image" title="${this.name} shiny">
             
             <div class="other-images">
-                <p> 
-                    <img src="${this.imagem3}" alt="${this.name} animated" title="${this.name} animated">
-                    <img src="${this.imagem32}" alt="${this.name} back" title="${this.name} back">
-                </p>
+                <img src="${this.imagem32}" alt="${this.name} back" title="${this.name} back">
+
+                <img src="${this.imagem3}" alt="${this.name} animated" title="${this.name} animated">
+                
             </div>
 
             
 
             <table>
+                <tr>
+                    <th></th>
+                    <th class="no-border">Other</th>
+                    <th>Versions</th>
+                    <th></th>
+                </tr>
                 <tr>
                     <th>Red - Blue</th>
                     <th>Shiny</th>
@@ -92,7 +98,7 @@ class PokemonSelected {
                     <td><img src="${this.imagem4}" alt="${this.name} shiny image" title="${this.name} shiny"></td>
                     <td><img src="${this.imagem5}" alt="${this.name} shiny " title="${this.name} shiny"></td>
                     <td><img src="${this.imagem6}" alt="${this.name} Female " title="${this.name} Female"></td>
-                    <td><img src="${this.imagem7}" alt="${this.name} Female " title="${this.name} Female"></td>
+                    <td><img src="${this.imagem7}" alt="${this.name} icon " title="${this.name} icon"></td>
                 </tr>
             </table>
 
