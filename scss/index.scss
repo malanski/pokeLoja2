@@ -120,6 +120,7 @@ main {
                     }
                     button:hover {
                         animation: pokeBtnAnimation 5s ease infinite;
+                        height: 50px;
                         span{
                             animation: buyAnimation 4s ease infinite;
                         }
@@ -133,10 +134,7 @@ main {
             transition: all ease-in-out 3s;
 
             h2 {
-            // font-family: config.$pokeFont;
-            // margin-top: -30px;
-            color:config.$yellowPok;
-            // text-shadow: config.$texShadow;
+                color:config.$yellowPok;
             }
         }
     }
@@ -193,7 +191,7 @@ main {
     100% {
         color: config.$yellowPok;
         text-shadow:
-        0.2rem 0.5vh 0.1vw config.$bluePok;
+        0.2rem 0.5vh 0.5vw config.$bluePok;
         font-family: Pokemon;
     }
 }
@@ -203,19 +201,16 @@ main {
         color: #DDD;
         text-shadow:
         0.2px 0.5vh 0.1vw config.$blue2Pok;
-        font-family: Pokemon;
     }
     50% {
         background-position: 100% 50%;
-        font-size: 1.3rem;
-        font-family: Pokemon;
+        // font-size: 1.3rem;
     }
     100% {
         background-position: 0% 50%;
         color: config.$yellowPok;
         text-shadow:
-        0.2rem 0.5vh 0.1vw config.$bluePok;
-        font-family: Pokemon;
+        0.2rem 0.5vh 0.2vw config.$bluePok;
     }
 }
 

@@ -7,11 +7,11 @@ header {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 2;
-    background-color: config.$headerColor;
+    background-color: config.$bodyBgColor;
     height: auto;
     width: 100vw;
     padding: 5px;
-
+    transition: all ease-out 1.5s;
     .header-container {
         display: flex;
         justify-content: space-between;
@@ -138,6 +138,10 @@ header {
         }
     }
 }
+header:hover {
+    transition: all ease-in-out 0.9s;
+    background-color: config.$headerColor;
+}
 
 .pika-spin {
     animation: pikaspin 3s infinite linear;
@@ -180,6 +184,7 @@ header {
     background-repeat: no-repeat;
     background-size: 150%;
     margin-left: 100%;
+    margin-top: -50px;
     width: 50%;
     filter:blur(2px);
     transform: all ease 2s;
@@ -190,15 +195,19 @@ header {
         background-repeat: no-repeat;
         background-size: 200%;
         margin-left: 45%;
+        margin-top: -60px;
         width: 70%;
         filter: contrast(200%)
         hue-rotate(180deg);
         animation-name: 'pika-spin';
+        transform: all ease 2s;
+        // position: absolute;
+
     }
     to {
         background-color: none;
         margin-left: 0;
-        width: 100%;
+        width: 50%;
     }
 }
 
@@ -248,13 +257,18 @@ nav {
             margin: 10px;
             a {
                 text-decoration: none;
+                margin-left: 5px;
                 .socialfoot {
-                    width: 25px;
-                    height: 25px;
+                    // width: 25px;
+                    // height: 25px;
                     border-radius: 5px;
                     margin-top: 2%;
                     margin-bottom: 2%;
+                    margin-left: 5px;
                     transition: all ease 0.4s;
+                    font-size: 25px;
+                    color: white;
+
                 }
             }
         }

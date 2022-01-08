@@ -16,7 +16,7 @@ body, html {
 }
 
 .gridzera {
-    background-color: rgb(98, 81, 81);
+    background-color: config.$bodyBgColor;
     margin: 0;
     display: grid;
     width: 100vw;

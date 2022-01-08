@@ -3,8 +3,8 @@ class Carrinho {
 	btnCartClose = document.querySelector('#btn-cart-x');
 	clickOutCart = document.querySelector('.opn-cart');
 	itens = [];
+	item = [];
 	total = 0;
-	item = document.querySelector('.inside');
 
 	constructor(options) {
 		this.btnCart.addEventListener('click', this.abrirCarrinho);
@@ -43,29 +43,31 @@ class Carrinho {
 
 	adicionar(pokemon) {
 		this.itens.push(pokemon);
+		this.item.push(pokemon);
 		// this.preco.push(pokemon.preco);
 		// Calcular preço TOTAL
 
 		const pokeNoCarrinho = document.querySelector ('.poke-container');
 
+		const item = document.querySelector('.inside');
 
         // this.types = options.types.map(typeItem => typeItem.type.name);
 
-		// this.item.innerHTML =`
-		// 			<div class="buy-card">
-		// 				<img src="${pokemon.imagem}">
-		// 				<div class="item-price">
-		// 					<h6>${pokemon.nome}</h6>
-		// 					<span><small>1 X </small>${pokemon.preco}<small> R$ </small></span>
-		// 				</div>
-		// 				<i class="fas fa-trash" title="Remove"></i>
-		// 			</div>`
+		item.innerHTML =`
+					<div class="buy-card">
+						<img src="${pokemon.imagem}">
+						<div class="item-price">
+							<h6>${pokemon.nome}</h6>
+							<span><small>1 X </small>${pokemon.preco}<small> R$ </small></span>
+						</div>
+						<i class="fas fa-trash" title="Remove"></i>
+					</div>`
 
 		pokeNoCarrinho.innerHTML = `
 			<h4 class="user-name"></h4>
 			<ol>
 				${
-					this.itens.map(itemPoke => `<li class="inside">${this.item}</li>`)
+					this.item.map(itemPoke => `<li class="inside">${pokemon.item}</li>`)
 					.join('')
 				}
 			</ol>

@@ -43,11 +43,11 @@ async function getPokemons(page = 0) {
 
     // Loading
     pokeList.innerHTML = `
-    <div>
-    <div class="loading">
-        <p>Now Loading... please wait...</p>
+        <div>
+            <div class="loading">
+                <p>Now Loading... please wait...</p>
+            </div>
         </div>
-    </div>
     `;
 
     // Limita aquantidade de Pokémon por Página
@@ -99,10 +99,11 @@ function renderPokemons(pokemonsApi) {
         const id = event.target.getAttribute('data-id');
 
         const pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
-        
+
         const openCartClass = document.querySelectorAll('.btn');
+
         window.carrinho.adicionar(pokemon);
-        
+
         window.carrinho.abrirCarrinho(openCartClass);
         });
     });

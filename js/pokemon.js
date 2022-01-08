@@ -5,6 +5,8 @@ class PokemonSelected {
         this.abilities = options.abilities.map(abilityType => abilityType.ability.name);
         this.id = options.id;
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;   
+        this.imagem2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${this.id}.png`;   
+        this.imagem3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
     }
     html() {
         const pokeDiv = document.querySelector('.poke-data')
@@ -17,7 +19,13 @@ class PokemonSelected {
             </div>
 
             <div class="poke-status">
-                <h2><small>Nome:</small> ${this.name}</h2>
+                <img src="${this.imagem2}" alt="${this.name} original">
+                
+                <div class="name-animated">
+                    <h2><small>Nome:</small> ${this.name}</h2>
+                    <img class="animated" src="${this.imagem3}" alt="${this.name} animated">
+                </div>
+
                 <hr>
                     <h2>Tipo</h2>
                     <ul>
@@ -122,14 +130,14 @@ async function getPokemonData(id = 0) {
         //o + antes do id converte String em Numeros positivos
         pokeNext.innerHTML = `
             <a href="pokemon.html?id=${+id + 1}">
-                <button>NEXT-></button>
+                <button>NEXT<i class="fas fa-arrow-right"></i></button>
             </a>`;
     }
     function backPoke() {
         const pokeBack = document.querySelector('.back-poke');
         pokeBack.innerHTML = `
             <a href="pokemon.html?id=${+id - 1}">
-                <button><-BACK</button>
+                <button><i class="fas fa-arrow-left">BACK</button>
             </a>`
             if (id === 1) {
                 pokeNext.style.visibility = "hidden";

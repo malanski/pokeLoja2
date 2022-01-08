@@ -58,12 +58,20 @@ main {
                         padding: 10px;
                         margin-top: -25px;
                         margin-bottom: 55px;
+                        transition: all ease-in-out .8s;
+
                     }
                 }
                 .poke-img:hover{
-                    transition: all ease-in-out .3s;
-                    background-color: black;
+                    // background-color: black;
+                    background-image: url('../images/tenor.gif');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    rotate: 90;
                     border: 1px solid white;
+                    transition: all ease-in-out 1.5s;
+
                 }
                 .poke-status {
                     background-color: rgb(195, 124, 243);
@@ -71,8 +79,24 @@ main {
                     border-radius: 5px;
                     margin: 20px;
                     padding: 50px;
-                    h2{
-                        font-size: 27px;
+                    img {
+                        width: 180px;
+                        margin-top: -55px;
+
+                    }
+                    .name-animated{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                        .animated {
+                            width: 50px;
+                            margin-left: 15px;
+
+                        }
+                        h2{
+                            font-size: 27px;
+                        }
                     }
                     li{
                         font-size: 22px;
