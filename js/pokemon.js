@@ -33,7 +33,7 @@ class PokemonSelected {
 
                 <hr>
                     <h2>Tipo</h2>
-                    <ul>
+                    <ul class="tipos">
                         ${
                             this.types.map(tipo => `<li>${tipo}</li>`)
                             .join('')
@@ -46,7 +46,7 @@ class PokemonSelected {
                     </ul>
                 </hr>
                 <h2>Habilidades</h2>
-                <ul>
+                <ul class="tipos">
                     ${
                         this.abilities.map(habilidade => `<li>${habilidade}</li>`)
                         .join('')
@@ -71,15 +71,13 @@ class PokemonSelected {
                 recently with ${this.types[1]} desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
             <img src="${this.imagem2}" alt="${this.name} shiny image" title="${this.name} shiny">
-            
+
             <div class="other-images">
                 <img src="${this.imagem32}" alt="${this.name} back" title="${this.name} back">
 
                 <img src="${this.imagem3}" alt="${this.name} animated" title="${this.name} animated">
-                
-            </div>
 
-            
+            </div>
 
             <table>
                 <tr>

@@ -99,9 +99,13 @@ main {
                             font-size: 27px;
                         }
                     }
-                    li{
-                        font-size: 22px;
-                        margin: 5px;
+                    .tipos {
+                        border-radius: 5px;
+                        background-color: white;
+                        li{
+                            font-size: 22px;
+                            margin: 5px;
+                        }
                     }
                 }
             }
@@ -125,6 +129,9 @@ main {
                 p{
                     font-size: 20px;
                     text-align: justify;
+                    background-color: white;
+                    padding: 3px;
+                    border-radius: 5px;
                 }
                 img{
                     width: 100%;
@@ -173,7 +180,6 @@ main {
                             }
                         }
                     }
-                    
                 }
             }
         }
