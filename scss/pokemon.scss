@@ -17,7 +17,7 @@ main {
     grid-column-end: 1;
     width: 70vw;
         .poke-data {
-            background-color: rgb(63, 50, 248);
+            background-color: config.$headerColor;
             padding: 10px;
             border: 1px solid black;
             border-radius: 5px;
@@ -57,8 +57,7 @@ main {
                         align-self: center;
                         width: 90%;
                         height: 90%;
-                        padding: 10px;
-                        margin-top: 10px;
+                        
                         // margin-bottom: 55px;
                         transition: all ease-in-out .8s;
 
@@ -95,13 +94,19 @@ main {
                         margin-top: 20px;
                         .poke-numbers{
                             border: 1px solid black;
+                            background-color: config.$blue2Pok;
                             border-radius: 5px;
                             padding: 5px;
+                            height: fit-content;
                             h3{
-                                font-size: 20px;
+                                font-size: 18px;
                             }
                         }
                         .animated {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-items: center;
                             width: 50%;
                             margin-left: 15px;
 
@@ -134,14 +139,15 @@ main {
                     }
                 }
                 h5{
+                    font-family: config.$pokeFont;
                     font-size: 25px;
                     text-transform: capitalize;
                 }
                 p{
-                    font-size: 20px;
+                    font-size: 17px;
                     text-align: justify;
                     background-color: white;
-                    padding: 3px;
+                    padding: 5px;
                     border-radius: 5px;
                 }
                 img{
