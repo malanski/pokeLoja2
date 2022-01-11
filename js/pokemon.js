@@ -1,9 +1,13 @@
 class PokemonSelected {
     constructor(options) {
+        this.id = options.id;
         this.name = options.name;
+        this.height = options.height;
+        this.weight = options.weight;
+        this.base_experience = options.base_experience;
+        // this.sprites = options.sprites.map(imageCheck => imageCheck.back_default.string);
         this.types = options.types.map(typeItem => typeItem.type.name);
         this.abilities = options.abilities.map(abilityType => abilityType.ability.name);
-        this.id = options.id;
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;   
         this.imagem2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${this.id}.png`;   
         this.imagem3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
@@ -27,7 +31,15 @@ class PokemonSelected {
                 <img src="${this.imagem2}" alt="${this.name} original">
                 
                 <div class="name-animated">
-                    <h2><small>Nome:</small> ${this.name}</h2>
+                    <div class="poke-numbers">
+                        <h3><small>Id number:</small> ${this.id}#</h3>
+                        <h2><small>Name:</small> ${this.name}</h2>
+                        <h3><small>Size:</small> ${(this.height * 0.1).toFixed(2)} meters</h3>
+                        <h3><small>Weight:</small> ${(this.weight * 0.1).toFixed(2)} Kg</h3>
+                        <h3><small>Experience:</small> ${this.base_experience}XP's</h3>
+
+                    </div>
+
                     <img class="animated" src="${this.imagem3}" alt="${this.name} animated">
                 </div>
 
@@ -52,6 +64,7 @@ class PokemonSelected {
                         .join('')
                     }
                 </ul>
+                
             </div>
         </div>
         <div class="poke-info">
