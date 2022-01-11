@@ -57,8 +57,7 @@ main {
                         align-self: center;
                         width: 90%;
                         height: 90%;
-                        padding: 10px;
-                        margin-top: 10px;
+                        
                         // margin-bottom: 55px;
                         transition: all ease-in-out .8s;
 
@@ -98,10 +97,14 @@ main {
                             border-radius: 5px;
                             padding: 5px;
                             h3{
-                                font-size: 20px;
+                                font-size: 18px;
                             }
                         }
                         .animated {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-items: center;
                             width: 50%;
                             margin-left: 15px;
 

@@ -9,14 +9,20 @@ class PokemonSelected {
         this.types = options.types.map(typeItem => typeItem.type.name);
         this.abilities = options.abilities.map(abilityType => abilityType.ability.name);
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;   
-        this.imagem2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${this.id}.png`;   
-        this.imagem3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
-        this.imagem32 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/${this.id}.gif`;   
-        this.imagem4 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/${this.id}.png`;   
-        this.imagem5 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/${this.id}.png`;   
-        this.imagem6 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/female/${this.id}.png`;   
-        this.imagem7 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/female/${this.id}.png`;   
+        this.imageDrem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`;   
+        this.imageArt = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${this.id}.png`;   
+        this.gif = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
+        this.gif2 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/${this.id}.gif`;   
+        this.imageYel = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/yellow/transparent/${this.id}.png`;   
+        this.imageCristal = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/transparent/${this.id}.png`;   
+        this.imageRed = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-i/red-blue/transparent/${this.id}.png`;   
+        this.imageOmega = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/${this.id}.png`;   
+        this.imageXfem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/female/${this.id}.png`;   
+        this.imageViFem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/female/${this.id}.png`;   
     }
+    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/other/dream-world/25.svg
+    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/versions/generation-i/yellow/transparent/25.png
+    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/versions/generation-ii/crystal/transparent/25.png
     html() {
         const pokeDiv = document.querySelector('.poke-data')
         // console.log(this.abilities)
@@ -25,10 +31,11 @@ class PokemonSelected {
             <div class="poke-img">
                 <h1>${this.name}</h1>
                 <img src="${this.imagem}" alt="${this.name}">
+                <img src="${this.imageDrem}" alt="${this.name}">
             </div>
 
             <div class="poke-status">
-                <img src="${this.imagem2}" alt="${this.name} original">
+                <img src="${this.imageArt}" alt="${this.name} original">
                 
                 <div class="name-animated">
                     <div class="poke-numbers">
@@ -40,7 +47,13 @@ class PokemonSelected {
 
                     </div>
 
-                    <img class="animated" src="${this.imagem3}" alt="${this.name} animated">
+                    <div class="animated">
+                        <img src="${this.gif}" alt="${this.name} animated">
+                        <img src="${this.imageYel}" alt="${this.name} animated">
+                        <img src="${this.imageRed}" alt="${this.name} animated">
+                        <img src="${this.gif2}" alt="${this.name} animated">
+                    </div>
+
                 </div>
 
                 <hr>
@@ -71,10 +84,13 @@ class PokemonSelected {
 
         <div class="info-head">
             <h5> ${this.name} History</h5>
-            <img src="${this.imagem4}" alt="${this.name} red-blue">
+            <img src="${this.imageRed}" alt="${this.name} red-blue">
         </div>
 
             <p>
+                The pokémon ${this.name}, of the species ${this.name}lus pokémonae, ${this.types[0]} type
+            </p>
+                <p>
                 Lorem Ipsum is ${this.name} simply dummy text of the printing and typesetting industry.  
                 Lorem Ipsum ${this.name} has been the industry's ${this.types[0]} standard dummy text ever since the 1500s,
                 when an unknown printer took a galley of type and scrambled it to ${this.abilities} make a type 
@@ -83,12 +99,12 @@ class PokemonSelected {
                 1960s with the release of ${this.name} Letraset sheets containing Lorem Ipsum passages, and more 
                 recently with ${this.types[1]} desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
-            <img src="${this.imagem2}" alt="${this.name} shiny image" title="${this.name} shiny">
+            <img src="${this.imageArt}" alt="${this.name} shiny image" title="${this.name} shiny">
 
             <div class="other-images">
-                <img src="${this.imagem32}" alt="${this.name} back" title="${this.name} back">
+                <img src="${this.gif2}" alt="${this.name} back" title="${this.name} back">
 
-                <img src="${this.imagem3}" alt="${this.name} animated" title="${this.name} animated">
+                <img src="${this.gif}" alt="${this.name} animated" title="${this.name} animated">
 
             </div>
 
@@ -106,10 +122,10 @@ class PokemonSelected {
                     <th>Icon</th>
                 </tr>
                 <tr>
-                    <td><img src="${this.imagem4}" alt="${this.name} shiny image" title="${this.name} shiny"></td>
-                    <td><img src="${this.imagem5}" alt="${this.name} shiny " title="${this.name} shiny"></td>
-                    <td><img src="${this.imagem6}" alt="${this.name} Female " title="${this.name} Female"></td>
-                    <td><img src="${this.imagem7}" alt="${this.name} icon " title="${this.name} icon"></td>
+                    <td><img src="${this.imageRed}" alt="${this.name} shiny image" title="${this.name} shiny"></td>
+                    <td><img src="${this.imageOmega}" alt="${this.name} shiny " title="${this.name} shiny"></td>
+                    <td><img src="${this.imageXfem}" alt="${this.name} Female " title="${this.name} Female"></td>
+                    <td><img src="${this.imageViFem}" alt="${this.name} icon " title="${this.name} icon"></td>
                 </tr>
             </table>
 
