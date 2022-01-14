@@ -93,7 +93,7 @@ main {
                         margin: 0;
                         // margin-bottom: 10px;
                         width: 16.5vw;
-                        height: 45px;
+                        height: 48px;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -179,7 +179,6 @@ main {
     }
 }
 
-
 @keyframes buyAnimation {
     0% {
         color: #DDD;
@@ -236,6 +235,8 @@ main {
 /*---------|MAN-------|MAIN|------|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
 /*---------|MAN-------|MAIN|------|MAIN------*/
+
+
 @media screen and (max-width: config.$mobileBreakpointG){
     main {
         grid-area: conteudo;

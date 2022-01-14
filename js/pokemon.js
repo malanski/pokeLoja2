@@ -33,6 +33,91 @@ class PokemonSelected {
         const pokeDiv = document.querySelector('.poke-data')
         // console.log(this.abilities)
         pokeDiv.innerHTML =`
+            <div class="card-game">
+                <div class="card-name">
+                    <div class="name-icone">
+                        <img class="poke-icone" src="${this.imageArt}" alt="${this.name}">
+                        <h1>${this.name}</h1>
+                    </div>
+
+                    <h3>${this.base_experience}HP<i class="fas fa-fire-alt"></i></h3>
+                </div>
+
+                <div class="img-principal">
+                    <img src="${this.imageArt}" alt="${this.name}">
+                    <h4>
+                    NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
+                    </h4>
+                </div>
+
+                <div class="first-attack">
+                    <i class="fas fa-sun"></i>
+                    <h5>${this.abilities[0]} Shove</h5>
+                    <h5>${(this.base_experience / 2.5).toFixed(0)}</h5>
+                </div>
+
+                <div class="second-attack">
+                    <div>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h5>
+                        ${
+                            this.abilities.map(habilidade => `${habilidade}`)
+                            .join(' ')
+                        } slap
+                    </h5>
+                    <h5>
+                        ${(this.base_experience / 1.7).toFixed(0)}
+                    </h5>
+                </div>
+                <div class="card-footer">
+                    
+                    <div class="weakness">
+                        <h6>
+                            <span> weakness <i class="fas fa-fire-alt"></i> <small>x</small> 2</span>
+                            <span> resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 2).toFixed(0)}</span>
+                        </h6>
+                        <h5>
+                            <span> retreat <br> cost</span>
+                            <span><i class="fas fa-sun"></i> <i class="fas fa-sun"></i></span>
+                        </h5>
+                    </div>
+
+                    <div class="information">
+                        <p>
+                            ${this.id}# Pokémon: ${this.name} a.k.a. <i>${this.name}nia ${this.name}lus pokémonae</i>, is a 
+                            ${
+                                this.types.map(tipo => `${tipo}`)
+                                .join(' and ')
+                            } type of pocket-monster.
+                            In order to achieve ${this.name}'s first special attack, like 
+                            ${
+                                this.abilities.map(habilidade => `${habilidade}`)
+                                .join(' and ')
+                            }
+                            ${this.name} need to get over 
+                            ${this.base_experience * 2.5} experience points.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <h6>
+                            dev. Ulisses Malanski
+                    </h6>
+                    <h6>
+                            © 2022 Pokémon
+                    </h6>
+                    <h6>
+                            ${(this.weight * this.height / this.base_experience).toFixed(0)}/
+                            ${(this.weight * this.base_experience / this.height).toFixed(0)}
+                    </h6>
+                </div>
+            </div>
+
+
+
         <div class="pokemon">
             <div class="poke-img">
                 <h1>${this.name}</h1>
@@ -237,7 +322,7 @@ async function getPokemonData(id = 0) {
 };
 
 
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 1500));
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 500));
 
 window.onload =  async function() {
     const { id } = getQueryparameters();
