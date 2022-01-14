@@ -31,20 +31,20 @@ header {
             }
             a {
                 text-decoration: none;
-                .font-poke {
+                h1 {
                     color: config.$yellowPok;
                     text-shadow: config.$texShadow;
                     line-height: 40px;
                     font-family: config.$pokeFont;
                     font-size: 35px;
                     transition: all ease 0.9s;
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     animation-duration: 3s;
                     animation-name: runing;
                     margin-left: 20px;
                     text-align: center;
                 }
-                .font-poke:hover {
+                h1:hover {
                     background: url("../images/sparcle.gif");
                     background-position: center;
                     background-repeat: no-repeat;
@@ -111,7 +111,8 @@ header {
             margin: 10px;
             padding-top: 5px;
             padding-bottom: 5px;
-            padding-right: 52px;
+            padding-right: 92px;
+            width: fit-content;
             padding-left: 5px;
             text-transform: uppercase;
             border: 1px solid black;
@@ -252,6 +253,19 @@ nav {
             .navlink:hover {
                 color: config.$yellowPok;
             }
+            li::before {
+                // content: counter(li) "";
+                list-style-type: none;
+
+                font-size: 36px;
+                font-weight: bold;
+                line-height: 0;
+            }
+            li::marker{
+                counter-reset: none;
+                content: none;
+
+            } 
         }
         .social1 {
             margin: 10px;
@@ -293,12 +307,13 @@ nav {
                 margin-left: 0px;
                 margin-top: 50px;
                 a {
-                    .font-poke{
+                    h1{
                         margin-top: 50px;
                         padding-top: 0;
                         font-size: 45px;
                         line-height: 35px;
                         margin-bottom: 0;
+                        text-decoration: none;
                     }
                 }
             }
@@ -378,7 +393,7 @@ nav {
 }
 
 
-@media screen and (max-width: config.$mobileBreakpointM){
+@media screen and (max-width: config.$mobileBreakpointMm){
     header {
         grid-area: header;
         grid-column-start: 1;
@@ -390,6 +405,11 @@ nav {
             .logo {
                 margin-top: 55px;
                 margin-bottom: 15px;
+                a{
+                    h1{
+                        font-size: 20ox;
+                    }
+                }
             }
             .search {
                 margin-top: 30px;
@@ -404,20 +424,18 @@ nav {
                         width: 350px;
                     }
                     button {
-                        margin-right: 5px;
+                        margin-right: 21px;
                     }
                 }
             }
             .profile {
                 display: flex;
                 justify-content: space-between;
-                width: 94%;
+                width: 99%;
                 margin-top: 5px;
                 margin-left: 5px;
-                margin-right: 5px;
+                margin-right: 0;
                 margin-bottom: 5px;
-                // margin-top: 10px;
-                // margin-right: 150px;
                 .headlink {
                     font-size: 0.8rem;
 
@@ -440,33 +458,126 @@ nav {
                 left: 0;
                 align-items: center;
                 margin-left: -20px;
-                margin-right: 15px;
+                margin-right: 0;
                 li .navlink {
-                    font-size: 20px;
+                    font-size: 15px;
                 }
             }
             .social1 {
                 margin-left: 2px;
                 margin-right: 5px;
+                font-size: 15px;
+
                 .socialfoot {
                     max-width: 19px;
                     max-height: 19px;
                     margin-top: 2%;
                     margin-bottom: 2%;
+                    font-size: 15px;
                 }
             }
         }
     }
 }
+
+@media screen and (max-width: config.$mobileBreakpointM){
+    header {
+        grid-area: header;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        margin: 0;
+        padding: 5px;
+        .header-container {
+            margin: 5px;
+            .logo {
+                margin-top: 55px;
+                margin-bottom: 15px;
+                a{
+                    h1{
+                        font-size: 20ox;
+                    }
+                }
+            }
+            .search {
+                margin-top: 30px;
+                margin-bottom: 5px;
+                margin-left: 5px;
+                .search-input {
+                    input {
+                        width: 350px;
+                        height: 20%;
+                    }
+                    input:focus {
+                        width: 350px;
+                    }
+                    button {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .profile {
+                display: flex;
+                justify-content: space-between;
+                width: 99%;
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                .headlink {
+                    font-size: 0.8rem;
+
+                }
+            }
+        }
+    }
+    nav {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        .nav-container {
+            justify-content: right;
+            align-items: center;
+            padding-left: 5px;
+            padding-right: 5px;
+            flex: 1;
+            .navbar {
+                align-self: center;
+                left: 0;
+                align-items: center;
+                margin-left: -20px;
+                margin-right: 0;
+                li .navlink {
+                    font-size: 15px;
+                }
+            }
+            .social1 {
+                margin-left: 2px;
+                margin-right: 5px;
+                font-size: 15px;
+
+                .socialfoot {
+                    max-width: 19px;
+                    max-height: 19px;
+                    margin-top: 2%;
+                    margin-bottom: 2%;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: config.$mobileBreakpointP){
     header {
         margin: 0;
         .header-container {
             .logo {
                 a{
-                    .font-poke{
+                    h1{
                         margin-left: 0px;
                         margin-top: 5px;
+                        font-size: 35px;
                     }
                 }
             }
@@ -487,7 +598,8 @@ nav {
                 }
             }
             .profile {
-                
+                width: 98%;
+                margin: 0.5%;
                 .headlink {
                     font-size: 0.8rem;
                     margin-left: 0;

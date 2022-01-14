@@ -6,6 +6,7 @@ class Carrinho {
 	itemPoke = [];
 	total = 0;
 	precos = 0;
+	// precoTotal = 0;
 
 	constructor(options) {
 		this.btnCart.addEventListener('click', this.abrirCarrinho);
@@ -56,7 +57,7 @@ class Carrinho {
 		const precoTotal = this.itens.reduce(getTotal, 0);
 			function getTotal(precoTotal, preco) {
  			return precoTotal + (preco);
-			 console.log(precoTotal);
+			console.log(precoTotal);
 		}
 
 		const pokeNoCarrinho = document.querySelector ('.poke-container');
