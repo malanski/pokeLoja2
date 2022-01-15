@@ -85,13 +85,13 @@ main {
                         width: 100%;
                         border: 7px solid config.$yellowPok;
                         box-shadow: 1px 1px 18px 4px #000000;
-                        background-image: url('https://c.tenor.com/lYMM2qCuvFAAAAAC/grass.gif');
+                        background-image: url('https://c.tenor.com/VpjOpBj2uycAAAAM/natural-nature.gif');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                     }
                     h4{
                         background-color: config.$yellowPok;
-                        border: 2px solid config.$yellow2Pok;
+                        border: 3px solid config.$yellow3Pok;
                         border-radius: 5px;
                         padding-left: 10px;
                         padding-right: 10px;
@@ -160,7 +160,7 @@ main {
                         flex-direction: column;
                         justify-content: space-around;
 
-                        width: 50%;
+                        width: 51%;
                         border-top: 4px solid black;
                         h6{
                             height: 50%;
@@ -193,7 +193,7 @@ main {
                             }
                         }
                         h5{
-                            height: 51%;
+                            height: 50%;
 
                             display: flex;
                             flex-direction: row;
@@ -226,12 +226,12 @@ main {
                         }
                     }
                     .information{
-                        border: 3px solid config.$yellow2Pok;
+                        border: 3px solid config.$yellow3Pok;
                         width: 48%;
                         margin-bottom: 5px;
                         p{
                             font-size: 15px;
-                            padding: 5px;
+                            padding: 3px;
                             margin-left: 5px;
                             text-align: justify;
                         }
@@ -241,12 +241,12 @@ main {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    width: 95%;
+                    width: 102%;
                     margin-top: 0;
                     margin-bottom: 0;
                     h6{
                         margin-top: 5px;
-                        margin-bottom: 5px;
+                        margin-bottom: 2px;
                         font-size: 15px;
                     }
                 }
