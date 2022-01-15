@@ -64,12 +64,12 @@ class PokemonSelected {
                     </div>
                     <h5>
                         ${
-                            this.abilities.map(habilidade => `${habilidade}`)
+                            this.abilities.map(habilidade => `<small>${habilidade}</small>`)
                             .join(' ')
                         } slap
                     </h5>
                     <h5>
-                        ${(this.base_experience / 1.7).toFixed(0)}
+                        <big>${(this.base_experience / 1.7).toFixed(0)}</big>
                     </h5>
                 </div>
                 <div class="card-footer">
@@ -87,31 +87,32 @@ class PokemonSelected {
 
                     <div class="information">
                         <p>
-                            ${this.id}# Pokémon: ${this.name} a.k.a. <i>${this.name}nia ${this.name}lus pokémonae</i>, is a 
+                            ${this.name}<small> a.k.a. </small><i>${this.name}nia ${this.name}lus pokémonae</i>, is a 
                             ${
                                 this.types.map(tipo => `${tipo}`)
                                 .join(' and ')
                             } type of pocket-monster.
-                            In order to achieve ${this.name}'s first special attack, like 
+                            In order to achieve ${this.name}'s Critical Hit attack, with 
                             ${
                                 this.abilities.map(habilidade => `${habilidade}`)
-                                .join(' and ')
+                                .join(' or ')
                             }
-                            ${this.name} need to get over 
-                            ${this.base_experience * 2.5} experience points.
+                            ${this.name} needs to get under 
+                            ${(this.base_experience / 3).toFixed(0)}HP.
                         </p>
                     </div>
                 </div>
                 <div class="card-bottom">
                     <h6>
-                            dev. Ulisses Malanski
+                            <small>dev.</small>Ulisses Malanski
                     </h6>
                     <h6>
                             © 2022 Pokémon
                     </h6>
                     <h6>
                             ${(this.weight * this.height / this.base_experience).toFixed(0)}/
-                            ${(this.weight * this.base_experience / this.height).toFixed(0)}
+                            ${(this.weight * this.base_experience / this.height / 10).toFixed(0)}
+                            <i class="fas fa-yin-yang"></i>
                     </h6>
                 </div>
             </div>
