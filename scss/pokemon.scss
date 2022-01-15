@@ -14,7 +14,7 @@ main {
             padding: 10px;
             border: 1px solid black;
             border-radius: 5px;
-            box-shadow: 1px 1px 18px 4px #40014f;
+            box-shadow: 1px 1px 18px 4px #000000;
             .card-game{
                 border: 20px solid config.$yellowPok;
                 border-radius: 20px;
@@ -65,7 +65,8 @@ main {
                         i{
                             border: 2px solid config.$yellowPok;
                             border-radius: 50%;
-                            background-color: gray;
+                            background: config.$iconRoundBg;
+
                             padding: 8px;
 
                         }
@@ -106,13 +107,14 @@ main {
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: baseline;
-                    width: 90%;
+                    width: 95%;
                     border-bottom: 1px solid black;
                     i{
                         font-size: 30px;
                         border: 2px solid white;
                         border-radius: 50%;
-                        background-color: config.$nextBtnBg;
+                        background: config.$iconRound2Bg;
+
                         background-size: contain;
                         padding: 8px;
                     }
@@ -126,15 +128,16 @@ main {
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: baseline;
-                    width: 90%;
+                    width: 95%;
                     margin-bottom: 5px;
                     i{
-                        font-size: 30px;
+                        font-size: 20px;
                         border: 2px solid white;
                         border-radius: 50%;
-                        background-color: config.$nextBtnBg;
+                        background: config.$iconRound2Bg;
+
                         background-size: contain;
-                        padding: 8px;
+                        padding: 3px;
                         margin-left: 0;
                         margin-right: 0;
                     }
@@ -148,7 +151,7 @@ main {
                     flex-direction: row;
                     align-items: flex-start;
                     justify-content: space-around;
-                    width: 90%;
+                    width: 100%;
                     border-bottom: 4px solid black;
                     padding-bottom: 5px;
                     margin-top: 0;
@@ -157,7 +160,7 @@ main {
                         flex-direction: column;
                         justify-content: space-around;
 
-                        width: 49%;
+                        width: 50%;
                         border-top: 4px solid black;
                         h6{
                             height: 50%;
@@ -166,24 +169,31 @@ main {
                             justify-content: space-around;
                             align-items: center;
                             width: 100%;
-                            font-size: 17px;
+                            font-size: 15px;
                             margin-top: 20px;
                             margin-bottom: 15px;
                             border-bottom: 1px solid black;
                             padding-bottom: 15px;
+                            .elemental{
+                                background: config.$iconRoundBg;
+                                font-size: 17px;
+                                border: 2px solid config.$yellow2Pok;
+                                border-radius: 50%;
+                                background-size: contain;
+                                padding: 3px;
+                            }
 
                             i{
-                                font-size: 25px;
-                                border: 2px solid white;
+                                background: config.$iconRound2Bg;
+                                font-size: 20px;
+                                border: 2px solid config.$yellow2Pok;
                                 border-radius: 50%;
-                                background-color: config.$nextBtnBg;
                                 background-size: contain;
-
-                                padding: 8px;
+                                padding: 5px;
                             }
                         }
                         h5{
-                            height: 50%;
+                            height: 51%;
 
                             display: flex;
                             flex-direction: row;
@@ -202,12 +212,11 @@ main {
                                 padding-top: 0;
                                 padding-bottom: 0;
                                 i{
-                                    font-size: 25px;
                                     border: 2px solid white;
                                     border-radius: 50%;
-                                    background-color: config.$nextBtnBg;
+                                    background: config.$iconRound2Bg;
                                     background-size: contain;
-                                    padding: 8px;
+                                    padding: 5px;
                                     margin-top: 0;
                                     margin-bottom: 0;
                                 }
@@ -217,8 +226,8 @@ main {
                         }
                     }
                     .information{
-                        border: 2px solid config.$yellow2Pok;
-                        width: 49%;
+                        border: 3px solid config.$yellow2Pok;
+                        width: 48%;
                         margin-bottom: 5px;
                         p{
                             font-size: 15px;

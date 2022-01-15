@@ -76,8 +76,8 @@ class PokemonSelected {
                     
                     <div class="weakness">
                         <h6>
-                            <span> weakness <i class="fas fa-fire-alt"></i> <small>x</small> 2</span>
-                            <span> resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 2).toFixed(0)}</span>
+                            <span> weakness <i class="fas fa-fire-alt elemental"></i> <small>x</small> ${(this.base_experience / 25).toFixed(0)}</span>
+                            <span> resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 20).toFixed(0)}</span>
                         </h6>
                         <h5>
                             <span> retreat <br> cost</span>
@@ -320,7 +320,7 @@ async function getPokemonData(id = 0) {
                 <button><i class="fas fa-arrow-left"></i>BACK</button>
             </a>`
             }
-            
+
         const pokeBack2 = document.querySelector('.back-poke2');
     
             if (id == 1) {
