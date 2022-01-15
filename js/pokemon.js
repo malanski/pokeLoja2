@@ -246,19 +246,10 @@ class PokemonSelected {
                     <td><img src="${this.imageSilver}" alt="${this.name} icon " title="${this.name} icon"></td>
                 </tr>
             </table>
-
-            
         </div>
         `
         return pokeDiv;
     }
-    // html() {
-    //     const pokeInfo = document.querySelector('.poke-info');
-    //     pokeInfo.innerHTML = `
-    //     `
-    //     return pokeInfo;
-    // }
-
 }
 
 //  procura Url de cada pokemon na API
@@ -278,7 +269,7 @@ async function getPokemonData(id = 0) {
 
 //  ProXimo Pokemon
     function nextPoke() {
-        const pokeNext = document.querySelector('.next-poke');
+        const pokeNext = document.querySelector(".next-poke");
         
         if (id == 898) {
             pokeNext.innerHTML = `
@@ -293,6 +284,21 @@ async function getPokemonData(id = 0) {
         }
         if ( id == 10220){
             pokeNext.style.visibility = "hidden";
+         }
+        const pokeNext2 = document.querySelector(".next-poke2");
+        if (id == 898) {
+            pokeNext2.innerHTML = `
+                <a href="pokemon.html?id=10001">
+                    <button>NEXT<i class="fas fa-arrow-right"></i></button>
+                </a>`;
+        } else {
+            pokeNext2.innerHTML = `
+            <a href="pokemon.html?id=${+id + 1}">
+                <button>NEXT<i class="fas fa-arrow-right"></i></button>
+            </a>`;
+        }
+        if ( id == 10220){
+            pokeNext2.style.visibility = "hidden";
          }
     }
 
@@ -310,6 +316,24 @@ async function getPokemonData(id = 0) {
             </a>` 
             } else {
                 pokeBack.innerHTML = `
+            <a href="pokemon.html?id=${+id - 1}">
+                <button><i class="fas fa-arrow-left"></i>BACK</button>
+            </a>`
+            }
+            
+        const pokeBack2 = document.querySelector('.back-poke2');
+    
+            if (id == 1) {
+                pokeBack2.style.visibility = "hidden";
+            }
+
+            if(id == 10001) {
+                pokeBack2.innerHTML = `
+            <a href="pokemon.html?id=898">
+                <button><i class="fas fa-arrow-left"></i>BACK</button>
+            </a>` 
+            } else {
+                pokeBack2.innerHTML = `
             <a href="pokemon.html?id=${+id - 1}">
                 <button><i class="fas fa-arrow-left"></i>BACK</button>
             </a>`

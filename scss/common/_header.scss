@@ -629,3 +629,65 @@ nav {
         }
     }
 }
+
+@media screen and (max-width: config.$mobileBreakpointP){
+    header {
+        margin: 0;
+        .header-container {
+            .logo {
+                a{
+                    h1{
+                        margin-left: 0px;
+                        margin-top: 5px;
+                        font-size: 35px;
+                    }
+                }
+            }
+            .search {
+                margin-top: 20px;
+                margin-left: 20px;
+                .search-input {
+                    input {
+                        width: 79vw;
+                        height: 10%;
+                    }
+                    input:focus {
+                        width: 79vw;
+                    }
+                    button {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .profile {
+                width: 98%;
+                margin: 0.5%;
+                .headlink {
+                    font-size: 0.8rem;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    nav {
+        .nav-container {
+            justify-content: center;
+            margin-left: 20px;
+            .navbar {
+                padding-left: 0;
+                li a .navlink {
+                    font-size: 12px;
+                }
+            }
+            .social1 {
+                justify-content: space-between;
+                // align-self: flex-start;
+
+                .socialfoot {
+                    max-width: 15px;
+                    max-height: 15px;
+                }
+            }
+        }
+    }
+}
