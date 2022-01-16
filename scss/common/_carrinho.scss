@@ -86,8 +86,8 @@ body.carrinho-aberto {
         color: white;
         
         ul {
-            list-style-type: decimal;
-            margin-left: -5px;
+            list-style-type: none;
+            margin-left: -25px;
             margin-right: 0;
             
             li {
@@ -120,7 +120,7 @@ body.carrinho-aberto {
                             margin-left: -20px;
                             margin-bottom: 5px;
                             margin-top: 10px;
-                            font-size: 25px;
+                            font-size: 22px;
                         }
                         span{
                             font-size: 20px;
@@ -129,26 +129,54 @@ body.carrinho-aberto {
                 }
             }
         }
-        h2{
-            text-align: right;
+        
+    }
+    
+    .total-preco{
+        width: 100%;
+        
+        .total-pokes{
             border: 1px solid white;
             border-radius: 5px;
-        }
-        h3{
-            text-align: right;
-            border: 1px solid white;
-            border-radius: 5px;
+            h5{
+                text-align: center;
+                font-size: 25px;
+                color: white;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 0;
 
+
+            }
+            .info-buy {
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 5px;
+                padding: 5px;
+                align-self: flex-end;
+                h2{
+                    text-align: right;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    color: green;
+                }
+                h3{
+                    text-align: right;
+                    color: white;
+                    border: 1px solid white;
+                    border-radius: 5px;
+        
+                }
+                h4{
+                    text-align: right;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    color: white;
+
+        
+                }
+            }
         }
-    }
-    .preco-total{
-        font-size: 25px;
-        color: black;
-    }
-    .final-buy {
-        border-radius: 5px;
-        margin-top: 5px;
-        align-self: flex-end;
     }
     .credit-cards {
         list-style: none;

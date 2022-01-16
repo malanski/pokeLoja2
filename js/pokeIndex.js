@@ -9,7 +9,7 @@ class Pokemon {
         
         this.preco = Math.floor(Math.random() * 100).toFixed(2);
         this.precoDesc = (this.preco * 0.8).toFixed(2);
-        this.precoParc = (this.preco / 2).toFixed(2);
+        this.precoParc = (this.preco / 12).toFixed(2);
     }
 
     html() {

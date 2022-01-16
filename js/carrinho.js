@@ -49,10 +49,12 @@ class Carrinho {
 		let totalPreco = document.querySelector('.total-preco');
 		totalPreco.innerHTML = '';
 		let precoTotal = 0;
+		let parceTotal = 0;
 		
 		let pokemonsPurchased = this.itens.map(function (pokemon, index) {
 			const pokeUnits = index + 1;
 			precoTotal = precoTotal + parseFloat(pokemon.precoDesc);
+			parceTotal = parceTotal + parseFloat(pokemon.precoParc);
 			console.log(precoTotal);
 
 			const itemPoke = document.createElement('ul');
@@ -75,9 +77,12 @@ class Carrinho {
 			const pokeTotal = document.createElement('div');
 			pokeTotal.className = 'total-pokes';
 			pokeTotal.innerHTML = `
-				<div class="final-buy">
-					<h4>Units=${pokeUnits}</h4>
-					<h4>Total Price= ${(precoTotal).toFixed(2)}</h4> 
+				<h5>Price information</h5>
+				<div class="info-buy">
+					<h3>Units=${pokeUnits}</h3>
+					<h2 class="total-price">Total Price= ${(precoTotal).toFixed(2)}</h2> 
+
+					<h4>12 x of  ${(parceTotal).toFixed(2)}</h4> 
 				</div>
 			`
 			totalPreco.innerHTML = '';
