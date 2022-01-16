@@ -2,7 +2,8 @@ class Carrinho {
 	btnCart = document.querySelector('#btn-cart');
 	btnCartClose = document.querySelector('#btn-cart-x');
 	clickOutCart = document.querySelector('.opn-cart');
-	itens = [];
+	// itens = [];
+	cartStorage = localStorage;
 	total = 0;
 
 	constructor() {
@@ -29,6 +30,8 @@ class Carrinho {
 		// event.preventDefault();
 		const openCartClass = 'carrinho-aberto';
 
+		window.carrinho.renderCarrinho();
+
 		document.body.className.includes(openCartClass) ? document.body.className = '' : document.body.className = openCartClass;
 	}
 
@@ -38,11 +41,14 @@ class Carrinho {
 	}
 
 	adicionar(pokemon) {
-		this.itens.push(pokemon);
-		this.renderCarrinho(this.itens);
+		this.addedStorage(pokemon);
+		// this.itens.push(pokemon);
+		// this.renderCarrinho(this.itens);
 	}
 
 	renderCarrinho() {
+		const pokemons = this.getStorage();
+
 		let pokeNoCarrinho = document.querySelector('.poke-container');
 		pokeNoCarrinho.innerHTML = '';
 
@@ -51,10 +57,10 @@ class Carrinho {
 		let precoTotal = 0;
 		let parceTotal = 0;
 		
-		let pokemonsPurchased = this.itens.map(function (pokemon, index) {
+		let pokemonsPurchased = pokemons.map((itens, index) => {
 			const pokeUnits = index + 1;
-			precoTotal = precoTotal + parseFloat(pokemon.precoDesc);
-			parceTotal = parceTotal + parseFloat(pokemon.precoParc);
+			precoTotal = precoTotal + parseFloat(itens.precoDesc);
+			parceTotal = parceTotal + parseFloat(itens.precoParc);
 			console.log(precoTotal);
 
 			const itemPoke = document.createElement('ul');
@@ -64,10 +70,10 @@ class Carrinho {
 			itemPoke.innerHTML =`
 					<li>
 						<div class="buy-card">
-							<img src="${pokemon.imagem}">
+							<img src="${itens.imagem}">
 							<div class="item-price">
-								<h6>${pokemon.nome}</h6>
-								<span><small>1 X </small>${pokemon.precoDesc}<small> R$ </small></span>
+								<h6>${itens.nome}</h6>
+								<span><small>1 X </small>${itens.precoDesc}<small> R$ </small></span>
 							</div>
 							<i class="fas fa-trash" title="Remove"></i>
 						</div>
@@ -89,6 +95,14 @@ class Carrinho {
 			totalPreco.appendChild(pokeTotal);
 		});
 	}
+	addedStorage(pokemon) {
+		const pokemons = this.getStorage() || [];
+		pokemons.push(pokemon);
+		localStorage.setItem("pokemonsPurchased", JSON.stringify(pokemons));
+ 	}
+	 getStorage() {
+		 return JSON.parse(localStorage.getItem("pokemonsPurchased"))
+	 }
 }
 
 window.addEventListener('load', async () => {
