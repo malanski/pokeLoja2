@@ -98,7 +98,7 @@ main {
                         justify-content: space-between;
                         align-items: center;
                     }
-                    .btn {
+                    .btn-buy {
                         /*padding-right: 2.5rem;*/
                         background: config.$btnCardBg;
                         background-size: 400% 400%;
@@ -284,7 +284,7 @@ main {
                     div button {
                         width: 250px;
 
-                        .btn {
+                        .btn-buy {
                             .img {
                                 max-width: 20px;
                                 max-height: 20px;
@@ -344,7 +344,7 @@ main {
                 div button {
                     align-self: center;
                     width: 201px;
-                    .btn {
+                    .btn-buy {
                         .img {
                             max-width: 20px;
                             max-height: 20px;
@@ -402,7 +402,7 @@ main {
                 div button {
                     align-self: center;
                     width: 195px;
-                    .btn {
+                    .btn-buy {
                         .img {
                             max-width: 20px;
                             max-height: 20px;
@@ -481,7 +481,7 @@ main {
                     div button {
                         width: 170px;
     
-                        .btn {
+                        .btn-buy {
                             padding: 5px;
                             .img {
                                 max-width: 20px;
@@ -561,7 +561,7 @@ main {
                     div button {
                         width: 170px;
     
-                        .btn {
+                        .btn-buy {
                             padding: 5px;
                             .img {
                                 max-width: 20px;

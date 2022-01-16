@@ -3,19 +3,12 @@ class Carrinho {
 	btnCartClose = document.querySelector('#btn-cart-x');
 	clickOutCart = document.querySelector('.opn-cart');
 	itens = [];
-	itemPoke = [];
 	total = 0;
-	precos = 0;
-	// precoTotal = 0;
 
-	constructor(options) {
+	constructor() {
 		this.btnCart.addEventListener('click', this.abrirCarrinho);
 
-		// this.preco = Math.floor();
-		// this.precos = options.itens.map(itemPreco => itemPreco.item.preco);
-
 		this.btnCartClose.addEventListener('click', this.fecharCarrinho);
-		// console.log('carrinho carregado...........');
 
 		this.clickOutCart.addEventListener('click', function(event) {
 			event.preventDefault();
@@ -26,6 +19,8 @@ class Carrinho {
 			if(event.key === "Escape") {
 			// document.body.className = '';
 			document.body.classList = [];
+			} else if (event.key === '@') {
+				document.body.className = 'carrinho-aberto';
 			}
 		});
 	}
@@ -39,64 +34,55 @@ class Carrinho {
 
 	fecharCarrinho(event) {
 		event.preventDefault();
-
 		document.body.className = '';
 	}
 
-	// somarPrecos(pokemon) {
-	// 	// this.preco.push(pokemon.preco);
-	// 	// Calcular preço TOTAL
-	// }
-
-
 	adicionar(pokemon) {
 		this.itens.push(pokemon);
-		this.itemPoke.push(pokemon);
-		// this.preco.push(pokemon)
+		this.renderCarrinho(this.itens);
+	}
 
-		const precoTotal = this.itens.reduce(getTotal, 0);
-			function getTotal(precoTotal, preco) {
- 			return precoTotal + (preco);
+	renderCarrinho() {
+		let pokeNoCarrinho = document.querySelector('.poke-container');
+		pokeNoCarrinho.innerHTML = '';
+
+		let totalPreco = document.querySelector('.total-preco');
+		totalPreco.innerHTML = '';
+		let precoTotal = 0;
+		
+		let pokemonsPurchased = this.itens.map(function (pokemon, index) {
+			const pokeUnits = index + 1;
+			precoTotal = precoTotal + parseFloat(pokemon.precoDesc);
 			console.log(precoTotal);
-		}
 
-		const pokeNoCarrinho = document.querySelector ('.poke-container');
+			const itemPoke = document.createElement('ul');
 
-		const itemPoke = document.getElementsByClassName('inside');
+			itemPoke.className = 'poke-inside'
 
-        // this.types = options.types.map(typeItem => typeItem.type.name);
-
-		itemPoke.innerHTML =`
-					<div class="buy-card">
-						<img src="${pokemon.imagem}">
-						<div class="item-price">
-							<h6>${pokemon.nome}</h6>
-							<span><small>1 X </small>${pokemon.preco}<small> R$ </small></span>
+			itemPoke.innerHTML =`
+					<li>
+						<div class="buy-card">
+							<img src="${pokemon.imagem}">
+							<div class="item-price">
+								<h6>${pokemon.nome}</h6>
+								<span><small>1 X </small>${pokemon.precoDesc}<small> R$ </small></span>
+							</div>
+							<i class="fas fa-trash" title="Remove"></i>
 						</div>
-						<i class="fas fa-trash" title="Remove"></i>
-					</div>`
+					</li>`
+			pokeNoCarrinho.appendChild(itemPoke);
 
-		pokeNoCarrinho.innerHTML = `
-			<h4 class="user-name"></h4>
-			<ol>
-				${
-					this.itemPoke.map(itemPoke => `<li class="inside">${itemPoke}</li>`)
-					.join('')
-				}
-			</ol>
-
-			<div class="preco-carrinho">
-				<h2 class="total-preco">Total =  R$<input type="checkbox"></h2>
-				<h3 class="total-parcela">Parcelado Total = 12 x ${(pokemon.preco / 12).toFixed(2)} R$<input type="checkbox"></h3>
-				<h2 class="total-avista">AVISTA Total = ${(pokemon.preco * 0.8).toFixed(2)} R$<input type="checkbox"></h2>
-			</div>
-
-		`
-
-		console.log(pokemon.precoTotal)
-		// console.log(pokemon.preco)
-		// console.log(pokemon.imagem)
-		console.log(pokemon.nome)
+			const pokeTotal = document.createElement('div');
+			pokeTotal.className = 'total-pokes';
+			pokeTotal.innerHTML = `
+				<div class="final-buy">
+					<h4>Units=${pokeUnits}</h4>
+					<h4>Total Price= ${(precoTotal).toFixed(2)}</h4> 
+				</div>
+			`
+			totalPreco.innerHTML = '';
+			totalPreco.appendChild(pokeTotal);
+		});
 	}
 }
 

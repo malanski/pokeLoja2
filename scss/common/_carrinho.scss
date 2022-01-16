@@ -85,7 +85,7 @@ body.carrinho-aberto {
         background-color: #000000;
         color: white;
         
-        ol {
+        ul {
             list-style-type: decimal;
             margin-left: -5px;
             margin-right: 0;
@@ -140,6 +140,10 @@ body.carrinho-aberto {
             border-radius: 5px;
 
         }
+    }
+    .preco-total{
+        font-size: 25px;
+        color: black;
     }
     .final-buy {
         border-radius: 5px;

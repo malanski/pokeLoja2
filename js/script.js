@@ -1,44 +1,4 @@
 
-const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 500));
-class Pokemon {
-    constructor(nome, url){
-        this.nome = nome;
-        this.url = url;
-        this.id = this.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/', '');
-        this.imagem = `
-            https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
-        this.imagem3 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/${this.id}.gif`;   
-        
-        this.preco = Math.floor(Math.random() * 100).toFixed(2);
-        // this.precoTotal = this.precoTotal.map(totalPrice => totalPrice.push(preco))
-    }
-
-    html() {
-        const pokeDiv = document.createElement('div');
-        pokeDiv.className = 'poke';
-        pokeDiv.innerHTML = `
-            <a href="pokemon.html?id=${this.id}">
-                <div class="card-feet">
-                    <h2>${this.nome}</h2>
-                    <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
-
-                    <p class="old-price"><small>R$${this.preco}</small></p>
-                    <p class="actual-price"><small>R$</small>${(this.preco * 0.8).toFixed(2)}</p>
-                    <p class="parcela-price"><small>12x R$ </small>${(this.preco / 12).toFixed(2)}</p><br>
-                    <div>
-                        <button data-id="${this.id}" class="btn">
-                        <img data-id="${this.id}" src="${this.imagem3}" title="Buy ${this.nome} Now">
-                        <!--<i class="far fa-dot-circle"></i>-->
-                        <span data-id="${this.id}" class="buy">Buy</span>
-                        </button>
-                    </div>
-                </div>
-            </a>
-        `;
-        return pokeDiv;
-    }
-}
-
 let page = 0;
 const limit = 20;
 let pokemons = [];
@@ -80,6 +40,8 @@ function pageLogger(page) {
     pageLogs.innerHTML = `${page}`;
 }
 
+
+const fakePromise = () => new Promise((resolve) => setTimeout(resolve, 500));
 //  RENDERIZA OS POKEMONS NA LISTA
 function renderPokemons(pokemonsApi) {
     const pokeList = document.querySelector('.poke-list');
@@ -96,20 +58,20 @@ function renderPokemons(pokemonsApi) {
     });
 
     // Adiciona Click nos Buy Buttons
-    const buyButtons = document.querySelectorAll('.btn');
-
+    const buyButtons = document.querySelectorAll('.btn-buy');
     buyButtons.forEach((btn) => {
         btn.addEventListener('click', (event) => {
-        event.preventDefault();
-        const id = event.target.getAttribute('data-id');
+            event.preventDefault();
+            const id = event.target.getAttribute('data-id');
 
-        const pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
+            const pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
 
-        const openCartClass = document.querySelectorAll('.btn');
+            const openCartClass = document.querySelectorAll('.btn-buy')
+            window.carrinho.adicionar(pokemon);
+            // window.carrinho.renderCarrinho(pokemon);
+            window.carrinho.abrirCarrinho(openCartClass);
 
-        window.carrinho.adicionar(pokemon);
 
-        window.carrinho.abrirCarrinho(openCartClass);
         });
     });
 }
