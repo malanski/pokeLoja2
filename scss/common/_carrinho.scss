@@ -11,7 +11,7 @@ body.carrinho-aberto {
         left: 0;
         position: fixed;
         width: 100vw;
-        height: 100vh;
+        height: auto;
     }
     .carrinho {
         box-shadow: 1px 1px 18px 4px #000000;
@@ -21,10 +21,11 @@ body.carrinho-aberto {
 }
 
 .carrinho {
-    position: fixed;
+    position: absolute;
     right: -280px;
     width: 280px;
-    height: 100vh;
+    min-height: auto;
+    scroll-behavior: auto;
     top: 0;
     background-color: config.$bodyBgColor;
     opacity: 0.9;
@@ -172,8 +173,6 @@ body.carrinho-aberto {
                     border: 1px solid white;
                     border-radius: 5px;
                     color: white;
-
-        
                 }
             }
         }
