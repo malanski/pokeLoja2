@@ -2,6 +2,13 @@ class Carrinho {
 	btnCart = document.querySelector('#btn-cart');
 	btnCartClose = document.querySelector('#btn-cart-x');
 	clickOutCart = document.querySelector('.opn-cart');
+
+	//botão remover Um pokemom
+	btnCartRemove = document.querySelector('#remove-poke');
+
+	//botão REMOVE TODOS OS POKEMONS DO CARRINHO
+	btnCartClear = document.querySelector('.cancel-buy');
+
 	// itens = [];
 	cartStorage = localStorage;
 	total = 0;
@@ -11,6 +18,7 @@ class Carrinho {
 
 		this.btnCartClose.addEventListener('click', this.fecharCarrinho);
 
+
 		this.clickOutCart.addEventListener('click', function(event) {
 			event.preventDefault();
 			document.body.className = '';
@@ -18,25 +26,34 @@ class Carrinho {
 
 		this.keyboardPress = addEventListener('keydown', function(event) {
 			if(event.key === "Escape") {
-			// document.body.className = '';
 			document.body.classList = [];
 			} else if (event.key === '@') {
 				document.body.className = 'carrinho-aberto';
 			}
 		});
-	}
 
+		// tentando Fazer funçãp pra remover as coisas
+
+		// this.btnCartRemove.addEventListener('click', this.removePokemon);
+
+		// this.btnCartClear.addEventListener('click', this.removePokemon);
+
+	}
+	
 	abrirCarrinho(event) {
 		// event.preventDefault();
+		window.carrinho.renderCarrinho();
 		const openCartClass = 'carrinho-aberto';
 
-		window.carrinho.renderCarrinho();
-
 		document.body.className.includes(openCartClass) ? document.body.className = '' : document.body.className = openCartClass;
+
+		// if (pokemons === null) {
+		// 	alert("You need to click BUY to Start using the Buying Cart")
+		// }
 	}
 
 	fecharCarrinho(event) {
-		event.preventDefault();
+	event.preventDefault();
 		document.body.className = '';
 	}
 
@@ -61,23 +78,27 @@ class Carrinho {
 			const pokeUnits = index + 1;
 			precoTotal = precoTotal + parseFloat(itens.precoDesc);
 			parceTotal = parceTotal + parseFloat(itens.precoParc);
-			console.log(precoTotal);
+			console.log(itens);
 
 			const itemPoke = document.createElement('ul');
 
 			itemPoke.className = 'poke-inside'
 
-			itemPoke.innerHTML =`
-					<li>
-						<div class="buy-card">
-							<img src="${itens.imagem}">
-							<div class="item-price">
-								<h6>${itens.nome}</h6>
-								<span><small>1 X </small>${itens.precoDesc}<small> R$ </small></span>
-							</div>
-							<i class="fas fa-trash" title="Remove"></i>
+			itemPoke.innerHTML = `
+				<li>
+					<div class="buy-card">
+						<p><small>${index}</small></p>
+							<a href="pokemon.html?id=${itens.id}">
+								<img src="${itens.imagem}" alt="${itens.imagem}" title="${itens.imagem}">
+							</a>
+						<div class="item-price">
+							<h6>${itens.nome}</h6>
+							<span><small>1 X </small>${itens.precoDesc}<small> R$ </small></span>
 						</div>
-					</li>`
+						<i data-id="${index}" id="remove-poke" class="fas fa-trash" title="Remove"></i>
+					</div>
+				</li>
+			`
 			pokeNoCarrinho.appendChild(itemPoke);
 
 			const pokeTotal = document.createElement('div');
@@ -86,24 +107,50 @@ class Carrinho {
 				<h5>Price information</h5>
 				<div class="info-buy">
 					<h3>Units=${pokeUnits}</h3>
-					<h2 class="total-price">Total Price= ${(precoTotal).toFixed(2)}</h2> 
-
-					<h4>12 x of  ${(parceTotal).toFixed(2)}</h4> 
+					<h2 class="total-price">Total Price= ${(precoTotal).toFixed(2)}</h2>
+					<h4>12 x of  ${(parceTotal).toFixed(2)}</h4>
 				</div>
 			`
 			totalPreco.innerHTML = '';
 			totalPreco.appendChild(pokeTotal);
 		});
 	}
+
+	//REmovedor de pokemon
+	removePokemon() {
+		this.removeStorage(itens);
+		// this.btnCartRemove.addEventListener('click', this.removePokemon);
+		// const itenId = event.target.getAttribute('data-id');
+
+        // const pokemon = this.pokemons.find((pokemon) => pokemon.id == itenId);
+	}
+
 	addedStorage(pokemon) {
 		const pokemons = this.getStorage() || [];
 		pokemons.push(pokemon);
 		localStorage.setItem("pokemonsPurchased", JSON.stringify(pokemons));
  	}
-	 getStorage() {
+	
+
+	getStorage() {
 		 return JSON.parse(localStorage.getItem("pokemonsPurchased"))
-	 }
-}
+	}
+
+	//removedor de localStorage
+	removeStorage() {
+		console.log(index)
+		// const index = itens.indexOf(index);
+		// if (index > -1) {
+  		// 	itens.splice(index, 1);
+		// }
+
+		// const pokemons = this.getStorage() || [];
+		// pokemons.pop(pokemon);
+		// localStorage.removeItem("pokemonsPurchased", JSON.stringify(pokemons));
+
+ 	}
+	//  localStorage.clear();
+	}
 
 window.addEventListener('load', async () => {
 	window.carrinho = new Carrinho();

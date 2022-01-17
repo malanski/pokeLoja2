@@ -24,11 +24,6 @@ class PokemonSelected {
         this.imageIcoFem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/female/${this.id}.png`;   
         this.imageIco = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/${this.id}.png`;   
     }
-    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/other/dream-world/25.svg
-    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/versions/generation-i/yellow/transparent/25.png
-    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/versions/generation-ii/crystal/transparent/25.png
-    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/versions/generation-ii/gold/transparent/25.png
-    // https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/versions/generation-ii/silver/transparent/25.png
     html() {
         const pokeDiv = document.querySelector('.poke-data')
         // console.log(this.abilities)
@@ -36,7 +31,7 @@ class PokemonSelected {
             <div class="card-game">
                 <div class="card-name">
                     <div class="name-icone">
-                        <img class="poke-icone" src="${this.imageArt}" alt="${this.name}">
+                        <img class="poke-icone" src="${this.imagem}" alt="${this.name}">
                         <h1>${this.name}</h1>
                     </div>
 
@@ -44,7 +39,7 @@ class PokemonSelected {
                 </div>
 
                 <div class="img-principal">
-                    <img src="${this.imageArt}" alt="${this.name}">
+                    <img class="imgcard" src="${this.imageArt}" alt="${this.name}">
                     <h4>
                     NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
                     </h4>
@@ -248,9 +243,21 @@ class PokemonSelected {
             </table>
         </div>
         `
+        const cardImage = document.querySelector('.imgcard');
+
+        cardImage.onclick = function() {
+            let imageSrc = cardImage.getAttribute('src');
+            if(imageSrc === '${this.imageArt}') {
+                cardImage.setAttribute ('src', '${this.imagem}');
+            } else {
+                cardImage.setAttribute ('src', '${this.imageArt}')
+            }
+        }
         return pokeDiv;
+
     }
 }
+
 
 //  procura Url de cada pokemon na API
 function getQueryparameters() {

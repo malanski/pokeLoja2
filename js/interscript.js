@@ -5,13 +5,14 @@ class TopPokes {
         this.imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.id}.png`;
     }
     html() {
-        const asideTop = document.querySelector('.top-poke-img')
+        const asideTop = document.querySelector('.poke-img')
         asideTop.innerHTML =`
             <img src="${this.imagem}" alt="${this.name}">
         `
         return TopPokes
     }
 }
+
 
 // Giff Click interativo do Aside: Ash Computer
 const minhaImagem = document.querySelector('.loop');
@@ -24,6 +25,7 @@ minhaImagem.onclick = function() {
         minhaImagem.setAttribute ('src', 'images/ash-poke-pc2.png')
     }
 }
+
 
 // Giff Click interativo do Aside: Pikachuu
 const vaporWave = document.querySelector('.pikachuu');

@@ -11,7 +11,7 @@ body.carrinho-aberto {
         left: 0;
         position: fixed;
         width: 100vw;
-        height: auto;
+        min-height: 100vh;
     }
     .carrinho {
         box-shadow: 1px 1px 18px 4px #000000;
@@ -24,7 +24,7 @@ body.carrinho-aberto {
     position: absolute;
     right: -280px;
     width: 280px;
-    min-height: auto;
+    min-height: 100vh;
     scroll-behavior: auto;
     top: 0;
     background-color: config.$bodyBgColor;
@@ -69,15 +69,18 @@ body.carrinho-aberto {
             }
         }
     }
+
     p{
         text-align: left;
         margin: 10px;
         font-size: 27px;
     }
+
     img{
         width: 150px;
         align-self: center;
     }
+
     .poke-container{
         width: 100%;
         border-radius: 5px;
@@ -102,9 +105,14 @@ body.carrinho-aberto {
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
+                    p{
+                        font-size: 15px;
+                        margin: 0;
+                    }
                     img {
                         width: 50px;
                         margin-right: -20px;
+                        margin-left: -20px;
                     }
                     i{
                         font-size: 12px;
