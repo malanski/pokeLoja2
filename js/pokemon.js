@@ -245,12 +245,13 @@ class PokemonSelected {
         </div>
         `
 
-        trocaImagem();
+        trocaImagem(pokeDiv);
 
         return pokeDiv;
 
     }
 }
+// console.log(PokemonSelected)
 
 function trocaImagem(event) {
     const cardImage = document.querySelector('.imgcard');
