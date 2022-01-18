@@ -26,15 +26,15 @@ class Carrinho {
 
 		this.keyboardPress = addEventListener('keydown', function(event) {
 			if(event.key === "Escape") {
-			document.body.classList = [];
+				document.body.classList = [];
 			} else if (event.key === '@') {
 				document.body.className = 'carrinho-aberto';
 			}
 		});
 
 		// tentando Fazer funçãp pra remover as coisas
+		this.btnCartRemove.addEventListener('click', this.removePokemon);
 
-		// this.btnCartRemove.addEventListener('click', this.removePokemon);
 
 		// this.btnCartClear.addEventListener('click', this.removePokemon);
 
@@ -53,7 +53,7 @@ class Carrinho {
 	}
 
 	fecharCarrinho(event) {
-	event.preventDefault();
+		event.preventDefault();
 		document.body.className = '';
 	}
 
@@ -78,7 +78,6 @@ class Carrinho {
 			const pokeUnits = index + 1;
 			precoTotal = precoTotal + parseFloat(itens.precoDesc);
 			parceTotal = parceTotal + parseFloat(itens.precoParc);
-			console.log(itens);
 
 			const itemPoke = document.createElement('ul');
 
@@ -95,10 +94,11 @@ class Carrinho {
 							<h6>${itens.nome}</h6>
 							<span><small>1 X </small>${itens.precoDesc}<small> R$ </small></span>
 						</div>
-						<i data-id="${index}" id="remove-poke" class="fas fa-trash" title="Remove"></i>
+						<i data-id="${itens.id}" id="remove-poke" class="fas fa-trash" title="Remove"></i>
 					</div>
 				</li>
 			`
+
 			pokeNoCarrinho.appendChild(itemPoke);
 
 			const pokeTotal = document.createElement('div');
@@ -113,12 +113,18 @@ class Carrinho {
 			`
 			totalPreco.innerHTML = '';
 			totalPreco.appendChild(pokeTotal);
+
+
 		});
+
 	}
 
 	//REmovedor de pokemon
-	removePokemon() {
-		this.removeStorage(itens);
+	removePokemon(event) {
+		event.preventDefault();
+		console.log("clicado");
+		
+		// this.removeStorage();
 		// this.btnCartRemove.addEventListener('click', this.removePokemon);
 		// const itenId = event.target.getAttribute('data-id');
 
@@ -138,8 +144,7 @@ class Carrinho {
 
 	//removedor de localStorage
 	removeStorage() {
-		console.log(index)
-		// const index = itens.indexOf(index);
+		// const index = itens.indexOf(itens.id);
 		// if (index > -1) {
   		// 	itens.splice(index, 1);
 		// }
@@ -150,8 +155,11 @@ class Carrinho {
 
  	}
 	//  localStorage.clear();
-	}
+}
 
 window.addEventListener('load', async () => {
 	window.carrinho = new Carrinho();
+
+	//faz o carrinho renderizar ao carregar pagina e nao só quando clica nele
+	window.carrinho.renderCarrinho();
 })
