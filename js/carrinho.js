@@ -4,7 +4,6 @@ class Carrinho {
 	clickOutCart = document.querySelector('.opn-cart');
 
 	//botão remover Um pokemom
-	btnCartRemove = document.querySelector('#remove-poke');
 
 	//botão REMOVE TODOS OS POKEMONS DO CARRINHO
 	btnCartClear = document.querySelector('.cancel-buy');
@@ -33,10 +32,9 @@ class Carrinho {
 		});
 
 		// tentando Fazer funçãp pra remover as coisas
-		this.btnCartRemove.addEventListener('click', this.removePokemon);
 
 
-		// this.btnCartClear.addEventListener('click', this.removePokemon);
+		this.btnCartClear.addEventListener('click', this.removeStorage);
 
 	}
 	
@@ -65,6 +63,8 @@ class Carrinho {
 
 	renderCarrinho() {
 		const pokemons = this.getStorage();
+	
+		
 
 		let pokeNoCarrinho = document.querySelector('.poke-container');
 		pokeNoCarrinho.innerHTML = '';
@@ -98,8 +98,11 @@ class Carrinho {
 					</div>
 				</li>
 			`
-
+			
 			pokeNoCarrinho.appendChild(itemPoke);
+
+			const btnCartRemove = document.querySelector('#remove-poke');
+			btnCartRemove.addEventListener('click', this.removePokemon);
 
 			const pokeTotal = document.createElement('div');
 			pokeTotal.className = 'total-pokes';
@@ -121,9 +124,12 @@ class Carrinho {
 
 	//REmovedor de pokemon
 	removePokemon(event) {
-		event.preventDefault();
-		console.log("clicado");
-		
+		// event.preventDefault();
+		console.log("clicado");// Cade o Clique?????? funciona em tag chumbada no  HTML sómente?
+		alert('funcionaaaa!');
+
+		// window.localStorage.clear()
+
 		// this.removeStorage();
 		// this.btnCartRemove.addEventListener('click', this.removePokemon);
 		// const itenId = event.target.getAttribute('data-id');
@@ -135,15 +141,16 @@ class Carrinho {
 		const pokemons = this.getStorage() || [];
 		pokemons.push(pokemon);
 		localStorage.setItem("pokemonsPurchased", JSON.stringify(pokemons));
- 	}
-	
-
-	getStorage() {
-		 return JSON.parse(localStorage.getItem("pokemonsPurchased"))
 	}
 
-	//removedor de localStorage
+
+	getStorage() {
+		return JSON.parse(localStorage.getItem("pokemonsPurchased"))
+	}
+
+	//removedor de localStorage??????
 	removeStorage() {
+		window.localStorage.clear()
 		// const index = itens.indexOf(itens.id);
 		// if (index > -1) {
   		// 	itens.splice(index, 1);
@@ -160,6 +167,7 @@ class Carrinho {
 window.addEventListener('load', async () => {
 	window.carrinho = new Carrinho();
 
-	//faz o carrinho renderizar ao carregar pagina e nao só quando clica nele
+	//faz o carrinho renderizar ao carregar pagina e nao só quando clica nele  ???
 	window.carrinho.renderCarrinho();
+	
 })
