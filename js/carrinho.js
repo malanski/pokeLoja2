@@ -101,6 +101,7 @@ class Carrinho {
 			
 			pokeNoCarrinho.appendChild(itemPoke);
 
+			// è só aqui  q o Botão de remover é chamado depois q é renderizado acima!!!!!!!!!!!Porra!
 			const btnCartRemove = document.querySelector('#remove-poke');
 			btnCartRemove.addEventListener('click', this.removePokemon);
 
