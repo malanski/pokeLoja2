@@ -25,8 +25,9 @@ class PokemonSelected {
         this.imageIco = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/${this.id}.png`;   
     }
     html() {
-        const pokeDiv = document.querySelector('.poke-data')
-        // console.log(this.abilities)
+        
+        const pokeDiv = document.querySelector('.poke-data');
+        
         pokeDiv.innerHTML =`
             <div class="card-game">
                 <div class="card-name">
@@ -243,20 +244,27 @@ class PokemonSelected {
             </table>
         </div>
         `
-        const cardImage = document.querySelector('.imgcard');
 
-        cardImage.onclick = function() {
-            let imageSrc = cardImage.getAttribute('src');
-            if(imageSrc === '${this.imageArt}') {
-                cardImage.setAttribute ('src', '${this.imagem}');
-            } else {
-                cardImage.setAttribute ('src', '${this.imageArt}')
-            }
-        }
+        trocaImagem();
+
         return pokeDiv;
 
     }
 }
+
+function trocaImagem(event) {
+    const cardImage = document.querySelector('.imgcard');
+    cardImage.onclick = function() {
+        let imageSrc = cardImage.getAttribute('src');
+        if(imageSrc === `${this.imageArt}`) {
+            cardImage.setAttribute ('src', `${this.imagem}`); //Como colocar interpolador aqui????
+        } else {
+            cardImage.setAttribute ('src', `${this.imageArt}`);
+        }
+    }
+}
+
+
 
 
 //  procura Url de cada pokemon na API
