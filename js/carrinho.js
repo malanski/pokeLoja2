@@ -129,11 +129,10 @@ class Carrinho {
 		console.log("clicado");// Cade o Clique?????? funciona em tag chumbada no  HTML sómente?
 		alert('funcionaaaa!');
 
-		// window.localStorage.clear()
+		const itenId = event.target.getAttribute('data-id');
 
-		// this.removeStorage();
-		// this.btnCartRemove.addEventListener('click', this.removePokemon);
-		// const itenId = event.target.getAttribute('data-id');
+		localStorage.removeItem("pokemonsPurchased", JSON.stringify(pokemons));
+
 
         // const pokemon = this.pokemons.find((pokemon) => pokemon.id == itenId);
 	}

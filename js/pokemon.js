@@ -75,6 +75,7 @@ class PokemonSelected {
                             <span> weakness <i class="fas fa-fire-alt elemental"></i> <small>x</small> ${(this.base_experience / 25).toFixed(0)}</span>
                             <span> resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 20).toFixed(0)}</span>
                         </h6>
+
                         <h5>
                             <span> retreat <br> cost</span>
                             <span><i class="fas fa-sun"></i> <i class="fas fa-sun"></i></span>
@@ -98,6 +99,7 @@ class PokemonSelected {
                         </p>
                     </div>
                 </div>
+
                 <div class="card-bottom">
                     <h6>
                             <small>dev.</small>Ulisses Malanski
@@ -113,7 +115,179 @@ class PokemonSelected {
                 </div>
             </div>
 
+            <div class="card2b2">
+            <div class="card2-game">
+            <div class="card-name">
+                <div class="name-icone">
+                    <img class="poke-icone" src="${this.imageArt}" alt="${this.name}">
+                    <h1>${this.name}</h1>
+                </div>
 
+                <h3>${this.base_experience}HP<i class="fas fa-fire-alt"></i></h3>
+            </div>
+
+            <div class="img-principal">
+                <img class="imgcard" src="${this.imagem}" alt="${this.name}">
+                <h4>
+                NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
+                </h4>
+            </div>
+
+            <div class="first-attack">
+                <i class="fas fa-sun"></i>
+                <h5>${this.abilities[0]} Shove</h5>
+                <h5>${(this.base_experience / 2.5).toFixed(0)}</h5>
+            </div>
+
+            <div class="second-attack">
+                <div>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h5>
+                    ${
+                        this.abilities.map(habilidade => `<small>${habilidade}</small>`)
+                        .join(' ')
+                    } slap
+                </h5>
+                <h5>
+                    <big>${(this.base_experience / 1.7).toFixed(0)}</big>
+                </h5>
+            </div>
+            <div class="card-footer">
+                
+                <div class="weakness">
+                    <h6>
+                        <span> weakness <i class="fas fa-fire-alt elemental"></i> <small>x</small> ${(this.base_experience / 25).toFixed(0)}</span>
+                        <span> resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 20).toFixed(0)}</span>
+                    </h6>
+
+                    <h5>
+                        <span> retreat <br> cost</span>
+                        <span><i class="fas fa-sun"></i> <i class="fas fa-sun"></i></span>
+                    </h5>
+                </div>
+
+                <div class="information">
+                    <p>
+                        ${this.name}<small> a.k.a. </small><i>${this.name}nia ${this.name}lus pokémonae</i>, is a 
+                        ${
+                            this.types.map(tipo => `${tipo}`)
+                            .join(' and ')
+                        } type of pocket-monster.
+                        In order to achieve ${this.name}'s Critical Hit attack, with 
+                        ${
+                            this.abilities.map(habilidade => `${habilidade}`)
+                            .join(' or ')
+                        }
+                        ${this.name} needs to get under 
+                        ${(this.base_experience / 3).toFixed(0)}HP.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-bottom">
+                <h6>
+                        <small>dev.</small>Ulisses Malanski
+                </h6>
+                <h6>
+                        © 2022 Pokémon
+                </h6>
+                <h6>
+                        ${(this.weight * this.height / this.base_experience).toFixed(0)}/
+                        ${(this.weight * this.base_experience / this.height / 10).toFixed(0)}
+                        <i class="fas fa-yin-yang"></i>
+                </h6>
+            </div>
+        </div>
+        <div class="card2-game">
+            <div class="card-name">
+                <div class="name-icone">
+                    <img class="poke-icone" src="${this.imageArt}" alt="${this.name}">
+                    <h1>${this.name}</h1>
+                </div>
+
+                <h3>${this.base_experience}HP<i class="fas fa-fire-alt"></i></h3>
+            </div>
+
+            <div class="img-principal">
+                <img class="imgcard" src="${this.imageDrem}" alt="${this.name}">
+                <h4>
+                NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
+                </h4>
+            </div>
+
+            <div class="first-attack">
+                <i class="fas fa-sun"></i>
+                <h5>${this.abilities[0]} Shove</h5>
+                <h5>${(this.base_experience / 2.5).toFixed(0)}</h5>
+            </div>
+
+            <div class="second-attack">
+                <div>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h5>
+                    ${
+                        this.abilities.map(habilidade => `<small>${habilidade}</small>`)
+                        .join(' ')
+                    } slap
+                </h5>
+                <h5>
+                    <big>${(this.base_experience / 1.7).toFixed(0)}</big>
+                </h5>
+            </div>
+            <div class="card-footer">
+                
+                <div class="weakness">
+                    <h6>
+                        <span> weakness <i class="fas fa-fire-alt elemental"></i> <small>x</small> ${(this.base_experience / 25).toFixed(0)}</span>
+                        <span> resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 20).toFixed(0)}</span>
+                    </h6>
+
+                    <h5>
+                        <span> retreat <br> cost</span>
+                        <span><i class="fas fa-sun"></i> <i class="fas fa-sun"></i></span>
+                    </h5>
+                </div>
+
+                <div class="information">
+                    <p>
+                        ${this.name}<small> a.k.a. </small><i>${this.name}nia ${this.name}lus pokémonae</i>, is a 
+                        ${
+                            this.types.map(tipo => `${tipo}`)
+                            .join(' and ')
+                        } type of pocket-monster.
+                        In order to achieve ${this.name}'s Critical Hit attack, with 
+                        ${
+                            this.abilities.map(habilidade => `${habilidade}`)
+                            .join(' or ')
+                        }
+                        ${this.name} needs to get under 
+                        ${(this.base_experience / 3).toFixed(0)}HP.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-bottom">
+                <h6>
+                        <small>dev.</small>Ulisses Malanski
+                </h6>
+                <h6>
+                        © 2022 Pokémon
+                </h6>
+                <h6>
+                        ${(this.weight * this.height / this.base_experience).toFixed(0)}/
+                        ${(this.weight * this.base_experience / this.height / 10).toFixed(0)}
+                        <i class="fas fa-yin-yang"></i>
+                </h6>
+            </div>
+        </div>
+
+            </div>
 
         <div class="pokemon">
             <div class="poke-img">
@@ -245,25 +419,27 @@ class PokemonSelected {
         </div>
         `
 
-        trocaImagem(pokeDiv);
+        // trocaImagem(pokeDiv);
 
         return pokeDiv;
 
     }
 }
-// console.log(PokemonSelected)
 
-function trocaImagem(event) {
-    const cardImage = document.querySelector('.imgcard');
-    cardImage.onclick = function() {
-        let imageSrc = cardImage.getAttribute('src');
-        if(imageSrc === `${this.imageArt}`) {
-            cardImage.setAttribute ('src', `${this.imagem}`); //Como colocar interpolador aqui????
-        } else {
-            cardImage.setAttribute ('src', `${this.imageArt}`);
-        }
-    }
-}
+
+// Esta Giromba não funciona corretamente e nao consegue trocar o SRC da img usando as imagens dinamicas
+
+// function trocaImagem(event) {
+//     const cardImage = document.querySelector('.imgcard');
+//     cardImage.onclick = function() {
+//         let imageSrc = cardImage.getAttribute('src');
+//         if(imageSrc === `${this.imageArt}`) {
+//             cardImage.setAttribute ('src', `${this.imagem}`); //Como colocar interpolador aqui????
+//         } else {
+//             cardImage.setAttribute ('src', `${this.imageArt}`);
+//         }
+//     }
+// }
 
 
 
