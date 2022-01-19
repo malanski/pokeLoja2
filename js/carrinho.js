@@ -4,7 +4,6 @@ class Carrinho {
 	clickOutCart = document.querySelector('.opn-cart');
 
 	//botão remover Um pokemom
-	btnCartRemove = document.querySelector('#remove-poke');
 
 	//botão REMOVE TODOS OS POKEMONS DO CARRINHO
 	btnCartClear = document.querySelector('.cancel-buy');
@@ -26,7 +25,7 @@ class Carrinho {
 
 		this.keyboardPress = addEventListener('keydown', function(event) {
 			if(event.key === "Escape") {
-			document.body.classList = [];
+				document.body.classList = [];
 			} else if (event.key === '@') {
 				document.body.className = 'carrinho-aberto';
 			}
@@ -34,9 +33,8 @@ class Carrinho {
 
 		// tentando Fazer funçãp pra remover as coisas
 
-		// this.btnCartRemove.addEventListener('click', this.removePokemon);
 
-		// this.btnCartClear.addEventListener('click', this.removePokemon);
+		this.btnCartClear.addEventListener('click', this.removeStorage);
 
 	}
 	
@@ -53,7 +51,7 @@ class Carrinho {
 	}
 
 	fecharCarrinho(event) {
-	event.preventDefault();
+		event.preventDefault();
 		document.body.className = '';
 	}
 
@@ -65,6 +63,8 @@ class Carrinho {
 
 	renderCarrinho() {
 		const pokemons = this.getStorage();
+	
+		
 
 		let pokeNoCarrinho = document.querySelector('.poke-container');
 		pokeNoCarrinho.innerHTML = '';
@@ -78,7 +78,6 @@ class Carrinho {
 			const pokeUnits = index + 1;
 			precoTotal = precoTotal + parseFloat(itens.precoDesc);
 			parceTotal = parceTotal + parseFloat(itens.precoParc);
-			console.log(itens);
 
 			const itemPoke = document.createElement('ul');
 
@@ -95,11 +94,16 @@ class Carrinho {
 							<h6>${itens.nome}</h6>
 							<span><small>1 X </small>${itens.precoDesc}<small> R$ </small></span>
 						</div>
-						<i data-id="${index}" id="remove-poke" class="fas fa-trash" title="Remove"></i>
+						<i data-id="${itens.id}" id="remove-poke" class="fas fa-trash" title="Remove"></i>
 					</div>
 				</li>
 			`
+			
 			pokeNoCarrinho.appendChild(itemPoke);
+
+			// è só aqui  q o Botão de remover é chamado depois q é renderizado acima!!!!!!!!!!!Porra!
+			const btnCartRemove = document.querySelector('#remove-poke');
+			btnCartRemove.addEventListener('click', this.removePokemon);
 
 			const pokeTotal = document.createElement('div');
 			pokeTotal.className = 'total-pokes';
@@ -113,14 +117,22 @@ class Carrinho {
 			`
 			totalPreco.innerHTML = '';
 			totalPreco.appendChild(pokeTotal);
+
+
 		});
+
 	}
 
 	//REmovedor de pokemon
-	removePokemon() {
-		this.removeStorage(itens);
-		// this.btnCartRemove.addEventListener('click', this.removePokemon);
-		// const itenId = event.target.getAttribute('data-id');
+	removePokemon(event) {
+		// event.preventDefault();
+		console.log("clicado");// Cade o Clique?????? funciona em tag chumbada no  HTML sómente?
+		alert('funcionaaaa!');
+
+		const itenId = event.target.getAttribute('data-id');
+
+		localStorage.removeItem("pokemonsPurchased", JSON.stringify(pokemons));
+
 
         // const pokemon = this.pokemons.find((pokemon) => pokemon.id == itenId);
 	}
@@ -129,17 +141,17 @@ class Carrinho {
 		const pokemons = this.getStorage() || [];
 		pokemons.push(pokemon);
 		localStorage.setItem("pokemonsPurchased", JSON.stringify(pokemons));
- 	}
-	
-
-	getStorage() {
-		 return JSON.parse(localStorage.getItem("pokemonsPurchased"))
 	}
 
-	//removedor de localStorage
+
+	getStorage() {
+		return JSON.parse(localStorage.getItem("pokemonsPurchased"))
+	}
+
+	//removedor de localStorage??????
 	removeStorage() {
-		console.log(index)
-		// const index = itens.indexOf(index);
+		window.localStorage.clear()
+		// const index = itens.indexOf(itens.id);
 		// if (index > -1) {
   		// 	itens.splice(index, 1);
 		// }
@@ -150,8 +162,12 @@ class Carrinho {
 
  	}
 	//  localStorage.clear();
-	}
+}
 
 window.addEventListener('load', async () => {
 	window.carrinho = new Carrinho();
+
+	//faz o carrinho renderizar ao carregar pagina e nao só quando clica nele  ???
+	window.carrinho.renderCarrinho();
+	
 })
