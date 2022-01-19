@@ -55,7 +55,7 @@ body, html {
 @media screen and (max-width: config.$mobileBreakpointG){
     .gridzera {
         grid-template-rows:
-        200px 80px auto auto auto;
+        300px 80px auto auto auto;
         grid-template-columns: 100vw;
         grid-template-areas:
         'header'
@@ -84,13 +84,13 @@ body, html {
 @media screen and (max-width: config.$mobileBreakpointMm){
     .gridzera {
         grid-template-rows:
-        250px 85px auto auto auto;
+        300px 85px auto auto auto;
     }
 }
 @media screen and (max-width: config.$mobileBreakpointM){
     .gridzera {
         grid-template-rows:
-        230px 85px auto auto auto;
+        290px 85px auto auto auto;
     }
 }
 
@@ -98,7 +98,7 @@ body, html {
 @media screen and (max-width: config.$mobileBreakpointP){
     .gridzera {
         grid-template-rows:
-        230px 85px auto auto auto;
+        270px 85px auto auto auto;
     }
 }
 
