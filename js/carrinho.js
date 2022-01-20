@@ -82,13 +82,13 @@ class Carrinho {
 			itemPoke.innerHTML = `
 				<li>
 					<div class="buy-card">
-						<p><small>${index}</small></p>
+						<p><small>${index + 1}</small></p>
 							<a href="pokemon.html?id=${itens.id}">
 								<img src="${itens.imagem}" alt="${itens.imagem}" title="${itens.imagem}">
 							</a>
 						<div class="item-price">
 							<h6>${itens.nome}</h6>
-							<span><small>1 X </small>${itens.precoDesc}<small> R$ </small></span>
+							<span><h6 class="counting"></h6> X ${itens.precoDesc}<small> R$ </small></span>
 						</div>
 						<div class="remove-poke">
 							<i data-id="${itens.id}" class="fas fa-trash" title="Remove"></i>
@@ -96,31 +96,49 @@ class Carrinho {
 					</div>
 				</li>
 			`
-			
 			pokeNoCarrinho.appendChild(itemPoke);
 
+
+			// const pokeCartList = itens.map((pokemon) => new PokeCarrinho(pokemon.name, pokemon.url));
+
+			// this.pokeCartList = pokeCartList;
+
+			// pokeCartList.forEach((pokemon) => {
+			// 	const html = pokemon.html();
+			// 	pokeList.appendChild(html)
+			// });
+			
+			// var contaPoke = 0;
+
+			// function incrementClick () {
+			// 	contaPoke = contaPoke + 1;
+						
+			// 	// updateDisplay(++contaPoke);
+			// }
+
 			const btnCartRemove = document.querySelectorAll('.remove-poke');
+
 			btnCartRemove.forEach((btn) => {
 				btn.addEventListener('click', (event) => {
 					event.preventDefault();
 					const id = event.target.getAttribute('data-id');
+
+			
+
+					console.log('Yow Clicou brow')
 		
-					const pokemon = this.itemPoke.find((pokemon) => pokemon.id == id);
+					// const pokemon = window.itens.find((pokemon) => pokemon.id == id);
 		
-					const closeCartClass = document.querySelectorAll('.remove-poke')
-					// window.carrinho.adicionar(pokemon);
+					// const closeCartClass = document.querySelectorAll('.remove-poke')
 					// window.carrinho.renderCarrinho(pokemon);
-					window.carrinho.fecharCarrinho(closeCartClass);
-		
+					// window.carrinho.fecharCarrinho(closeCartClass);
 		
 				});
 			});
-
-
 			// è só aqui  q o Botão de remover é chamado depois q é renderizado acima!!!!!!!!!!!Porra!
 			// const btnCartRemove = document.querySelectorAll('.remove-poke');
-
 			// btnCartRemove.addEventListener('click', this.removePokemon);
+
 
 			const pokeTotal = document.createElement('div');
 			pokeTotal.className = 'total-pokes';
