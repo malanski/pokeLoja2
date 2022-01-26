@@ -96,23 +96,23 @@ class Carrinho {
 					</div>
 				</li>
 			`
-			
+
 			pokeNoCarrinho.appendChild(itemPoke);
 
 			const btnCartRemove = document.querySelectorAll('.remove-poke');
+
 			btnCartRemove.forEach((btn) => {
 				btn.addEventListener('click', (event) => {
 					event.preventDefault();
 					const id = event.target.getAttribute('data-id');
-		
-					const pokemon = this.itemPoke.find((pokemon) => pokemon.id == id);
-		
+					console.log(pokeNoCarrinho);
+					const pokemon = this.pokeNoCarrinho.find((pokemon) => pokemon.id == id);
+
 					const closeCartClass = document.querySelectorAll('.remove-poke')
 					// window.carrinho.adicionar(pokemon);
 					// window.carrinho.renderCarrinho(pokemon);
 					window.carrinho.fecharCarrinho(closeCartClass);
-		
-		
+
 				});
 			});
 
@@ -145,6 +145,8 @@ class Carrinho {
 		// event.preventDefault();
 		console.log("clicado");// Cade o Clique?????? funciona em tag primeira?   HTML sómente?
 		alert('funcionaaaa!');
+		window.carrinho.renderCarrinho();
+
 
 		// const itenId = event.target.getAttribute('data-id');
 
