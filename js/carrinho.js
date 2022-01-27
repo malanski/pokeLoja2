@@ -82,13 +82,13 @@ class Carrinho {
 			itemPoke.innerHTML = `
 				<li>
 					<div class="buy-card">
-						<p><small>${index}</small></p>
+						<p><small>${index + 1}</small></p>
 							<a href="pokemon.html?id=${itens.id}">
 								<img src="${itens.imagem}" alt="${itens.imagem}" title="${itens.imagem}">
 							</a>
 						<div class="item-price">
 							<h6>${itens.nome}</h6>
-							<span><small>1 X </small>${itens.precoDesc}<small> R$ </small></span>
+							<span><h6 class="counting"></h6> X ${itens.precoDesc}<small> R$ </small></span>
 						</div>
 						<div class="remove-poke">
 							<i data-id="${itens.id}" class="fas fa-trash" title="Remove"></i>
@@ -96,8 +96,29 @@ class Carrinho {
 					</div>
 				</li>
 			`
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe227900c9ebe292a8357394330f918878d9da4b
 			pokeNoCarrinho.appendChild(itemPoke);
+
+
+			// const pokeCartList = itens.map((pokemon) => new PokeCarrinho(pokemon.name, pokemon.url));
+
+			// this.pokeCartList = pokeCartList;
+
+			// pokeCartList.forEach((pokemon) => {
+			// 	const html = pokemon.html();
+			// 	pokeList.appendChild(html)
+			// });
+			
+			// var contaPoke = 0;
+
+			// function incrementClick () {
+			// 	contaPoke = contaPoke + 1;
+						
+			// 	// updateDisplay(++contaPoke);
+			// }
 
 			const btnCartRemove = document.querySelectorAll('.remove-poke');
 
@@ -105,6 +126,7 @@ class Carrinho {
 				btn.addEventListener('click', (event) => {
 					event.preventDefault();
 					const id = event.target.getAttribute('data-id');
+<<<<<<< HEAD
 					console.log(pokeNoCarrinho);
 					const pokemon = this.pokeNoCarrinho.find((pokemon) => pokemon.id == id);
 
@@ -113,14 +135,25 @@ class Carrinho {
 					// window.carrinho.renderCarrinho(pokemon);
 					window.carrinho.fecharCarrinho(closeCartClass);
 
+=======
+
+			
+
+					console.log('Yow Clicou brow')
+		
+					// const pokemon = window.itens.find((pokemon) => pokemon.id == id);
+		
+					// const closeCartClass = document.querySelectorAll('.remove-poke')
+					// window.carrinho.renderCarrinho(pokemon);
+					// window.carrinho.fecharCarrinho(closeCartClass);
+		
+>>>>>>> fe227900c9ebe292a8357394330f918878d9da4b
 				});
 			});
-
-
 			// è só aqui  q o Botão de remover é chamado depois q é renderizado acima!!!!!!!!!!!Porra!
 			// const btnCartRemove = document.querySelectorAll('.remove-poke');
-
 			// btnCartRemove.addEventListener('click', this.removePokemon);
+
 
 			const pokeTotal = document.createElement('div');
 			pokeTotal.className = 'total-pokes';
