@@ -32,6 +32,7 @@ header {
             a {
                 text-decoration: none;
                 img{
+                    width: 50%;
                     margin-left: 20px;
                     margin-bottom: -5px;
 
@@ -40,6 +41,7 @@ header {
                     color: config.$yellowPok;
                     text-shadow: config.$texShadow;
                     line-height: 40px;
+                    letter-spacing: 3px;
                     font-family: config.$pokeFont;
                     font-size: 35px;
                     transition: all ease 0.9s;
@@ -48,6 +50,7 @@ header {
                     animation-name: runing;
                     margin-left: 20px;
                     margin-top: -5px;
+                    margin-bottom: 5px;
                     text-align: center;
                 }
                 h1:hover {
@@ -110,31 +113,29 @@ header {
             }
         }
         .profile {
+            width: 25vw;
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
             list-style-type: none;
             margin: 10px;
             padding-top: 5px;
             padding-bottom: 5px;
-            padding-right: 92px;
-            width: fit-content;
             padding-left: 5px;
+            padding-right: 5px;
             text-transform: uppercase;
             border: 1px solid black;
             border-radius: 5px;
-            li {
-                margin-left: 8%;
-                .headlink {
-                    text-decoration: none;
-                    color: black;
-                    font-size: 28px;
-                    font-weight: 800;
-                    transition: all ease 0.4s;
-                }
-                .headlink:hover {
-                    color: config.$yellowPok;
-                }
+            text-align: center;
+            li .headlink {
+                text-decoration: none;
+                color: black;
+                font-size: 28px;
+                font-weight: 800;
+                transition: all ease 0.4s;
+            }
+            li .headlink:hover {
+                color: config.$yellowPok;
             }
         }
         .profile:hover{
@@ -348,7 +349,7 @@ nav {
                 margin-top: 0;
                 margin-right: 50px;
                 position: absolute;
-                .headlink {
+                li .headlink {
                     font-size: 0.9rem;
                 }
                 img {
@@ -443,7 +444,7 @@ nav {
                 margin-left: 5px;
                 margin-right: 0;
                 margin-bottom: 5px;
-                .headlink {
+                li .headlink {
                     font-size: 0.8rem;
 
                 }
@@ -525,13 +526,15 @@ nav {
             .profile {
                 display: flex;
                 justify-content: space-between;
-                width: 99%;
-                margin-top: 5px;
-                margin-left: 5px;
-                margin-right: 5px;
-                margin-bottom: 5px;
-                .headlink {
-                    font-size: 0.8rem;
+                width: 97%;
+                margin: 0px;
+                li .headlink {
+                    font-size: 1.2rem;
+                    margin: 0;
+                    padding: 0;
+                    i{
+                        font-size: 1.5rem;
+                    }
 
                 }
             }
@@ -607,9 +610,12 @@ nav {
             .profile {
                 width: 98%;
                 margin: 0.5%;
-                .headlink {
-                    font-size: 0.8rem;
+                text-align: center;
+                li .headlink {
+                    font-size: 0.9rem;
                     margin-left: 0;
+                    margin-right: 0;
+                    padding: 0;
                 }
             }
         }

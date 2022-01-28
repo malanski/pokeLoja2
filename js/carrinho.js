@@ -96,10 +96,6 @@ class Carrinho {
 					</div>
 				</li>
 			`
-<<<<<<< HEAD
-
-=======
->>>>>>> fe227900c9ebe292a8357394330f918878d9da4b
 			pokeNoCarrinho.appendChild(itemPoke);
 
 
@@ -126,7 +122,6 @@ class Carrinho {
 				btn.addEventListener('click', (event) => {
 					event.preventDefault();
 					const id = event.target.getAttribute('data-id');
-<<<<<<< HEAD
 					console.log(pokeNoCarrinho);
 					const pokemon = this.pokeNoCarrinho.find((pokemon) => pokemon.id == id);
 
@@ -135,19 +130,6 @@ class Carrinho {
 					// window.carrinho.renderCarrinho(pokemon);
 					window.carrinho.fecharCarrinho(closeCartClass);
 
-=======
-
-			
-
-					console.log('Yow Clicou brow')
-		
-					// const pokemon = window.itens.find((pokemon) => pokemon.id == id);
-		
-					// const closeCartClass = document.querySelectorAll('.remove-poke')
-					// window.carrinho.renderCarrinho(pokemon);
-					// window.carrinho.fecharCarrinho(closeCartClass);
-		
->>>>>>> fe227900c9ebe292a8357394330f918878d9da4b
 				});
 			});
 			// è só aqui  q o Botão de remover é chamado depois q é renderizado acima!!!!!!!!!!!Porra!
