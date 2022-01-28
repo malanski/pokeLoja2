@@ -37,16 +37,19 @@ main {
             border: 1px solid rgb(173, 200, 255);
             border-radius: 5px;
             padding: 10px;
+            width: 100%;
+
             a {
                 text-decoration: none;
                 color: black;
+
                 .card-feet {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
                     max-height: 100px;
-                    width: auto;
+                    width: 100%;
                     height: 330px;
                     margin-left: 6px;
                     margin-right: 6px;
@@ -92,7 +95,6 @@ main {
                     div button{
                         margin: 0;
                         // margin-bottom: 10px;
-                        width: 16.5vw;
                         height: 48px;
                         display: flex;
                         justify-content: space-between;
@@ -103,10 +105,12 @@ main {
                         background: config.$btnCardBg;
                         background-size: 400% 400%;
                         cursor: pointer;
-                        border: 1px solid rgb(0, 0, 0);
+                        border: 2px solid rgb(0, 0, 0);
                         border-radius: 5px;
-                        padding: 10px;
+                        padding: 10px 10px;
                         margin-bottom: 0;
+                        width: 100%;
+
                         img {
                             height: 35px;
                             margin-top: 0;
