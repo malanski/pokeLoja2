@@ -90,13 +90,13 @@ body, html {
 @media screen and (max-width: config.$mobileBreakpointMm){
     .gridzera {
         grid-template-rows:
-        300px 85px auto auto auto;
+        330px 85px auto auto auto;
     }
 }
 @media screen and (max-width: config.$mobileBreakpointM){
     .gridzera {
         grid-template-rows:
-        320px 85px auto auto auto;
+        340px 85px auto auto auto;
     }
 }
 

@@ -227,7 +227,7 @@ aside {
 @media screen and (max-width: config.$mobileBreakpointM){
     aside {
         width: 90%;
-        margin: 20px;
+        margin: 5%;
         .aside-head {
             .gambeta {
                 width: 90%;
@@ -241,6 +241,17 @@ aside {
     }
 }
 @media screen and (max-width: config.$mobileBreakpointP){
+    aside {
+        .gambeta {
+        }
+        .crossfade{
+            .pikachuu{
+                width: 295px;
+            }
+        }
+    }
+}
+@media screen and (max-width: config.$mobileBreakpointPp){
     aside {
         .gambeta {
         }
