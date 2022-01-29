@@ -48,7 +48,7 @@ main {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
-                    max-height: 100px;
+                    max-height: 80px;
                     width: 100%;
                     height: 330px;
                     margin-left: 6px;
@@ -58,39 +58,37 @@ main {
                         width:150px;
                         height:150px;
                         margin: 0;
-                        // margin-bottom: 20px;
+                        // margin-bottom: 20px; 
                     }
                     h2 {
                         text-transform: capitalize;
-                        // margin-top: 20px;
-                        // margin-bottom: 0;
                         margin: 0;
                         padding: 0;
                         font-weight: 800;
                         font-size: 30px;
                     }
+                    .money{
+                        font-family: 'Titillium Web', sans-serif;
+                        font-weight: 800;
+                        line-height: 20px;
+                    }
                     .old-price {
-                        // flex-shrink: 1;
                         text-decoration: line-through;
                         color: red;
                         font-size: 23px;
-                        // margin-bottom: 5px;
                         margin: 0;
                     }
                     .actual-price {
-                        // flex-shrink: 1;
                         color: rgb(25, 184, 0);
                         font-weight: bold;
                         font-size: 27px;
-                        // margin: 0;
                         margin: 0;
                     }
                     .parcela-price {
-                        color: rgb(0, 9, 184);
+                        color: rgb(49, 58, 228);
                         font-weight: bold;
                         font-size: 23px;
                         margin: 0;
-                        // margin-top: 0;
                     }
                     div button{
                         margin: 0;
@@ -107,7 +105,8 @@ main {
                         cursor: pointer;
                         border: 2px solid rgb(0, 0, 0);
                         border-radius: 5px;
-                        padding: 10px 10px;
+                        padding: 10px 20px;
+                        margin-top: 5px;
                         margin-bottom: 0;
                         width: 100%;
 
@@ -120,16 +119,15 @@ main {
                             opacity: 0.5;
                         }
                         span{
-                            font-size: 1rem;
+                            font-size: 20px;
                             font-weight: 600;
                             color: white;
                         }
                     }
                     button:hover {
-                        animation: pokeBtnAnimation 5s ease infinite;
-                        height: 45px;
+                        animation: pokeBtnAnimation 5s ease-in-out infinite;
                         span{
-                            animation: buyAnimation 4s ease infinite;
+                            animation: buyAnimation 4s ease-in-out infinite;
                         }
                     }
                 }
@@ -171,14 +169,22 @@ main {
                 background-size: 300% 300%;
                 margin: 1%;
                 width: 80vw;
-                padding: 5px 10px;
-                border-radius: 3%;
+                padding: 10px 10px;
+                border-radius: 5px;
+                border:1px solid white ;
             }
             button:hover {
                 animation: pokeProxAnimation 1.5s ease infinite;
             }
+            // 
             .page-log {
-                font-size: 15px;
+                padding: 10px 20px;
+                border: 2px solid green;
+                border-radius: 5px;
+                font-size: 25px;
+                color: greenyellow;
+                font-family: Digital-7;
+                background: #000000;
             }
     }
 }
@@ -189,34 +195,36 @@ main {
         text-shadow:
         0.2px 0.5vh 0.1vw config.$blue2Pok;
         font-family: Pokemon;
+        letter-spacing: 2px;
     }
     50% {
-        font-size: 1.3rem;
+        font-size: 20px;
         font-family: Pokemon;
+        color: rgb(251, 208, 162);
+        letter-spacing: 4px;
+
+        
     }
     100% {
         color: config.$yellowPok;
         text-shadow:
-        0.2rem 0.5vh 0.5vw config.$bluePok;
+        0.2px 0.5vh 0.1vw config.$blue2Pok;
         font-family: Pokemon;
+        letter-spacing: 2px;
+
     }
 }
 @keyframes pokeBtnAnimation {
     0% {
         background-position: 0% 5%;
-        color: #DDD;
-        text-shadow:
-        0.2px 0.5vh 0.1vw config.$blue2Pok;
+        
     }
     50% {
         background-position: 100% 50%;
-        // font-size: 1.3rem;
     }
     100% {
         background-position: 0% 50%;
-        color: config.$yellowPok;
-        text-shadow:
-        0.2rem 0.5vh 0.2vw config.$bluePok;
+        
     }
 }
 

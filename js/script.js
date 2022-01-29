@@ -29,7 +29,7 @@ async function getPokemons(page = 0) {
     const pages = Math.ceil(json.count / limit);
 
     // mostra numero de paginas atual e total: logger
-    pageLogger((page + 1) + '/' + pages);
+    pageLogger((page + 1) + ':' + pages);
 
     return json;
 }

@@ -21,9 +21,9 @@ class Pokemon {
                     <h2>${this.nome}</h2>
                     <img class="poke-pic" src="${this.imagem}" alt="${this.nome}">
 
-                    <p class="old-price"><small>R$${this.preco}</small></p>
-                    <p class="actual-price"><small>R$</small>${this.precoDesc}</p>
-                    <p class="parcela-price"><small>12x R$ </small>${this.precoParc}</p><br>
+                    <p class="money old-price"><small>R$${this.preco}</small></p>
+                    <p class="money actual-price"><small>R$</small>${this.precoDesc}</p>
+                    <p class="money parcela-price"><small>12x R$ </small>${this.precoParc}</p><br>
                     <div>
                         <button data-id="${this.id}" class="btn-buy">
                         <img data-id="${this.id}" src="${this.imagem3}" title="Buy ${this.nome} Now">
