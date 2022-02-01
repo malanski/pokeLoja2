@@ -236,7 +236,6 @@ nav {
         align-items: baseline;
         flex-wrap: nowrap;
         margin-left: 5px;
-        margin-right: 25px;
         padding: 5px;
         width: 98vw;
             .navbar {
@@ -256,6 +255,7 @@ nav {
                 color: white;
                 border-right: solid 1px white;
                 padding-right: 5px;
+                padding-left: 5px;
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -635,7 +635,7 @@ nav {
             }
         }
     }
-}
+} 
 
 @media screen and (max-width: config.$mobileBreakpointPp){
     header {

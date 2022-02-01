@@ -6,8 +6,6 @@ class Carrinho {
 	//botão REMOVE TODOS OS POKEMONS DO CARRINHO
 	btnCartClear = document.querySelector('.cancel-buy');
 
-	// itens = [];
-	cartStorage = localStorage;
 	total = 0;
 
 	constructor() {
@@ -34,6 +32,8 @@ class Carrinho {
 
 		this.btnCartClear.addEventListener('click', this.removeStorage);
 
+		this.myStorage = this.getStorage();
+
 	}
 	
 	abrirCarrinho(event) {
@@ -41,11 +41,17 @@ class Carrinho {
 		window.carrinho.renderCarrinho();
 		const openCartClass = 'carrinho-aberto';
 
-		document.body.className.includes(openCartClass) ? document.body.className = '' : document.body.className = openCartClass;
-
-		// if (pokemons === null) {
-		// 	alert("You need to click BUY to Start using the Buying Cart")
-		// }
+		document.body.className.includes(openCartClass)
+			? (document.body.className = '')
+			: (document.body.className = openCartClass)
+		addEventListener('keydown', function (event) {
+			if (event.key === 'Escape') {
+				document.body.className = ''
+			} else if (event.key === '*'){
+				document.body.className = 'carrinho-aberto'
+				window.carrinho.renderCarrinho()
+			}
+		})
 	}
 
 	fecharCarrinho(event) {
@@ -54,148 +60,126 @@ class Carrinho {
 	}
 
 	adicionar(pokemon) {
-		this.addedStorage(pokemon);
-		// this.itens.push(pokemon);
-		// this.renderCarrinho(this.itens);
+		this.populateStorage(pokemon);
+		document.body.className ='carrinho-aberto'
+		this.renderCarrinho();
 	}
 
 	renderCarrinho() {
-		const pokemons = this.getStorage();
+		const pokemonsNoCarrinho = this.getStorage() || [];
 
-		let pokeNoCarrinho = document.querySelector('.poke-container');
-		pokeNoCarrinho.innerHTML = '';
+		const pokeCart = document.querySelector('.poke-container');
+		pokeCart.innerHTML = '';
 
-		let totalPreco = document.querySelector('.total-preco');
-		totalPreco.innerHTML = '';
+		const pokeTotais = document.querySelector('.total-preco');
+		pokeTotais.innerHTML = '';
 		let precoTotal = 0;
 		let parceTotal = 0;
+		const pokemonsAlreadyAdded = []
+		
+		if (pokemonsNoCarrinho.length > 0) {
+			pokemonsNoCarrinho.map((itens) => {
+				const pokemonExist = pokemonsAlreadyAdded.find(
+					(pokemon) => pokemon.id == itens.id,
+				)
+				if (pokemonExist) {
+					pokemonExist.qnty = pokemonExist.qnty + 1
+					pokemonsAlreadyAdded.push(pokemonExist)
+					this.updatePokemonQnty(pokemonExist.id, pokemonExist.qnty)
+				} else {
+					pokemonsAlreadyAdded.push({ id: itens.id, qnty: 1})
+					pokeCart.appendChild(this.createPokemonItem(itens))
+				}
 
-		let pokemonsPurchased = pokemons.map((itens, index) => {
-			const pokeUnits = index + 1;
-			precoTotal = precoTotal + parseFloat(itens.precoDesc);
-			parceTotal = parceTotal + parseFloat(itens.precoParc);
-			// itens = [];
-			const itemPoke = document.createElement('ul');
+				precoTotal = precoTotal + parseFloat(itens.precoDesc)
+			})
+			pokeTotais.appendChild(
+				this.addDetails(pokemonsNoCarrinho.length, precoTotal),
+			)
+		} else {
+			const pokeItem = document.querySelector('ul')
+			pokeItem.className = 'poke-inside'
+			pokeItem.innerHTML = `<li>Nothing inside<br>Click on Buy at the Home site</li>`
+			pokeCart.appendChild(pokeItem)
+		}
+	}
 
-			itemPoke.className = 'poke-inside'
-
-			itemPoke.innerHTML = `
-				<li>
-					<div class="buy-card">
-						<p><small>${index + 1}</small></p>
-							<a href="pokemon.html?id=${itens.id}">
-								<img src="${itens.imagem}" alt="${itens.imagem}" title="${itens.imagem}">
-							</a>
-						<div class="item-price">
-							<h6>${itens.nome}</h6>
-							<span><h6 class="counting"></h6> X ${itens.precoDesc}<small> R$ </small></span>
-						</div>
-						<div class="remove-poke">
-							<i data-id="${itens.id}" class="fas fa-trash" title="Remove"></i>
-						</div>
-					</div>
-				</li>
-			`
-			pokeNoCarrinho.appendChild(itemPoke);
-
-
-			// const pokeCartList = itens.map((pokemon) => new PokeCarrinho(pokemon.name, pokemon.url));
-
-			// this.pokeCartList = pokeCartList;
-
-			// pokeCartList.forEach((pokemon) => {
-			// 	const html = pokemon.html();
-			// 	pokeList.appendChild(html)
-			// });
-			
-			// var contaPoke = 0;
-
-			// function incrementClick () {
-			// 	contaPoke = contaPoke + 1;
-						
-			// 	// updateDisplay(++contaPoke);
-			// }
-
-			const btnCartRemove = document.querySelectorAll('.remove-poke');
-
-			btnCartRemove.forEach((btn) => {
-				btn.addEventListener('click', (event) => {
-					event.preventDefault();
-					const id = event.target.getAttribute('data-id');
-					console.log(pokeNoCarrinho);
-					const pokemon = this.pokeNoCarrinho.find((pokemon) => pokemon.id == id);
-
-					const closeCartClass = document.querySelectorAll('.remove-poke')
-					// window.carrinho.adicionar(pokemon);
-					// window.carrinho.renderCarrinho(pokemon);
-					window.carrinho.fecharCarrinho(closeCartClass);
-
-				});
-			});
-			// è só aqui  q o Botão de remover é chamado depois q é renderizado acima!!!!!!!!!!!Porra!
-			// const btnCartRemove = document.querySelectorAll('.remove-poke');
-			// btnCartRemove.addEventListener('click', this.removePokemon);
-
-
-			const pokeTotal = document.createElement('div');
-			pokeTotal.className = 'total-pokes';
-			pokeTotal.innerHTML = `
-				<h5>Price information</h5>
-				<div class="info-buy">
-					<h3>Units = ${pokeUnits} </h3>
-					<h2 class="total-price">Total Price= ${(precoTotal).toFixed(2)}</h2>
-					<h4>12 x of  ${(parceTotal).toFixed(2)}</h4>
-				</div>
-			`
-			totalPreco.innerHTML = '';
-			totalPreco.appendChild(pokeTotal);
-
-
-		});
-
+	updatePokemonQnty(pokemonId, pokemonQnty) {
+		const qntyElement = document.querySelector(`.qnty-item-${pokemonId}`)
+		qntyElement.innerHTML = pokemonQnty
 	}
 
 	//REmovedor de pokemon
-	removePokemon(event) {
-		// event.preventDefault();
-		console.log("clicado");// Cade o Clique?????? funciona em tag primeira?   HTML sómente?
+	removePokemonItem(pokemonId) {
+		const pokemonsNoCarrinho = this.getStorage()
+		const findPoke = pokemonsNoCarrinho.filter(
+			(pokemonsNoCarrinho) => pokemonsNoCarrinho.id != pokemonId,
+		)
 		alert('funcionaaaa!');
-		window.carrinho.renderCarrinho();
-
-
-		// const itenId = event.target.getAttribute('data-id');
-
-		// const index = itens.indexOf(itens.id);
-		// if (index > -1) {
-  		// 	itens.splice(index, 1);
-		// }
-
-        // const pokemon = this.pokemons.find((pokemon) => pokemon.id == itenId);
+		this.deleteStorage(findPoke)
+		this.renderCarrinho();
 	}
 
-	addedStorage(pokemon) {
-		const pokemons = this.getStorage() || [];
-		pokemons.push(pokemon);
-		localStorage.setItem("pokemonsPurchased", JSON.stringify(pokemons));
+	createPokemonItem(item, index) {
+		const pokeItem = document.createElement('ul')
+		pokeItem.className ='poke-inside'
+		index = 0
+		pokeItem.innerHTML = `
+			<li>
+				<div class="buy-card">
+					<p><small>${index + 1}</small></p>
+						<a href="pokemon.html?id=${item.id}">
+							<img src="${item.imagem}" alt="${item.imagem}" title="${item.imagem}">
+						</a>
+					<div class="item-price">
+						<h6>${item.nome}</h6>
+						<span><h6 class="qnty-item qnty-item-${item.id}"></h6> X ${item.precoDesc}<small> R$ </small></span>
+					</div>
+					<div class="remove-poke">
+						<i onClick="window.carrinho.removePokemonItem(${item.id})" class="fas fa-trash" title="Remove"></i>
+					</div>
+				</div>
+			</li>
+		`
+		return pokeItem
 	}
 
-
-	getStorage() {
-		return JSON.parse(localStorage.getItem("pokemonsPurchased"))
+	addDetails(totalItens, precoTotal) {
+		const pokeTotal = document.createElement('div')
+		pokeTotal.className ='total-pokes'
+		pokeTotal.innerHTML = `
+			<h4>Total itens: ${totalItens}</h4>
+			<h4>Total price: R$ ${precoTotal.toFixed(2)}</h4>
+		`
+		return  pokeTotal
+	}
+	
+	deleteStorage(findPoke) {
+		localStorage.setItem('pokemonsNoCarrinho', JSON.stringify(findPoke))
 	}
 
 	//removedor de localStorage??????
 	removeStorage() {
 		console.log('clicouuu')
-		localStorage.removeItem("pokemonsPurchased");
+		localStorage.removeItem("pokemonsNoCarrinho");
 		window.carrinho.renderCarrinho();
- 	}
+	}
+
+	populateStorage(pokemon){
+		const pokemons = this.getStorage() || []
+		pokemons.push(pokemon)
+		localStorage.setItem('pokemonsNoCarrinho', JSON.stringify(pokemons))
+	}
+
+	getStorage() {
+		return JSON.parse(localStorage.getItem("pokemonsNoCarrinho"))
+	}
 }
 
 window.addEventListener('load', async () => {
 	window.carrinho = new Carrinho();
 
 	//faz o carrinho renderizar ao carregar pagina e nao só quando clica nele  ???
-	window.carrinho.renderCarrinho();
+	// window.carrinho.renderCarrinho();
 	
 })
