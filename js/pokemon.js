@@ -29,6 +29,7 @@ class PokemonSelected {
         const pokeDiv = document.querySelector('.poke-data');
         
         pokeDiv.innerHTML =`
+        <section class="pokemon-cards-principal">
             <div class="card-game">
                 <div class="card-name">
                     <div class="name-icone">
@@ -114,6 +115,98 @@ class PokemonSelected {
                     </h6>
                 </div>
             </div>
+
+            <!-- ___________________  CARD 0 2   Start     ___________________________ -->
+            <div class="card-game">
+                <div class="card-name">
+                    <div class="name-icone">
+                        <div class="poke-icone">
+                            <img src="${this.imageArt}" alt="${this.name}">
+                        </div>
+                        <p class="pokemon-name">${this.name}</p>
+                    </div>
+
+                    <p class="xp-hp">${(this.base_experience + 57).toFixed(0)}HP<i class="fas fa-fire-alt"></i></p>
+                </div>
+
+                <div class="img-principal">
+                    <img class="imgcard" src="${this.imageDrem}" alt="${this.name}">
+                    <div class="info-principal">
+                        NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
+                    </div>
+                </div>
+
+                <div class="first-attack">
+                    <i class="fas fa-sun"></i>
+                    <p>${this.abilities[0]} Shove</p>
+                    <p>${(this.base_experience / 2.3).toFixed(0)}</p>
+                </div>
+
+                <div class="second-attack">
+                    <div>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <p>
+                        ${
+                            this.abilities.map(habilidade => `<small>${habilidade}</small>`)
+                            .join(' ')
+                        } slap
+                    </p>
+                    <p>
+                        <big>${(this.base_experience / 1.3).toFixed(0)}</big>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    
+                    <div class="weakness">
+                        <div class="weak-point">
+                            <span>weakness <i class="fas fa-fire-alt elemental"></i> <small>x</small> ${(this.base_experience / 23).toFixed(0)}</span>
+                            <span>resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 18).toFixed(0)}</span>
+                        </div>
+
+                        <div class="weak-point">
+                            <span> retreat <br> cost</span>
+                            <span><i class="fas fa-sun"></i> <i class="fas fa-sun"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="information">
+                        <p>
+                            ${this.name}<small> a.k.a. </small><i>${this.name}nia ${this.name}lus pokémonae</i>, is a 
+                            ${
+                                this.types.map(tipo => `${tipo}`)
+                                .join(' and ')
+                            } type of pocket-monster.
+                            In order to achieve ${this.name}'s Critical Hit attack, with 
+                            ${
+                                this.abilities.map(habilidade => `${habilidade}`)
+                                .join(' or ')
+                            }
+                            ${this.name} needs to get under 
+                            ${(this.base_experience / 2.5).toFixed(0)}HP.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-bottom">
+                    <h6>
+                            <small>dev.</small>Ulisses Malanski
+                    </h6>
+                    <h6>
+                            © 2022 Pokémon
+                    </h6>
+                    <h6>
+                            ${(this.weight * this.height / this.base_experience + 37).toFixed(0)}/
+                            ${(this.weight * this.base_experience / this.height / 9).toFixed(0)}
+                            <i class="fas fa-yin-yang"></i>
+                    </h6>
+                </div>
+            </div>
+
+            <!-- ___________________  CARD 0 2 end       ___________________________ -->
+        </section>
 
 
         <div class="pokemon">

@@ -1,5 +1,9 @@
 @use 'config';
-
+.pokemon-cards-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 main {
     margin: 0;
     background-color: config.$headerColor;
@@ -14,11 +18,12 @@ main {
     grid-column-end: 1;
     width: 70vw;
         .poke-data {
-           
+            width: 100%;
             .card-game{
-                width: 50%;
+                width: 49%;
                 height: 750px;
                 border: 20px solid config.$yellowPok;
+                box-shadow: 1px 1px 18px 4px #000000;
                 border-radius: 20px;
                 background-image: url('https://c.tenor.com/pK6hhq40TB0AAAAM/moving-wallpaper-wallpaper.gif');
                 background-repeat: no-repeat;
