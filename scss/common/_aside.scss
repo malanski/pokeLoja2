@@ -22,11 +22,11 @@ aside {
         flex-direction: column;
         flex-grow: 1;
         width: 90%;
-        margin: 10px;
+        margin: 5%;
         .logo-img {
             align-self: center;
-            width: 200px;
-            height: 100px;
+            width: 100%;
+            // height: 100px;
         }
         h4{
             font-size: 15px;
@@ -36,8 +36,9 @@ aside {
             margin: 5px;
         }
         .logo-img:hover{
-            background-image: url("../images/");
+            background-image: url("../images/fireworks-sparks.gif");
             background-size: cover;
+            background-position: center;
         }
         .poke-ads-title {
             border-radius: 5px;
