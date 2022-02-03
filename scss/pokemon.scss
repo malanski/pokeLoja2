@@ -17,7 +17,7 @@ main {
            
             .card-game{
                 width: 50%;
-                height: 130vh;
+                height: 750px;
                 border: 20px solid config.$yellowPok;
                 border-radius: 20px;
                 background-image: url('https://c.tenor.com/pK6hhq40TB0AAAAM/moving-wallpaper-wallpaper.gif');
@@ -34,7 +34,7 @@ main {
                     align-items: baseline;
                     width: 105%;
                     margin-top: -10px;
-                    margin-bottom: -25px;
+                    margin-bottom: -10px;
                     margin-left: -20px;
 
                     .name-icone{
@@ -42,22 +42,29 @@ main {
                         flex-direction: row;
                         align-items: baseline;
                         justify-content: flex-start;
+
                         .poke-icone{
                             border: 4px solid config.$yellowPok;
                             border-radius: 50%;
                             background-color: rgb(177, 177, 177);
                             padding: 5px;
+                            margin-top: -10px;
                             width: 70px;
-                            margin-top: -15px;
-                            position: absolute;
+                            height: 70px;
+
+                            img{
+                                width: 100%;
+                                // margin-left: -45%;
+                                // margin-top: -45%;
+                            }
                         }
                         .pokemon-name{
-                            position: relative;
-                            font-size: 20px;
+                            font-family: config.$pokeFont;
+                            font-size: 27px;
                             text-transform: capitalize;
                             font-weight: bolder;
-                            margin-top: 0px;
-                            margin-left: 70px;
+                            margin-top: -15px;
+                            margin-left: 0px;
                             margin-bottom: 3px;
                         }
                     }
@@ -75,7 +82,7 @@ main {
                     }
                 }
                 .img-principal{
-                    margin-top: -5px;
+                    margin-top: -25px;
                     margin-bottom: 0;
                     display: flex;
                     flex-direction: column;
@@ -754,6 +761,8 @@ main {
         padding: 0;
         .poke-data {
             .card-game{
+                width: 100%;
+
                 .card-name{
                     .name-icone{
                         h1{
