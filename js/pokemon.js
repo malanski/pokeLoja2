@@ -40,35 +40,38 @@ class PokemonSelected {
                     <p class="xp-hp">${this.base_experience}HP<i class="fas fa-fire-alt"></i></p>
                 </div>
 
-                <div class="img-principal">
-                    <img class="imgcard" src="${this.imageArt}" alt="${this.name}">
+                <div class="central-principal">
+                    <img class="img-principal" src="${this.imageArt}" alt="${this.name}">
                     <div class="info-principal">
                         NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
                     </div>
                 </div>
 
-                <div class="first-attack">
-                    <i class="fas fa-sun"></i>
-                    <p>${this.abilities[0]} Shove</p>
-                    <p>${(this.base_experience / 2.5).toFixed(0)}</p>
+                <div class="attacks">
+                    <div class="first-attack">
+                        <i class="fas fa-sun"></i>
+                        <p>${this.abilities[0]}</p>
+                        <p>${(this.base_experience / 2.5).toFixed(0)}</p>
+                    </div>
+
+                    <div class="second-attack">
+                        <div>
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <p>
+                            ${
+                                this.abilities.map(habilidade => `<small>${habilidade}</small>`)
+                                .join('+')
+                            }
+                        </p>
+                        <p>
+                            <big>${(this.base_experience / 1.7).toFixed(0)}</big>
+                        </p>
+                    </div>
                 </div>
 
-                <div class="second-attack">
-                    <div>
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <p>
-                        ${
-                            this.abilities.map(habilidade => `<small>${habilidade}</small>`)
-                            .join(' ')
-                        } slap
-                    </p>
-                    <p>
-                        <big>${(this.base_experience / 1.7).toFixed(0)}</big>
-                    </p>
-                </div>
                 <div class="card-footer">
                     
                     <div class="weakness">
@@ -117,56 +120,55 @@ class PokemonSelected {
             </div>
 
             <!-- ___________________  CARD 0 2   Start     ___________________________ -->
-            <div class="card-game">
+            <div class="card-game card-dois">
                 <div class="card-name">
                     <div class="name-icone">
-                        <div class="poke-icone">
+                        <div class="poke-icone icone2">
                             <img src="${this.imageArt}" alt="${this.name}">
                         </div>
-                        <p class="pokemon-name">${this.name}</p>
+                        <p class="pokemon-name name2">${this.name}</p>
                     </div>
 
                     <p class="xp-hp">${(this.base_experience + 57).toFixed(0)}HP<i class="fas fa-fire-alt"></i></p>
                 </div>
 
-                <div class="img-principal">
-                    <img class="imgcard" src="${this.imageDrem}" alt="${this.name}">
+                <div class="central-principal">
+                    <img class="img-principal img-dois" src="${this.imagem}" alt="${this.name}">
                     <div class="info-principal">
                         NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
                     </div>
                 </div>
 
-                <div class="first-attack">
-                    <i class="fas fa-sun"></i>
-                    <p>${this.abilities[0]} Shove</p>
-                    <p>${(this.base_experience / 2.3).toFixed(0)}</p>
-                </div>
-
-                <div class="second-attack">
-                    <div>
+                <div class="attacks">
+                    <div class="first-attack">
                         <i class="fas fa-sun"></i>
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-sun"></i>
+                        <p>${this.abilities[0]} <b>Attack</b></p>
+                        <p>${(this.base_experience / 2.3).toFixed(0)}</p>
                     </div>
-                    <p>
-                        ${
-                            this.abilities.map(habilidade => `<small>${habilidade}</small>`)
-                            .join(' ')
-                        } slap
-                    </p>
-                    <p>
-                        <big>${(this.base_experience / 1.3).toFixed(0)}</big>
-                    </p>
+
+                    <div class="second-attack">
+                        <div>
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <p>
+                            Max-Attack ${this.abilities[1]}
+                        </p>
+                        <p>
+                            <big>${(this.base_experience / 1.3).toFixed(0)}</big>
+                        </p>
+                    </div>
                 </div>
                 <div class="card-footer">
                     
                     <div class="weakness">
-                        <div class="weak-point">
+                        <div class="weak-point weak-point2">
                             <span>weakness <i class="fas fa-fire-alt elemental"></i> <small>x</small> ${(this.base_experience / 23).toFixed(0)}</span>
                             <span>resistence <i class="fas fa-fist-raised"></i>-${(this.base_experience / 18).toFixed(0)}</span>
                         </div>
 
-                        <div class="weak-point">
+                        <div class="weak-point weak-point2">
                             <span> retreat <br> cost</span>
                             <span><i class="fas fa-sun"></i> <i class="fas fa-sun"></i></span>
                         </div>
@@ -174,33 +176,33 @@ class PokemonSelected {
 
                     <div class="information">
                         <p>
-                            ${this.name}<small> a.k.a. </small><i>${this.name}nia ${this.name}lus pokémonae</i>, is a 
+                            <b>${this.name}nia ${this.name}lus pokémonae</b>, is a family of 
                             ${
                                 this.types.map(tipo => `${tipo}`)
                                 .join(' and ')
                             } type of pocket-monster.
-                            In order to achieve ${this.name}'s Critical Hit attack, with 
+                            In order to achieve ${this.name}'s Special Hit attack, with 
                             ${
                                 this.abilities.map(habilidade => `${habilidade}`)
                                 .join(' or ')
                             }
                             ${this.name} needs to get under 
-                            ${(this.base_experience / 2.5).toFixed(0)}HP.
+                            <b>${(this.base_experience / 2.5).toFixed(0)}HP.</b>
                         </p>
                     </div>
                 </div>
 
-                <div class="card-bottom">
+                <div class="card-bottom bottom2">
                     <h6>
-                            <small>dev.</small>Ulisses Malanski
+                        <small>dev.</small>Ulisses Malanski
                     </h6>
                     <h6>
-                            © 2022 Pokémon
+                        © 2022 Pokémon
                     </h6>
                     <h6>
-                            ${(this.weight * this.height / this.base_experience + 37).toFixed(0)}/
-                            ${(this.weight * this.base_experience / this.height / 9).toFixed(0)}
-                            <i class="fas fa-yin-yang"></i>
+                        ${(this.weight * this.height / this.base_experience + 37).toFixed(0)}/
+                        ${(this.weight * this.base_experience / this.height / 9).toFixed(0)}
+                        <i class="fab fa-ussunnah"></i>
                     </h6>
                 </div>
             </div>

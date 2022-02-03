@@ -21,7 +21,7 @@ main {
             width: 100%;
             .card-game{
                 width: 49%;
-                height: 750px;
+                height: 780px;
                 border: 20px solid config.$yellowPok;
                 box-shadow: 1px 1px 18px 4px #000000;
                 border-radius: 20px;
@@ -36,7 +36,7 @@ main {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    align-items: baseline;
+                    align-items: center;
                     width: 105%;
                     margin-top: -10px;
                     margin-bottom: -10px;
@@ -45,11 +45,11 @@ main {
                     .name-icone{
                         display: flex;
                         flex-direction: row;
-                        align-items: baseline;
+                        align-items: center;
                         justify-content: flex-start;
 
                         .poke-icone{
-                            border: 4px solid config.$yellowPok;
+                            border: 6px solid config.$yellowPok;
                             border-radius: 50%;
                             background-color: rgb(177, 177, 177);
                             padding: 5px;
@@ -63,22 +63,39 @@ main {
                                 // margin-top: -45%;
                             }
                         }
+                        .icone2{
+                            border: 4px solid config.$yellowPok;
+                            background-color: rgb(86, 0, 82);
+                            box-shadow: 1px 1px 10px 2px #000000;
+                        }
                         .pokemon-name{
                             font-family: config.$pokeFont;
                             font-size: 27px;
+                            line-height: 18px;
+                            letter-spacing: 3px;
                             text-transform: capitalize;
                             font-weight: bolder;
-                            margin-top: -15px;
+                            margin-top: -25px;
                             margin-left: 0px;
                             margin-bottom: 3px;
+                            padding-bottom: 0;
+                        }
+                        .name2{
+                            color:white;
+                            text-shadow: config.$texShadow;
+
                         }
                     }
                     .xp-hp{
                         margin-right: -10px;
-                        margin: 0;
+                        margin-top: -25px;
+                        margin-bottom: -10px;
                         font-size: 22px;
+                        font-weight: bold;
                         i{
                             border: 2px solid config.$yellowPok;
+                            box-shadow: 1px 1px 10px 2px #000000;
+
                             border-radius: 50%;
                             background: config.$iconRoundBg;
                             padding: 6px;
@@ -86,25 +103,34 @@ main {
                         }
                     }
                 }
-                .img-principal{
-                    margin-top: -25px;
+                .central-principal{
+                    margin-top: -30px;
                     margin-bottom: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     width: 75%;
 
-                    img{
+                    .img-principal{
                         width: 100%;
                         border: 7px solid config.$yellowPok;
                         box-shadow: 1px 1px 18px 4px #000000;
-                        // background-image: url('https://c.tenor.com/VpjOpBj2uycAAAAM/natural-nature.gif');
                         // background-image: url('https://i.pinimg.com/originals/de/ea/3f/deea3ff8c40767a979fec03a48d4a899.gif');
                         background-image: url('https://thumbs.gfycat.com/AchingSoggyCur-size_restricted.gif');
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
                         background-position-y: bottom;
                     }
+                    .img-dois {
+                        background-image: url('https://c.tenor.com/VpjOpBj2uycAAAAM/natural-nature.gif');
+                        height: 293px;
+                        margin-bottom: 0;
+                        margin-top: -15px;
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        background-position-y: bottom;
+                    }
+
                     .info-principal{
                         background-color: config.$yellowPok;
                         border: 3px solid config.$yellow3Pok;
@@ -115,62 +141,64 @@ main {
                         text-align: center;
                         font-size: 15px;
                         margin-top: 0;
+                        margin-bottom: -5px;
+                    }
+                }
+                .attacks{
+                    width: 100%;
+                    .first-attack{
+                        display: flex;
+                        margin-top: -40px;
                         margin-bottom: 0;
+                        padding-bottom: 5px;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: baseline;
+                        border-bottom: 1px solid black;
+                        i{
+                            font-size: 20px;
+                            border: 2px solid white;
+                            border-radius: 50%;
+                            background: config.$iconRound2Bg;
+    
+                            background-size: contain;
+                            padding: 5px;
+                        }
+                        p{
+                            text-transform: capitalize;
+                            font-size: 20px;
+                            margin: 0;
+                            padding: 0;
+                        }
                     }
-                }
-                .first-attack{
-                    display: flex;
-                    margin-top: -20px;
-                    margin-bottom: 0;
-                    padding-bottom: 5px;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: baseline;
-                    width: 95%;
-                    border-bottom: 1px solid black;
-                    i{
-                        font-size: 20px;
-                        border: 2px solid white;
-                        border-radius: 50%;
-                        background: config.$iconRound2Bg;
-
-                        background-size: contain;
-                        padding: 5px;
-                    }
-                    p{
-                        text-transform: capitalize;
-                        font-size: 20px;
-                        margin: 0;
-                        padding: 0;
-                    }
-                }
-                .second-attack{
-                    display: flex;
-                    margin-top: -15px;
-                    padding-top: 0;
-                    padding-bottom: 20px;
-
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: baseline;
-                    width: 95%;
-                    margin-bottom: 5px;
-                    i{
-                        font-size: 20px;
-                        border: 2px solid white;
-                        border-radius: 50%;
-                        background: config.$iconRound2Bg;
-
-                        background-size: contain;
-                        padding: 3px;
-                        margin-left: 0;
-                        margin-right: 0;
-                    }
-                    p{
-                        text-transform: capitalize;
-                        font-size: 20px;
-                        margin: 0;
-                        padding: 0;
+                    .second-attack{
+                        display: flex;
+                        margin-top: 5px;
+                        padding-top: 0;
+                        padding-bottom: 20px;
+    
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: baseline;
+                        width: 95%;
+                        margin-bottom: 5px;
+                        i{
+                            font-size: 20px;
+                            border: 2px solid white;
+                            border-radius: 50%;
+                            background: config.$iconRound2Bg;
+    
+                            background-size: contain;
+                            padding: 3px;
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
+                        p{
+                            text-transform: capitalize;
+                            font-size: 20px;
+                            margin: 0;
+                            padding: 0;
+                        }
                     }
                 }
                 .card-footer{
@@ -200,10 +228,10 @@ main {
                             justify-content: space-around;
                             align-items: center;
                             width: 100%;
-                            font-size: 10px;
+                            font-size: 13px;
                             font-weight: bolder;
-                            margin-top: 20px;
-                            margin-bottom: 15px;
+                            margin-top: 10px;
+                            margin-bottom: 5px;
                             border-bottom: 1px solid black;
                             padding-bottom: 15px;
                             .elemental{
@@ -222,7 +250,11 @@ main {
                                 border-radius: 50%;
                                 background-size: contain;
                                 padding: 5px;
+                                color: #000000;
                             }
+                        }
+                        .weak-point2{
+                            color: white;
                         }
                         p{
                             height: 50%;
@@ -271,16 +303,29 @@ main {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    width: 102%;
+                    width: 101%;
                     margin-top: 0;
                     margin-bottom: 0;
                     h6{
                         margin-top: 5px;
                         margin-bottom: 2px;
                         font-size: 15px;
+                        i{
+                            color:rgb(0, 0, 0);
+                            font-size: 18px;
+                        }
                     }
                 }
+                .bottom2{
+                    color: white;
 
+                }
+
+            }
+            .card-dois{
+                background-image: url('https://c.tenor.com/5jKmrBxmjA0AAAAM/aa-handfield-andree-anne-handfield-aaa-handfield-art.gif');
+                background-repeat: no-repeat;
+                background-size: cover ;
             }
             .card2b2{
                 display: flex;
@@ -758,6 +803,9 @@ main {
 
 
 @media screen and(max-width:config.$mobileBreakpointMm) {
+    .pokemon-cards-principal{
+        flex-direction: column;
+    }
     main{
         width: 100vw;
         height: auto;
@@ -825,7 +873,7 @@ main {
                     .information{
                         p{
                             padding: 2px;
-                            font-size: 10px;
+                            font-size: 13px;
                         }
                     }
                 }
