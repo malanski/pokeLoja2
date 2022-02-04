@@ -37,7 +37,7 @@ class Carrinho {
 	}
 	
 	abrirCarrinho(event) {
-		// event.preventDefault();
+		event.preventDefault();
 		window.carrinho.renderCarrinho();
 		const openCartClass = 'carrinho-aberto';
 
@@ -160,14 +160,16 @@ class Carrinho {
 	
 	deleteStorage(findPoke) {
 		localStorage.setItem('pokemonsNoCarrinho', JSON.stringify(findPoke))
+		window.carrinho.renderCarrinho();
+
 	}
 
 	//removedor de localStorage??????
-	removeStorage() {
-		console.log('clicouuu')
-		localStorage.removeItem("pokemonsNoCarrinho");
-		window.carrinho.renderCarrinho();
-	}
+	// removeStorage(pokemon) {
+	// 	console.log('clicouuu')
+	// 	localStorage.removeItem("pokemonsNoCarrinho", JSON.stringify(pokemon));
+	// 	window.carrinho.renderCarrinho();
+	// }
 
 	populateStorage(pokemon){
 		const pokemons = this.getStorage() || []
