@@ -128,12 +128,15 @@ class Carrinho {
 			<li>
 				<div class="buy-card">
 					<p><small>${index + 1}</small></p>
-						<a href="pokemon.html?id=${item.id}">
-							<img src="${item.imagem}" alt="${item.imagem}" title="${item.imagem}">
-						</a>
+					<a href="pokemon.html?id=${item.id}">
+						<img src="${item.imagem}" alt="${item.imagem}" title="${item.imagem}">
+					</a>
 					<div class="item-price">
-						<h6>${item.nome}</h6>
-						<span><h6 class="qnty-item qnty-item-${item.id}"></h6> X ${item.precoDesc}<small> R$ </small></span>
+						<p class="item-name">${item.nome}</p>
+						<div class="item-info">
+							<p class="qnty-item qnty-item-${item.id}">1 </p>
+							<p><small> x </small> ${item.precoDesc}<small>R$</small></p>
+						</div>
 					</div>
 					<div class="remove-poke">
 						<i onClick="window.carrinho.removePokemonItem(${item.id})" class="fas fa-trash" title="Remove"></i>
@@ -149,7 +152,8 @@ class Carrinho {
 		pokeTotal.className ='total-pokes'
 		pokeTotal.innerHTML = `
 			<h4>Total itens: ${totalItens}</h4>
-			<h4>Total price: R$ ${precoTotal.toFixed(2)}</h4>
+			<h4 class="my-price"><small>Total price</small>: R$ ${precoTotal.toFixed(2)}</h4>
+			<h4 class="my-price"><small>12 x</small> R$ ${(precoTotal / 12).toFixed(2)}</h4>
 		`
 		return  pokeTotal
 	}

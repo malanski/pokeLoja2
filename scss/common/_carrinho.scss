@@ -112,7 +112,7 @@ body.carrinho-aberto {
                     img {
                         width: 50px;
                         margin-right: -20px;
-                        margin-left: -20px;
+                        margin-left: -40px;
                     }
                     i{
                         font-size: 12px;
@@ -125,11 +125,17 @@ body.carrinho-aberto {
                         justify-content: space-around;
                         align-items: center;
                         flex-direction: column;
-                        h6{
+                        .item-name{
+                            text-align: center;
                             margin-left: -20px;
                             margin-bottom: 5px;
                             margin-top: 10px;
                             font-size: 22px;
+                        }
+                        .item-info{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
                         }
                         span{
                             font-size: 20px;
@@ -147,15 +153,19 @@ body.carrinho-aberto {
         .total-pokes{
             border: 1px solid white;
             border-radius: 5px;
-            h5{
-                text-align: center;
-                font-size: 25px;
+            h4{
+                text-align: right;
+                font-size: 20px;
                 color: white;
                 margin-top: 0;
                 margin-bottom: 0;
                 padding-top: 0;
-
-
+            }
+            .my-price{
+                font-size: 22px;
+                border: 1px solid white;
+                border-radius: 5px;
+                color: green;
             }
             .info-buy {
                 width: 100%;

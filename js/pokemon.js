@@ -43,7 +43,7 @@ class PokemonSelected {
                 <div class="central-principal">
                     <img class="img-principal" src="${this.imageArt}" alt="${this.name}">
                     <div class="info-principal">
-                        NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
+                        NO.${this.id} ${this.types[0]} <small>Pokémon</small> HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(0)}kg
                     </div>
                 </div>
 
@@ -135,7 +135,7 @@ class PokemonSelected {
                 <div class="central-principal">
                     <img class="img-principal img-dois" src="${this.imagem}" alt="${this.name}">
                     <div class="info-principal">
-                        NO.${this.id} ${this.types[0]} Pokémon HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(2)}kg
+                        NO.${this.id} ${this.types[0]} <small>Pokémon</small> HT: ${(this.height * 0.1).toFixed(2)}m WT: ${(this.weight * 0.1).toFixed(0)}kg
                     </div>
                 </div>
 
