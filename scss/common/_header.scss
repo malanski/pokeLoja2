@@ -127,14 +127,14 @@ header {
             border: 1px solid black;
             border-radius: 5px;
             text-align: center;
-            li .headlink {
+            .headlink {
                 text-decoration: none;
                 color: black;
                 font-size: 20px;
                 font-weight: 800;
                 transition: all ease 0.4s;
             }
-            li .headlink:hover {
+            .headlink:hover {
                 color: config.$yellowPok;
             }
         }
@@ -350,7 +350,7 @@ nav {
                 margin-top: 0;
                 margin-right: 50px;
                 position: absolute;
-                li .headlink {
+                .headlink {
                     font-size: 0.9rem;
                 }
                 img {
@@ -440,7 +440,7 @@ nav {
                 margin-left: 5px;
                 margin-right: 0;
                 margin-bottom: 5px;
-                li .headlink {
+                .headlink {
                     font-size: 0.8rem;
 
                 }
@@ -530,7 +530,7 @@ nav {
                 justify-content: space-between;
                 width: 97%;
                 margin: 0px;
-                li .headlink {
+                .headlink {
                     font-size: 1.2rem;
                     margin: 0;
                     padding: 0;
@@ -611,7 +611,7 @@ nav {
                 width: 98%;
                 margin: 0.5%;
                 text-align: center;
-                li .headlink {
+                .headlink {
                     font-size: 0.9rem;
                     margin-left: 0;
                     margin-right: 0;

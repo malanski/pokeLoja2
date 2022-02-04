@@ -94,7 +94,7 @@ class Carrinho {
 				precoTotal = precoTotal + parseFloat(itens.precoDesc)
 			})
 			pokeTotais.appendChild(
-				this.addDetails(pokemonsNoCarrinho.length, precoTotal),
+				this.addDetails(pokemonsNoCarrinho.length, precoTotal)
 			)
 		} else {
 			const pokeItem = document.querySelector('ul')
