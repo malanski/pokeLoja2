@@ -30,7 +30,7 @@ body.carrinho-aberto {
     background-color: config.$bodyBgColor;
     opacity: 0.9;
     border-radius: 2% 0  0 2%;
-    border-left: solid 20px config.$headerColor;
+    // border-left: solid 20px config.$headerColor;
     padding: 5px;
     transition: all ease-in-out .3s;
     display: flex;
@@ -55,7 +55,7 @@ body.carrinho-aberto {
         button{
             color: #000000;
             cursor: pointer;
-            margin-left: -30px;
+            margin-left: 0px;
             margin-top: 10px;
             background: white;
             border: 1px solid black;
@@ -153,17 +153,32 @@ body.carrinho-aberto {
         .total-pokes{
             border: 1px solid white;
             border-radius: 5px;
-            h4{
-                text-align: right;
+            .itens-qnty{
+                display: inline-flex;
+                align-items: center;
+                text-align: center;
                 font-size: 20px;
                 color: white;
                 margin-top: 0;
                 margin-bottom: 0;
                 padding-top: 0;
+                .qnty{
+                    color: green;
+                }
             }
             .my-price{
+                text-align: center;
                 font-size: 22px;
                 border: 1px solid white;
+                background: white;
+                border-radius: 5px;
+                color: green;
+            }
+            .my-price12x{
+                font-size: 22px;
+                border: 1px solid white;
+                background: white;
+                text-align: center;
                 border-radius: 5px;
                 color: green;
             }
@@ -195,6 +210,12 @@ body.carrinho-aberto {
             }
         }
     }
+    .cart-buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
     .credit-cards {
         list-style: none;
         width: 100%;
@@ -203,6 +224,8 @@ body.carrinho-aberto {
         align-items: center;
         text-align: center;
         font-size: 25px;
+        margin: 0;
+        padding: 10px;
     }
 }
 

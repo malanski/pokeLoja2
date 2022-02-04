@@ -151,9 +151,9 @@ class Carrinho {
 		const pokeTotal = document.createElement('div')
 		pokeTotal.className ='total-pokes'
 		pokeTotal.innerHTML = `
-			<h4>Total itens: ${totalItens}</h4>
+			<h4 class="itens-qnty"><p class="qnty">${totalItens}</p> pokémons selected</h4>
 			<h4 class="my-price"><small>Total price</small>: R$ ${precoTotal.toFixed(2)}</h4>
-			<h4 class="my-price"><small>12 x</small> R$ ${(precoTotal / 12).toFixed(2)}</h4>
+			<h4 class="my-price12x"><small>12 x</small> R$ ${(precoTotal / 12).toFixed(2)}</h4>
 		`
 		return  pokeTotal
 	}
