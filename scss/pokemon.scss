@@ -574,7 +574,103 @@ main {
     
                 }
             }
+            .gameboy-container {
+                display: flex;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                .gameboy{
+                    width: 25%;
+                    margin-right: 10px;
+                    height: auto;
+                    background: wheat;
+                    padding-top: 22px;
+                    padding-bottom: 30px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    box-shadow: 3px 3px 10px black;
+                        border-top-right-radius: 8px;
+                        border-top-left-radius: 8px;
+                        border-bottom-left-radius: 8px;
+                        border-bottom-right-radius: 35px;
+                    .border-tela{
+                        border: 1px solid black;
+                        padding: 20px 40px;
+                        border-top-right-radius: 10px;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 30px;
+                        background: radial-gradient(black, rgb(74, 74, 74), rgb(86, 86, 86), black);
 
+                        .tela-gameboy{
+                            background: yellowgreen;
+                            border: 3px solid black;
+                            border-radius: 3px;
+                            box-shadow: 2px 2px 10px white;
+                            width: 100%;
+                            height: auto;
+                            .name-mini{
+                                text-align: center;
+                                font-family: 'Press Start 2P', cursive;
+                            }
+
+                            img{
+                                width: 60%;
+                                margin-left: 20%;
+                                margin-bottom: 20%;
+                            }
+                            .double-poke{
+                                display: flex;
+                                flex-direction: row;
+
+                                .double{
+                                    margin:-5px;
+                                }
+                            }
+    
+                        }
+                    }
+                    .nintendo-name{
+                        font-weight: bold;
+                        font-size: 16px;
+                        margin-right: 0;
+                        .gameboy-name{
+                            margin-right: 0;
+                            margin-left: -5px;
+                            text-transform: uppercase;
+                            letter-spacing: -1px;
+                            font-style: italic;
+                            font-weight: 100;
+                            font-size: 20px;
+
+                        }
+                    }
+                    .controller{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 90%;
+                        margin-left: 5%;
+                        i{
+                            font-size: 40px;
+                            font-weight: bold;
+                        }
+                        .a-b-container{
+
+                            .btn{
+                                background-color: red;
+                                padding: 10px;
+                                border-radius: 50%;
+                            }
+                            .btn-a{
+
+                            }
+                            .btn-b{
+
+                            }
+                        }
+                    }
+                }
+            }
             .pokemon {
                 border: 1px solid gray;
                 border-radius: 5px;
@@ -883,6 +979,13 @@ main {
                     width: 100%;
                 }
             }
+            .gameboy-container{
+                flex-direction: column;
+                .gameboy{
+                    width: 100vw;
+                    margin-bottom: 20px;
+                }
+            }
 
 
             .pokemon{
@@ -1013,6 +1116,13 @@ main {
                 }
 
             }
+            .gameboy-container{
+                flex-direction: column;
+                .gameboy{
+                    width: 95vw;
+                    margin-bottom: 20px;
+                }
+            }
 
 
             .pokemon{
@@ -1139,6 +1249,13 @@ main {
                     }
                 }
 
+            }
+            .gameboy-container{
+                flex-direction: column;
+                .gameboy{
+                    width: 95vw;
+                    margin-bottom: 20px;
+                }
             }
 
 

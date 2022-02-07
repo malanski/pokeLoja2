@@ -210,6 +210,113 @@ class PokemonSelected {
             <!-- ___________________  CARD 0 2 end       ___________________________ -->
         </section>
 
+        <section class="gameboy-container">
+        
+                <div class="gameboy">
+                    <div class="border-tela">
+                        <div class="tela-gameboy">
+                            <p class="name-mini">${this.name}</p>
+
+                            <img src="${this.gif}" alt="${this.name} animated">
+                        </div>
+                    </div>
+
+                    <p class="nintendo-name">
+                        Nintendo
+                        <span class="gameboy-name">Game Boy</span>
+                        <small><sub>TM</sub></small>
+                    </p>
+                    <div class="controller">
+                        <i class="fas fa-plus"></i>
+                        <div class="a-b-container">
+                            <button class="btn btn-a"></button>
+                            <button class="btn btn-b"></button>
+                        </div>
+                    </div>
+                </div>
+
+  <!-- ___________________  GAME Boy1 end       ___________________________ -->
+
+                <div class="gameboy">
+                    <div class="border-tela">
+                        <div class="tela-gameboy">
+                            <p class="name-mini">${this.name}</p>
+
+                            <img src="${this.gif2}" alt="${this.name} animated">
+                        </div>
+                    </div>
+
+                    <p class="nintendo-name">
+                        Nintendo
+                        <span class="gameboy-name">Game Boy</span>
+                        <small><sub>TM</sub></small>
+                    </p>
+                    <div class="controller">
+                        <i class="fas fa-plus"></i>
+                        <div class="a-b-container">
+                            <button class="btn btn-a"></button>
+                            <button class="btn btn-b"></button>
+                        </div>
+                    </div>
+                </div>
+
+  <!-- ___________________  GAME Boy2 end       ___________________________ -->
+
+                <div class="gameboy">
+                    <div class="border-tela">
+                        <div class="tela-gameboy">
+                            <p class="name-mini">${this.name}</p>
+
+                            <img src="${this.imageX}" alt="${this.name} animated">
+                        </div>
+                    </div>
+
+                    <p class="nintendo-name">
+                        Nintendo
+                        <span class="gameboy-name">Game Boy</span>
+                        <small><sub>TM</sub></small>
+                    </p>
+                    <div class="controller">
+                        <i class="fas fa-plus"></i>
+                        <div class="a-b-container">
+                            <button class="btn btn-a"></button>
+                            <button class="btn btn-b"></button>
+                        </div>
+                    </div>
+                </div>
+
+  <!-- ___________________  GAME Boy3 end       ___________________________ -->
+
+                <div class="gameboy">
+                    <div class="border-tela">
+                        <div class="tela-gameboy">
+                            <p class="name-mini">${this.name}</p>
+
+                            <div class="double-poke">
+                                <img class="double" src="${this.imageOmega}" alt="${this.name}">
+                                <img class="double" src="${this.imageYel}" alt="${this.name}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="nintendo-name">
+                        Nintendo
+                        <span class="gameboy-name">Game Boy</span>
+                        <small><sub>TM</sub></small>
+                    </p>
+                    <div class="controller">
+                        <i class="fas fa-plus"></i>
+                        <div class="a-b-container">
+                            <button class="btn btn-a"></button>
+                            <button class="btn btn-b"></button>
+                        </div>
+                    </div>
+                </div>
+
+  <!-- ___________________  GAME Boy4 end       ___________________________ -->
+
+        </section>
+
 
         <div class="pokemon">
             <div class="poke-img">
