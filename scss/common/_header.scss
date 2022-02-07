@@ -490,7 +490,7 @@ nav {
         margin: 0;
         padding: 5px;
         .header-container {
-            margin: 5px;
+            margin: 0;
             .logo {
                 margin-top: 55px;
                 margin-bottom: 15px;
@@ -547,18 +547,18 @@ nav {
         margin: 0;
         padding: 0;
         .nav-container {
-            
+            margin: 0;
             padding-left: 0;
             padding-right: 0;
             .navbar {
                 align-self: center;
-                left: 0;
                 align-items: center;
                 margin-left: 0;
                 margin-right: 0;
 
                 li .navlink {
-                    font-size: 15px;
+                    text-align: center;
+                    font-size: 17px;
                 }
             }
             .social1 {
@@ -623,11 +623,15 @@ nav {
     nav {
         .nav-container {
             justify-content: center;
+            margin-left: 0;
             .navbar {
 
                 padding-left: 0;
-                li a .navlink {
-                    font-size: 15px;
+                li .navlink {
+                    border-right: 0;
+                    text-align: center;
+
+                    font-size: 17px;
                 }
             }
             .social1 {
