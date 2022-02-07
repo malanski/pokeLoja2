@@ -764,9 +764,8 @@ main {
 }
 @media screen and(max-width:config.$mobileBreakpointG) {
     main{
-        width: 100vw;
-        // height: 100vh;
-        margin: 0;
+        width: 99vw;
+        margin-left: 0.5vw;
         margin-top: 5px;
         .poke-data .pokemon{
             width: 100%;
@@ -807,10 +806,8 @@ main {
         flex-direction: column;
     }
     main{
-        width: 100vw;
-        height: auto;
-
-        margin: 0;
+        width: 99vw;
+        margin-left: 0.5vw;
         padding: 0;
         .poke-data {
             .card-game{
@@ -930,10 +927,8 @@ main {
 
 @media screen and(max-width:config.$mobileBreakpointP) {
     main{
-        width: 100vw;
-        height: auto;
-
-        margin: 0;
+        width: 99vw;
+        margin-left: 0.5vw;
         padding: 0;
         .poke-data {
             .card-game{
@@ -1061,10 +1056,8 @@ main {
 }
 @media screen and(max-width:config.$mobileBreakpointPp) {
     main{
-        width: 100vw;
-        height: auto;
-
-        margin: 0;
+        width: 99vw;
+        margin-left: 0.5vw;
         padding: 0;
         .poke-data {
             padding: 0;
