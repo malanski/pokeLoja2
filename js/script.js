@@ -58,14 +58,6 @@ function renderPokemons(pokemonsApi) {
         pokeList.appendChild(html)
     });
 
-    let pokeContador = 0;
-    function acumulaPoke() {
-        pokeContador = pokeContador + 1;
-
-        // renderiza a quantidade individual de cada item comprado
-        
-        document.querySelectorAll('h6.counting').innerText = pokeContador;
-    }
 
     // Adiciona Click nos Buy Buttons
     const buyButtons = document.querySelectorAll('.btn-buy');
@@ -76,16 +68,10 @@ function renderPokemons(pokemonsApi) {
             event.preventDefault();
             const id = event.target.getAttribute('data-id');
 
-            // Se data-id se repetir, acumule-as num contador q vai multiplicar o preço de cada pokemon
-
-            acumulaPoke(event);
-            console.log(pokeContador)
-
             const pokemon = this.pokemons.find((pokemon) => pokemon.id == id);
 
             const openCartClass = document.querySelectorAll('.btn-buy')
             window.carrinho.adicionar(pokemon);
-            // window.carrinho.renderCarrinho(pokemon);
             window.carrinho.abrirCarrinho(openCartClass);
 
 
